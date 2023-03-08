@@ -94,7 +94,10 @@ var spy = new Gumshoe('#docs-nav a', {
 var lightbox = new SimpleLightbox('.simplelightbox-gallery a', {/* options */});
 
 
-
+/* ====== Bootstrap Tooltips ======= */
+/*  Ref: https://getbootstrap.com/docs/5.2/components/tooltips/ */
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 
 

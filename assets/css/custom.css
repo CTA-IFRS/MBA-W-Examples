@@ -1,0 +1,8 @@
+.permalink{
+    font-size: 1rem;
+    float: right;
+}
+
+.docs-nav .nav-item .nav-link:hover {
+    color: #28b76b;
+}

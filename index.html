@@ -24,6 +24,7 @@
 
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+	<link id="theme-style" rel="stylesheet" href="assets/css/custom.css">
 
 </head> 
 
@@ -37,7 +38,7 @@
 	                    <span></span>
 	                    <span></span>
 	                </button>
-	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="assets/images/coderdocs-logo.svg" alt="logo"><span class="logo-text">MBA-W<span class="text-alt"> Examples</span></span></a></div>    
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="assets/images/logo.svg" alt="logo"><span class="logo-text">MBA-W<span class="text-alt"> Examples</span></span></a></div>    
                 </div><!--//docs-logo-wrapper-->
 	            
             </div><!--//container-->
@@ -47,15 +48,9 @@
     
     <div class="docs-wrapper">
 	    <div id="docs-sidebar" class="docs-sidebar">
-		    <div class="top-search-box d-lg-none p-3">
-                <form class="search-form">
-		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
-		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
-		        </form>
-            </div>
 		    <nav id="docs-nav" class="docs-nav navbar">
 			    <ul class="section-items list-unstyled nav flex-column pb-3">
-					<li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-0"><span class="theme-icon-holder me-2"><i class="fas fa-star"></i></span>Introdução</a></li>
+					<li class="nav-item section-title"><a class="nav-link scrollto" href="#section-0"><span class="theme-icon-holder me-2"><i class="fas fa-star"></i></span>Introdução</a></li>
 				    <li class="nav-item section-title"><a class="nav-link scrollto" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-eye"></i></span>1. Perceptível</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">1.1 Alternativas em Texto</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">1.2 Mídias com base em tempo</a></li>
@@ -95,9 +90,25 @@
 						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
 						</section><!--//docs-intro-->
 				    </header>
-				     <section class="docs-section" id="item-1-1">
+				    <section class="docs-section" id="item-1-1">
 						<h2 class="section-heading">1.1 Alternativas em Texto</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						
+						<div class="docs-section" id="item-1-1-1">
+							<h3>
+								1.1.1 Alternativa textual para imagens simples
+								<span class="permalink"><a href="#item-1-1-1" aria-label="Link Permanente para 1.1.1 Alternativa textual para imagens simples" title="Link Permanente para 1.1.1 Alternativa textual para imagens simples">§</a></span>
+							</h3>
+							<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+							<div class="row">
+								<div class="col-md-6 col-lg-4 mx-auto">
+									<img class="rounded mx-auto d-block img-fluid" src="assets/images/mouse-adaptado.png" alt="A mão de uma pessoa segura um mouse convencional que contém uma entrada lateral na qual, com a outra mão, está sendo conectado o cabo de um acionador retangular.">
+								</div>
+							</div>
+							<p><strong>Exemplo de código:</strong></p>
+							<code>
+								&lt;img src="mouseadptado.jpg" alt="A mão de uma pessoa segura um mouse convencional que contém uma entrada lateral na qual, com a outra mão, está sendo conectado o cabo de um acionador retangular."&gt;
+							</code>
+						</div>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-1-2">

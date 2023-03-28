@@ -26,6 +26,9 @@
     <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
 	<link id="theme-style" rel="stylesheet" href="assets/css/custom.css">
 
+	<!-- High Contrast CSS-->
+	<link rel="stylesheet" href="assets/css/high_contrast.css">
+
 </head> 
 
 <body class="docs-page">    
@@ -40,7 +43,9 @@
 	                </button>
 	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="assets/images/logo.svg" alt="logo"><span class="logo-text">MBA-W<span class="text-alt"> Examples</span></span></a></div>    
                 </div><!--//docs-logo-wrapper-->
-	            
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+					<a href="" id="high_contrast" aria-checked="false" class="btn btn-primary d-none d-lg-flex"><i class="bi bi-circle-half">&nbsp;</i> Alto contraste</a>
+				</div>
             </div><!--//container-->
         </div><!--//branding-->
     </header><!--//header-->
@@ -123,7 +128,53 @@
 							<div class="docs-code-block">
 								<script src="https://gist.github.com/laelNervis/a3f779c86eb3abc4d6d513de35237334.js"></script>
 							</div>
+						</div>
 
+						<div class="docs-section" id="item-1-1-2">
+							<h3>
+								1.1.2 Alternativa textual para imagens de texto
+								<span class="permalink"><a href="#item-1-1-2" aria-label="Link Permanente para 1.1.2 Alternativa textual para imagens de texto" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.1.2 Alternativa textual para imagens de texto">§</a></span>
+							</h3>
+							
+							<p class="mt-5">A descrição de imagens que contêm texto precisa incluir o texto que aparece visualmente, como no exemplo a seguir:</p>
+							<div class="row">
+								<div class="col-md-6 col-lg-4 mx-auto">
+									<img class="rounded mx-auto d-block img-fluid" src="assets/images/curso-ta.png" alt="Banner Curso gratuito: Tecnologia Assistiva no Contexto Educacional">
+								</div>
+							</div>
+							<p>Exemplo de código:</p>
+							<code>
+								&lt;img src="curso-ta.jpg" alt="Banner Curso gratuito: Tecnologia Assistiva no Contexto Educacional"&gt;
+							</code>
+						</div>
+
+						<div class="docs-section" id="item-1-1-3">
+							<h3>
+								1.1.3 Alternativa textual para imagens complexas
+								<span class="permalink"><a href="#item-1-1-3" aria-label="Link Permanente para 1.1.3 Alternativa textual para imagens complexas" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.1.3 Alternativa textual para imagens complexas">§</a></span>
+							</h3>
+							
+							<p class="mt-5">No exemplo a seguir, o atributo alt é utilizado para fornecer uma descrição breve da imagem, informando objetivamente sobre seu conteúdo. Já a descrição da imagem (neste exemplo um infográfico) é apresentada ao lado da mesma. A separação dos elementos em quadros no infográfico foi reproduzida na forma de tópicos na descrição. 
+							</p>
+							<div class="row border p-3">
+								<div class="col-md-6">
+									<img class="rounded d-block img-fluid" src="assets/images/infografico.png" alt="Infográfico sobre a história do Movimento Maker">
+								</div>
+								<div class="col-md-6">
+									<p class="lh-sm"><small>Alinha do tempo ao lado mostra que a filosofia do "Faça você mesmo" é um método para construir, modificar ou reparar algo sem a ajuda direta de especialistas ou profissionais. O termo "do-it-yourself" popularizou-se nos anos 50 devido ao crescimento de pessoas iniciando projetos de reformas e vários outros tipos de artesanato e projetos de construção. Segundo essa mesma imagem, a cronologia do movimento maker é apresentada como:</small></p>
+									<ul class="lh-sm">
+										<li><small>Século VII - um templo grego foi a primeira construção feita com instruções do tipo "faça você mesmo"</small></li>
+										<li><small>Década de 50- artistas buscavam fazer as próprias coisas em oposição a produção em massa e cultura de massa.</small></li>
+										<li><small>Década de 60 e 70 - livros e séries de TV popularizaram o movimento de "faça você mesmo" com técnicas de construção e reformas domésticas.</small></li>
+										<li><small>Década de 90 - omodelo "faça você mesmo" foi impactado pelo crescimento digital e da internet.</small></li>
+										<li><small>2017 - geração millennial junta tecnologia e criatividade fazendo mais projetos "do-it-yourself", desde o simples até o elaborado.</small></li>
+									</ul>
+								</div>
+							</div>
+							<p class="mt-4">Exemplo de código:</p>
+							<div class="docs-code-block">
+								<script src="https://gist.github.com/laelNervis/c7f1c82d8d05a9fc0c867749c4291f61.js"></script>
+							</div>
 						</div>
 					</section><!--//section-->
 					
@@ -234,13 +285,15 @@
        
     <!-- Javascript -->          
     <script src="assets/plugins/popper.min.js"></script>
+	<script src="assets/plugins/js.cookie.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
     
     
     <!-- Page Specific JS -->
     <script src="assets/plugins/smoothscroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/js/highlight-custom.js"></script>
+	<script src="assets/js/high_contrast.js"></script> 
     <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
     <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
     <script src="assets/js/docs.js"></script> 

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <title>Exemplos do MBA-W</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Exemplos para o Manual Brasileiro de Acessibilidade Web">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <!-- <link rel="shortcut icon" href="favicon.ico">  -->
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+	<link id="theme-style" rel="stylesheet" href="assets/css/custom.css">
+
+	<!-- High Contrast CSS-->
+	<link rel="stylesheet" href="assets/css/high_contrast.css">
+
+</head> 
+
+<body class="docs-page">    
+    <header class="header fixed-top">
+		<!-- <nav class="barra-acessibilidade navbar navbar-expand-sm navbar-dark" aria-label="Menu de acessibilidade">
+			<button type="button" class="navbar-toggler bg-dark btn-a11y" data-bs-toggle="collapse" data-bs-target="#menuAcessibilidade" aria-controls="menuAcessibilidade" aria-expanded="false" aria-label="Expandir menu">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div id="menuAcessibilidade" class="collapse navbar-collapse">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link text-dark py-0" href="#conteudo-principal" accesskey="1"><small>Ir para o conteúdo
+							<span class="badge text-bg-dark">1</span></small>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-dark py-0" href="#menu-principal" accesskey="2"><small>Ir para o menu
+							<span class="badge text-bg-dark">2</span></small>
+						</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav justify-content-end ml-auto">
+					<li class="nav-item my-2 my-md-0">
+						<a class="nav-link text-dark py-0" id="high_contrast" aria-checked="false" href="#"><small><i class="bi bi-circle-half">&nbsp;</i> Alto contraste</small></a>
+					</li>
+				</ul>
+			</div>
+		</nav> -->
+		
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="assets/images/logo.svg" alt="logo"><h1 class="d-inline"><span class="logo-text">Manual do <span class="text-alt">WCAG 2.1</span></span></h1></a></div>
+                </div><!--//docs-logo-wrapper-->
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+					<a href="" class="btn btn-primary d-none d-lg-flex"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;Download em PDF</a>
+				</div>
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar">
+		    <nav id="docs-nav" class="docs-nav navbar">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+					<li class="nav-item section-title"><a class="nav-link scrollto" href="#section-0"><span class="theme-icon-holder me-2"><i class="fas fa-star"></i></span>Introdução</a></li>
+				    <li class="nav-item section-title"><a class="nav-link scrollto" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-eye"></i></span>1. Perceptível</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">1.1 Alternativas em Texto</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">1.2 Mídias com base em tempo</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">1.3 Adaptável</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">1.4 Discernível</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>2. Operável</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">2.1 Acessível por Teclado</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">2.2 Tempo Suficiente</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">2.3 Convulsões e Reações Fisicas</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">2.4 Navegável</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-5">2.5 Modalidades de Entrada</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i class="fas fa-box"></i></span>3. Compreensível</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">3.1 Legível</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">3.2 Previsível</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">3.3 Assistência de Entrada</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i class="fas fa-cogs"></i></span>4. Robusto</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">4.1 Compatível</a></li>
+			    </ul>
+
+		    </nav><!--//docs-nav-->
+	    </div><!--//docs-sidebar-->
+	    <div class="docs-content">
+		    <div class="container">
+				<article class="docs-article" id="section-0">
+				    <header class="docs-header">
+					    <h2 class="docs-heading">Introdução <span class="docs-time">Última atualização: 28-05-2023</span></h2>
+					    <section class="docs-intro">
+						    <p>O intuito dessa página é apresentar uma explicação de fácil compreensão de cada critério de sucesso da WCAG 2.1, bem como exemplos desses critérios de sucesso conforme as técnicas existentes na WCAG 2.1</p>
+						</section><!--//docs-intro-->
+				    </header>
+			    </article><!--//docs-article-->
+
+			    <article class="docs-article" id="section-1">
+				    <header class="docs-header">
+					    <h2 class="docs-heading">1. Perceptível</h2>
+					    <section class="docs-intro">
+						    <p class="lead">As informações e os componentes da interface do usuário devem ser apresentados em formas que possam ser percebidas pelo usuário.</p>
+						</section><!--//docs-intro-->
+				    </header>
+				    <section class="docs-section" id="item-1-1">
+						<h3 class="section-heading">1.1 Alternativas em Texto</h3>
+						<section class="docs-intro">
+						    <p>Fornecer alternativas textuais para qualquer conteúdo não textual, para que possa ser transformado em outras formas de acordo com as necessidades dos usuários, tais como impressão com tamanho de fontes maiores, braille, fala, símbolos ou linguagem mais simples.</p>
+						</section><!--//docs-intro-->
+
+						<div class="docs-section" id="item-1-1-1">
+							<h4>
+								Alternativas para imagens, vídeos, áudios e afins <span class="permalink"><a href="#item-1-1-1" aria-label="Link Permanente para 1.1.1 Conteúdo não textual" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.1.1 Conteúdo não textual">§</a></span>
+								<small class="text-muted d-flex fs-6 align-content-center mt-1">Critério de Sucesso 1.1.1 Conteúdo não textual&nbsp;<span class="badge bg-secondary">Nível A</span></small>
+							</h4>
+							<p class="mt-4">Todo o conteúdo não textual que é exibido ao usuário tem uma alternativa textual que serve a um propósito equivalente, exceto para as situações indicadas abaixo.</p>
+							<div class="callout-block">
+								<strong class="d-block">Controles ou entrada</strong>
+								Se o conteúdo não textual for um controle ou aceitar a entrada de dados por parte do usuário, então esse conteúdo não textual possui um nome que descreve a sua finalidade. (Consultar o Critério de Sucesso 4.1.2 para requisitos adicionais de controles e conteúdo que aceitam entrada de dados por parte do usuário)
+							</div>
+							<div class="callout-block">
+								<strong class="d-block">Mídias com base no tempo</strong>
+								Se o conteúdo não textual consiste em mídia baseada em tempo, então as alternativas textuais fornecem, no mínimo, uma identificação descritiva do conteúdo não textual (Consulte a Diretriz 1.2 para obter os requisitos adicionais para mídia).
+							</div>
+							<div class="callout-block">
+								<strong class="d-block">Teste</strong>
+								Se o conteúdo não textual for um teste ou um exercício, que ficaria inválido se fosse apresentado em texto, então as alternativas textuais fornecem, no mínimo, uma identificação descritiva do conteúdo não textual.
+							</div>
+							<div class="callout-block">
+								<strong class="d-block">Sensorial</strong>
+								Se a finalidade do conteúdo não textual for, essencialmente, criar uma experiência sensorial específica, então as alternativas textuais fornecem, no mínimo, uma identificação descritiva do conteúdo não textual.
+							</div>
+							<div class="callout-block">
+								<strong class="d-block">CAPTCHA</strong>
+								Se a finalidade do conteúdo não textual for confirmar que o conteúdo está sendo acessado por uma pessoa e não por um computador, então devem ser fornecidas alternativas textuais que identificam e descrevem a finalidade do conteúdo não textual. Formas alternativas de CAPTCHA, que utilizam modos de saída para diferentes tipos de percepção sensorial, devem ser apresentadas para atender diferentes deficiências.
+							</div>
+							<div class="callout-block">
+								<strong class="d-block">Decoração, Formatação, Invisível</strong>
+								Se o conteúdo não textual for meramente decorativo, se for utilizado apenas para formatação visual, ou se não for exibido aos usuários, então esse conteúdo não textual deve ser implementado de uma forma que possa ser ignorado pelas tecnologias assistivas.
+							</div>
+							
+							<h5 class="mt-5">Compreendendo o critério</h5>
+							<p>Conteúdo não textual é qualquer conteúdo que não é formado por uma sequência de caracteres, como, por exemplo, imagens (inclusive imagens de texto), mídias de áudio e vídeo, gráficos, diagramas, animações, ASCII, emoticons, botões, CAPTCHAs, dentre outros.</p>
+							<p>O objetivo deste critério é oferecer uma alternativa textual para tais elementos, tornando-os acessíveis de acordo com as necessidades da pessoa. Por exemplo, uma pessoa que não consegue ver uma imagem pode ter a alternativa em texto lida em voz alta usando um leitor de tela. Uma pessoa que não consegue ouvir um arquivo de áudio pode ter a alternativa textual exibida para ser lida. No futuro, as alternativas de texto também permitirão que as informações sejam mais facilmente traduzidas para a língua de sinais ou para uma forma simplificada da mesma língua.</p>
+
+							<h5 class="mt-5 mb-3">Técnicas de como atender o critério</h5>
+							<div class="row row-cols-1 row-cols-md-3 g-4">
+								<div class="col">
+								  <div class="card text-center">
+									<img src="assets/images/mouse-adaptado.png" class="card-img-top" alt="Exemplo">
+									<div class="card-img-overlay d-flex flex-column">
+									  <a class="btn btn-primary mt-auto" href="tecnica01.html">Alternativa textual para imagens simples</a>
+									</div>
+								  </div>
+								</div>
+								<div class="col">
+								  <div class="card">
+									<img src="assets/images/mouse-adaptado.png" class="card-img-top" alt="Exemplo">
+									<div class="card-body">
+										<h6 class="card-title"><a href="card.html" data-bs-toggle="modal" data-bs-target="#exampleModal">Alternativa textual para imagens de texto</a></h6>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sint odit architecto recusandae dicta!</p>
+									</div>
+
+									<!-- Modal -->
+									<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+										<div class="modal-content">
+											<div class="modal-header">
+											<h1 class="modal-title fs-5" id="exampleModalLabel">Alternativa textual para imagens de texto</h1>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar exemplo"></button>
+											</div>
+											<div class="modal-body">
+												<p>A descrição de imagens que contêm texto precisa incluir o texto que aparece visualmente nela. Em alguns casos, quando o que é relevante na imagem é o próprio texto, a descrição no atributo alt pode incluir somente esse texto.</p>
+												<div class="row">
+													<div class="col-md-10 col-lg-6 col-xl-4 mx-auto">
+														<img class="rounded mx-auto d-block img-fluid" src="assets/images/curso-ta.png" alt="Banner Curso gratuito: Tecnologia Assistiva no Contexto Educacional">
+													</div>
+												</div>
+												<p class="mt-4">Código fonte do exemplo:</p>
+												<div class="d-flex justify-content-center">
+													<code>
+														&lt;img src="curso.gif" alt="Curso gratuito: Tecnologia Assistiva no Contexto Educacional"&gt;
+													</code>
+												</div>
+												<p class="mt-4">Ou então:</p>
+												<div class="d-flex justify-content-center">
+													<code>
+														&lt;img src="curso.gif" alt="Banner Curso gratuito: Tecnologia Assistiva no Contexto Educacional"&gt;
+													</code>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar exemplo</button>
+											  </div>
+										</div>
+										</div>
+									</div>
+
+								  </div>
+								</div>
+								<div class="col">
+								  <div class="card h-100">
+									<img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
+									<div class="card-body">
+										<h6 class="card-title"><a href="card.html">Alternativa textual para imagens complexas</a></h6>
+									  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+									</div>
+								  </div>
+								</div>
+								<div class="col">
+								  <div class="card h-100">
+									<img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
+									<div class="card-body">
+										<h6 class="card-title"><a href="card.html">Imagens decorativas</a></h6>
+									  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									</div>
+								  </div>
+								</div>
+								<div class="col">
+									<div class="card h-100">
+									  <img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
+									  <div class="card-body">
+										  <h6 class="card-title"><a href="card.html">Alternativa textual para áudio e/ou vídeo ao vivo</a></h6>
+										<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									  </div>
+									</div>
+								  </div>
+								  <div class="col">
+									<div class="card h-100">
+									  <img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
+									  <div class="card-body">
+										  <h6 class="card-title"><a href="card.html">Alternativa textual para elementos que não são imagens</a></h6>
+										<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									  </div>
+									</div>
+								  </div>
+								  <div class="col">
+									<div class="card h-100">
+									  <img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
+									  <div class="card-body">
+										  <h6 class="card-title"><a href="card.html">Alternativa textual para elementos MathML</a></h6>
+										<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									  </div>
+									</div>
+								  </div>
+								  <div class="col">
+									<div class="card h-100">
+									  <img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
+									  <div class="card-body">
+										  <h6 class="card-title"><a href="card.html">Alternativa para CAPTCHA</a></h6>
+										<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									  </div>
+									</div>
+								  </div>
+							  </div>
+
+
+
+							
+
+						<div class="docs-section mt-5 pt-5" id="item-1-1-3">
+							<hr>
+							<hr>
+							<hr>
+							<h3>
+								Alternativa textual para imagens complexas
+								<span class="permalink"><a href="#item-1-1-3" aria-label="Link Permanente para 1.1.3 Alternativa textual para imagens complexas" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.1.3 Alternativa textual para imagens complexas">§</a></span>
+							</h3>
+							
+							<p class="mt-5">No exemplo a seguir, o atributo alt é utilizado para fornecer uma descrição breve da imagem, informando objetivamente sobre seu conteúdo. Já a descrição da imagem (neste exemplo um infográfico) é apresentada ao lado da mesma. A separação dos elementos em quadros no infográfico foi reproduzida na forma de tópicos na descrição. 
+							</p>
+							<div class="row border p-3">
+								<div class="col-md-6">
+									<img class="rounded d-block img-fluid" src="assets/images/infografico.png" alt="Infográfico sobre a história do Movimento Maker">
+								</div>
+								<div class="col-md-6">
+									<p class="lh-sm"><small>Alinha do tempo ao lado mostra que a filosofia do "Faça você mesmo" é um método para construir, modificar ou reparar algo sem a ajuda direta de especialistas ou profissionais. O termo "do-it-yourself" popularizou-se nos anos 50 devido ao crescimento de pessoas iniciando projetos de reformas e vários outros tipos de artesanato e projetos de construção. Segundo essa mesma imagem, a cronologia do movimento maker é apresentada como:</small></p>
+									<ul class="lh-sm">
+										<li><small>Século VII - um templo grego foi a primeira construção feita com instruções do tipo "faça você mesmo"</small></li>
+										<li><small>Década de 50- artistas buscavam fazer as próprias coisas em oposição a produção em massa e cultura de massa.</small></li>
+										<li><small>Década de 60 e 70 - livros e séries de TV popularizaram o movimento de "faça você mesmo" com técnicas de construção e reformas domésticas.</small></li>
+										<li><small>Década de 90 - omodelo "faça você mesmo" foi impactado pelo crescimento digital e da internet.</small></li>
+										<li><small>2017 - geração millennial junta tecnologia e criatividade fazendo mais projetos "do-it-yourself", desde o simples até o elaborado.</small></li>
+									</ul>
+								</div>
+							</div>
+							<p class="mt-4">Exemplo de código:</p>
+							<div class="docs-code-block">
+								<script src="https://gist.github.com/laelNervis/c7f1c82d8d05a9fc0c867749c4291f61.js"></script>
+							</div>
+						</div>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-1-2">
+						<h2 class="section-heading">1.2 Mídias com base em tempo</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-1-3">
+						<h2 class="section-heading">1.3 Adaptável</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-1-4">
+						<h2 class="section-heading">1.4 Discernível</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    <article class="docs-article" id="section-2">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">2. Operável</h1>
+					    <section class="docs-intro">
+						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-2-1">
+						<h2 class="section-heading">2.1 Acessível por Teclado</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-2-2">
+						<h2 class="section-heading">2.2 Tempo Suficiente</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-2-3">
+						<h2 class="section-heading">2.3 Convulsões e Reações Fisicas</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-2-4">
+						<h2 class="section-heading">2.4 Navegável</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-2-5">
+						<h2 class="section-heading">2.5 Modalidades de Entrada</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    
+			    <article class="docs-article" id="section-3">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">3. Compreensível</h1>
+					    <section class="docs-intro">
+						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-3-1">
+						<h2 class="section-heading">3.1 Legível</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-3-2">
+						<h2 class="section-heading">3.2 Previsível</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-3-3">
+						<h2 class="section-heading">3.3 Assistência de Entrada</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    <article class="docs-article" id="section-4">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">4. Robusto</h1>
+					    <section class="docs-intro">
+						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-4-1">
+						<h2 class="section-heading">4.1 Compatível</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+
+			    <footer class="footer">
+				    <div class="container text-center py-5">
+				        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+			            <small class="copyright">UNIFESP | CTA-IFRS</small>
+				        <ul class="social-list list-unstyled pt-4 mb-0">
+						    <li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li> 
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
+				        </ul><!--//social-list-->
+				    </div>
+			    </footer>
+		    </div> 
+	    </div>
+    </div><!--//docs-wrapper-->
+   
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script>
+	<script src="assets/plugins/js.cookie.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script>
+	<script src="assets/js/high_contrast.js"></script> 
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="assets/js/docs.js"></script> 
+
+</body>
+</html> 
+

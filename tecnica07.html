@@ -17,8 +17,8 @@
     <!-- FontAwesome JS-->
     <script defer src="assets/fontawesome/js/all.min.js"></script>
 
-	<!-- Image Map Resizer-->
-    <script defer src="assets/js/imageMapResizer.min.js"></script>
+	<!-- Charts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
@@ -30,6 +30,14 @@
 
 	<!-- High Contrast CSS-->
 	<link rel="stylesheet" href="assets/css/high_contrast.css">
+
+	<style>
+		#chart-container {
+		  width: 400px;
+		  height: 300px;
+		  margin: 0 auto;
+		}
+	</style>
 
 </head> 
 
@@ -119,13 +127,87 @@
 						<section>
 							<h3 class="mt-5">Exemplo 01</h3>
 							<p>Seção de uma página web que lista os links de acesso para cada curso ofertado agrupados por nível de ensino, onde o nível de ensino é informado ao usuário pelo atributo aria-label</p>
-							<p>Código fonte do exemplo:</p>
+							<div class="border rounded px-4 pt-4">
+								<nav aria-label="Nível Técnico">
+									<ul>
+										<li><a href="">Técnico em Administração</a></li>
+										<li><a href="">Técnico em Agroecologia</a></li>
+										<li><a href="">Técnico em Informática</a></li>
+									</ul>
+								</nav>
+								<nav aria-label="Nível Graduação">
+									<ul>
+										<li><a href="">Bacharelado em Física</a></li>
+										<li><a href="">Licenciatura em Letras</a></li>
+										<li><a href="">Licenciatura em Matemática</a></li>
+									</ul>
+								</nav>
+							</div>
+							<p class="mt-4">Código fonte do exemplo:</p>
 							<script src="https://gist.github.com/laelNervis/3c76a79da6d9af8976c75c25a81096fe.js"></script>
 
 							<h3 class="mt-5">Exemplo 02</h3>
 							<p>Uma página web que mostra, em um componente dinâmico, o desempenho das ações de uma empresa ao longo do dia</p>
+							<div id="chart-container" role="region" aria-label="Painel de desempenho de ações da Acme Corporation">
+								<canvas id="chart"></canvas>
+							</div>
 							<p>Código fonte do exemplo:</p>
 							<script src="https://gist.github.com/laelNervis/d9c1c0dfed22de14b1a85f1cd88be52a.js"></script>
+							<script>
+								// Cria o gráfico
+								var ctx = document.getElementById('chart').getContext('2d');
+								var chart = new Chart(ctx, {
+								  type: 'line',
+								  data: {
+									labels: [],
+									datasets: [{
+									  label: 'Dados da evolução',
+									  data: [],
+									  backgroundColor: 'rgba(0, 123, 255, 0.5)',
+									  borderColor: 'rgba(0, 123, 255, 1)',
+									  borderWidth: 1
+									}]
+								  },
+								  options: {
+									responsive: true,
+									maintainAspectRatio: false,
+									scales: {
+									  y: {
+										beginAtZero: true,
+										ticks: {
+										  fontSize: 16 // Define o tamanho da fonte do eixo Y (em pixels)
+										}
+									  }
+									},
+									plugins: {
+									  legend: {
+										labels: {
+										  fontSize: 16 // Define o tamanho da fonte das legendas (em pixels)
+										}
+									  }
+									}
+								  }
+								});
+							
+								// Atualiza o gráfico a cada dois segundos
+								setInterval(function() {
+								  // Gera um número aleatório entre 1 e 100
+								  var randomValue = Math.floor(Math.random() * 100) + 1;
+								  
+								  // Adiciona o novo dado ao gráfico
+								  chart.data.labels.push('');
+								  chart.data.datasets[0].data.push(randomValue);
+								  
+								  // Remove o dado mais antigo se houver mais de 10 pontos no gráfico
+								  if (chart.data.labels.length > 10) {
+									chart.data.labels.shift();
+									chart.data.datasets[0].data.shift();
+								  }
+								  
+								  // Atualiza o gráfico
+								  chart.update();
+								}, 2000);
+							  </script>
 							<hr>	
 						</section><!--//docs-examples-->
 				    </header>

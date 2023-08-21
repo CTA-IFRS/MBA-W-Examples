@@ -1,0 +1,100 @@
+﻿​​Transcrição do Podcast CTA IFRS por Iury Accordi
+________________
+
+
+
+
+[00:00:06]              Yuri                  Olá, todo mundo. Eu sou o Yuri Acord, professor do campus Viamão do Instituto Federal do Rio Grande do Sul, IFRS,  apresentando um podcast sobre tecnologias aplicadas à educação.  Hoje, eu vou conversar com a Bruna Poleto Salton, coordenadora do Centro Tecnológico de Acessibilidade do IFRS, o CTA,  e o Lael Nervis, que trabalha junto com ela.  Muito obrigado, Bruna. Muito obrigado, Lael, por aceitarem o convite.  E, para começar, vocês podem nos falar sobre o que é o CTA?
+
+[00:00:36]              Bruna                  O CTA é o Centro Tecnológico de Acessibilidade, é um setor aqui do Instituto Federal do Rio Grande do Sul,  um setor vinculado à reitoria, à pró-reitoria de ensino, responsável por tratar as questões relacionadas à acessibilidade dentro do IFRS.  Então, o nosso trabalho é junto ao campi do IFRS, com o foco dos nossos estudantes com deficiência.  Temos um trabalho muito forte na área da acessibilidade digital e também da tecnologia assistiva.  Então, se algum dos nossos estudantes com deficiência tem uma necessidade de tecnologia assistiva,  o trabalho que a gente vai fazer é junto com esse campus e com as pessoas que fazem o atendimento dele também.
+
+[00:01:20]              Yuri                  E vocês têm uma ideia de quantos alunos já foram atendidos pelo CTA?  Uma demanda por semestre ou por ano, ou quantos alunos vocês estão atendendo agora, por exemplo?
+
+[00:01:29]              Bruna                  O CTA, a gente já atua há muitos anos aqui e foi mudando um pouco a forma como a gente foi recebendo as demandas.  E assim, é importante a gente deixar claro, tem alunos que vão precisar de recursos mais especializados.  Então, a gente vai desenvolver, vai trabalhar junto, vai desenvolver, vai testar, vai fazer adaptações, vai ir melhorando, um longo processo.  E tem estudantes que precisam de orientações, no sentido assim...
+
+[00:01:59]              Lael                  Metodologias.
+
+[00:02:01]              Bruna                  Metodologias, indicação de alguma ferramenta gratuita para solucionar alguma questão.  Então, aluno que precisa de uma ferramenta de ditado, por exemplo.  Uma ferramenta, um próprio leitor de tela para uma pessoa cega.
+
+[00:02:14]              Lael                  Algumas vezes é apenas uma adaptação do material didático.  Uma forma como o professor disponibiliza isso para o aluno, a forma como ele avalia.  Não necessariamente que a gente vá produzir um recurso.
+
+[00:02:26]              Yuri                  Tipo um plano educacional individualizado.
+
+[00:02:30]              Bruna                  É, no sentido mais voltado para os materiais pedagógicos.  Então, muitas vezes é uma adaptação, como facilitar a leitura para aquele estudante.  Como facilitar para aquele estudante expressar aquilo que ele está querendo passar.  De alguma forma que seja possível, de acordo com a sua especificidade.  Então, nem sempre a tecnologia assistiva vai ser um produto que vamos desenvolver.  Às vezes é um serviço, é uma metodologia.  Tudo está englobado no conceito de tecnologia assistiva.  Então, é difícil a gente colocar em números.  Mas assim, para você ter uma ideia.  Todas as semanas a gente recebe demandas dos campi.  Seja de curso, seja de serviço, seja de metodologia.  Seja de um auxílio para pensar no material acessível para aquele estudante.
+
+[00:03:21]              Lael                  Às vezes, aconteceu um caso recente.  Eles sabiam que o aluno precisava de um leitor de telas.  Mas eles não sabiam como instalar e como configurar.  Então, esse foi o nosso serviço de tecnologia assistiva.
+
+[00:03:34]              Yuri                  E essa demanda vem mais por parte dos alunos?  Ou por parte dos servidores, dos professores ou dos técnicos?
+
+[00:03:41]              Lael                  Dos servidores.
+
+[00:03:43]              Bruna                  Dos NAPNES, principalmente dos núcleos que fazem o atendimento aos estudantes com deficiência.  De professores, a gente tem recebido muita demanda também.  Acho que os campi estão conhecendo mais o CTA.  Então, os professores têm entrado em contato diretamente conosco, muitas vezes.  Não tem feito tanto aquela via NAPNE para chegar na gente.
+
+[00:04:06]              Lael                  Esse seria o fluxo.
+
+[00:04:07]              Bruna                  O que acontecia normalmente.  Chega no NAPNE, o NAPNE nos procura.
+
+[00:04:12]              Lael                  O NAPNE, ele que dá o atendimento nos campi.  Se o NAPNE não consegue atender, ele tem uma demanda de algum recurso específico,  ele tem dúvidas, ele nos consulta.  Então, geralmente, esse é o fluxo até chegar em nós.
+
+[00:04:27]              Yuri                  Mas vocês aceitam essa demanda de professores, por exemplo?  
+
+
+[00:04:31]              Bruna                  Com certeza, inclusive de alunos.  Tem alunos também que nos procuram.  Eu vi no site que vocês têm um engrossador de lápis que me facilitaria para eu conseguir escrever.  Aí a gente atende também, independente de como chegue a demanda para nós.
+
+[00:04:47]              Yuri                  Legal.  E vocês têm uma sede, né?  A sede fica aqui no Campus Bento Gonçalves.  O que tem nessa sede do CTA?
+
+[00:04:54]              Bruna                  Então, apesar de a gente estar ligado à reitoria, nós estamos fisicamente dentro do Campus Bento,  porque nós temos uma oficina que o prédio da reitoria como é prédio comercial não comporta.  Então, o campus cedeu um espaço e depois nós, com projetos,  construímos a área da oficina, a área atrás da casa.  Então, lá a gente tem máquina de corte a laser,  a gente tem diversas impressoras 3D,  temos uma CNC,  temos equipamentos de eletrônica,
+
+[00:05:26]              Lael                  Temos ferramentas diversas,  ferramentas manuais diversas de vacinaria, metodologia.
+
+[00:05:32]              Yuri                  É um FabLab de CTA.
+
+[00:05:34]              Bruna                  É. Praticamente um FabLab.  É bem equipada a nossa oficina.  E aí temos também uma área onde a gente guarda os nossos insumos, né?  Que a gente usa muito MDF, acrílico, papel, materiais de baixo custo.  E também toda uma área de eletrônica, com componentes eletrônicos também.  Então, basicamente esse é o CTA.
+
+[00:05:57]              Yuri                  Eu li que existe um centro de referência em tecnologia assistiva, né?  O CRTA.  Vocês podem falar um pouco sobre isso?
+
+[00:06:04]              Bruna                  O CRTA, então, ele é um projeto financiado pelo MEC, pela SETEC,  que teve como principal objetivo fazer um levantamento de demanda de tecnologia assistiva  em toda a rede federal  e tentar, na medida do possível, atender essa demanda.  Um projeto que iniciou em 2017, né?  Envolveu diversos campi, não só o CTA aqui, né?  A Reitoria, mas outros campi também se envolveram nesse projeto.  E nesses anos do projeto, então, a gente fez esse levantamento de demandas,  nós produzimos recursos, nós enviamos recursos para as instituições da rede.  Mas o produto final desse projeto  é um repositório de tecnologia assistiva no contexto educacional.  E ele está para ser lançado agora.  Então, tudo que a gente gerou de produto e de conhecimento nesse projeto  está nesse repositório.  Qualquer instituição vai poder entrar lá, procurar um recurso.  Se quiser, pode baixar os arquivos, pode produzir na sua própria instituição.  Tem os manuais de uso, manuais de confecção.  E também as pessoas podem contribuir nesse repositório com os seus próprios projetos.
+
+[00:07:20]              Lael                  Também a publicação do livro.  Projeto CRTA com os produtos que nós produzimos.
+
+[00:07:28]              Yuri                  Foi produzido um livro, isso?
+
+[00:07:30]              Lael                  Isso.
+
+[00:07:32]              Bruna                  Conexões assistivas.
+
+[00:07:34]              Lael                  Está disponível.
+
+[00:07:35]              Yuri                  Está disponível?
+
+[00:07:36]              Lael                  Está disponível no nosso site.
+
+[00:07:37]              Yuri                  Ok.  Bom, o IFRS também oferece um curso sobre tecnologia assistiva no contexto educacional.  Qualquer pessoa tem acesso a esse curso?
+
+[00:07:46]              Bruna                  Sim, é um curso livre, gratuito, aberto.  Ele está junto ao hall de Cursos MOOC do IFRS.  É um curso de 60 horas.  Qualquer pessoa pode fazer esse curso no seu tempo.  Então, está disponível.  São três módulos.  Um curso bastante completo para quem quer ingressar, iniciar o estudo nessa área.
+
+[00:08:10]              Yuri                  E vocês têm alguma coisa também quanto à acessibilidade digital para comunicadores, né?
+
+[00:08:15]              Bruna                  Sim, o trabalho do CTA também envolve promoção da acessibilidade, inclusive da acessibilidade digital.  A gente procura trabalhar junto com os setores da instituição,  na perspectiva de conseguir atingir um bom nível de acessibilidade nos nossos recursos digitais,  inclusive nos nossos sites, nas redes sociais.  Então, esse material, que é a acessibilidade digital para os comunicadores,  ele foi confeccionado pensando justamente em atender a demanda dos nossos setores de comunicação  para melhorar a acessibilidade da comunicação nos sites, nas redes sociais.  Então, nós fizemos um momento de capacitação com eles  e também lançamos um material que está no nosso site também com esse objetivo.  Com orientações, com dicas de comunicação mais acessível.
+
+[00:09:16]              Yuri                  Agora, Bruna e Lael, vocês podem falar alguma coisa sobre um caso  que vocês consideram mais emblemático entre todos os alunos e alunas que já passaram pelo CTA?
+
+[00:09:27]              Bruna                  Sim, então, é um caso que a gente lembra muito, foi um caso muito desafiador,  mas isso não quer dizer que recursos simples possam também resolver grandes problemas,  grandes barreiras de acesso, que isso acontece muito.  Mas, nesse caso, é um estudante que tem deficiência múltipla,  então tem deficiência visual, baixa visão, deficiência física, é cadeirante,  ele tem um movimento limitado das mãos e tem também a deficiência intelectual.  Então, ele chegou aqui no Instituto, no ensino médio,  e antes, no seu percurso escolar, ele nunca tinha sido apresentado a tecnologia assistiva no contexto educacional.  Então, aqui foi o primeiro contato dele com a tecnologia assistiva,  iniciamos fazendo uma avaliação junto com profissionais da saúde,  inclusive até para a gente não explorar movimentos que talvez possam causar alguma lesão maior.  Então, é importante a gente ter essa conversa multidisciplinar.
+
+[00:10:30]              Lael                  Nós testamos acionadores, mouses adaptados,  estávamos buscando qual seria o melhor recurso para que ele conseguisse utilizar o computador  e com fonte ampliada, para ele conseguir ler, porque ele tem baixa visão.
+
+[00:10:45]              Bruna                  Então, a gente estava buscando alternativas para que ele conseguisse efetivamente participar das aulas,  que até então não haviam ocorrido no percurso escolar dele.  Então, nós fizemos muitos testes, até mesmo com lápis, com engrossador,  para verificar se ele conseguia segurar o lápis, se ele conseguiria manusear,  que tipo de mouse ele conseguiria manusear ou utilizar com alguma autonomia.  Fizemos testes no sistema operacional, utilizando uma configuração para baixa visão,  para ver que tamanho de letra ele conseguia enxergar,  que contraste de cores eram melhores para ele.  Então, foi uma série de testes até a gente chegar em algumas possibilidades.  E aí, claro, tem todo um processo de ele aprender a usar essas ferramentas.  E aí entra o núcleo, entra o NAPNE.  E também é importante que ele utilize em casa, com a família,  com os profissionais da saúde que fazem o atendimento dele.  Que ele exercite o uso.  Então, foi um processo bastante longo, porque a gente foi verificando ao longo do processo  que alguns recursos não estavam funcionando como a gente gostaria.  Fizemos uma reavaliação, fizemos adaptações naqueles recursos,  fizemos novas adaptações, até que fomos chegando em outros recursos totalmente diferentes.
+
+[00:12:12]              Lael                  Ao longo desse período, já são três ou quatro anos que ele estava aqui,  ele teve evolução.  Então, tem recursos que deixaram de ser úteis para ele e a gente teve que adaptar.
+
+[00:12:24]              Bruna                  Então, hoje a gente já sabe o que funciona melhor  e também as necessidades dele foram mudando ao longo do percurso dele aqui.  Um período bastante longo até a gente chegar em recursos que realmente surtiram efeito,  mas que valem a pena, porque fazem toda a diferença na situação dele.
+
+[00:12:44]              Yuri                  Com certeza.  Bom, aproximando-se do final, já tem mais alguma coisa que vocês queriam falar sobre o CTA?
+
+[00:12:51]              Bruna                  Eu penso que o CTA é um setor que, se fosse possível,  que todos os institutos tivessem um centro parecido ou similar como o CTA,  onde as pessoas pudessem buscar informação sobre acessibilidade, sobre tecnologia assistiva.  Hoje é muito comum, por exemplo, as pessoas nos campi nos procurarem para pedir uma orientação  com relação a:  “a gente gostaria de fazer um material acessível para publicar no site,  como que a gente pode fazer?  A gente está querendo colocar placas de sinalização em braille.  Como que a gente pendura essas placas? Qual é a altura? Existe uma norma?”  Então, tudo que é relacionado à acessibilidade e tecnologia assistiva,  não só envolvendo os estudantes diretamente,  mas muitas vezes envolvendo questões de infraestrutura,  até questões de documentação, os editais, como é que a gente pode deixar mais acessível.  Então, muitos setores acabam nos procurando para a gente orientar nesse sentido.  Então, eu acho que é um setor que faz a diferença diretamente para o aluno,  mas indiretamente também para toda a instituição.
+
+[00:14:01]              Yuri                  Bruna, Lael, muito obrigado pela colaboração de vocês.
+
+[00:14:05]              Bruna                  Obrigada.
+
+[00:14:06]              Lael                  Obrigado.

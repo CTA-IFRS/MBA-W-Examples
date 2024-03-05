@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<title>Manual Brasileiro da Acessibilidade Web | MBA-W</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Manual Brasileiro da Acessibilidade Web baseado na WCAG 2.1">
+	<meta name="author" content="Lael Nervis and Xiaoying Riley at 3rd Wave Media">
+	<!-- <link rel="shortcut icon" href="favicon.ico">  -->
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+	<!-- FontAwesome JS-->
+	<script defer src="assets/fontawesome/js/all.min.js"></script>
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+	<link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+	<link id="theme-style" rel="stylesheet" href="assets/css/custom.css">
+
+	<!-- High Contrast CSS-->
+	<link rel="stylesheet" href="assets/css/high_contrast.css">
+
+</head>
+
+<body class="docs-page">
+	<header class="header fixed-top">
+		<!-- <nav class="barra-acessibilidade navbar navbar-expand-sm navbar-dark" aria-label="Menu de acessibilidade">
+			<button type="button" class="navbar-toggler bg-dark btn-a11y" data-bs-toggle="collapse" data-bs-target="#menuAcessibilidade" aria-controls="menuAcessibilidade" aria-expanded="false" aria-label="Expandir menu">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div id="menuAcessibilidade" class="collapse navbar-collapse">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link text-dark py-0" href="#conteudo-principal" accesskey="1"><small>Ir para o conteúdo
+							<span class="badge text-bg-dark">1</span></small>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-dark py-0" href="#menu-principal" accesskey="2"><small>Ir para o menu
+							<span class="badge text-bg-dark">2</span></small>
+						</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav justify-content-end ml-auto">
+					<li class="nav-item my-2 my-md-0">
+						<a class="nav-link text-dark py-0" id="high_contrast" aria-checked="false" href="#"><small><i class="bi bi-circle-half">&nbsp;</i> Alto contraste</small></a>
+					</li>
+				</ul>
+			</div>
+		</nav> -->
+
+		<div class="branding docs-branding">
+			<div class="container-fluid position-relative py-2">
+				<div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+						type="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2"
+								src="assets/images/logo.svg" alt="logo">
+							<h1 class="d-inline"><span class="logo-text">Manual do <span class="text-alt">WCAG
+										2.1</span></span></h1>
+						</a></div>
+				</div><!--//docs-logo-wrapper-->
+				<div class="docs-top-utilities d-flex justify-content-end align-items-center">
+					<a href="" class="btn btn-primary d-none d-lg-flex"><i class="fa fa-download"
+							aria-hidden="true"></i>&nbsp;&nbsp;Download em PDF</a>
+				</div>
+			</div><!--//container-->
+		</div><!--//branding-->
+	</header><!--//header-->
+
+
+	<div class="docs-wrapper">
+		<div id="docs-sidebar" class="docs-sidebar">
+			<nav id="docs-nav" class="docs-nav navbar">
+				<ul class="section-items list-unstyled nav flex-column pb-3">
+					<li class="nav-item section-title"><a class="nav-link" href="manual.html#section-0"><span
+								class="theme-icon-holder me-2"><i class="fas fa-star"></i></span>Introdução</a></li>
+					<li class="nav-item section-title"><a class="nav-link" href="manual.html#section-1"><span
+								class="theme-icon-holder me-2"><i class="fas fa-eye"></i></span>1. Perceptível</a></li>
+					<li class="nav-item"><a class="nav-link" href="manual.html#item-1-1">1.1 Alternativas em Texto</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="manual.html#item-1-2">1.2 Mídias com base em
+							tempo</a></li>
+					<li class="nav-item"><a class="nav-link" href="manual.html#item-1-3">1.3 Adaptável</a></li>
+					<li class="nav-item"><a class="nav-link" href="manual.html#item-1-4">1.4 Discernível</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link" href="manual.html#section-2"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>2. Operável</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="manual.html#item-2-1">2.1 Acessível por Teclado</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="manual.html#item-2-2">2.2 Tempo Suficiente</a></li>
+					<li class="nav-item"><a class="nav-link" href="manual.html#item-2-3">2.3 Convulsões e Reações
+							Fisicas</a></li>
+					<li class="nav-item"><a class="nav-link" href="manual.html#item-2-4">2.4 Navegável</a></li>
+					<li class="nav-item"><a class="nav-link" href="manual.html#item-2-5">2.5 Modalidades de Entrada</a>
+					</li>
+					<li class="nav-item section-title mt-3"><a class="nav-link" href="manual.html#section-3"><span
+								class="theme-icon-holder me-2"><i class="fas fa-box"></i></span>3. Compreensível</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="manual.html#item-3-1">3.1 Legível</a></li>
+					<li class="nav-item"><a class="nav-link" href="manual.html#item-3-2">3.2 Previsível</a></li>
+					<li class="nav-item"><a class="nav-link" href="manual.html#item-3-3">3.3 Assistência de Entrada</a>
+					</li>
+					<li class="nav-item section-title mt-3"><a class="nav-link" href="manual.html#section-4"><span
+								class="theme-icon-holder me-2"><i class="fas fa-cogs"></i></span>4. Robusto</a></li>
+					<li class="nav-item"><a class="nav-link" href="manual.html#item-4-1">4.1 Compatível</a></li>
+				</ul>
+
+			</nav><!--//docs-nav-->
+		</div><!--//docs-sidebar-->
+		<div class="docs-content">
+			<div class="container">
+				<article class="docs-article" id="item-1-2">
+					<header class="docs-header">
+						<h2 class="docs-heading">Vídeo com Transcrição</h2>
+						<section class="docs-intro">
+							<p>O objetivo é fornecer uma alternativa acessível para apresentar as informações de um vídeo.</p>
+
+							<p>Para apresentar as mesmas informações de forma acessível, essa técnica envolve a criação de um documento que conte a mesma história e apresente as mesmas informações do vídeo. Esse documento inclui todos os diálogos e ações importantes, bem como descrições de cenários etc. que fazem parte da história.</p>
+						</section><!--//docs-intro-->
+						<section>
+							<h3 class="mt-5">Exemplo de vídeo com transcrição</h3>
+							<div class="border rounded px-4 py-4">
+								<p>Podemos utilizar videos do curso da Bruna onde ela já fez a transcrição</p>
+								<!-- <div class="row-cols-2 d-flex justify-content-center">
+									<iframe width="560" height="315" src="####" frameborder="0"></iframe>
+								</div> -->
+								<!-- <div class="d-flex justify-content-center">
+									<a href="assets/documents/tutorial-de-reproducao-de-material-acessivel.pdf" class="btn btn-sm btn-outline-info mt-3">Tutorial de reprodução de material acessível</a>
+								</div> -->
+							</div>
+						</section><!--//docs-examples-->
+					</header>
+				</article><!--//docs-article-->
+
+				<footer class="footer">
+					<div class="container text-center py-5">
+						<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+						<small class="copyright">UNIFESP | CTA-IFRS</small>
+						<ul class="social-list list-unstyled pt-4 mb-0">
+							<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
+						</ul><!--//social-list-->
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div><!--//docs-wrapper-->
+
+
+	<!-- Javascript -->
+	<script src="assets/plugins/popper.min.js"></script>
+	<script src="assets/plugins/js.cookie.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+	<!-- Page Specific JS -->
+	<script src="assets/plugins/smoothscroll.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+	<script src="assets/js/highlight-custom.js"></script>
+	<script src="assets/js/high_contrast.js"></script>
+	<script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+	<script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+	<script src="assets/js/docs.js"></script>
+
+</body>
+
+</html>

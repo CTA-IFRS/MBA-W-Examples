@@ -110,13 +110,18 @@
 				    <header class="docs-header">
 					    <h2 class="docs-heading">Alternativa textual para mapa de imagem</h2>
 					    <section class="docs-intro">
-						    <p>A imagem do sistema solar permite que o usuário acesse mais informações sobre cada um dos planetas através de links. Deve ser fornecida uma alternativa textual para a imagem como um todo, que neste caso poderia ser "ilustração do sistema solar com a representação das orbitas dos planetas".</p>
+							<p>Deve ser fornecida uma alternativa textual para a imagem como um todo, utilizando o atributo <code>alt</code> da imagem em questão e descrições para cada uma das áreas ativas, ou seja, para cada das áreas mapeadas na imagem pois elas se comportam como links que recebem o foco. Para descrever cada uma das áreas também utiliza-se o atributo <code>alt</code>.</p>
+							<div class="callout-block">
+								<strong class="d-block">Mapa de imagem</strong>
+								É um elemento HTML que permite que diferentes áreas de uma imagem sejam clicáveis. Ou seja, consiste em uma lista de coordenadas de uma imagem, que são links para vários destinos.
+							</div>
 						</section><!--//docs-intro-->
 						<section>
 							<h3 class="mt-5">Exemplo</h3>
+							<p>A imagem do sistema solar, a seguir,  permite que o usuário acesse mais informações sobre cada um dos planetas através de links. O texto alternativo para a imagem como um todo, neste caso, foi descrito como "ilustração do sistema solar com a representação das órbitas dos planetas". Cada um dos planetas e o sol foram mapeados e para cada um deles foi inserido no atributo <code>alt</code> da tag <code>area</code> o seu respectivo nome.</p>
 							<div class="row">
 								<div class="col-md-10 col-lg-10 col-xl-10 mx-auto">
-									<img class="rounded mx-auto d-block img-fluid" src="assets/images/sistema-solar.png" alt="ilustração do sistema solar com a representação das orbitas dos planetas" usemap="#image-map">
+									<img class="rounded mx-auto d-block img-fluid" src="assets/images/sistema-solar.png" alt="ilustração do sistema solar com a representação das órbitas dos planetas" usemap="#image-map">
 
 									<map name="image-map" id="image-map">
 										<area href="sol.html" alt="Sol" shape="circle" coords="41, 378, 227" />

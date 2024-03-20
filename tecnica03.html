@@ -105,17 +105,22 @@
 		    <div class="container">
 				<article class="docs-article" id="item-1-1">
 				    <header class="docs-header">
-					    <h2 class="docs-heading">Alternativa textual para imagens simples</h2>
+					    <h2 class="docs-heading">Alternativa textual para imagens complexas</h2>
 					    <section class="docs-intro">
-						    <p>Imagens complexas são aquelas que exigem uma descrição longa e detalhada para contemplar seu conteúdo. Exemplos incluem infográficos, gráficos, diagramas, organogramas, dentre outros. O atributo alt do elemento img é utilizado para descrições breves, ou seja, para imagens que não exigem descrições longas. No caso deste tipo de imagem, o ideal é disponibilizar a descrição no próprio conteúdo da página, antes ou depois da imagem, possibilitando o acesso ao seu conteúdo por pessoas com deficiência visual. A descrição no conteúdo da página facilita ainda a compreensão da imagem por todas as pessoas, inclusive aquelas com deficiência intelectual, que podem ter dificuldade em compreender informações apresentadas na forma de gráficos ou diagramas, por exemplo.</p>
+						    <p>O atributo <code>alt</code> do elemento <code>img</code> é utilizado para descrições breves, ou seja, para imagens que não exigem descrições longas. No caso de imagens complexas, o ideal é disponibilizar a descrição no próprio conteúdo da página (antes ou depois da imagem), ou então, disponibilizar um link logo após a imagem que leva o usuário a outra página web que contém descrição detalhada. Em ambos os casos possibilita-se o acesso ao seu conteúdo por pessoas com deficiência visual.</p>
+							<div class="callout-block">
+								<strong class="d-block">Imagens complexas</strong>
+								São aquelas que exigem uma descrição longa e detalhada para contemplar seu conteúdo. Exemplos incluem infográficos, gráficos, diagramas, organogramas, dentre outros.
+							</div>
+							<p>A descrição da imagem no contexto da página facilita ainda a compreensão da imagem por todas as pessoas, inclusive aquelas com deficiência intelectual, que podem ter dificuldade em compreender informações apresentadas na forma de gráficos ou diagramas, por exemplo.</p>
 						</section><!--//docs-intro-->
 						<section>
-							<h3 class="mt-5">Exemplos com infográfico</h3>
-							<div class="border rounded px-4 py-4">
+							<h3 class="mt-5 pt-5 border-top">Exemplo de descrição no contexto</h3>
+							<div>
 								<p>No exemplo a seguir, a descrição da imagem (um infográfico) é apresentada ao lado da mesma. A separação dos elementos em quadros no infográfico foi reproduzida na forma de tópicos na descrição.</p>
-								<div class="row my-5">
+								<div class="row mt-5 mb-3">
 									<div class="col-md-6 mx-auto">
-										<img class="rounded d-block img-fluid" src="assets/images/infografico.png" alt="Infográfico sobre a história do Movimento Maker">
+										<img class="rounded d-block img-fluid img-thumbnail" src="assets/images/infografico.png" alt="Infográfico sobre a história do Movimento Maker">
 									</div>
 									<div class="col-md-6 mx-auto">
 										<p class="lh-sm"><small>Alinha do tempo ao lado mostra que a filosofia do "Faça você mesmo" é um método para construir, modificar ou reparar algo sem a ajuda direta de especialistas ou profissionais. O termo "do-it-yourself" popularizou-se nos anos 50 devido ao crescimento de pessoas iniciando projetos de reformas e vários outros tipos de artesanato e projetos de construção. Segundo essa mesma imagem, a cronologia do movimento maker é apresentada como:</small></p>
@@ -128,15 +133,27 @@
 										</ul>
 									</div>
 								</div>
-								<p>Na imagem anterior, o atributo alt poderá ser utilizado para fornecer uma descrição breve ou uma visão geral da imagem, informando objetivamente sobre seu conteúdo.</p>
+								<p>Na imagem anterior, o atributo <code>alt</code> fornece uma descrição breve, ou seja, uma visão geral da imagem, informando objetivamente sobre seu conteúdo.</p>
 								<p>Código fonte do exemplo:</p>
-								<code>
-									&lt;img src="infografico.png" alt="Infográfico sobre a história do Movimento Maker."&gt;
-								</code>
+								<script src="https://gist.github.com/laelNervis/c7f1c82d8d05a9fc0c867749c4291f61.js"></script>
 							</div>
 
-							<h3 class="mt-5">Exemplos com Gráfico</h3>
-							<div class="border rounded px-4 py-4">
+							<h3 class="mt-5 pt-5 border-top">Exemplo de descrição em outra página</h3>
+							<div>
+								<p>No exemplo a seguir, a descrição detalhada da imagem (um infográfico) é apresentada em outra página web. Para acessar essa página com a descrição detalhada é disponibilizado um link logo após a imagem.</p>
+								<div class="row my-5">
+									<div class="col-md-6 mx-auto">
+										<img class="rounded d-block img-fluid img-thumbnail" src="assets/images/infografico.png" alt="Infográfico sobre a história do Movimento Maker">
+										<p class="text-end"><a href="">Descrição detalhada do infográfico</a></p>
+									</div>
+									<p>Código fonte do exemplo:</p>
+									<script src="https://gist.github.com/laelNervis/060d3d6c646276a4626862e016f40d82.js"></script>
+								</div>
+								
+							</div>
+
+							<h3 class="mt-5 pt-5 border-top">Exemplo de descrição através da tabela de dados</h3>
+							<div>
 								<p>No caso de gráficos, a alternativa textual pode ser a própria tabela que lhe deu origem, disponibilizada junto à imagem do gráfico.</p>
 								<div class="row my-5">
 									<div class="col-md-6 mx-auto">
@@ -170,7 +187,6 @@
 										</table>
 									</div>
 								</div>
-								<p>Na imagem anterior, o atributo alt poderá ser utilizado para fornecer uma descrição breve ou uma visão geral da imagem, informando objetivamente sobre seu conteúdo.</p>
 								<p>Código fonte do exemplo:</p>
 								<script src="https://gist.github.com/laelNervis/e2e266301b616b3f56a4445412f000bd.js"></script>
 							</div>

@@ -107,41 +107,35 @@
 				    <header class="docs-header">
 					    <h2 class="docs-heading">Alternativa textual para imagens simples</h2>
 					    <section class="docs-intro">
-						    <p>O atributo alt do elemento img é utilizado para fornecer uma descrição à imagem que será lida pelos leitores de tela. Leitores de tela são recursos de tecnologia assistiva utilizados por usuários cegos para uso do computador e dispositivos móveis.</p>
+						    <p>O atributo <code>alt</code> do elemento <code>img</code> é utilizado para fornecer uma descrição à imagem que será lida pelos leitores de tela. Leitores de tela são recursos de tecnologia assistiva utilizados por usuários cegos para uso do computador e dispositivos móveis.</p>
 							<div class="callout-block callout-block-warning">
-								Recomenda-se que a descrição disponibilizada no atributo alt seja curta e objetiva, mas o mais informativa possível.
+								Recomenda-se que a descrição disponibilizada no atributo <code>alt</code> seja curta e objetiva, mas o mais informativa possível.
 							</div>
 						</section><!--//docs-intro-->
 						<section>
 							<h3 class="mt-5">Exemplos de imagens apenas com texto alternativo</h3>
 
-							<div class="row row-cols-1 row-cols-md-2 g-4">
-								<div class="col">
-								  <div class="card h-100">
-									<img src="assets/images/mouse-adaptado.png" class="card-img-top" alt="A mão de uma pessoa segura um mouse convencional que contém uma entrada lateral na qual, com a outra mão, está sendo conectado o cabo de um acionador retangular">
-									<div class="card-body">
-									  <p class="card-title">Código fonte do exemplo:</p>
-									  <code>
-										&lt;img src="mouseadptado.jpg" alt="A mão de uma pessoa segura um mouse convencional que contém uma entrada lateral na qual, com a outra mão, está sendo conectado o cabo de um acionador retangular"&gt;
-									  </code>
+							<div class="border rounded px-4 pt-4 pb-3">
+								<div class="row">
+									<div class="col-md-8 col-lg-6 mx-auto mb-2">
+										<img src="assets/images/mouse-adaptado.png" class="rounded mx-auto d-block img-fluid" alt="A mão de uma pessoa segura um mouse convencional que contém uma entrada lateral na qual, com a outra mão, está sendo conectado o cabo de um acionador retangular">
 									</div>
-								  </div>
 								</div>
-								<div class="col">
-									<div class="card h-100">
-									  <img src="assets/images/caneta.png" class="card-img-top" alt="Uma caneta preta sobre uma folha de papel branco">
-									  <div class="card-body">
-										<p class="card-title">Código fonte do exemplo:</p>
-										<code>
-										  &lt;img src="caneta.jpg" alt="Uma caneta preta sobre uma folha de papel branco"&gt;
-										</code>
-									  </div>
+								<p class="card-title">Código fonte do exemplo:</p>
+								<script src="https://gist.github.com/CTA-IFRS/bc68b4dc77e24ad089c2821e6008d5ee.js"></script>
+
+								<div class="row pt-5">
+									<div class="col-md-8 col-lg-6 mx-auto mb-2">
+										<img src="assets/images/caneta.png" class="rounded mx-auto d-block img-fluid" alt="Uma caneta preta sobre uma folha de papel branco">
 									</div>
-								  </div>
+								</div>
+								<p class="card-title">Código fonte do exemplo:</p>
+								<script src="https://gist.github.com/CTA-IFRS/c94085ce039d97011eb5df8f3779389e.js"></script>
 							</div>
 
 							<h3 class="mt-5">Exemplo de imagem que possui texto alternativo e legenda</h3>
 							<div class="border rounded px-4 pt-4">
+								<p>Exemplo de uma imagem utilizada em um curso online, para a qual foi fornecida uma breve descrição na legenda da figura e uma descrição mais detalhada através do atributo <code>alt</code>. É importante evitar que o conteúdo da legenda e do <code>alt</code> sejam redundantes; o ideal é que elas se complementem.</p>
 								<div class="row">
 									<div class="col-md-8 col-lg-6 mx-auto mb-2">
 										<figure>

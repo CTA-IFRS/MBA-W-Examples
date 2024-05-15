@@ -113,45 +113,47 @@
 						    <p>Se o conteúdo não textual for meramente decorativo, se for utilizado apenas para formatação visual, ou se não for exibido aos usuários, então esse conteúdo não textual deve ser implementado de uma forma que possa ser ignorado pelas tecnologias assistivas. Isso pode ser feito de duas principais formas:</p>
 						</section><!--//docs-intro-->
 						<section>
-							<h3 class="mt-4">1 - Imagem decorativa inserida por CSS</h3>
-							<p> Essa técnica tem por objetivo fornecer um mecanismo que permita adicionar imagens decorativas ou utilizadas para formatação visual no conteúdo Web, sem exigir marcação adicional no conteúdo. Dessa forma, as imagens não são interpretadas pelos recursos de tecnologia assistiva.</p>
-							<p>Imagens de fundo podem ser incluídas com as seguintes propriedades CSS:</p>
-							<div class="row mb-5">
-								<ul class="list-group mx-auto col-lg-8 col-sm-10">
-									<li class="list-group-item"><code>background</code>;</li>
-									<li class="list-group-item"><code>background-image</code>;</li>
-									<li class="list-group-item"><code>content</code>, combinado com os pseudo-elementos <code>::before</code> e <code>::after</code>;</li>
-									<li class="list-group-item"><code>list-style-image</code>.</li>
-								</ul>
+							<h3 class="mt-5">Exemplo de imagem decorativa inserida por CSS</h3>
+							<div class="border rounded px-4 pt-4 pb-2">
+								<p> Essa técnica tem por objetivo fornecer um mecanismo que permita adicionar imagens decorativas ou utilizadas para formatação visual no conteúdo Web, sem exigir marcação adicional no conteúdo. Dessa forma, as imagens não são interpretadas pelos recursos de tecnologia assistiva.</p>
+								<p>Imagens de fundo podem ser incluídas com as seguintes propriedades CSS:</p>
+								<div class="row mb-5">
+									<ul class="list-group mx-auto col-lg-8 col-sm-10">
+										<li class="list-group-item"><code>background</code>;</li>
+										<li class="list-group-item"><code>background-image</code>;</li>
+										<li class="list-group-item"><code>content</code>, combinado com os pseudo-elementos <code>::before</code> e <code>::after</code>;</li>
+										<li class="list-group-item"><code>list-style-image</code>.</li>
+									</ul>
+								</div>
+								
+								<h4 class="h5"><small>Exemplo decorativa inserida via CSS</small></h4>
+								<style>
+									#exemplo-decorativa{
+										background-image: url("assets/images/exemplo-decorativa.png");
+										background-position: center;
+										height: 100px;
+										margin: 0 5px 0 0;
+									}
+								</style>
+								<div class="row" id="exemplo-decorativa"></div>
+								<p class="mt-4">Código fonte do exemplo:</p>
+								<script src="https://gist.github.com/laelNervis/aa7820a8826f3594938cab699eabdb3c.js"></script>
 							</div>
 							
-							<h4 class="h5"><small>Exemplo decorativa inserida via CSS</small></h4>
-							<style>
-								#exemplo-decorativa{
-									background-image: url("assets/images/exemplo-decorativa.png");
-									background-position: center;
-									height: 100px;
-									margin: 0 5px 0 0;
-								}
-							</style>
-							<div class="row" id="exemplo-decorativa"></div>
-							<p class="mt-4">Código fonte do exemplo:</p>
-							<script src="https://gist.github.com/laelNervis/aa7820a8826f3594938cab699eabdb3c.js"></script>
+							<h3 class="mt-5">Exemplo de imagem decorativa inserida no HTML</h3>
+							<div class="border rounded px-4 pt-4 pb-2">
+								<p>O objetivo desta técnica é mostrar como imagens decorativas podem ser inseridas no HTML de forma que sejam ignoradas pelos recursos de tecnologia assistiva. Para que isso ocorra, é preciso que a imagem tenha o atributo <code>alt</code> vazio (<code>alt=""</code> - sem espaço entre as aspas) e não seja incluído o atributo <code>title</code>.</p>
+								<div class="callout-block callout-block-warning">
+									<strong>Nota:</strong> Ter atributo <code>alt</code> vazio não é o mesmo que não ter atributo <code>alt</code>. Atributo <code>alt</code> vazio significa <code>alt=""</code>.
+								</div>
+								<p>O atributo <code>alt</code> vazio indica aos softwares de tecnologia assistiva que aquela imagem pode ser ignorada com segurança e sem prejuízo para a compreensão do conteúdo da página. Além disso, como o atributo title é interpretado por recursos de tecnologia assistiva, se o objetivo é que a imagem seja ignorada, este atributo não deve ser incluído.</p>
 
-							<h3 class="mt-4">2 - Imagem decorativa inserida no HTML</h3>
-							<p>O objetivo desta técnica é mostrar como imagens decorativas podem ser inseridas no HTML de forma que sejam ignoradas pelos recursos de tecnologia assistiva. Para que isso ocorra, é preciso que a imagem tenha o atributo <code>alt</code> vazio (<code>alt=""</code> - sem espaço entre as aspas) e não seja incluído o atributo <code>title</code>.</p>
-							<div class="callout-block callout-block-warning">
-								<strong>Nota:</strong> Ter atributo <code>alt</code> vazio não é o mesmo que não ter atributo <code>alt</code>. Atributo <code>alt</code> vazio significa <code>alt=""</code>.
+								<h4 class="h5"><small>Exemplo de imagem decorativa no HTML</small></h4>
+								<img src="assets/images/exemplo-decorativa.png" alt="" class="rounded mx-auto d-block img-fluid"/>
+								
+								<p class="mt-4">Código fonte do exemplo:</p>
+								<script src="https://gist.github.com/laelNervis/8918aef93468d6ef277c8f4d88bf1df4.js"></script>
 							</div>
-							<p>O atributo <code>alt</code> vazio indica aos softwares de tecnologia assistiva que aquela imagem pode ser ignorada com segurança e sem prejuízo para a compreensão do conteúdo da página. Além disso, como o atributo title é interpretado por recursos de tecnologia assistiva, se o objetivo é que a imagem seja ignorada, este atributo não deve ser incluído.</p>
-
-							<h4 class="h5"><small>Exemplo de imagem decorativa no HTML</small></h4>
-							<img src="assets/images/exemplo-decorativa.png" alt="" class="rounded mx-auto d-block img-fluid"/>
-							
-							<p class="mt-4">Código fonte do exemplo:</p>
-							<script src="https://gist.github.com/laelNervis/8918aef93468d6ef277c8f4d88bf1df4.js"></script>
-
-							<hr>	
 						</section><!--//docs-examples-->
 				    </header>
 			    </article><!--//docs-article-->

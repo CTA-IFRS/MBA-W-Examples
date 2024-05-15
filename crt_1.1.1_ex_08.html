@@ -131,7 +131,7 @@
 						<h2 class="docs-heading">Alternativa textual para elementos MathML</h2>
 						<section class="docs-intro">
 							<p>Caso seja necessário representar uma equação matemática, a recomendação é utilizar MathML
-								e o atributo alttext.</p>
+								e o atributo <code>alttext</code>.</p>
 							<div class="callout-block">
 								Mathematical Markup Language (MathML) é uma linguagem de marcação baseada em XML
 								utilizada para descrever notações matemáticas e capturar tanto a sua estrutura quanto
@@ -140,82 +140,84 @@
 						</section><!--//docs-intro-->
 						<section>
 							<h3 class="mt-5">Exemplos com atributo <code>alttext</code></h3>
-							<p class="h2">
-								<math xmlns="http://www.w3.org/1998/Math/MathML" alttext="Raiz quadrada de a dividido por b">
-									<mfrac>
-										<msqrt>
-											<mtext>a</mtext>
-										</msqrt>
-										<mi>b</mi>
-									</mfrac>
-								</math>
-							</p>
-							<p>Código fonte do exemplo:</p>
-							<script src="https://gist.github.com/laelNervis/3763149cdf2dc1c2ccbf8225f59850bc.js"></script>
-
-							<p class="pt-5">No teorema de Pitágoras <math alttext="a ao quadrado mais b ao quadrado é igual a c ao quadrado">
-									<mrow>
-										<msup>
-											<mi>a</mi>
-											<mn>2</mn>
-										</msup>
-										<mo>+</mo>
-										<msup>
+							<div class="border rounded px-4 pt-4 pb-2">
+								<p class="h2">
+									<math xmlns="http://www.w3.org/1998/Math/MathML" alttext="Raiz quadrada de a dividido por b">
+										<mfrac>
+											<msqrt>
+												<mtext>a</mtext>
+											</msqrt>
 											<mi>b</mi>
-											<mn>2</mn>
-										</msup>
-										<mo>=</mo>
-										<msup>
-											<mi>c</mi>
-											<mn>2</mn>
-										</msup>
-									</mrow>
-								</math>, a soma do… </p>
-							<p>Código fonte do exemplo:</p>
-							<script src="https://gist.github.com/laelNervis/24df3fea8736da79bc395392d769975b.js"></script>
+										</mfrac>
+									</math>
+								</p>
+								<p>Código fonte do exemplo:</p>
+								<script src="https://gist.github.com/laelNervis/3763149cdf2dc1c2ccbf8225f59850bc.js"></script>
+	
+								<p class="pt-5">No teorema de Pitágoras <math alttext="a ao quadrado mais b ao quadrado é igual a c ao quadrado">
+										<mrow>
+											<msup>
+												<mi>a</mi>
+												<mn>2</mn>
+											</msup>
+											<mo>+</mo>
+											<msup>
+												<mi>b</mi>
+												<mn>2</mn>
+											</msup>
+											<mo>=</mo>
+											<msup>
+												<mi>c</mi>
+												<mn>2</mn>
+											</msup>
+										</mrow>
+									</math>, a soma do… </p>
+								<p>Código fonte do exemplo:</p>
+								<script src="https://gist.github.com/laelNervis/24df3fea8736da79bc395392d769975b.js"></script>
+							</div>
 
 							<h3 class="mt-5">Exemplo com atributo <code>aria-label</code></h3>
-
-							<math role="math" aria-label="x é igual a menos b, mais ou menos  a raiz quadrada de b ao quadrado menos quatro a vezes c tudo sobre dois a">
-								<mrow>
-									<mi>x</mi>
-									<mo>=</mo>
-									<mfrac>
-										<mrow>
+							<div class="border rounded px-4 pt-4 pb-2">
+								<math role="math" aria-label="x é igual a menos b, mais ou menos  a raiz quadrada de b ao quadrado menos quatro a vezes c tudo sobre dois a">
+									<mrow>
+										<mi>x</mi>
+										<mo>=</mo>
+										<mfrac>
 											<mrow>
-												<mo>-</mo>
-												<mi>b</mi>
-											</mrow>
-											<mo>&PlusMinus;</mo>
-											<msqrt>
 												<mrow>
-													<msup>
-														<mi>b</mi>
-														<mn>2</mn>
-													</msup>
 													<mo>-</mo>
-													<mrow>
-														<mn>4</mn>
-														<mo>&InvisibleTimes;</mo>
-														<mi>a</mi>
-														<mo>&InvisibleTimes;</mo>
-														<mi>c</mi>
-													</mrow>
+													<mi>b</mi>
 												</mrow>
-											</msqrt>
-										</mrow>
-										<mrow>
-											<mn>2</mn>
-											<mo>&InvisibleTimes;</mo>
-											<mi>a</mi>
-										</mrow>
-									</mfrac>
-								</mrow>
-							</math>
-
-							<p>Código fonte do exemplo:</p>
-							<script src="https://gist.github.com/CTA-IFRS/82108b60602de26de2eb9c9ef980f005.js"></script>
-
+												<mo>&PlusMinus;</mo>
+												<msqrt>
+													<mrow>
+														<msup>
+															<mi>b</mi>
+															<mn>2</mn>
+														</msup>
+														<mo>-</mo>
+														<mrow>
+															<mn>4</mn>
+															<mo>&InvisibleTimes;</mo>
+															<mi>a</mi>
+															<mo>&InvisibleTimes;</mo>
+															<mi>c</mi>
+														</mrow>
+													</mrow>
+												</msqrt>
+											</mrow>
+											<mrow>
+												<mn>2</mn>
+												<mo>&InvisibleTimes;</mo>
+												<mi>a</mi>
+											</mrow>
+										</mfrac>
+									</mrow>
+								</math>
+	
+								<p>Código fonte do exemplo:</p>
+								<script src="https://gist.github.com/CTA-IFRS/82108b60602de26de2eb9c9ef980f005.js"></script>
+							</div>
 						</section><!--//docs-examples-->
 					</header>
 				</article><!--//docs-article-->

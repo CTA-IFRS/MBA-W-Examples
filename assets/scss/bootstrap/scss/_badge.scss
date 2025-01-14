@@ -11,8 +11,12 @@
   --#{$prefix}badge-padding-y: #{$badge-padding-y};
   @include rfs($badge-font-size, --#{$prefix}badge-font-size);
   --#{$prefix}badge-font-weight: #{$badge-font-weight};
-  --#{$prefix}badge-color: #{$badge-color};
-  --#{$prefix}badge-border-radius: #{$badge-border-radius};
+
+  // Removing the below 3 styles, so that the badges displayed in the accessiblity bar are consistent with the other apps 
+  // --#{$prefix}badge-color: #{$badge-color};
+  // --#{$prefix}badge-border-radius: #{$badge-border-radius};
+  // --#{$prefix}badge-background-color: #{$badge-background-color};
+
   // scss-docs-end badge-css-vars
 
   display: inline-block;
@@ -21,6 +25,7 @@
   font-weight: var(--#{$prefix}badge-font-weight);
   line-height: 1;
   color: var(--#{$prefix}badge-color);
+  background-color: var(--#{$prefix}badge-background-color);
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;

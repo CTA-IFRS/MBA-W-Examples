@@ -38,7 +38,7 @@
   @include font-size($font-size-base);
   color: var(--#{$prefix}accordion-btn-color);
   text-align: left; // Reset button style
-  background-color: var(--#{$prefix}accordion-btn-bg);
+  background-color: #F5F8FA;
   border: 0;
   @include border-radius(0);
   overflow-anchor: none;
@@ -46,7 +46,7 @@
 
   &:not(.collapsed) {
     color: var(--#{$prefix}accordion-active-color);
-    background-color: var(--#{$prefix}accordion-active-bg);
+    background-color: #F5F8FA;
     box-shadow: inset 0 calc(var(--#{$prefix}accordion-border-width) * -1) 0 var(--#{$prefix}accordion-border-color); // stylelint-disable-line function-disallowed-list
 
     &::after {
@@ -70,6 +70,7 @@
 
   &:hover {
     z-index: 2;
+    background-color: #E7EBEE;
   }
 
   &:focus {
@@ -119,6 +120,11 @@
 
 .accordion-body {
   padding: var(--#{$prefix}accordion-body-padding-y) var(--#{$prefix}accordion-body-padding-x);
+}
+
+.accordion-button:focus, .accordion-item:focus, .accordion-header:focus {
+  outline: 0;
+  box-shadow: none;
 }
 
 

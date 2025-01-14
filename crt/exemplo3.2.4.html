@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 3.2.4</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 3.2.4</strong></center></p>
+    <hr>
+
+    <h2>Botões e Controles</h2>
+
+    <h3>4. Identificação consistente na página: Todos os componentes que possuem a mesma funcionalidade e se repetem na página são identificados de maneira consistente.</h3>
+
+	<p>O critério <strong>3.2.4</strong> da <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> determina que componentes com funcionalidades semelhantes, que se repetem na página, devem ser identificados de forma consistente. Isso significa que nomes, rótulos e estilos visuais de componentes como botões e links devem ser mantidos uniformes em toda a página para evitar confusão e facilitar a navegação, principalmente para usuários que utilizam tecnologias assistivas.</p>
+	
+	<h4>Explicação do Exemplo:</h4>
+
+	<p> No exemplo abaixo, temos dois botões que realizam a mesma funcionalidade ("Enviar"). Ambos possuem o mesmo rótulo e um estilo visual consistente, garantindo que sejam identificados corretamente pelos usuários, independentemente de onde estejam localizados na página.</p>
+
+	<p>Ambos os botões têm o mesmo texto ("Enviar") e a mesma classe CSS (<code>primary</code>), assegurando consistência na aparência e funcionalidade.</p>
+
+    <!-- início do exemplo -->
+	<style>
+		.content-wrapper {
+			border: 2px solid #ccc;
+			padding: 20px;
+			border-radius: 8px;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+
+		button {
+			margin: 10px;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+		}
+	
+		button.primary {
+			background-color: #007bff;
+			color: white;
+			border: none;
+		}
+	
+		button.primary:hover {
+			background-color: #0056b3;
+		}
+	
+		input {
+			width: 90%;
+			padding: 8px;
+			margin-bottom: 15px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+	</style>
+
+	<div class="content-wrapper">
+		<main>
+			<section>
+				<h2>Formulário de Contato</h2>
+				<p>Preecha com seu nome e e-mail para podermos entrar em contato</p>
+				<form>
+					<label for="name">Nome:</label>
+					<input type="text" id="name" name="name" required>
+					<br><br>
+					<label for="email">E-mail:</label>
+					<input type="email" id="email" name="email" required>
+					<br><br>
+					<button type="submit" class="primary">Enviar</button>
+				</form>
+			</section>
+			<br>
+			<section>
+				<h2>Newsletter</h2>
+				<p>Caso queira receber nossa newsletter, preencha com seu e-mail abaixo.</p>
+				<form>
+					<label for="newsletter-email">E-mail:</label>
+					<input type="email" id="newsletter-email" name="newsletter-email" required>
+					<br><br>
+					<button type="submit" class="primary">Enviar</button>
+				</form>
+			</section>
+		</main>
+
+		<footer>
+			<p>&copy; 2024 Exemplo de Acessibilidade. Todos os direitos reservados.</p>
+		</footer>
+	</div>
+    <!-- fim do exemplo -->
+</body>

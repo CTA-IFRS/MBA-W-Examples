@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 3.3.2</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 3.3.2</strong></center></p>
+    <hr>
+
+    <h2>Formulários e Entrada de Dados</h2>
+
+    <h3>5. Textos de ajuda previsíveis e 7. Campos obrigatórios e 14. 14. Botão de submissão: Todos os textos de ajuda estão posicionados de maneira previsível em relação aos campos do formulário. E todos os campos obrigatórios estão devidamente identificados de forma que todos possam perceber. E todos os formulários possuem um botão para a submissão dos dados.</h3>
+
+	<p>O critério <strong>3.3.2</strong> da <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> estabelece que, ao criar formulários na web, todos os campos obrigatórios devem ser claramente identificados, de forma que os usuários saibam quais campos precisam ser preenchidos. Além disso, as instruções de ajuda ou dicas devem ser posicionadas de maneira previsível em relação aos campos de entrada, para que o usuário saiba exatamente o que preencher em cada campo. Assim:</p>
+
+	<ul>
+		<li><strong>Campos obrigatórios:</strong> Devem ser identificados de maneira clara, normalmente utilizando um asterisco (*) ou outras indicações visuais que são amplamente reconhecidas.</li>
+		<li><strong>Botão de submissão:</strong> Todos os formulários devem possuir um botão de submissão para enviar os dados. O texto deste botão deve ser descritivo e relevante ao contexto.</li>
+		<li><strong>Posicionamento das instruções:</strong> As instruções ou textos de ajuda devem ser dispostos de forma lógica e acessível, como por exemplo, próximos aos campos que elas se referem.</li>
+	</ul>
+	
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <p>O exemplo abaixo aprenseta um formulário que atende aos critérios do WCAG, garantindo que todos os campos obrigatórios estão identificados corretamente, as instruções estão posicionadas de maneira previsível, e o formulário possui um botão de submissão claro.</p>
+
+	<ul>
+		<li><strong>Campos obrigatórios:</strong> Os campos "Nome completo" e "E-mail" estão identificados com um asterisco (<code>*</code>) e a marcação <code>aria-hidden="true"</code> para tornar o asterisco invisível para leitores de tela, mas visível para usuários visuais. Isso assegura que leitores de tela não confundam a marcação com conteúdo adicional.</li>
+		<li><strong>Instruções de ajuda:</strong> Cada campo tem um texto de ajuda (<code>&lt;small&gt;</code>) logo abaixo dele, fornecendo informações adicionais sobre o que o usuário deve preencher, de maneira previsível e acessível.</li>
+		<li><strong>Botão de submissão:</strong> O botão "Enviar Cadastro" é claramente identificado com um texto descritivo e semântico, facilitando a compreensão de sua função.</li>
+	</ul>
+	
+
+    <!-- início do exemplo -->
+	<style>
+		.content-wrapper {
+			border: 2px solid #ccc;
+			padding: 20px;
+			border-radius: 8px;
+			max-width: 450px;
+			margin: 0 auto;
+		}
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+		div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        small {
+            font-size: 12px;
+            color: #777;
+        }
+
+        span {
+            color: red;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        small {
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
+
+	<div class="content-wrapper">
+		<h1>Formulário de Cadastro</h1>
+	
+		<form action="/submit" method="POST">
+			<div>
+				<label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+				<input type="text" id="nome" name="nome" required>
+				<small id="nome-help">Informe seu nome completo, incluindo sobrenomes.</small>
+			</div>
+			<br>
+			<div>
+				<label for="email">E-mail <span aria-hidden="true">*</span></label>
+				<input type="email" id="email" name="email" required>
+				<small id="email-help">Digite um e-mail válido, como exemplo@dominio.com.</small>
+			</div>
+			<br>
+			<div>
+				<label for="telefone">Telefone</label>
+				<input type="tel" id="telefone" name="telefone">
+				<small id="telefone-help">Informe seu número de telefone, com DDD.</small>
+			</div>
+			<br>
+			<button type="submit">Enviar Cadastro</button>
+		</form>
+	
+	</div>
+    <!-- fim do exemplo -->
+</body>

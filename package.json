@@ -1,0 +1,15 @@
+{
+  "name": "manual-brasileiro-acessibilidade",
+  "version": "1.0.0",
+  "description": "Projeto contendo o código do Manual Brasileiro de Acessibilidade na Web.",
+  "scripts": {
+    "sass:generate": "sass assets/scss/theme.scss:assets/css/theme.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.unifesp.br/proj-acessibilidade-mpf/manual-brasileiro-acessibilidade.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "main": "index.js"
+}

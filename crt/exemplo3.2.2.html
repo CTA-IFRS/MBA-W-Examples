@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 3.2.2</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 3.2.2</strong></center></p>
+    <hr>
+
+    <h2>Botões e Controles</h2>
+
+    <h3>10. Mudança de contexto previsível na entrada: Não há componentes que provocam mudança de contexto enquanto o usuário insere ou seleciona informações ou o usuário é avisado sobre esse comportamento antes de utilizar o componente.</h3>
+
+	<p>O critério <strong>3.2.2</strong> da <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> recomenda que nenhum componente de interface, como botões ou controles, deve causar uma mudança de contexto inesperada enquanto o usuário está inserindo ou selecionando informações. Se for necessário que um componente provoque uma mudança de contexto, o usuário deve ser claramente avisado sobre esse comportamento antes de interagir com o componente.</p>
+
+    <p><strong>Mudança de contexto</strong> refere-se a qualquer alteração no estado ou na localização da página que faça o usuário perder o controle ou a compreensão do contexto atual. Exemplos incluem redirecionamentos automáticos, atualizações de página ou mudanças inesperadas de foco.</p>
+
+    <p>A recomendação assegura que os usuários saibam quando uma ação resultará em uma mudança de contexto para que possam decidir se desejam ou não prosseguir com a interação.</p>
+
+    <p>No exemplo abaixo, temos um formulário de login. Um aviso é mostrado ao usuário antes de clicar no botão de login, informando-o de que, ao enviar o formulário, ele será redirecionado para uma nova página.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+	<ul>
+		<li>Antes do envio do formulário, um aviso (<code>&lt;div class="info"&gt;</code>) é apresentado ao usuário, informando-o de que ao clicar no botão de envio, ele será redirecionado para a página de sua conta. Esse aviso é crucial para garantir que o usuário saiba sobre a mudança de contexto antes de interagir com o formulário. Dessa forma, ele tem a opção de decidir se deseja ou não prosseguir com o envio.</li>
+		<li>O botão de envio não provoca uma mudança de contexto inesperada, porque o usuário foi claramente informado sobre o redirecionamento que ocorrerá quando o formulário for enviado.</li>
+		<li>Não há redirecionamento automático ou mudança de contexto no momento em que o usuário começa a interagir com o formulário. Isso garante que o usuário tenha controle total sobre sua interação.</li>
+    </ul>
+
+    <!-- início do exemplo -->
+	<style>
+		.content-wrapper {
+			border: 2px solid #ccc;
+			padding: 20px;
+			border-radius: 8px;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+		label {
+			display: block;
+			margin-bottom: 8px;
+		}
+		input {
+			width: 90%;
+			padding: 8px;
+			margin-bottom: 15px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+		button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #45a049;
+		}
+		.info {
+			width: 90%;
+			background-color: #f9ed69;
+			color: #333;
+			padding: 10px;
+			border-radius: 5px;
+			margin-bottom: 15px;
+		}
+	</style>
+
+	<div class="content-wrapper">
+		<h1>Login</h1>
+	
+		<div class="info">
+			<strong>Atenção:</strong> Ao enviar o formulário, você será redirecionado para a página de sua conta.
+		</div>
+	
+		<form id="loginForm" action="pagina-conta.html" method="post">
+			<label for="username">Nome de usuário:</label>
+			<input type="text" id="username" name="username">
+	
+			<label for="password">Senha:</label>
+			<input type="password" id="password" name="password">
+	
+			<!-- Botão de envio -->
+			<button type="submit">Entrar</button>
+		</form>
+	</div>
+    <!-- fim do exemplo -->
+
+</body>

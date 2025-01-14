@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 2.2.1</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 2.2.1</strong></center></p>
+    <hr>
+
+    <h2>Tempo</h2>
+
+    <h3>2. Limite de tempo ajustável: Há um mecanismo para desligar, ajustar ou estender o limite de tempo antes de atingi-lo ou o limite de tempo é intrínseco ao conteúdo, essencial ou superior a 20 horas.</h3>
+
+	<p>De acordo com o <strong>critério 2.2.1</strong> da <abbr title="Diretrizes de Acessibilidade para o Conteúdo Web">WCAG</abbr>, é necessário fornecer um mecanismo que permita aos usuários ajustarem, desativarem ou estenderem o limite de tempo em interações temporizadas, a menos que esse limite seja essencial para o funcionamento da página ou seja superior a 20 horas. Isso garante que pessoas com deficiências, como dificuldades motoras ou cognitivas, possam interagir com o conteúdo no seu próprio ritmo.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <p>No exemplo abaixo, é fornecida uma funcionalidade de limite de tempo ajustável para um formulário. O usuário pode optar por estender o tempo antes de a sessão expirar, clicando em um botão para adicionar mais 5 minutos à contagem regressiva.</p>
+
+	<p>O script utilizado neste exemplo implementa um contador regressivo que diminui a cada segundo. Caso o tempo chegue a zero, uma mensagem é exibida para informar que o tempo expirou. Um botão adicional permite que o usuário estenda o limite em 5 minutos, reiniciando o contador com o tempo adicional. Isso garante que o usuário tenha controle sobre o limite de tempo, conforme recomendação deste critério.</p>
+
+    <!-- início do exemplo -->
+	<style>
+		.content-wrapper {
+			border: 2px solid #ccc;
+			padding: 20px;
+			border-radius: 8px;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #timer {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #555;
+        }
+	</style>
+
+	<div class="content-wrapper">
+		<form id="formulario" action="#" method="post">
+			<fieldset>
+				<legend>Formulário com limite de tempo ajustável</legend>
+				<label for="nome">Nome:</label>
+				<input type="text" id="nome" name="nome" required>
+				<br>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+				<br>
+				<button type="submit">Enviar</button>
+			</fieldset>
+		</form>
+		<p id="timer">Tempo restante: <span id="tempo-restante">300</span> segundos</p>
+		<button id="estender-tempo">Estender Tempo (+5 minutos)</button>
+	</div>
+	
+	<script>
+        let tempoRestante = 300; // 5 minutos em segundos
+        const tempoSpan = document.getElementById('tempo-restante');
+        const botaoEstender = document.getElementById('estender-tempo');
+
+        // Função para atualizar o tempo restante na tela
+        function atualizarTempo() {
+            tempoSpan.textContent = tempoRestante;
+            if (tempoRestante > 0) {
+                tempoRestante--; // Decrementa o tempo em 1 segundo
+            } else {
+                alert('O tempo expirou! Por favor, recarregue a página.'); // Alerta ao usuário
+                clearInterval(intervalo); // Para o contador
+            }
+        }
+
+        // Inicia o contador que atualiza o tempo a cada segundo
+        const intervalo = setInterval(atualizarTempo, 1000);
+
+        // Adiciona 5 minutos ao tempo restante ao clicar no botão
+        botaoEstender.addEventListener('click', () => {
+            tempoRestante += 300; // Adiciona 300 segundos (5 minutos)
+            alert('O tempo foi estendido em 5 minutos.'); // Alerta o usuário sobre a extensão
+        });
+    </script>
+    <!-- fim do exemplo -->
+</body>

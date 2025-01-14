@@ -2,15 +2,14 @@
 
 /*********** Theme Generic **********/
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: $theme-text-color-secondary;
-    padding-top: 69px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Inter', sans-serif;
 	color: $theme-text-color-primary;
 	font-weight: 600;
 }
@@ -79,18 +78,18 @@ a.text-link {
 	}
 }
 
-.btn {
-	font-weight: 600;
-	padding: 0.6rem 1.25rem;
-	border: none;
-	&:hover, &:active, &:focus {
-		box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
-		box-shadow: 0 12px 24px -6px rgba(0,0,0,0.15);
-		text-decoration:none;
-		outline: none;
-		@include transition (all 0.4s ease-in-out);
-	}
-}
+// .btn {
+// 	font-weight: 600;
+// 	padding: 0.6rem 1.25rem;
+// 	border: none;
+// 	&:hover, &:active, &:focus {
+// 		box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+// 		box-shadow: 0 12px 24px -6px rgba(0,0,0,0.15);
+// 		text-decoration:none;
+// 		outline: none;
+// 		@include transition (all 0.4s ease-in-out);
+// 	}
+// }
 
 .btn:focus, .btn.focus {
 	box-shadow: none !important;
@@ -132,7 +131,7 @@ a.text-link {
 
 .theme-icon-holder {
 	display: inline-block;
-	background: $theme-bg-light;
+	// background: $theme-bg-light;
 	color: $theme-color-primary;
 	width: 32px;
 	height: 32px;
@@ -298,11 +297,9 @@ a.text-link {
 	}
 }
 
-.header {
-	@include box-shadow(0 1px 4px 0 rgba(0,0,0,.1));
-	background: #fff;
+.navbar {
+	box-shadow: 0 3px 2px -2px rgba(0,0,0,.1);
 }
-
 
 .btn-success, .btn-warning, .btn-info, .btn-danger {
 	color: #fff;

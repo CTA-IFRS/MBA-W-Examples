@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 3.1.3</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 3.1.3</strong></center></p>
+    <hr>
+
+    <h2>Conteúdo textual</h2>
+
+    <h3>9. Uso de texto especial: Todos os trechos de texto de ênfase, citação, abreviação ou texto especial são utilizados para transmitir esses propósitos.</h3>
+
+    <p>O critério <strong>3.1.2</strong> das <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> recomenda que trechos de texto com propósitos específicos, como ênfase, citações ou abreviações, sejam corretamente marcados com elementos semânticos específicos. Isso melhora a acessibilidade, garantindo que tecnologias assistivas transmitam a informação corretamente.</p>
+    
+    <p>Utilizar a marcação semântica apropriada facilita a compreensão do conteúdo para usuários de leitores de tela, além de fornecer contexto adicional sobre a função e o significado de partes específicas do texto.</p>
+
+	<p>O uso correto de elementos semânticos oferece os seguintes benefícios:</p>
+    <ul>
+        <li>Facilita a compreensão do conteúdo por usuários de tecnologias assistivas.</li>
+        <li>Melhora a estrutura e a legibilidade do conteúdo.</li>
+        <li>Fornece contexto adicional para termos ou frases específicas.</li>
+    </ul>
+
+	<p>O exemplo a seguir demonstra o uso correto de elementos semânticos para ênfase, citações e abreviações:</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+	<ul>
+        <li><strong>Ênfase:</strong> O elemento <code>&lt;em&gt;</code> é utilizado para dar ênfase ao texto “destacar”. Leitores de tela geralmente modificam o tom de voz para transmitir essa ênfase.</li>
+        <li><strong>Citação:</strong> O elemento <code>&lt;cite&gt;</code> é usado para identificar a fonte de uma citação, no caso, “Albert Einstein”.</li>
+        <li><strong>Bloco de Citação:</strong> O elemento <code>&lt;blockquote&gt;</code> é utilizado para destacar uma citação longa, indicando que o texto foi citado de outra fonte.</li>
+        <li><strong>Abreviação:</strong> O elemento <code>&lt;abbr&gt;</code> é utilizado para definir a sigla “WWW” (World Wide Web). O atributo <code>title</code> fornece a expansão completa da sigla, ajudando leitores de tela a transmitir o significado completo.</li>
+		<li><strong>Realce:</strong> Uso de <code>&lt;strong&gt;</code>: Realça visualmente e semanticamente um termo importante como "acessibilidade".</li>
+    </ul>
+
+    <!-- início do exemplo -->
+    <style>
+		.content-wrapper {
+			border: 2px solid #ccc;
+			padding: 20px;
+			border-radius: 8px;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        blockquote {
+            border-left: 4px solid #ccc;
+            padding-left: 10px;
+            margin-left: 0;
+            color: #555;
+        }
+    </style>
+
+	<div class="content-wrapper">
+		<p>É importante <em>destacar</em> certas informações. Como disse <cite>Albert Einstein</cite>:</p>
+		<blockquote>
+			<p>"A imaginação é mais importante que o conhecimento."</p>
+		</blockquote>
+
+		<p>Siglas como <abbr title="World Wide Web">WWW</abbr> são amplamente conhecidas.</p>
+
+		<p>O termo <strong>acessibilidade</strong> deve ser priorizado em qualquer projeto web.</p>
+
+		<p>Em casos de abreviações, como <abbr title="Cascading Style Sheets">CSS</abbr>, é importante fornecer o significado completo.</p>
+
+		<p>Para dar ênfase em uma palavra ou frase, usamos a tag <em>em</em>. Por exemplo, <em>inclusão</em> é um conceito fundamental.</p>
+
+		<p>Palavras técnicas, como <code>aria-label</code>, devem ser explicadas em seu contexto.</p>
+
+		<p>Se precisar referenciar um livro ou trabalho acadêmico, utilize a tag <code>&lt;cite&gt;</code>. Por exemplo, em <cite>Design para Todos</cite>, o autor destaca a importância da acessibilidade.</p>
+	</div>
+    <!-- fim do exemplo -->
+
+</body>

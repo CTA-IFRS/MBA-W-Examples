@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 2.1.4</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 2.1.4</strong></center></p>
+    <hr>
+
+    <h2>Interação por teclado</h2>
+
+    <h3>10. Atalhos de teclado: Não há atalhos de teclado que utilizam uma única tecla, de forma que sempre haja a presença de uma tecla modificadora (como Ctrl ou Alt).</h3>
+
+	<p>O critério <strong>2.1.4</strong> da <abbr title="Diretrizes de Acessibilidade para o Conteúdo Web">WCAG</abbr> estabelece que atalhos ativados por teclas únicas não devem ser implementados, exceto quando combinados com teclas modificadoras, como <kbd>Ctrl</kbd>, <kbd>Alt</kbd> ou <kbd>Shift</kbd>. Isso evita conflitos com tecnologias assistivas que utilizam teclas únicas para navegação ou interação, garantindo que atalhos personalizados não interfiram na usabilidade da página.</p>
+
+	<p>No exemplo abaixo foi criado um atalho que exige o uso de <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd> em vez de apenas uma única tecla, para realizar uma ação, como exibir informações adicionais ou mover o foco para um elemento específico.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+	<ul>
+		<li>
+			<strong>Atalhos com Teclas Modificadoras:</strong>
+			<ul>
+				<li>O exemplo implementa um atalho que requer a combinação de <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd>, em vez de apenas uma tecla única, para ativar uma funcionalidade.</li>
+			</ul>
+		</li>
+		<li>
+			<strong>Evita Conflitos com Tecnologias Assistivas:</strong>
+			<ul>
+				<li>Atalhos de teclas únicas podem interferir em leitores de tela ou outros dispositivos assistivos, tornando a navegação difícil ou impossível para usuários com deficiência.</li>
+			</ul>
+		</li>
+		<li>
+			<strong>Ação Clara e Acessível:</strong>
+			<ul>
+				<li>A ação associada ao atalho (exibir informações) é clara e útil, com feedback visual para o usuário.</li>
+			</ul>
+		</li>
+	</ul>
+
+    <!-- início do exemplo -->
+		<style>
+			.content-wrapper {
+				border: 2px solid #ccc;
+				padding: 20px;
+				border-radius: 8px;
+				max-width: 800px;
+				margin: 0 auto;
+			}
+			.info {
+				background-color: #f0f8ff;
+				border: 1px solid #007BFF;
+				border-radius: 5px;
+				padding: 10px;
+				margin-top: 10px;
+			}
+			button {
+				margin: 10px 0;
+				padding: 10px 20px;
+				font-size: 16px;
+				cursor: pointer;
+				background-color: #007BFF;
+				color: white;
+				border: none;
+				border-radius: 5px;
+			}
+			button:focus {
+				outline: 2px solid #FF5722;
+			}
+		</style>
+	
+		<div class="content-wrapper">
+			<h2>Exemplo de Solução: Atalhos com Teclas Modificadoras</h2>
+			<p>
+				Use o atalho <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd> para exibir informações adicionais.
+			</p>
+			<div class="info" id="info" style="display: none;">
+				<p>Você ativou o atalho de teclado com teclas modificadoras!</p>
+			</div>
+		</div>
+	
+		<script>
+			document.addEventListener('keydown', (event) => {
+				if (event.ctrlKey && event.shiftKey && event.key === 'H') {
+					const info = document.getElementById('info');
+					if (info.style.display === 'none') {
+						info.style.display = 'block';
+					} else {
+						info.style.display = 'none';
+					}
+				}
+			});
+		</script>
+    <!-- fim do exemplo -->
+</body>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 3.1.2</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 3.1.2</strong></center></p>
+    <hr>
+
+    <h2>Codificação e Marcação Semântica</h2>
+
+    <h3>3. Idioma das partes da página: Todas as partes da página que possuem idioma diferente do principal têm seu idioma declarado de forma programaticamente determinada ou o texto é um nome próprio, um termo técnico, uma palavra em um idioma indeterminado, ou uma palavra ou frase estrangeira que se tornou parte do vernáculo do texto que a envolve.</h3>
+
+	<p>O critério <strong>3.1.2</strong> das <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> exige que partes de uma página da web cujo idioma seja diferente do idioma principal sejam declaradas programaticamente, ou seja, estejam especificadas no código fonte do HTML. Isso permite que tecnologias assistivas, como leitores de tela, ajustem a pronúncia corretamente para cada idioma específico, garantindo uma melhor compreensão para o usuário. Isso é essencial para frases estrangeiras, termos técnicos ou citações em outros idiomas, garantindo que os usuários entendam corretamente o conteúdo.</p>
+
+	<p>Essa técnica deve ser utilizada quando forem:</p>
+	<ul>
+		<li>Usadas palavras ou frases estrangeiras que não fazem parte do vernáculo local.</li>
+		<li>Citados textos em outro idioma.</li>
+		<li>Incluidos termos técnicos em outro idioma.</li>
+	</ul>
+
+	<p>Considere o trecho abaixo onde parte do texto está em inglês, enquanto o restante está em português:</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+		<ul>
+			<li>A tag <code>&lt;html&gt;</code> inclui o atributo <code>lang="pt-BR"</code>, especificando que o idioma principal da página é o Português do Brasil.</li>
+			<li>O termo <strong>"Web Accessibility"</strong> está em inglês e, por isso, é envolvido pela tag <code>&lt;span&gt;</code> com o atributo <code>lang="en"</code>.</li>
+			<li>Essa declaração permite que leitores de tela ajustem a pronúncia corretamente ao ler essa frase específica em inglês.</li>
+		</ul>
+
+		<p>Termos estrangeiros que se tornaram parte do idioma local (por exemplo, <strong>"e-mail"</strong> ou <strong>"download"</strong>) não precisam de uma declaração especial, pois são geralmente compreendidos como parte do vernáculo.</p>
+
+    <!-- início do exemplo -->
+	<style>
+		.content-wrapper {
+			border: 2px solid #ccc;
+			padding: 20px;
+			border-radius: 8px;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		code {
+			background-color: #f4f4f4;
+			padding: 2px 4px;
+			border-radius: 4px;
+		}
+	</style>
+
+<div class="content-wrapper">
+		<pre><code>&lt;!DOCTYPE html&gt;
+	&lt;html lang="pt-BR"&gt;
+	&lt;head&gt;
+		&lt;meta charset="UTF-8"&gt;
+		&lt;title&gt;Exemplo com Idiomas Diferentes&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;p&gt;Este site segue as diretrizes de acessibilidade da WCAG.
+		O termo &lt;span lang="en"&gt;Web Accessibility&lt;/span&gt; é amplamente utilizado para descrever
+		práticas de acessibilidade na web.&lt;/p&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;</code></pre>
+</div>	
+    <!-- fim do exemplo -->
+
+</body>

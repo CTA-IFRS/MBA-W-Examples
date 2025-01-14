@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 3.2.5</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 3.2.5</strong></center></p>
+    <hr>
+
+    <h2>Botões e Controles</h2>
+
+    <h3>8. Mudança de contexto previsível: Toda mudança de contexto é iniciada apenas a pedido do usuário ou há um mecanismo para desativar essas mudanças de contexto.</h3>
+
+	<p>De acordo com o critério <strong>3.2.5</strong> da <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>, é essencial que mudanças de contexto (como abrir uma nova página, alterar o foco ou recarregar conteúdo) sejam realizadas apenas com a confirmação do usuário ou que exista um mecanismo que permita desativar essa funcionalidade. Isso garante previsibilidade e controle sobre a interface, evitando confusão ou dificuldade para pessoas com deficiência.</p>
+	
+	<h4>Explicação do Exemplo:</h4>
+
+	<p>No exemplo abaixo, temos botões que acionam a exibição de novas seções de conteúdo. A mudança só ocorre mediante a interação direta do usuário, e nenhuma alteração automática de contexto é feita.</p>
+
+    <!-- início do exemplo -->
+		<style>
+			.content-wrapper {
+				border: 2px solid #ccc;
+				padding: 20px;
+				border-radius: 8px;
+				max-width: 800px;
+				margin: 0 auto;
+			}
+			button {
+				margin: 10px;
+				padding: 10px 20px;
+				font-size: 16px;
+				cursor: pointer;
+				border-radius: 5px;
+				border: 1px solid #ccc;
+			}
+		
+			button.primary {
+				background-color: #007bff;
+				color: white;
+				border: none;
+			}
+		
+			button.primary:hover {
+				background-color: #0056b3;
+			}
+		
+			section {
+				margin-bottom: 30px;
+			}
+		
+			.hidden {
+				display: none;
+			}
+		</style>
+		
+		<div class="content-wrapper">
+			<main>
+				<section>
+					<h2>Seção Principal</h2>
+					<p>Escolha uma opção abaixo para exibir mais informações:</p>
+
+					<button class="primary" onclick="showSection('info1')">Mostrar Informações 1</button>
+					<button class="primary" onclick="showSection('info2')">Mostrar Informações 2</button>
+				</section>
+
+				<section id="info1" class="hidden">
+					<h3>Informações 1</h3>
+					<p>Essas são as informações detalhadas da opção 1. O usuário escolheu explicitamente visualizá-las.</p>
+					<button onclick="hideSection('info1')">Ocultar</button>
+				</section>
+
+				<section id="info2" class="hidden">
+					<h3>Informações 2</h3>
+					<p>Essas são as informações detalhadas da opção 2. O usuário escolheu explicitamente visualizá-las.</p>
+					<button onclick="hideSection('info2')">Ocultar</button>
+				</section>
+			</main>
+
+			<footer>
+				<p>&copy; 2024 Exemplo de Acessibilidade. Todos os direitos reservados.</p>
+			</footer>
+		</div>
+
+		<script>
+			function showSection(sectionId) {
+				document.getElementById(sectionId).classList.remove('hidden');
+			}
+
+			function hideSection(sectionId) {
+				document.getElementById(sectionId).classList.add('hidden');
+			}
+		</script>
+    <!-- fim do exemplo -->
+</body>

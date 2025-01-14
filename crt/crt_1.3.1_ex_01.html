@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>AMAWeb | Manual</title>
+        
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Manual Brasileiro da Acessibilidade Web baseado na WCAG 2.1">
+        <link href="../assets/redesign/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <!-- Font Inter -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <!-- Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="../assets/plugins/simplelightbox/simple-lightbox.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../assets/redesign/css/main.css">
+        <link rel="stylesheet" href="../assets/redesign/css/high_contrast.css">
+        <link href="../assets/redesign/css/amaweb.css" rel="stylesheet">
+        <!-- Theme CSS -->  
+        <link id="theme-style" rel="stylesheet" href="../assets/css/theme.css">
+    </head>
+    <body class="docs-page">
+        <header class="header fixed-top">
+            <!-- Barra de acessibilidade -->
+            <nav id="menuAcessibilidade" class="barra-acessibilidade navbar navbar-expand-sm navbar-dark" aria-label="Menu de acessibilidade">
+                <ul class="navbar-nav mx-3">
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" href="#conteudo-principal" accesskey="1">
+                            <small><span class="badge bg-black">1</span> Ir para o conteúdo</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" href="#menu-principal" accesskey="2">
+                            <small><span class="badge bg-black">2</span> Ir para o menu</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" id="high_contrast" aria-checked="false" href=""><small><i class="bi bi-circle-half">&nbsp;</i>Alto Contraste</small></a>
+                    </li>
+                </ul>
+                <span class="badge position-fixed" role="alert" style="right: 20px; background-color: #A82521;" ><i class="bi bi-exclamation-diamond"></i>&nbsp;&nbsp;EM DESENVOLVIMENTO</span>
+            </nav>
+
+            <!-- Menu principal -->
+            <a href="#menu-principal" id="menu-principal" class="visually-hidden">Início do menu principal</a>
+            <nav class="navbar navbar-expand-lg bg-light menu-principal">
+                <div class="container-fluid mx-3">
+                    <a class="navbar-brand" id="amaweb" href="/">
+                        <img class="brand-hover" src="../assets/redesign/img/navbar-logo-horizontal.svg" alt="logo-AMAWeb">
+                    </a>
+                    <div id="navbarNav">
+                        <ul class="nav navbar-nav gap-1">
+                            <li class="nav-item dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Menu
+                                </button>
+                                <ul id="dropdown" class="dropdown-menu dropdown-menu-lg-end shadow-lg" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="/">Página inicial</a></li>
+                                    <li><a class="dropdown-item" href="/avaliador">Avaliador</a></li>
+                                    <li><a class="dropdown-item" href="/manual">Manual</a></li>
+                                    <li><a class="dropdown-item" href="/observatorio">Observatório</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="docs-wrapper">
+            <!--//docs-sidebar-->
+            <div id="docs-sidebar" class="docs-sidebar">
+                <!--//docs-nav-->
+                <nav id="docs-nav" class="docs-nav navbar">
+                    <ul class="section-items list-unstyled nav flex-column pb-3">
+                        <li class="nav-item section-title"><a class="nav-link scrollto" href="../index.html#section-0"><span class="theme-icon-holder me-2"><i class="bi bi-star-fill"></i></span>Introdução</a></li>
+                        <li class="nav-item section-title"><a class="nav-link scrollto" href="../index.html#section-1"><span class="theme-icon-holder me-2"><i class="bi bi-eye-fill"></i></span>1. Perceptível</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-1-1">1.1 Alternativas em Texto</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-1-2">1.2 Mídias com base em tempo</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-1-3">1.3 Adaptável</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-1-4">1.4 Discernível</a></li>
+                        <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="../index.html#section-2"><span class="theme-icon-holder me-2"><i class="bi bi-keyboard-fill"></i></span>2. Operável</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-1">2.1 Acessível por Teclado</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-2">2.2 Tempo Suficiente</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-3">2.3 Convulsões e Reações Fisicas</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-4">2.4 Navegável</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-5">2.5 Modalidades de Entrada</a></li>
+                        <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="../index.html#section-3"><span class="theme-icon-holder me-2"><i class="bi bi-puzzle-fill"></i></span>3. Compreensível</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-3-1">3.1 Legível</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-3-2">3.2 Previsível</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-3-3">3.3 Assistência de Entrada</a></li>
+                        <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="../index.html#section-4"><span class="theme-icon-holder me-2"><i class="bi bi-diamond-fill"></i></span>4. Robusto</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-4-1">4.1 Compatível</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="docs-content">
+                <div class="container">
+                    <!--//docs-article-->   
+                    <article class="docs-article" id="item-1-1">
+                        <!-- Breadcrumb -->
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="../">Manual</a></li>
+                                <li class="breadcrumb-item" aria-current="page"><a href="../index.html#item-1-3-1">Critério de Sucesso 1.3.1</a></li>
+                            </ol>
+                        </nav>
+                        <header class="docs-header">
+                            <h2 class="docs-heading">Uso semântico de cabeçalhos <a href="" id="copyURL" data-bs-toggle="tooltip" data-bs-title="Copiar link deste exemplo"><i class="bi bi-link-45deg"></i></a></h2>
+                            <section class="docs-intro">
+                                <p>Os títulos que identificam as seções de conteúdo em uma página devem ser marcados utilizando os elementos de cabeçalho (h1 a h6). É importante que estes elementos sejam utilizados unicamente para identificar seções do conteúdo, ou seja, devem ser utilizados como títulos e não com outros propósitos.</p>
+                                <p>Os níveis de cabeçalho devem ser usados de forma hierárquica, pois organizam a ordem de importância e subordinação dos conteúdos, facilitando a leitura e compreensão. Além disso, muitos usuários de leitores de tela utilizam a hierarquia de cabeçalhos como uma forma de navegação na página, pulando de um para outro, agilizando, assim, a navegação.</p>
+                            </section><!--//docs-intro-->
+							<section>
+								<h3 class="mt-5">Exemplo do uso hierárquico dos elementos de cabeçalho</h3>
+                                <p>O exemplo a seguir mostra o uso hierárquico dos níveis de cabeçalho: trata-se de um blog de tecnologia onde os níveis de título possuem uma hierarquia bem organizada, com um <code>&lt;h1&gt;</code> representando o título do site, seguido por <code>&lt;h2&gt;</code> para os títulos principais de artigos, e <code>&lt;h3&gt;</code> para subseções dentro de cada artigo.</p>
+                                <div class="row">
+                                    <div class="col-8 mx-auto rounded border px-4 py-4">
+                                        <header>
+                                            <h1>Blog de Tecnologia</h1>
+                                        </header>
+                                        <main>
+                                            <article>
+                                                <h2>Últimas Notícias</h2>
+                                                <section>
+                                                    <h3>Lançamento do Novo Smartphone</h3>
+                                                    <p>O novo smartphone foi lançado hoje e traz diversas inovações...</p>
+                                                </section>
+                                            
+                                                <section>
+                                                    <h3>Atualização de Software</h3>
+                                                    <p>Uma nova atualização de software foi liberada para corrigir bugs...</p>
+                                                </section>
+                                            </article>
+                                        
+                                            <article>
+                                                <h2>Dicas de Programação</h2>
+                                                <section>
+                                                    <h3>Melhores Práticas em HTML</h3>
+                                                    <p>Veja como melhorar a acessibilidade e semântica do seu código HTML...</p>
+                                                </section>
+                                            
+                                                <section>
+                                                    <h3>Otimização de Código CSS</h3>
+                                                    <p>Dicas para escrever código CSS mais limpo e eficiente...</p>
+                                                </section>
+                                            </article>
+                                        </main>
+                                        <footer>
+                                            <h2>Contato</h2>
+                                            <p>Para mais informações, entre em contato pelo e-mail: contato@exemplo.com</p>
+                                        </footer>
+                                    </div>
+                                </div>
+                                <p class="mt-4">Código fonte do exemplo:</p>
+                                <div class="docs-code-block">
+                                    <script src="https://gist.github.com/laelNervis/0ddee343cc8bc6eec79211a9e0974c00.js"></script>
+                                </div>
+							</section><!--//docs-examples-->
+
+                            <section>
+                                <h3 class="mt-5">Exemplo do uso dos cabeçalhos para identificar cada seção</h3>
+                                <p>É importante que todas as seções de conteúdo estejam identificadas por um cabeçalho. O exemplo a seguir ilustra uma página web com um artigo sobre os cuidados com o meio ambiente. Nela, todas as seções de conteúdo possuem cabeçalhos que as identificam, facilitando a navegação e a compreensão do conteúdo.</p>
+                                <div class="row">
+                                    <div class="col-8 mx-auto rounded border px-4 py-4">
+                                        <h1>Cuidado com o Meio Ambiente</h1>
+                                        <section>
+                                            <h2>1. O que é Sustentabilidade?</h2>
+                                            <p>A sustentabilidade refere-se à capacidade de atender às necessidades do presente sem comprometer a habilidade das futuras gerações de atender às suas próprias necessidades.</p>
+                                            <h3>1.1 Definição de Sustentabilidade</h3>
+                                            <p>O conceito de sustentabilidade envolve práticas que promovem o equilíbrio entre a conservação ambiental, o crescimento econômico e a justiça social.</p>
+                                            <h3>1.2 Importância da Sustentabilidade</h3>
+                                            <p>A sustentabilidade é crucial para a preservação dos recursos naturais e a proteção do meio ambiente para as futuras gerações.</p>    
+                                        </section>
+                                        <section>
+                                            <h2>2. Práticas Sustentáveis</h2>
+                                            <p>Adotar práticas sustentáveis é essencial para minimizar o impacto ambiental e promover a saúde do nosso planeta.</p>
+                                            <h3>2.1 Reciclagem</h3>
+                                            <p>A reciclagem ajuda a reduzir a quantidade de resíduos enviados para aterros e a conservar recursos naturais.</p>
+                                            <h3>2.2 Conservação de Água</h3>
+                                            <p>Conservar água é fundamental para manter os ecossistemas saudáveis e garantir o abastecimento para as futuras gerações.</p>
+                                        </section>
+                                    </div>
+                                </div>
+                                <p class="mt-4">Código fonte do exemplo:</p>
+                                <div class="docs-code-block">
+                                    <script src="https://gist.github.com/laelNervis/f3f0195e4eda86e17c8a82d2162d4af7.js"></script>
+                                </div>
+                                <p class="mt-4">O exemplo a seguir reflete um portal de notícias com uma organização clara e acessível, onde o <code>&lt;h1&gt;</code> "Brasil Notícias" identifica o tema central da página, indicando que o conteúdo é sobre notícias, os elementos <code>&lt;h2&gt;</code> são usados para tópicos principais e os <code>&lt;h3&gt;</code> são utilizados para subtemas dentro das seções. Além disso a página conta com uma seção principal <code>&lt;main&gt;</code> e uma seção secundária <code>&lt;aside&gt;</code>.</p>
+                                <div class="row">
+                                    <div class="col-8 mx-auto rounded border px-4 py-4">
+                                        <h1>Brasil Notícias</h1>
+
+                                        <main>
+                                            <article>
+                                                <h2>Últimas Notícias</h2>
+                                                <p>Mantenha-se atualizado com as últimas notícias do Brasil e do mundo.</p>
+                                                
+                                                <h3>Crise Política no Brasil</h3>
+                                                <p>O governo enfrenta uma nova onda de protestos nas principais cidades do país.</p>
+                                                
+                                                <h3>Avanços na Vacinação</h3>
+                                                <p>Novas vacinas chegam ao Brasil, aumentando a cobertura vacinal da população.</p>
+                                            </article>
+
+                                            <article>
+                                                <h2>Esportes</h2>
+                                                <p>Acompanhe as últimas notícias e resultados dos principais eventos esportivos.</p>
+                                                
+                                                <h3>Campeonato Brasileiro</h3>
+                                                <p>As equipes se preparam para mais uma rodada emocionante do campeonato.</p>
+                                                
+                                                <h3>Jogos Olímpicos</h3>
+                                                <p>Atletas brasileiros se destacam nas competições olímpicas em Paris.</p>
+                                            </article>
+
+                                            <article>
+                                                <h2>Cultura e Entretenimento</h2>
+                                                <p>Descubra as novidades no mundo da cultura, cinema e música.</p>
+                                                
+                                                <h3>Lançamentos de Filmes</h3>
+                                                <p>Os filmes mais aguardados do mês já estão nos cinemas.</p>
+                                                
+                                                <h3>Festivais de Música</h3>
+                                                <p>Confira a programação dos principais festivais que ocorrerão neste verão.</p>
+                                            </article>
+                                        </main>
+
+                                        <aside>
+                                            <h2>Destaques</h2>
+                                            <p>Confira os principais destaques do dia e links para artigos populares.</p>
+                                            <ul>
+                                                <li><a href="#">Entrevista Exclusiva com Artista</a></li>
+                                                <li><a href="#">Análise do Último Jogo de Futebol</a></li>
+                                                <li><a href="#">Como a Vacinação Está Avançando</a></li>
+                                            </ul>
+                                        </aside>
+                                    </div>
+                                </div>
+                                <p class="mt-4">Código fonte do exemplo:</p>
+                                <div class="docs-code-block">
+                                    <script src="https://gist.github.com/laelNervis/83a5660ab9bc8238321232c4c6593aca.js"></script>
+                                </div>
+                            </section><!--//docs-examples-->
+                        </header>
+                    </article>
+                    
+                </div>
+
+                <!-- Footer -->
+                <footer class="container-fluid mt-5" id="footer">
+                    <div class="container p-5 d-none d-lg-block">
+                        <div class="fw-bold text-black-50 d-flex flex-column">
+                            <div class="d-flex">
+                                <div class="col-6 d-flex justify-content-start align-items-center">
+                                    <div id="redes-sociais">
+                                        <p>Acompanhe o AMAWeb:</p>
+                                        <div>
+                                            <a class="me-3" href="https://git.unifesp.br/proj-acessibilidade-mpf"><img src="../assets/redesign/img/footer-github-seeklogo 2.png" alt="Github"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex justify-content-end align-items-center">
+                                    <div id="logos">
+                                        <a class="ms-4" href=""><img src="../assets/redesign/img/footer-logo-mpf.png" alt="Logo MPF"></a>
+                                        <a class="ms-4" href=""><img src="../assets/redesign/img/footer-logo-unifesp.png" alt="Logo UNIFESP"></a>
+                                        <a class="ms-4" href=""><img src="../assets/redesign/img/footer-logo-cta.png" alt="Logo CTA"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center d-flex flex-column">
+                                <hr>
+                                <p class="p-0 m-0"><small>Desenvolvido por CTA - IFRS. Aplicativo sob a licença GPLv3 e Creative Commons NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container p-5 d-lg-none">
+                        <div class="fw-bold text-black-50 d-flex flex-column gap-4">
+                            <div class="d-flex flex-column text-center pb-2">
+                                <p>Desenvolvido por:</p>
+                                <div class="d-flex gap-3 justify-content-center">
+                                    <a href=""><img src="../assets/redesign/img/footer-logo-mpf.png" alt="Logo MPF"></a>
+                                    <a href=""><img src="../assets/redesign/img/footer-logo-unifesp.png" alt="Logo UNIFESP"></a>
+                                    <a href=""><img src="../assets/redesign/img/footer-logo-cta.png" alt="Logo CTA"></a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                <p>Acompanhe o AMAWeb:</p>
+                                <div>
+                                    <a class="me-3" href="https://git.unifesp.br/proj-acessibilidade-mpf"><img src="../assets/redesign/img/footer-github-seeklogo 2.png" alt="Github"></a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                <hr>
+                                <p class="p-0 m-0"><small>Desenvolvido por CTA - IFRS. Aplicativo sob a licença GPLv3 e Creative Commons NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!--//docs-wrapper-->
+        <!-- Javascript -->          
+        <script src="../assets/plugins/popper.min.js"></script>
+        <script src="../assets/plugins/js.cookie.min.js"></script>
+        <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Page Specific JS -->
+        <script src="../assets/plugins/smoothscroll.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+        <script src="../assets/js/highlight-custom.js"></script>
+        <script src="../assets/redesign/js/high_contrast.js"></script> 
+        <script src="../assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+        <script src="../assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+        <script src="../assets/js/docs.js"></script> 
+        <script src="../assets/redesign/js/copyCurrentUrl.js"></script>
+        <script src="../assets/js/imageMapResizer.min.js"></script>
+
+        <!-- Tooltips -->
+         <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+         </script>
+    </body>
+</html>

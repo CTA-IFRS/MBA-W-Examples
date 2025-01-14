@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>AMAWeb | Manual</title>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Manual Brasileiro da Acessibilidade Web baseado no WCAG 2.1">
+        <link href="assets/redesign/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <!-- Font Inter -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <!-- Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="assets/redesign/css/main.css">
+        <link rel="stylesheet" href="assets/redesign/css/high_contrast.css">
+        <link href="assets/redesign/css/amaweb.css" rel="stylesheet">
+        <!-- Theme CSS -->  
+        <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+    </head>
+    <body class="docs-page">
+        <header class="header fixed-top">
+            <!-- Barra de acessibilidade -->
+            <nav id="menuAcessibilidade" class="barra-acessibilidade navbar navbar-expand-sm navbar-dark" aria-label="Menu de acessibilidade">
+                <ul class="navbar-nav mx-3">
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" href="#conteudo-principal" accesskey="1">
+                            <small><span class="badge bg-black">1</span> Ir para o conteúdo</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" href="#menu-principal" accesskey="2">
+                            <small><span class="badge bg-black">2</span> Ir para o menu</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" id="high_contrast" aria-checked="false" href=""><small><i class="bi bi-circle-half">&nbsp;</i>Alto Contraste</small></a>
+                    </li>
+                </ul>
+                <span class="badge position-fixed" role="alert" style="right: 20px; background-color: #A82521;" ><i class="bi bi-exclamation-diamond"></i>&nbsp;&nbsp;EM DESENVOLVIMENTO</span>
+            </nav>
+
+            <!-- Menu principal -->
+            <a href="#menu-principal" id="menu-principal" class="visually-hidden">Início do menu principal</a>
+            <nav class="navbar navbar-expand-lg bg-light menu-principal">
+                <div class="container-fluid mx-3">
+                    <a class="navbar-brand" id="amaweb" href="/">
+                        <img class="brand-hover" src="assets/redesign/img/navbar-logo-horizontal.svg" alt="Logo AMAWeb">
+                    </a>
+                    <div id="navbarNav">
+                        <ul class="nav navbar-nav gap-1">
+                            <li class="nav-item dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Menu
+                                </button>
+                                <ul id="dropdown" class="dropdown-menu dropdown-menu-lg-end shadow-lg" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="/">Página inicial</a></li>
+                                    <li><a class="dropdown-item" href="/avaliador">Avaliador</a></li>
+                                    <li><a class="dropdown-item" href="/manual">Manual</a></li>
+                                    <li><a class="dropdown-item" href="/observatorio">Observatório</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+            <div class="docs-content">
+                <div class="container py-5">
+                    <!--//docs-intro-->
+                    <h4 class="d-flex align-items-center">
+                                    Critério de Sucesso 1.1.1
+                                    <small class="text-muted ms-2">
+                                        <span class="badge">Nível A</span>
+                                    </small>
+                                </h4>
+                                <h3>Conteúdo não textual&nbsp;<a href="#item-1-1-1" aria-label="Link Permanente para 1.1.1 Conteúdo não textual" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.1.1 Conteúdo não textual"><i class="bi bi-link-45deg"></i></a></h3>
+                                <!-- Accordion -->
+                                <div class="accordion" id="accordion-1-1-1">
+                                    <div class="accordion-item">
+                                        <h4 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1-1-1" aria-expanded="true" aria-controls="collapse-1-1-1">
+                                                <strong>Explicação do WCAG</strong>
+                                            </button>
+                                        </h4>
+                                        <div id="collapse-1-1-1" class="accordion-collapse collapse" data-bs-parent="#accordion-1-1-1">
+                                            <div class="accordion-body">
+                                                <p>Todo o conteúdo não textual que é exibido ao usuário tem uma alternativa textual que serve a um propósito equivalente, exceto para as situações indicadas abaixo.</p>
+                                                <div class="callout-block">
+                                                    <strong class="d-block">Controles ou entrada</strong>
+                                                    Se o conteúdo não textual for um controle ou aceitar a entrada de dados por parte do usuário, então esse conteúdo não textual possui um nome que descreve a sua finalidade. (Consultar o Critério de Sucesso 4.1.2 para requisitos adicionais de controles e conteúdo que aceitam entrada de dados por parte do usuário)
+                                                </div>
+                                                <div class="callout-block">
+                                                    <strong class="d-block">Mídias com base no tempo</strong>
+                                                    Se o conteúdo não textual consiste em mídia baseada em tempo, então as alternativas textuais fornecem, no mínimo, uma identificação descritiva do conteúdo não textual (Consulte a Diretriz 1.2 para obter os requisitos adicionais para mídia).
+                                                </div>
+                                                <div class="callout-block">
+                                                    <strong class="d-block">Teste</strong>
+                                                    Se o conteúdo não textual for um teste ou um exercício, que ficaria inválido se fosse apresentado em texto, então as alternativas textuais fornecem, no mínimo, uma identificação descritiva do conteúdo não textual.
+                                                </div>
+                                                <div class="callout-block">
+                                                    <strong class="d-block">Sensorial</strong>
+                                                    Se a finalidade do conteúdo não textual for, essencialmente, criar uma experiência sensorial específica, então as alternativas textuais fornecem, no mínimo, uma identificação descritiva do conteúdo não textual.
+                                                </div>
+                                                <div class="callout-block">
+                                                    <strong class="d-block">CAPTCHA</strong>
+                                                    Se a finalidade do conteúdo não textual for confirmar que o conteúdo está sendo acessado por uma pessoa e não por um computador, então devem ser fornecidas alternativas textuais que identificam e descrevem a finalidade do conteúdo não textual. Formas alternativas de CAPTCHA, que utilizam modos de saída para diferentes tipos de percepção sensorial, devem ser apresentadas para atender diferentes deficiências.
+                                                </div>
+                                                <div class="callout-block">
+                                                    <strong class="d-block">Decoração, Formatação, Invisível</strong>
+                                                    Se o conteúdo não textual for meramente decorativo, se for utilizado apenas para formatação visual, ou se não for exibido aos usuários, então este conteúdo deve ser implementado de forma que possa ser ignorado pelos recursos de tecnologia assistiva, ou seja, o leitor de tela utilizado pelas pessoas cegas irá ignorar a existência de tais conteúdos. Isso pode ser feito de duas principais formas:
+                                                </div>
+                                                <a class="btn button_secondary border-primary text-primary" href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/#non-text-content"><i class="bi bi-box-arrow-up-right"></i>&nbsp;Ver item 1.1.1 no WCAG</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="mt-4">Conteúdo não textual é qualquer conteúdo que não é formado por uma sequência de caracteres, como, por exemplo, imagens (inclusive imagens de texto), mídias de áudio e vídeo, gráficos, diagramas, animações, ASCII, emoticons, botões, CAPTCHAs, dentre outros.</p>
+                                <p>O objetivo deste critério é oferecer uma alternativa textual para tais elementos, tornando-os acessíveis de acordo com as necessidades da pessoa. Por exemplo, uma pessoa que não consegue ver uma imagem pode ter a alternativa em texto lida em voz alta usando um leitor de tela. Uma pessoa que não consegue ouvir um arquivo de áudio pode ter a alternativa textual exibida para ser lida.</p>
+                                <p>No futuro, as alternativas de texto também permitirão que as informações sejam mais facilmente traduzidas para a língua de sinais ou para uma forma simplificada da mesma língua.</p>
+                                <h3 class="mt-5 mb-3">Como atender o critério</h3>
+                                <div class="row g-3">
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_01.html">    
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Alternativa textual para imagens simples</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_02.html">  
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Alternativa textual para imagens de texto</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_03.html">  
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Alternativa textual para imagens complexas</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_04.html">  
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Alternativa textual para mapas de imagem</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_05.html">  
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Imagens decorativas</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_06.html">  
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Alternativa textual para áudio e/ou vídeo ao vivo</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_07.html">  
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Alternativa textual para elementos que não são imagens</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_08.html">  
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Alternativa textual para elementos MathML</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_09.html">  
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Alternativa textual para CAPTCHA</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                </div>
+
+                <!-- Footer -->
+                <footer class="container-fluid mt-5" id="footer">
+                    <div class="container p-5 d-none d-lg-block">
+                        <div class="fw-bold text-black-50 d-flex flex-column">
+                            <div class="d-flex">
+                                <div class="col-6 d-flex justify-content-start align-items-center">
+                                    <div id="redes-sociais">
+                                        <p>Acompanhe o AMAWeb:</p>
+                                        <div>
+                                            <a class="me-3" href="https://git.unifesp.br/proj-acessibilidade-mpf"><img src="assets/redesign/img/footer-github-seeklogo 2.png" alt="Github"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex justify-content-end align-items-center">
+                                    <div id="logos">
+                                        <a class="ms-4" href=""><img src="assets/redesign/img/footer-logo-mpf.png" alt="Logo MPF"></a>
+                                        <a class="ms-4" href=""><img src="assets/redesign/img/footer-logo-unifesp.png" alt="Logo UNIFESP"></a>
+                                        <a class="ms-4" href=""><img src="assets/redesign/img/footer-logo-cta.png" alt="Logo CTA"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center d-flex flex-column">
+                                <hr>
+                                <p class="p-0 m-0"><small>Desenvolvido por CTA - IFRS. Aplicativo sob a licença GPLv3 e Creative Commons NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container p-5 d-lg-none">
+                        <div class="fw-bold text-black-50 d-flex flex-column gap-4">
+                            <div class="d-flex flex-column text-center pb-2">
+                                <p>Desenvolvido por:</p>
+                                <div class="d-flex gap-3 justify-content-center">
+                                    <a href=""><img src="assets/redesign/img/footer-logo-mpf.png" alt="Logo MPF"></a>
+                                    <a href=""><img src="assets/redesign/img/footer-logo-unifesp.png" alt="Logo UNIFESP"></a>
+                                    <a href=""><img src="assets/redesign/img/footer-logo-cta.png" alt="Logo CTA"></a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                <p>Acompanhe o AMAWeb:</p>
+                                <div>
+                                    <a class="me-3" href="https://git.unifesp.br/proj-acessibilidade-mpf"><img src="assets/redesign/img/footer-github-seeklogo 2.png" alt="Github"></a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                <hr>
+                                <p class="p-0 m-0"><small>Desenvolvido por CTA - IFRS. Aplicativo sob a licença GPLv3 e Creative Commons NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!--//docs-wrapper-->
+        <!-- Javascript -->          
+        <script src="assets/plugins/popper.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.0/dist/js.cookie.min.js"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+        <!-- Page Specific JS -->
+        <script src="assets/plugins/smoothscroll.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+        <script src="assets/js/highlight-custom.js"></script>
+        <script src="assets/redesign/js/high_contrast.js"></script> 
+        <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+        <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+        <script src="assets/js/docs.js"></script> 
+
+        <!-- Tooltips -->
+        <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+         </script>
+
+    </body>
+</html>

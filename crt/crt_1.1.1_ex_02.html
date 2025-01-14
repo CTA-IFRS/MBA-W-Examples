@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>AMAWeb | Manual</title>
+        
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Manual Brasileiro da Acessibilidade Web baseado na WCAG 2.1">
+        <link href="../assets/redesign/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <!-- Font Inter -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <!-- Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="../assets/plugins/simplelightbox/simple-lightbox.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../assets/redesign/css/main.css">
+        <link rel="stylesheet" href="../assets/redesign/css/high_contrast.css">
+        <link href="../assets/redesign/css/amaweb.css" rel="stylesheet">
+        <!-- Theme CSS -->  
+        <link id="theme-style" rel="stylesheet" href="../assets/css/theme.css">
+    </head>
+    <body class="docs-page">
+        <header class="header fixed-top">
+            <!-- Barra de acessibilidade -->
+            <nav id="menuAcessibilidade" class="barra-acessibilidade navbar navbar-expand-sm navbar-dark" aria-label="Menu de acessibilidade">
+                <ul class="navbar-nav mx-3">
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" href="#conteudo-principal" accesskey="1">
+                            <small><span class="badge bg-black">1</span> Ir para o conteúdo</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" href="#menu-principal" accesskey="2">
+                            <small><span class="badge bg-black">2</span> Ir para o menu</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" id="high_contrast" aria-checked="false" href=""><small><i class="bi bi-circle-half">&nbsp;</i>Alto Contraste</small></a>
+                    </li>
+                </ul>
+                <span class="badge position-fixed" role="alert" style="right: 20px; background-color: #A82521;" ><i class="bi bi-exclamation-diamond"></i>&nbsp;&nbsp;EM DESENVOLVIMENTO</span>
+            </nav>
+
+            <!-- Menu principal -->
+            <a href="#menu-principal" id="menu-principal" class="visually-hidden">Início do menu principal</a>
+            <nav class="navbar navbar-expand-lg bg-light menu-principal">
+                <div class="container-fluid mx-3">
+                    <a class="navbar-brand" id="amaweb" href="/">
+                        <img class="brand-hover" src="../assets/redesign/img/navbar-logo-horizontal.svg" alt="logo-AMAWeb">
+                    </a>
+                    <div id="navbarNav">
+                        <ul class="nav navbar-nav gap-1">
+                            <li class="nav-item dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Menu
+                                </button>
+                                <ul id="dropdown" class="dropdown-menu dropdown-menu-lg-end shadow-lg" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="/">Página inicial</a></li>
+                                    <li><a class="dropdown-item" href="/avaliador">Avaliador</a></li>
+                                    <li><a class="dropdown-item" href="/manual">Manual</a></li>
+                                    <li><a class="dropdown-item" href="/observatorio">Observatório</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="docs-wrapper">
+            <!--//docs-sidebar-->
+            <div id="docs-sidebar" class="docs-sidebar">
+                <!--//docs-nav-->
+                <nav id="docs-nav" class="docs-nav navbar">
+                    <ul class="section-items list-unstyled nav flex-column pb-3">
+                        <li class="nav-item section-title"><a class="nav-link scrollto" href="../index.html#section-0"><span class="theme-icon-holder me-2"><i class="bi bi-star-fill"></i></span>Introdução</a></li>
+                        <li class="nav-item section-title"><a class="nav-link scrollto" href="../index.html#section-1"><span class="theme-icon-holder me-2"><i class="bi bi-eye-fill"></i></span>1. Perceptível</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-1-1">1.1 Alternativas em Texto</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-1-2">1.2 Mídias com base em tempo</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-1-3">1.3 Adaptável</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-1-4">1.4 Discernível</a></li>
+                        <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="../index.html#section-2"><span class="theme-icon-holder me-2"><i class="bi bi-keyboard-fill"></i></span>2. Operável</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-1">2.1 Acessível por Teclado</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-2">2.2 Tempo Suficiente</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-3">2.3 Convulsões e Reações Fisicas</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-4">2.4 Navegável</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-5">2.5 Modalidades de Entrada</a></li>
+                        <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="../index.html#section-3"><span class="theme-icon-holder me-2"><i class="bi bi-puzzle-fill"></i></span>3. Compreensível</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-3-1">3.1 Legível</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-3-2">3.2 Previsível</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-3-3">3.3 Assistência de Entrada</a></li>
+                        <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="../index.html#section-4"><span class="theme-icon-holder me-2"><i class="bi bi-diamond-fill"></i></span>4. Robusto</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-4-1">4.1 Compatível</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="docs-content">
+                <div class="container">
+                    <!--//docs-article-->   
+                    <article class="docs-article" id="item-1-1">
+                        <!-- Breadcrumb -->
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="../">Manual</a></li>
+                                <li class="breadcrumb-item" aria-current="page"><a href="../index.html#item-1-1-1">Critério de Sucesso 1.1.1</a></li>
+                            </ol>
+                        </nav>
+                        <header class="docs-header">
+                            <h2 class="docs-heading">Alternativa textual para imagens de texto <a href="" id="copyURL" data-bs-toggle="tooltip" data-bs-title="Copiar link deste exemplo"><i class="bi bi-link-45deg"></i></a></h2>
+							<section class="docs-intro">
+								<p>A descrição de imagens que contêm texto precisa incluir o texto que aparece visualmente nela. Em alguns casos, quando o que é relevante na imagem é o próprio texto, a descrição no atributo alt pode incluir somente esse texto.</p>
+							</section><!--//docs-intro-->
+							<section>
+								<h3 class="mt-5">Exemplo</h3>
+                                <p>Uma notícia divulgando um curso contém um banner, informando o nome do curso e que ele é gratuito.</p>
+                                <div class="px-4 pt-4 pb-3">
+                                    <div class="row mt-4">
+                                        <div class="col-md-10 col-lg-8 col-xl-8 mx-auto">
+                                            <img class="rounded mx-auto d-block img-fluid" src="../assets/images/crt_1.1.1_ex_02.png" alt="Banner Curso gratuito: Tecnologia Assistiva no Contexto Educacional">
+                                        </div>
+                                    </div>
+                                    <p class="mt-4">Código fonte do exemplo:</p>
+                                    <div class="docs-code-block">
+                                        <script src="https://gist.github.com/CTA-IFRS/34660d0fca982beb5ad08481599adad2.js"></script>
+                                    </div>
+                                </div>
+                                
+								
+							</section><!--//docs-examples-->
+                        </header>
+                    </article>
+                    
+                </div>
+
+                <!-- Footer -->
+                <footer class="container-fluid mt-5" id="footer">
+                    <div class="container p-5 d-none d-lg-block">
+                        <div class="fw-bold text-black-50 d-flex flex-column">
+                            <div class="d-flex">
+                                <div class="col-6 d-flex justify-content-start align-items-center">
+                                    <div id="redes-sociais">
+                                        <p>Acompanhe o AMAWeb:</p>
+                                        <div>
+                                            <a class="me-3" href="https://git.unifesp.br/proj-acessibilidade-mpf"><img src="../assets/redesign/img/footer-github-seeklogo 2.png" alt="Github"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex justify-content-end align-items-center">
+                                    <div id="logos">
+                                        <a class="ms-4" href=""><img src="../assets/redesign/img/footer-logo-mpf.png" alt="Logo MPF"></a>
+                                        <a class="ms-4" href=""><img src="../assets/redesign/img/footer-logo-unifesp.png" alt="Logo UNIFESP"></a>
+                                        <a class="ms-4" href=""><img src="../assets/redesign/img/footer-logo-cta.png" alt="Logo CTA"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center d-flex flex-column">
+                                <hr>
+                                <p class="p-0 m-0"><small>Desenvolvido por CTA - IFRS. Aplicativo sob a licença GPLv3 e Creative Commons NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container p-5 d-lg-none">
+                        <div class="fw-bold text-black-50 d-flex flex-column gap-4">
+                            <div class="d-flex flex-column text-center pb-2">
+                                <p>Desenvolvido por:</p>
+                                <div class="d-flex gap-3 justify-content-center">
+                                    <a href=""><img src="../assets/redesign/img/footer-logo-mpf.png" alt="Logo MPF"></a>
+                                    <a href=""><img src="../assets/redesign/img/footer-logo-unifesp.png" alt="Logo UNIFESP"></a>
+                                    <a href=""><img src="../assets/redesign/img/footer-logo-cta.png" alt="Logo CTA"></a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                <p>Acompanhe o AMAWeb:</p>
+                                <div>
+                                    <a class="me-3" href="https://git.unifesp.br/proj-acessibilidade-mpf"><img src="../assets/redesign/img/footer-github-seeklogo 2.png" alt="Github"></a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                <hr>
+                                <p class="p-0 m-0"><small>Desenvolvido por CTA - IFRS. Aplicativo sob a licença GPLv3 e Creative Commons NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!--//docs-wrapper-->
+        <!-- Javascript -->          
+        <script src="../assets/plugins/popper.min.js"></script>
+        <script src="../assets/plugins/js.cookie.min.js"></script>
+        <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Page Specific JS -->
+        <script src="../assets/plugins/smoothscroll.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+        <script src="../assets/js/highlight-custom.js"></script>
+        <script src="../assets/redesign/js/high_contrast.js"></script> 
+        <script src="../assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+        <script src="../assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+        <script src="../assets/js/docs.js"></script> 
+        <script src="../assets/redesign/js/copyCurrentUrl.js"></script>
+
+        <!-- Tooltips -->
+         <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+         </script>
+    </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 3.3.8</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 3.3.8</strong></center></p>
+    <hr>
+
+    <h2>Formulários e Entrada de Dados</h2>
+
+    <h3>18. Autenticação acessível (mínima): Não há testes de função cognitiva em processos de autenticação ou há um método de autenticação alternativo sem teste de função cognitiva ou há um mecanismo para auxiliar o usuário a completar o teste de função cognitiva ou o teste é um método de reconhecimento de objetos ou o teste serve para identificar conteúdo não textual fornecido pelo usuário.</h3>
+
+	<p>De acordo com o <strong>3.3.8</strong> da <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>, não é permitido exigir testes de função cognitiva em processos de autenticação. Caso testes cognitivos sejam exigidos, deve existir um método alternativo de autenticação ou um mecanismo para auxiliar o usuário a completar o teste. Além disso, a autenticação deve ser realizada de forma acessível, sem sobrecarregar cognitivamente o usuário.</p>
+    
+    <p>O critério também permite que o método de autenticação utilize o reconhecimento de objetos ou seja utilizado para identificar conteúdo não textual fornecido pelo usuário. Dessa forma, os testes devem ser desenhados para não criar barreiras àqueles com dificuldades cognitivas.</p>
+
+
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <p>Este exemplo evita testes cognitivos complexos, oferecendo uma autenticação alternativa baseada em um CAPTCHA visual simples. Além disso, oferece o uso de uma autenticação por imagem (método de reconhecimento de objetos), uma abordagem acessível para usuários que podem ter dificuldades cognitivas.</p>
+
+
+    <!-- início do exemplo -->
+	<style>
+		.content-wrapper {
+			border: 2px solid #ccc;
+			padding: 20px;
+			border-radius: 8px;
+			max-width: 450px;
+			margin: 0 auto;
+		}
+		
+		form {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			width: 100%;
+			max-width: 400px;
+		}
+
+		label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 5px;
+			color: #333;
+		}
+
+		input[type="password"], input[type="text"]{
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+			font-size: 14px;
+			box-sizing: border-box;
+		}
+
+		input[type="password"]:focus, input[type="text"]:focus{
+			border-color: #4CAF50;
+			outline: none;
+		}
+
+		button {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			padding: 12px 20px;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 16px;
+			width: 100%;
+			margin-top: 10px;
+		}
+
+		button:hover {
+			background-color: #45a049;
+		}
+	</style>
+
+	<div class="content-wrapper">
+		<form action="/login" method="POST">
+			<label for="usuario">Usuário:</label>
+			<input type="text" id="usuario" name="usuario" required>
+			<br><br>
+
+			<label for="senha">Senha:</label>
+			<input type="password" id="senha" name="senha" required>
+			<br><br>
+
+			<!-- Método alternativo de autenticação sem testes cognitivos -->
+			<label for="captcha">Digite o código abaixo:</label>
+			<img src="../assets/images/captcha.png" alt="Imagem de código captcha" id="captcha-img">
+			<input type="text" id="captcha" name="captcha" required>
+			<br><br>
+
+			<button type="submit">Entrar</button>
+		</form>
+	</div>
+    <!-- fim do exemplo -->
+</body>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 1.3.5</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 1.3.5</strong></center></p>
+    <hr>
+
+    <h2>Formulários e Entrada de Dados</h2>
+
+    <h3>8. Tipo de dado determinado: Todos os campos de entrada têm seu tipo de dado determinado programaticamente.</h3>
+
+    <p>O critério <strong>1.3.5</strong> das <abbr title="Diretrizes de Acessibilidade para o Conteúdo Web">WCAG</abbr> trata da importância de garantir que os tipos de dados de todos os campos de entrada em um formulário sejam determinados programaticamente. Isso significa que, além de incluir instruções visuais, os desenvolvedores devem especificar o tipo de dado esperado para cada campo de entrada por meio do atributo <code>type</code> no HTML. Esse atributo ajuda as tecnologias assistivas a identificarem corretamente o tipo de dado esperado, facilitando a interação de usuários que dependem de leitores de tela e outros recursos de acessibilidade.</p>
+
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <p>O exemplo abaixo mostra um formulário de cadastro com vários campos de entrada. Cada campo tem seu tipo de dado especificado usando o atributo <code>type</code> adequado para que tecnologias assistivas possam identificar e interagir corretamente com os campos de entrada.</p>
+
+    <!-- início do exemplo -->
+    <style>
+        /* Estilo para a borda ao redor do conteúdo */
+        .content-wrapper {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            margin-right: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+    <div class="content-wrapper">
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="age">Idade:</label>
+                <input type="number" id="age" name="age">
+            </div>
+            <div class="form-group">
+                <label for="dob">Data de Nascimento:</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+            <button type="submit" class="submit-button">Enviar</button>
+        </form>
+    </div>
+    <!-- fim do exemplo -->
+
+</body>

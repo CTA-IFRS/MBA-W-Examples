@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 2.2.4</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 2.2.4</strong></center></p>
+    <hr>
+
+    <h2>Tempo</h2>
+
+    <h3>4. Interrupções: Não há interrupções ou existe um mecanismo para adiar ou bloquear as interrupções ou as interrupções envolvem uma emergência.</h3>
+
+	<p>De acordo com o <strong>critério 2.2.4</strong> da <abbr title="Diretrizes de Acessibilidade para o Conteúdo Web">WCAG</abbr>, interrupções, como notificações ou pop-ups, não devem atrapalhar a experiência do usuário sem que haja um mecanismo para adiá-las ou bloqueá-las, a menos que sejam emergências. Isso garante que pessoas com deficiências cognitivas ou dificuldades motoras possam continuar interagindo com o conteúdo sem distrações inesperadas.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <p>No exemplo abaixo, é implmenetada uma notificação que pode ser adiada ou ocultada pelo usuário.</p>
+
+    <!-- início do exemplo -->
+		<style>
+			.content-wrapper {
+				border: 2px solid #ccc;
+				padding: 20px;
+				border-radius: 8px;
+				max-width: 400px;
+				margin: 0 auto;
+			}
+			button {
+				padding: 10px 15px;
+				background: #007BFF;
+				color: #fff;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+			}
+			button:hover {
+				background: #0056b3;
+			}
+			#notification {
+				margin-top: 20px;
+				padding: 15px;
+				background: #e9ecef;
+				border: 1px solid #ccc;
+				border-radius: 8px;
+				display: none;
+			}
+		</style>
+		
+		<div class="content-wrapper">
+			<h2>Exemplo Prático</h2>
+			<p>
+				Uma notificação aparecerá após 5 segundos. Você pode adiá-la ou ocultá-la.
+			</p>
+			<div id="notification">
+				<p>Você tem uma nova mensagem!</p>
+				<button id="dismiss-notification">Ocultar Notificação</button>
+				<button id="postpone-notification">Adiar Notificação</button>
+			</div>
+		</div>
+	
+		<script>
+			const notification = document.getElementById('notification');
+			const dismissButton = document.getElementById('dismiss-notification');
+			const postponeButton = document.getElementById('postpone-notification');
+	
+			// Exibe a notificação após 5 segundos
+			let notificationTimeout = setTimeout(() => {
+				notification.style.display = 'block';
+			}, 5000);
+	
+			// Oculta a notificação ao clicar no botão "Ocultar Notificação"
+			dismissButton.addEventListener('click', () => {
+				notification.style.display = 'none';
+				clearTimeout(notificationTimeout); // Cancela qualquer timeout em andamento
+			});
+	
+			// Adia a notificação por mais 5 segundos ao clicar em "Adiar Notificação"
+			postponeButton.addEventListener('click', () => {
+				notification.style.display = 'none';
+				clearTimeout(notificationTimeout); // Cancela o timeout anterior
+				notificationTimeout = setTimeout(() => {
+					notification.style.display = 'block';
+				}, 5000); // Adia por mais 5 segundos
+			});
+		</script>
+    <!-- fim do exemplo -->
+</body>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 3.3.6</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 3.3.6</strong></center></p>
+    <hr>
+
+    <h2>Formulários e Entrada de Dados</h2>
+
+    <h3>11. Prevenção de erro: Todos os formulários permitem uma forma de reverter, verificar ou confirmar os dados.</h3>
+
+	<p>A recomendação do critério <strong>3.3.6</strong> da <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> sugere que os formulários devem permitir que os usuários possam reverter, verificar ou confirmar seus dados antes de finalizarem a submissão. Isso é importante para evitar que erros sejam cometidos no preenchimento de formulários, especialmente quando esses erros podem ter consequências significativas, como em transações financeiras ou no envio de informações sensíveis.</p>
+
+	<p>O critério indica que os desenvolvedores devem fornecer meios de revisar e corrigir entradas antes de enviá-las, como botões de "voltar", uma tela de confirmação ou um resumo dos dados fornecidos antes da submissão final. Dessa forma, as pessoas com deficiência, especialmente aquelas que dependem de tecnologias assistivas, também conseguem ter um controle adequado sobre os dados inseridos.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+	<p>Este exemplo apresenta um formulário de cadastro simples com campos para nome, email e senha.</p>
+
+    <ul>
+		<li>O botão "Revisar Cadastro" permite que o usuário visualize um resumo das informações inseridas antes de submeter o formulário. Isso é uma forma de permitir a revisão dos dados.</li>
+		<li>Ao clicar em "Revisar Cadastro", a função <code>preencherResumo()</code> é executada, coletando os valores inseridos nos campos do formulário e exibindo um resumo.</li>
+		<li>O resumo mostra as informações inseridas e oferece a possibilidade de o usuário corrigir os dados ao clicar em "Editar Dados", retornando ao formulário.</li>
+		<li>Após revisar as informações, o usuário pode confirmar o envio dos dados clicando em "Confirmar Cadastro", o que envia o formulário para o servidor.</li>
+	</ul>
+	
+
+    <!-- início do exemplo -->
+	 <style>
+		.content-wrapper {
+			border: 2px solid #ccc;
+			padding: 20px;
+			border-radius: 8px;
+			max-width: 450px;
+			margin: 0 auto;
+		}
+		
+		h1 {
+			text-align: center;
+			color: #333;
+			font-size: 24px;
+		}
+
+		form {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			width: 100%;
+			max-width: 400px;
+		}
+
+		label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 5px;
+			color: #333;
+		}
+
+		input[type="email"], input[type="password"], input[type="text"]{
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+			font-size: 14px;
+			box-sizing: border-box;
+		}
+
+		input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus{
+			border-color: #4CAF50;
+			outline: none;
+		}
+
+		span {
+			color: red;
+		}
+
+		button {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			padding: 12px 20px;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 16px;
+			width: 100%;
+			margin-top: 10px;
+		}
+
+		button:hover {
+			background-color: #45a049;
+		}
+	</style>
+
+	<div class="content-wrapper">
+		<h1>Formulário de Cadastro</h1>
+	
+		<form id="cadastro" action="/confirmacao" method="POST">
+			<label for="nome">Nome:</label>
+			<input type="text" id="nome" name="nome" required>
+			<br><br>
+	
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+			<br><br>
+	
+			<label for="senha">Senha:</label>
+			<input type="password" id="senha" name="senha" required>
+			<br><br>
+	
+			<button type="button" onclick="preencherResumo()">Revisar Cadastro</button>
+			<br><br>
+		</form>
+	
+		<div id="resumo" style="display: none;">
+			<h2>Resumo dos Dados</h2>
+			<p><strong>Nome:</strong> <span id="resumo_nome"></span></p>
+			<p><strong>Email:</strong> <span id="resumo_email"></span></p>
+			<p><strong>Senha:</strong> <span id="resumo_senha"></span></p>
+			<button onclick="document.getElementById('cadastro').submit();">Confirmar Cadastro</button>
+			<button onclick="document.getElementById('resumo').style.display = 'none';">Editar Dados</button>
+		</div>
+	
+		<script>
+			function preencherResumo() {
+				// Coletando os dados do formulário
+				const nome = document.getElementById('nome').value;
+				const email = document.getElementById('email').value;
+				const senha = document.getElementById('senha').value;
+	
+				// Preenchendo o resumo com os dados
+				document.getElementById('resumo_nome').textContent = nome;
+				document.getElementById('resumo_email').textContent = email;
+				document.getElementById('resumo_senha').textContent = senha;
+	
+				// Exibindo a seção de resumo
+				document.getElementById('resumo').style.display = 'block';
+			}
+		</script>
+	</div>
+    <!-- fim do exemplo -->
+</body>

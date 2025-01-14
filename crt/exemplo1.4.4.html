@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 1.4.4</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 1.4.4</strong></center></p>
+    <hr>
+
+    <h2>Conteúdo Textual</h2>
+
+    <h3>7. Texto redimensionado: Não há perda de conteúdo ou funcionalidade quando o texto é redimensionado sem o uso de recursos de tecnologia assistiva em até 200%, de modo que o usuário não precisa rolar horizontalmente para ler uma linha de texto em uma janela de tela inteira.</h3>
+
+    <p>Segundo o critério <strong>1.4.4</strong> das Diretrizes de Acessibilidade para Conteúdo Web (WCAG), o texto deve ser redimensionável em até <strong>200%</strong> sem que haja perda de conteúdo ou funcionalidade. Isso significa que o usuário deve poder aumentar o tamanho do texto sem a necessidade de rolar horizontalmente para ler cada linha em uma tela cheia, evitando cortes ou sobreposição de conteúdo.</p>
+
+    <p>O exemplo a seguir simula uma noticia fictícia sobre reciclagem de plástico e usa um layout flexível e responsivo que se ajusta automaticamente quando o texto é ampliado permitindo uma leitura confortável em até 200% de aumento do tamanho da fonte.</p>
+
+    <p>Esta prática é fundamental para pessoas com baixa visão que preferem ou precisam visualizar o conteúdo em tamanhos maiores, sem o uso de tecnologias assistivas. Um layout responsivo evita que a ampliação do texto interfira na experiência do usuário, mantendo a legibilidade e a funcionalidade do conteúdo.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <p>Este exemplo ilustra o critério 1.4.4 da WCAG, que exige que o texto seja redimensionável em até 200% sem causar perda de conteúdo ou funcionalidade. A seção <code>.content</code> é centralizada e tem largura máxima definida para que o layout seja flexível e responsivo, adaptando-se ao aumento do texto sem a necessidade de rolagem horizontal. Isso melhora a acessibilidade, especialmente para pessoas com baixa visão, e evita a sobreposição ou corte de informações ao ampliar o texto.</p>
+
+    <!-- início do exemplo -->
+    <style>
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #333333;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em; /* Tamanho de fonte base */
+        }
+        .content p {
+            margin-bottom: 1em;
+        }
+    </style>
+
+  <div class="content">
+    <h1>Nova Tecnologia de Reciclagem Promete Reduzir Resíduos Plásticos em 90%</h1>
+    <p><strong>Publicado em:</strong> 02 de novembro de 2024</p>
+    
+      <p>
+          Pesquisadores de uma renomada universidade europeia desenvolveram uma nova tecnologia de reciclagem que promete transformar a indústria e reduzir em até 90% a quantidade de resíduos plásticos nos próximos anos. A inovação é baseada em um processo químico que descompõe o plástico em seus componentes originais, permitindo que ele seja reutilizado indefinidamente sem perder qualidade.
+      </p>
+    
+      <p>
+          A técnica, chamada de “Reciclagem Molecular”, utiliza um catalisador específico que acelera a quebra das cadeias de polímeros, transformando o plástico em matérias-primas que podem ser reutilizadas na fabricação de novos produtos. “Nossa tecnologia oferece uma solução viável e sustentável para o problema dos resíduos plásticos. Com ela, conseguimos transformar o que seria lixo em um recurso valioso”, afirma o professor John Anders, coordenador da pesquisa.
+      </p>
+    
+      <p>
+          Estima-se que mais de 300 milhões de toneladas de plástico sejam descartadas anualmente em todo o mundo, e grande parte acaba em aterros sanitários ou no oceano. A nova tecnologia tem o potencial de reduzir significativamente esse impacto ambiental, proporcionando uma alternativa eficiente para reciclagem em larga escala. Empresas do setor já demonstraram interesse em aplicar a inovação, e governos estudam incentivos para acelerar a adoção da tecnologia.
+      </p>
+    
+      <p>
+          Especialistas afirmam que, se adotada em escala global, a tecnologia de Reciclagem Molecular pode representar um passo importante na luta contra a poluição ambiental e abrir caminho para uma economia mais circular e sustentável. A previsão é que os primeiros centros de reciclagem com essa tecnologia entrem em operação até 2026.
+      </p>
+  </div>
+  <!-- fim do exemplo -->
+     
+</body>

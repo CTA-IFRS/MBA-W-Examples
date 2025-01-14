@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 3.2.3</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 3.2.3</strong></center></p>
+    <hr>
+
+    <h2>Links e Navegação</h2>
+
+    <h3>15. Navegação consistente: "Todos os mecanismos de navegação que se repetem em um conjunto de páginas estão na mesma ordem relativa ou a posição do mecanismo é alterada pelo usuário."</h3>
+
+	<p>De acordo com o critério <strong>3.2.3</strong> da <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>, mecanismos de navegação que se repetem em várias páginas de um site devem manter a mesma ordem relativa, a menos que o usuário opte por alterá-los. Isso facilita a navegação para usuários que dependem de leitores de tela ou outros dispositivos assistivos, além de melhorar a experiência geral ao proporcionar consistência na interface.</p>
+    
+    <h4>Explicação do Exemplo:</h4>
+
+	<p>No exemplo abaixo, a navegação é mantida na mesma ordem relativa em todas as páginas do site. Os links "Home", "Sobre", "Serviços" e "Contato" são apresentados na mesma sequência em todas as páginas para garantir consistência e conformidade com a WCAG.</p>
+
+	<p>Estes exemplos de páginas com navegação consistente e destacam a página atual utilizando <code>aria-current="page"</code></p>
+
+    <!-- início do exemplo -->
+	<style>
+		.content-wrapper {
+			border: 2px solid #ccc;
+			padding: 20px;
+			border-radius: 8px;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+
+		nav {
+			background-color: #f8f9fa;
+			padding: 10px;
+			margin-bottom: 20px;
+		}
+
+		nav a {
+			margin-right: 15px;
+			text-decoration: none;
+			color: #007bff;
+		}
+
+		nav a:hover {
+			text-decoration: underline;
+		}
+
+		nav a[aria-current="page"] {
+			font-weight: bold;
+			color: #0056b3;
+		}
+
+		footer {
+			margin-top: 20px;
+			text-align: center;
+		}
+    </style>
+
+	<div class="content-wrapper">
+		<nav aria-label="Navegação principal">
+			<a href="index.html" aria-current="page">Home</a>
+			<a href="about.html">Sobre</a>
+			<a href="services.html">Serviços</a>
+			<a href="contact.html">Contato</a>
+		</nav>
+	
+		<main>
+			<h2>Bem-vindo ao nosso site</h2>
+			<p>Este é um exemplo de como implementar uma navegação consistente em conformidade com o critério 3.2.3 da WCAG.</p>
+		</main>
+	
+		<footer>
+			<p>&copy; 2024 Exemplo de Acessibilidade. Todos os direitos reservados.</p>
+		</footer>
+	</div>
+
+	<br><br><br>
+
+	<div class="content-wrapper">
+		<nav aria-label="Navegação principal">
+			<a href="index.html">Home</a>
+			<a href="about.html" aria-current="page">Sobre</a>
+			<a href="services.html">Serviços</a>
+			<a href="contact.html">Contato</a>
+		</nav>
+
+		<main>
+			<h2>Sobre Nós</h2>
+			<p>Esta é a página sobre nossa organização, criada para demonstrar consistência na navegação.</p>
+		</main>
+
+		<footer>
+			<p>&copy; 2024 Exemplo de Acessibilidade. Todos os direitos reservados.</p>
+		</footer>
+	</div>
+	
+	<br><br><br>
+
+	<div class="content-wrapper">
+		<nav aria-label="Navegação principal">
+			<a href="index.html">Home</a>
+			<a href="about.html">Sobre</a>
+			<a href="services.html" aria-current="page">Serviços</a>
+			<a href="contact.html">Contato</a>
+		</nav>
+
+		<main>
+			<h2>Nossos Serviços</h2>
+			<p>Explore os serviços que oferecemos para atender às suas necessidades.</p>
+		</main>
+
+		<footer>
+			<p>&copy; 2024 Exemplo de Acessibilidade. Todos os direitos reservados.</p>
+		</footer>
+	</div>
+
+	<br><br><br>
+
+	<div class="content-wrapper">
+		<nav aria-label="Navegação principal">
+			<a href="index.html">Home</a>
+			<a href="about.html">Sobre</a>
+			<a href="services.html">Serviços</a>
+			<a href="contact.html" aria-current="page">Contato</a>
+		</nav>
+
+		<main>
+			<h2>Contato</h2>
+			<p>Entre em contato conosco através deste formulário ou envie-nos uma mensagem por e-mail.</p>
+		</main>
+
+		<footer>
+			<p>&copy; 2024 Exemplo de Acessibilidade. Todos os direitos reservados.</p>
+		</footer>
+	</div>
+    <!-- fim do exemplo -->
+</body>

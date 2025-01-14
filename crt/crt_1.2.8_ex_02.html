@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>AMAWeb | Manual</title>
+        
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Manual Brasileiro da Acessibilidade Web baseado na WCAG 2.1">
+        <link href="../assets/redesign/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <!-- Font Inter -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <!-- Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="../assets/plugins/simplelightbox/simple-lightbox.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../assets/redesign/css/main.css">
+        <link rel="stylesheet" href="../assets/redesign/css/high_contrast.css">
+        <link href="../assets/redesign/css/amaweb.css" rel="stylesheet">
+        <!-- Theme CSS -->  
+        <link id="theme-style" rel="stylesheet" href="../assets/css/theme.css">
+    </head>
+    <body class="docs-page">
+        <header class="header fixed-top">
+            <!-- Barra de acessibilidade -->
+            <nav id="menuAcessibilidade" class="barra-acessibilidade navbar navbar-expand-sm navbar-dark" aria-label="Menu de acessibilidade">
+                <ul class="navbar-nav mx-3">
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" href="#conteudo-principal" accesskey="1">
+                            <small><span class="badge bg-black">1</span> Ir para o conteúdo</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" href="#menu-principal" accesskey="2">
+                            <small><span class="badge bg-black">2</span> Ir para o menu</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" id="high_contrast" aria-checked="false" href=""><small><i class="bi bi-circle-half">&nbsp;</i>Alto Contraste</small></a>
+                    </li>
+                </ul>
+                <span class="badge position-fixed" role="alert" style="right: 20px; background-color: #A82521;" ><i class="bi bi-exclamation-diamond"></i>&nbsp;&nbsp;EM DESENVOLVIMENTO</span>
+            </nav>
+
+            <!-- Menu principal -->
+            <a href="#menu-principal" id="menu-principal" class="visually-hidden">Início do menu principal</a>
+            <nav class="navbar navbar-expand-lg bg-light menu-principal">
+                <div class="container-fluid mx-3">
+                    <a class="navbar-brand" id="amaweb" href="/">
+                        <img class="brand-hover" src="../assets/redesign/img/navbar-logo-horizontal.svg" alt="logo-AMAWeb">
+                    </a>
+                    <div id="navbarNav">
+                        <ul class="nav navbar-nav gap-1">
+                            <li class="nav-item dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Menu
+                                </button>
+                                <ul id="dropdown" class="dropdown-menu dropdown-menu-lg-end shadow-lg" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="/">Página inicial</a></li>
+                                    <li><a class="dropdown-item" href="/avaliador">Avaliador</a></li>
+                                    <li><a class="dropdown-item" href="/manual">Manual</a></li>
+                                    <li><a class="dropdown-item" href="/observatorio">Observatório</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="docs-wrapper">
+            <!--//docs-sidebar-->
+            <div id="docs-sidebar" class="docs-sidebar">
+                <!--//docs-nav-->
+                <nav id="docs-nav" class="docs-nav navbar">
+                    <ul class="section-items list-unstyled nav flex-column pb-3">
+                        <li class="nav-item section-title"><a class="nav-link scrollto" href="../index.html#section-0"><span class="theme-icon-holder me-2"><i class="bi bi-star-fill"></i></span>Introdução</a></li>
+                        <li class="nav-item section-title"><a class="nav-link scrollto" href="../index.html#section-1"><span class="theme-icon-holder me-2"><i class="bi bi-eye-fill"></i></span>1. Perceptível</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-1-1">1.1 Alternativas em Texto</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-1-2">1.2 Mídias com base em tempo</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-1-3">1.3 Adaptável</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-1-4">1.4 Discernível</a></li>
+                        <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="../index.html#section-2"><span class="theme-icon-holder me-2"><i class="bi bi-keyboard-fill"></i></span>2. Operável</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-1">2.1 Acessível por Teclado</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-2">2.2 Tempo Suficiente</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-3">2.3 Convulsões e Reações Fisicas</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-4">2.4 Navegável</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-5">2.5 Modalidades de Entrada</a></li>
+                        <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="../index.html#section-3"><span class="theme-icon-holder me-2"><i class="bi bi-puzzle-fill"></i></span>3. Compreensível</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-3-1">3.1 Legível</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-3-2">3.2 Previsível</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-3-3">3.3 Assistência de Entrada</a></li>
+                        <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="../index.html#section-4"><span class="theme-icon-holder me-2"><i class="bi bi-diamond-fill"></i></span>4. Robusto</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-4-1">4.1 Compatível</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="docs-content">
+                <div class="container">
+                    <article class="docs-article" id="item-1-2">
+						<!-- Breadcrumb -->
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="../">Manual</a></li>
+                                <li class="breadcrumb-item" aria-current="page"><a href="../index.html#item-1-2-8">Critério de Sucesso 1.2.8</a></li>
+                            </ol>
+                        </nav>
+						<header class="docs-header">
+							<h2 class="docs-heading">Vídeo ou áudio com alternativa textual presente na própria página <a href="" id="copyURL" data-bs-toggle="tooltip" data-bs-title="Copiar link deste exemplo"><i class="bi bi-link-45deg"></i></a></h2>
+							<section class="docs-intro">
+								<p>A transcrição textual é toda a informação relevante, sonora e visual, presente em um vídeo fornecida em forma de texto. A transcrição pode fornecer descrições completas de todas as informações visuais (contexto visual, ações, expressões, etc.), de todos os diálogos e outras informações sonoras, como risos, por exemplo. As informações são apresentadas na mesma sequência que aparecem no vídeo.</p>
+	
+								<p>A transcrição textual é, portanto, uma alternativa que oferece uma representação mais completa do que utilizar apenas a audiodescrição.</p>
+							</section><!--//docs-intro-->
+							<section>
+                                <h3 class="mt-5">Exemplo de áudio com transcrição no contexto</h3>
+								<div class="border rounded px-4 py-4">
+									<p>No exemplo a seguir, é disponibilizado um áudio sobre respiração consciente e, logo na sequência, é fornecida a transcrição de todo o conteúdo falado no áudio.</p>
+									<div class="d-flex justify-content-center">
+										<audio controls type="audio/mp3" src="../assets/audios/respiracao-consciente.mp3"></audio>
+									</div>
+									<p class="mb-0 mt-3"><small>Quando estiver ansioso ou estressado, que tal praticar a respiração consciente? A respiração consciente é uma técnica de meditação na qual você deve inspirar o ar e depois soltá-lo lentamente, de forma controlada, prestando atenção ao movimento do abdômen e do tórax. Pode ser realizada em qualquer momento do dia, seja ao acordar, durante o banho, no trabalho ou antes de dormir. Respirar atentamente pode reduzir o estresse, relaxar o corpo e a mente, auxiliar na concentração e foco, diminuir a pressão arterial e melhorar a qualidade do sono. Pausas para respirar contribuem para dias mais leves, agradáveis e produtivos. Que tal fazer uma pausa agora e praticar a respiração consciente?</small></p>
+								</div>
+
+								<h3 class="mt-5">Exemplo de transcrição após vídeo com diálogos</h3>
+								<div class="border rounded px-4 pt-4 pb-2">
+									<p>O conteúdo de um curso online é apresentado em um vídeo. Logo abaixo do vídeo, há um link que expande sua transcrição textual.</p>
+									<div class="row">
+										<div class="col-sm-12 col-md-10 col-lg-8 mx-auto">
+											<figure>
+												<div class="ratio ratio-16x9">
+													<iframe class="d-block" src="https://www.youtube.com/embed/yMKkNMVAAKM" allowfullscreen></iframe>
+												</div>
+												<figcaption class="text-center"><small>Recursos de apoio para a visão - CTA IFRS</small></figcaption>
+											</figure>
+										</div>
+									</div>
+	
+									<details class="mt-4 mb-5">
+										<summary>Transcrição do vídeo</summary>
+										<div class="pt-4 px-3 pb-0">
+											<h4 class="">Recursos de apoio para a visão</h4>
+											<p>Transcrição textual do vídeo - vídeo com duração de 4 minutos e 35 segundos</p>
+											<p>0:00 – Música tocando e aparece o logo do Instituto Federal do Rio Grande do Sul (IFRS) e, em seguida, o do Centro Tecnológico de Acessibilidade (CTA).</p>
+											<p>0:09 – Aparece o texto Tecnologia Assistiva: produtos de apoio para a visão.</p>
+											<p>0:13 – Intérprete de Libras no canto inferior direito da tela e Anderson Dall Agnol falando:
+												<br>&#8212; Oi, pessoal!
+												<br>&#8212; Hoje estou aqui para mostrar para vocês alguns recursos de apoio para a visão. Mais especificamente as lupas.
+												<br>&#8212; Aqui, por exemplo, nós temos uma lupa manual. Essa lupa, ela proporciona um aumento de 3 vezes, como vocês podem ver.
+												<br>(Anderson manuseia uma lupa de mão comum e a câmera o mostra utilizando a lupa sobre a capa de um livro, na qual as letras do titulo aparecem ampliadas pela lente da lupa).</p>
+											<p>0:32 – Anderson falando:
+												<br>&#8212; Mas, as lupas estão disponíveis nos mais diferentes formatos. Como, por exemplo, a lupa de mesa, a lupa de apoio, lupas de régua, e elas proporcionam os mais variados níveis de ampliação.
+												<br>&#8212; Outro tipo de lupa disponível, são as lupas eletrônicas. As lupas eletrônicas permitem fazer a leitura do conteúdo, permitindo a ampliação e também a mudança no esquema de cores, mudando a cor da letra e do fundo.
+												<br>(Anderson manuseia uma lupa eletrônica sobre a capa de um livro, pressionando botões disponíveis no recurso, mostrando como as letras aparecem ampliadas e com esquemas de cores diferentes no visor da lupa).</p>
+											<p>1:08 – Anderson falando:
+												<br>&#8212; As lupas eletrônicas estão disponíveis no mercado e elas possuem os mais variados recursos e valores. 
+												<br>&#8212; No entanto, como as lupas eletrônicas apresentam um valor elevado, às vezes é um pouco difícil para as instituições conseguirem adquirir ou até mesmo para os estudantes fazerem uso.
+												<br>&#8212; Outra alternativa que pode ser bastante útil aos estudantes são os aplicativos de lupa disponíveis nos smartphones. Esses aplicativos permitem, dentre suas várias opções, mudar o esquema do contraste, como, por exemplo, o contraste normal, branco e azul, amarelo e azul, tons de cinza e diversos outros.
+												<br>&#8212; Esses aplicativos, eles já vêm embutidos ou no próprio sistema operacional, ou o estudante pode fazer o download na loja de aplicativos do seu celular.
+												<br>(Anderson manuseia um celular utilizando um aplicativo de lupa sobre a capa de um livro e vai demonstrando diversas opções de esquemas de cores oferecidas pela ferramenta).</p>
+											<p>2:00 – Bruna Poletto Salton falando:
+												<br>&#8212; Outros recursos muito importantes de apoio à visão, são aqueles usados para confeccionar o braille, como é o caso da reglete e punção, utilizadas para confeccionar o braille manualmente. No qual os pontos vão sendo marcados na folha, utilizando a punção dentro da cela braile que está na reglete.(Bruna demonstra a marcação de pontos com uma punção em uma cela braile da reglete que está em uma prancha com uma folha).</p>
+											<p>2:22 – Bruna falando:
+												<br>&#8212; Além disso, existem também as rotuladoras manuais braille. Aqui a gente coloca uma fita auto adesiva, e vai marcando os caracteres na fita.
+												<br>&#8212; Ao finalizar a palavra ou a frase, a gente só corta a fita, e ela pode ser colada numa superfície, numa folha...
+												<br>(Bruna manuseia uma rotuladora manual braile, abre um compartimento e mostra onde colocar a fita. Em seguida, seleciona caracteres e os marca na fita usando o botão da rolutadora. Ao finalizar, pressiona o botão com força para cortar a fita, que fica em sua mão).</p>
+											<p>2:56 – Bruna falando:
+												<br>&#8212; Além disso, também existem as máquinas de escrever em braille. Elas têm os seis pontos do braille e o espaço. Então, por exemplo, se eu quiser fazer a letra "D", que são os pontos 1, 4 e 5, eu vou pressionar simultaneamente esses três pontos e vou marcando aqui na folha.
+												<br>(Bruna mostra as teclas existentes em uma máquina de escrever em braile e demonstra sua utilização, pressionando três teclas simultaneamente para escrever a letra D, que fica marcada na folha).</p>
+											<p>3:20 – Bruna falando:
+												<br>&#8212; E para além disso, também existem as impressoras braile que podem ser utilizadas quando eu quero imprimir um texto todo que já tenho pronto ou se quero imprimir um livro inteiro, por exemplo, conteúdo muito grande em braille.
+												<br>&#8212; E as impressoras existem de diversos modelos, diversos valores, propósitos diversos.
+												<br>&#8212; Outros recursos de apoio à visão muito importantes são os materiais didáticos acessíveis. Como, por exemplo, os materiais ampliados para estudantes com baixa visão, sempre considerando seu resíduo visual e aplicando um bom contraste.
+												<br>(Bruna mostra a representação da estrutura do COVID-19, com seus componentes impressos em tamanho ampliado em uma folha).</p>
+											<p>4:01 – Bruna falando:
+												<br>&#8212; Os materiais táteis para os estudantes cegos, utilizando materiais de diferentes texturas e relevo e utilizando braille.
+												<br>(Bruna manuseia uma folha com um mapa do Brasil em que cada região está representada com um material diferente, criando diferentes texturas, além das escritas em braile).</p>
+											<p>4:13 – Bruna falando:
+												<br>&#8212; Esses materiais também podem ser confeccionados utilizando a máquina de corte a laser e também utilizando a impressora 3D.
+												<br>(Bruna mostra um mapa no qual os continentes foram cortados na máquina de corte a laser em peças separadas e, em seguida, pega e manuseia uma representação tridimensional do vírus do COVID-19 feita na impressora 3D).</p>
+											<p>4:28 – Encerramento do vídeo, música inicia e aparecem os logos do IFRS e do CTA.</p>
+										</div>
+									</details>
+	
+									<p>Código fonte do exemplo:</p>
+									<script src="https://gist.github.com/CTA-IFRS/ffba1b57330b2f2fb5ee138311fe535e.js"></script>
+								</div>
+							</section><!--//docs-examples-->
+	
+						</header>
+					</article><!--//docs-article-->	
+                    
+                </div>
+
+                <!-- Footer -->
+                <footer class="container-fluid mt-5" id="footer">
+                    <div class="container p-5 d-none d-lg-block">
+                        <div class="fw-bold text-black-50 d-flex flex-column">
+                            <div class="d-flex">
+                                <div class="col-6 d-flex justify-content-start align-items-center">
+                                    <div id="redes-sociais">
+                                        <p>Acompanhe o AMAWeb:</p>
+                                        <div>
+                                            <a class="me-3" href="https://git.unifesp.br/proj-acessibilidade-mpf"><img src="../assets/redesign/img/footer-github-seeklogo 2.png" alt="Github"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex justify-content-end align-items-center">
+                                    <div id="logos">
+                                        <a class="ms-4" href=""><img src="../assets/redesign/img/footer-logo-mpf.png" alt="Logo MPF"></a>
+                                        <a class="ms-4" href=""><img src="../assets/redesign/img/footer-logo-unifesp.png" alt="Logo UNIFESP"></a>
+                                        <a class="ms-4" href=""><img src="../assets/redesign/img/footer-logo-cta.png" alt="Logo CTA"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center d-flex flex-column">
+                                <hr>
+                                <p class="p-0 m-0"><small>Desenvolvido por CTA - IFRS. Aplicativo sob a licença GPLv3 e Creative Commons NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container p-5 d-lg-none">
+                        <div class="fw-bold text-black-50 d-flex flex-column gap-4">
+                            <div class="d-flex flex-column text-center pb-2">
+                                <p>Desenvolvido por:</p>
+                                <div class="d-flex gap-3 justify-content-center">
+                                    <a href=""><img src="../assets/redesign/img/footer-logo-mpf.png" alt="Logo MPF"></a>
+                                    <a href=""><img src="../assets/redesign/img/footer-logo-unifesp.png" alt="Logo UNIFESP"></a>
+                                    <a href=""><img src="../assets/redesign/img/footer-logo-cta.png" alt="Logo CTA"></a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                <p>Acompanhe o AMAWeb:</p>
+                                <div>
+                                    <a class="me-3" href="https://git.unifesp.br/proj-acessibilidade-mpf"><img src="../assets/redesign/img/footer-github-seeklogo 2.png" alt="Github"></a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                <hr>
+                                <p class="p-0 m-0"><small>Desenvolvido por CTA - IFRS. Aplicativo sob a licença GPLv3 e Creative Commons NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!--//docs-wrapper-->
+        <!-- Javascript -->          
+        <script src="../assets/plugins/popper.min.js"></script>
+        <script src="../assets/plugins/js.cookie.min.js"></script>
+        <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Page Specific JS -->
+        <script src="../assets/plugins/smoothscroll.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+        <script src="../assets/js/highlight-custom.js"></script>
+        <script src="../assets/redesign/js/high_contrast.js"></script> 
+        <script src="../assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+        <script src="../assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+        <script src="../assets/js/docs.js"></script> 
+        <script src="../assets/redesign/js/copyCurrentUrl.js"></script>
+
+        <!-- Tooltips -->
+         <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+         </script>
+    </body>
+</html>

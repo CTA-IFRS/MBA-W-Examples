@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <title>AMAWeb | Manual</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manual Brasileiro da Acessibilidade Web baseado na WCAG 2.1">
+    <meta name="author" content="Lael Nervis and Xiaoying Riley at 3rd Wave Media">  
+
+	<meta http-equiv="refresh" content="1; url=manual.html">
+
+    <!-- <link rel="shortcut icon" href="favicon.ico">  -->
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body>    
+    <header class="header fixed-top">	 
+	       
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="assets/images/coderdocs-logo.svg" alt="logo"><span class="logo-text">Manual do <span class="text-alt">WCAG 2.1</span></span></a></div>    
+                </div><!--//docs-logo-wrapper-->
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+	
+					<!-- <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
+		            </ul> -->
+					<!--//social-list-->
+		            <a href="manual.html" class="btn btn-primary d-none d-lg-flex">Acessar o manual</a>
+	            </div><!--//docs-top-utilities-->
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    
+    <div class="page-header theme-bg-dark py-5 text-center position-relative">
+	    <div class="theme-bg-shapes-right"></div>
+	    <div class="theme-bg-shapes-left"></div>
+	    <div class="container">
+		    <h1 class="page-heading">Sobre o manual</h1>
+		    <div class="page-intro">O Manual Brasileiro para Acessibilidade na WEB é um recurso abrangente que visa facilitar a compreensão e implementação dos critérios de sucesso da WCAG (Web Content Accessibility Guidelines). Apresenta, de maneira acessível, cada princípio, diretriz e critério da WCAG, acompanhados por explicações claras. Além disso, oferece orientações técnicas sobre como atender a cada critério, incluindo exemplos funcionais e código-fonte para referência. Além dee star disponível online nesta página web, em breve haverá uma versão acessível em PDF para download.</div>
+		    <!-- <div class="main-search-box pt-3 d-block mx-auto">
+                 <form class="search-form w-100">
+		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+		        </form>
+             </div> -->
+	    </div>
+    </div><!--//page-header-->
+   <div class="page-content">
+	    <div class="container">
+		    <div class="docs-overview py-5">
+			    <div class="row justify-content-center">
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder me-2">
+								        <i class="fas fa-map-signs"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Navegação por níveis</span>
+							    </h5>
+							    <div class="card-text">
+								    Os critérios de sucesso da WCAG são organizados por níveis de conformidade: nível A, critérios mais simples e básicos; nível AA, critérios intermediários que garante acesso à maioria dos conteúdos e; nível AAA, critérios mais específicos e detalhados que trazem garantem um nível mais sofistica de acessibilidade. Acesse apenas o conteúdo do nível desejado:
+									<ul class="list-unstyled text-center mt-3">
+										<li><a class="btn btn-success btn-sm my-2" href="manual.html#item-1-1">Critérios de sucesso nível A</a></li>
+										<li><a class="btn btn-success btn-sm mb-2" href="manual.html#item-1-1">Critérios de sucesso nível AA</a></li>
+										<li><a class="btn btn-success btn-sm" href="manual.html#item-1-1">Critérios de sucesso nível AAA</a></li>
+									</ul>
+							    </div>
+							    <!-- <a class="card-link-mask" href="docs-page.html#section-1"></a> -->
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder me-2">
+								        <i class="fas fa-arrow-down"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Direto ao ponto</span>
+							    </h5>
+							    <div class="card-text">
+									<p>Acesse as explicações e seus respectivos exemplos separados de acordo com as seções do checklist da norma NBR 17060.02</p>
+								    <ul>
+										<li><a href="manual.html#item-1-1">Imagens</a></li>
+										<li><a href="manual.html#item-1-1">Áudio e vídeo</a></li>
+										<li><a href="manual.html#item-1-1">Uso de cores / apresentação</a></li>
+										<li><a href="manual.html#item-1-1">Navegação por teclado</a></li>
+										<li><a href="manual.html#item-1-1">Cabeçalho</a></li>
+										<li><a href="manual.html#item-1-1">Formulários e Entrada de Dados</a></li>
+										<li><a href="manual.html#item-1-1">Controles/Links e botões</a></li>
+										<li><a href="manual.html#item-1-1">Listas</a></li>
+										<li><a href="manual.html#item-1-1">Conteúdo e texto</a></li>
+										<li><a href="manual.html#item-1-1">Animação</a></li>
+										<li><a href="manual.html#item-1-1">Tabelas</a></li>
+										<li><a href="manual.html#item-1-1">Codificação e Marcação Semântica</a></li>
+										<li><a href="manual.html#item-1-1">Dispositivos Móveis /  Mobile e touch</a></li>
+									</ul>
+							    </div>
+							    <!-- <a class="card-link-mask" href="docs-page.html#section-2"></a> -->
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder me-2">
+								        <i class="fas fa-box fa-fw"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Busca</span>
+							    </h5>
+							    <div class="card-text">
+									<p>Utilize o campo de busca abaixo para encontrar, além dos critérios, exemplos e técnicas para os mais variados tipos de conteúdos acessíveis presentes na Web.</p>
+								    <form class="search-form w-100">
+										<input type="text" placeholder="Digite o termo da busca" name="search" class="form-control search-input">
+										<button type="submit" class="btn search-btn" value="Buscar"><i class="fas fa-search"></i></button>
+									</form>
+								</div>
+							    <!-- <a class="card-link-mask" href="docs-page.html#section-3"></a> -->
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				   
+			    </div><!--//row-->
+		    </div><!--//container-->
+		</div><!--//container-->
+    </div><!--//page-content-->
+
+    <section class="cta-section text-center py-5 theme-bg-dark position-relative">
+	    <div class="theme-bg-shapes-right"></div>
+	    <div class="theme-bg-shapes-left"></div>
+	    <div class="container">
+		    <!-- <h3 class="mb-2 text-white mb-3">Launch Your Software Project Like A Pro</h3>
+		    <div class="section-intro text-white mb-3 single-col-max mx-auto">Want to launch your software project and start getting traction from your target users? Check out our premium <a class="text-white" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-5-startup-template-for-software-projects/">Bootstrap 5 startup template CoderPro</a>! It has everything you need to promote your product.</div>
+		    <div class="pt-3 text-center">
+			    <a class="btn btn-light" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-5-startup-template-for-software-projects/">Get CoderPro<i class="fas fa-arrow-alt-circle-right ml-2"></i></a>
+		    </div> -->
+	    </div>
+    </section><!--//cta-section-->
+
+    <footer class="footer">
+		<div class="container text-center py-5">
+			<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+			<small class="copyright">UNIFESP | CTA-IFRS</small>
+			<ul class="social-list list-unstyled pt-4 mb-0">
+				<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li> 
+				<li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+				<li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
+			</ul><!--//social-list-->
+		</div>
+	</footer>
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="assets/js/docs.js"></script> 
+
+</body>
+</html> 
+

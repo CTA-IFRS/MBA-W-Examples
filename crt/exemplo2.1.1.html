@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 2.1.1</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 2.1.1</strong></center></p>
+    <hr>
+
+    <h2>Interação por teclado</h2>
+
+    <h3>13. Acessibilidade por teclado parcial: Todas as funcionalidades da página que não são acessíveis pelo teclado não admitem modo de operação equivalente utilizando somente o teclado (Exemplo: desenho à mão livre).</h3>
+
+	<p>De acordo com o critério <strong>2.1.1</strong> das <abbr title="Diretrizes de Acessibilidade para o Conteúdo Web">WCAG</abbr>, todas as funcionalidades de uma página web devem ser acessíveis utilizando apenas o teclado. Isso significa que um usuário que não utiliza dispositivos apontadores (como mouse ou touchpad) deve ser capaz de operar qualquer funcionalidade essencial da página.</p>
+
+	<p>A acessibilidade parcial por teclado ocorre quando somente algumas funcionalidades da página são acessíveis pelo teclado, enquanto outras, como ferramentas de desenho à mão livre ou interações baseadas apenas em gestos, não possuem modos de operação alternativos equivalentes para usuários que dependem exclusivamente do teclado.</p>
+
+	<p>Para atender ao critério 2.1.1, as funcionalidades que não podem ser diretamente acessíveis pelo teclado devem fornecer métodos alternativos que permitam aos usuários realizarem as mesmas ações.</p>
+
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <p>Este exemplo apresenta uma funcionalidade simples de seleção de cores para um editor, que pode ser acessada integralmente pelo teclado. Os usuários podem alternar entre cores usando as teclas de navegação (<kbd>Tab</kbd> e <kbd>Enter</kbd>).</p>
+
+    <!-- início do exemplo -->
+	
+	<style>
+		.content-wrapper {
+			border: 2px solid #ccc;
+			padding: 20px;
+			border-radius: 8px;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+        .accessible-feature {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .accessible-feature button {
+            margin: 5px 0;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+        }
+        .accessible-feature button:focus {
+            border-color: black;
+            outline: none;
+            box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+        }
+        .button-red {
+            background-color: red;
+        }
+        .button-blue {
+            background-color: blue;
+        }
+        .button-green {
+            background-color: green;
+        }
+	</style>
+
+	<div class="content-wrapper">
+		<section class="accessible-feature">
+			<div>
+				<p>Selecione uma cor:</p>
+				<button class="button-red" aria-label="Selecionar cor Vermelho" onclick="alert('Cor selecionada: Vermelho')">Vermelho</button>
+				<button class="button-blue" aria-label="Selecionar cor Azul" onclick="alert('Cor selecionada: Azul')">Azul</button>
+				<button class="button-green" aria-label="Selecionar cor Verde" onclick="alert('Cor selecionada: Verde')">Verde</button>
+			</div>
+		</section>
+	</div>
+    <!-- fim do exemplo -->
+</body>

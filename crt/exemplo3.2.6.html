@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 3.2.6</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 3.2.6</strong></center></p>
+    <hr>
+
+    <h2>Links e Navegação</h2>
+
+    <h3>16. Ajuda consistente: Todos os mecanismos de ajuda que se repetem em um conjunto de páginas estão na mesma ordem relativa ou a posição do mecanismo é alterada pelo usuário.</h3>
+
+	<p>De acordo com o critério <strong>3.2.6</strong> da <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>, todos os mecanismos de ajuda que se repetem em um conjunto de páginas devem manter a mesma ordem relativa ou permitir que o usuário ajuste sua posição. Isso garante uma experiência de navegação consistente e previsível para usuários que dependem de tecnologias assistivas ou que se beneficiam de interfaces organizadas.</p>
+
+	<p>Por exemplo, links para suporte ao cliente, FAQs ou chats de ajuda devem aparecer em uma posição consistente em todas as páginas do site, a menos que o usuário opte por rearranjá-los. Isso reduz a carga cognitiva e melhora a usabilidade. </p>
+	
+	<h4>Explicação do Exemplo:</h4>
+
+	<p>No exemplo abaixo, links de ajuda como "Suporte ao Cliente" e "Central de Ajuda" estão posicionados consistentemente na navegação secundária e destacados em todas as páginas:</p>
+
+	<p>Estes exemplos de páginas abaixo apresentam navegação consistente e destacam a página atual utilizando <code>aria-current="page"</code></p>
+	
+	<!-- Início do Exemplo -->
+	<style>
+		.content-wrapper {
+			border: 2px solid #ccc;
+			padding: 20px;
+			border-radius: 8px;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+	
+		nav {
+			background-color: #f8f9fa;
+			padding: 10px;
+			border-bottom: 2px solid #ccc;
+		}
+	
+		.secondary-nav {
+			margin-top: 10px;
+			text-align: right;
+		}
+	
+		nav a {
+			margin-right: 15px;
+			text-decoration: none;
+			color: #007bff;
+		}
+	
+		nav a:hover {
+			text-decoration: underline;
+		}
+	
+		nav a[aria-current="page"] {
+			font-weight: bold;
+			color: #0056b3;
+		}
+	
+		footer {
+			text-align: center;
+			margin-top: 20px;
+			padding: 10px;
+			border-top: 2px solid #ccc;
+		}
+	</style>
+	
+	<div class="content-wrapper">
+		<nav aria-label="Navegação principal">
+			<a href="#home" aria-current="page">Home</a>
+			<a href="#sobre">Sobre</a>
+			<a href="#servicos">Serviços</a>
+			<a href="#contato">Contato</a>
+		</nav>
+	
+		<div class="secondary-nav" aria-label="Mecanismos de ajuda">
+			<a href="#suporte">Suporte ao Cliente</a>
+			<a href="#central">Central de Ajuda</a>
+		</div>
+	
+		<main>
+			<h2>Bem-vindo ao nosso site</h2>
+			<p>Este é um exemplo de como implementar uma navegação consistente em conformidade com o critério 3.2.6 da WCAG.</p>
+		</main>
+	
+		<footer>
+			<p>&copy; 2024 Exemplo de Acessibilidade. Todos os direitos reservados.</p>
+		</footer>
+	</div>
+
+	<br><br><br>
+
+	<div class="content-wrapper">
+		<nav aria-label="Navegação principal">
+			<a href="#home">Home</a>
+			<a href="#sobre"  aria-current="page">Sobre</a>
+			<a href="#servicos">Serviços</a>
+			<a href="#contato">Contato</a>
+		</nav>
+	
+		<div class="secondary-nav" aria-label="Mecanismos de ajuda">
+			<a href="#suporte">Suporte ao Cliente</a>
+			<a href="#central">Central de Ajuda</a>
+		</div>
+
+		<main>
+			<h2>Sobre Nós</h2>
+			<p>Esta é a página sobre nossa organização, criada para demonstrar consistência na navegação.</p>
+		</main>
+
+		<footer>
+			<p>&copy; 2024 Exemplo de Acessibilidade. Todos os direitos reservados.</p>
+		</footer>
+	</div>
+	
+	<br><br><br>
+
+	<div class="content-wrapper">
+		<nav aria-label="Navegação principal">
+			<a href="#home">Home</a>
+			<a href="#sobre">Sobre</a>
+			<a href="#servicos" aria-current="page">Serviços</a>
+			<a href="#contato">Contato</a>
+		</nav>
+	
+		<div class="secondary-nav" aria-label="Mecanismos de ajuda">
+			<a href="#suporte">Suporte ao Cliente</a>
+			<a href="#central">Central de Ajuda</a>
+		</div>
+
+		<main>
+			<h2>Nossos Serviços</h2>
+			<p>Explore os serviços que oferecemos para atender às suas necessidades.</p>
+		</main>
+
+		<footer>
+			<p>&copy; 2024 Exemplo de Acessibilidade. Todos os direitos reservados.</p>
+		</footer>
+	</div>
+
+	<br><br><br>
+
+	<div class="content-wrapper">
+		<nav aria-label="Navegação principal">
+			<a href="#home">Home</a>
+			<a href="#sobre">Sobre</a>
+			<a href="#servicos">Serviços</a>
+			<a href="#contato" aria-current="page">Contato</a>
+		</nav>
+	
+		<div class="secondary-nav" aria-label="Mecanismos de ajuda">
+			<a href="#suporte">Suporte ao Cliente</a>
+			<a href="#central">Central de Ajuda</a>
+		</div>
+
+		<main>
+			<h2>Contato</h2>
+			<p>Entre em contato conosco através deste formulário ou envie-nos uma mensagem por e-mail.</p>
+		</main>
+
+		<footer>
+			<p>&copy; 2024 Exemplo de Acessibilidade. Todos os direitos reservados.</p>
+		</footer>
+	</div>
+	<!-- Fim do Exemplo -->
+</body>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 1.4.8</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 1.4.8</strong></center></p>
+    <hr>
+
+    <h2>Conteúdo Textual</h2>
+
+    <h3>5. Alinhamento de blocos de texto: O alinhamento é essencial para a compreensão do conteúdo."</h3>
+
+    <p>De acordo com o critério de acessibilidade <abbr title="Diretrizes de Acessibilidade para o Conteúdo Web">WCAG</abbr> <strong>1.4.8</strong>, o alinhamento de texto é um aspecto essencial para garantir que o conteúdo seja compreensível e legível.</p> 
+
+    <p>Um alinhamento apropriado facilita a leitura, especialmente para pessoas com dislexia ou dificuldades visuais, que podem encontrar problemas ao ler blocos de texto totalmente justificados. A recomendação é utilizar o alinhamento à esquerda para textos longos, garantindo uma melhor navegação visual e permitindo que os olhos dos usuários se movam de forma linear pelo conteúdo.</p>
+
+    <p>O exemplo abaixo contém um texto explicativo e um bloco que ilustra os diferentes tipos de alinhamento para demonstrar as diretrizes do critério 1.4.8 da WCAG.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+    <ul>
+      <li>A classe <code>.centered-text</code> exemplifica um título centralizado, que é útil para elementos que precisam de destaque.</li>
+      <li>A classe <code>.align-left-text</code> aplica o alinhamento à esquerda (<code>text-align: left</code>), que é o recomendado para melhor legibilidade.</li>
+      <li>A classe <code>.justified-text</code> aplica o alinhamento justificado a um parágrafo, demonstrando o efeito do espaçamento irregular entre palavras, que pode dificultar a leitura para alguns usuários.</li>
+    </ul>
+  
+    <!-- início do exemplo -->
+    <style>
+      .content-wrapper {
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .align-left-text{
+        text-align: left; /* Alinhamento do texto à esquerda para melhor legibilidade */
+      }
+      .centered-text {
+        text-align: center; /* Texto centralizado para destaque*/
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #333;
+      }
+      .justified-text {
+        text-align: justify; /* Recomendado evitar em textos longos pois dificulta a legibilidade*/
+      }
+    </style>
+
+    <div class="content-wrapper">
+      <p class="centered-text">Texto alinhado à esquerda.</p>
+      <p class="align-left-text">O alinhamento de texto é um dos fatores cruciais para a acessibilidade. Em blocos de texto justificados é mais difícil manter a fluidez da leitura, pois o espaçamento entre palavras varia, causando uma "quebra" no movimento visual do leitor. Por esse motivo, o texto à esquerda é a preferência para a maioria dos conteúdos em páginas web.</p>
+
+      <p class="align-left-text">O alinhamento à esquerda é amplamente considerado o formato padrão para exibição de texto, especialmente em idiomas que utilizam o alfabeto latino, como o português. Esse alinhamento facilita a leitura e a compreensão do conteúdo, pois a maioria das pessoas está acostumada a começar a leitura no início da linha. Ao alinhar o texto à esquerda, ele segue o fluxo natural de leitura, proporcionando uma experiência mais fluida e sem interrupções. Esse alinhamento cria uma linha de base consistente, o que torna o texto visualmente mais organizado e fácil de seguir, o que é essencial para uma leitura eficiente, especialmente em páginas longas ou em conteúdo complexo.</p>
+
+      <p class="align-left-text">Além disso, o alinhamento à esquerda oferece um benefício significativo em termos de acessibilidade. Para pessoas com dislexia ou outras dificuldades de leitura, o alinhamento à esquerda ajuda a reduzir a distração causada por espaçamentos irregulares entre as palavras. Ao contrário do alinhamento justificado, que pode criar grandes lacunas no texto, o alinhamento à esquerda mantém uma distribuição uniforme das palavras, sem forçar o espaçamento, tornando a leitura mais fácil e menos cansativa. Esse aspecto é crucial para garantir que o conteúdo seja acessível para uma ampla gama de leitores, independentemente de suas habilidades cognitivas ou de leitura.</p>
+      
+      <p class="align-left-text">Outro ponto importante é a consistência que o alinhamento à esquerda proporciona em dispositivos e plataformas diferentes. Como o alinhamento à esquerda é o padrão amplamente adotado em navegadores, aplicativos e sistemas operacionais, ele garante que o texto será exibido de forma consistente, sem alterar a legibilidade entre diferentes dispositivos, como computadores, smartphones e tablets. Isso melhora a experiência do usuário e assegura que o conteúdo seja apresentado de maneira clara e acessível, independentemente do meio utilizado para acessá-lo. Portanto, manter o alinhamento à esquerda é uma prática essencial tanto para a legibilidade quanto para a consistência de design na web.</p>
+
+      <hr>
+
+      <p class="centered-text">Texto justificado.</p>
+      <p class="justified-text"> Este parágrafo utiliza o alinhamento justificado, onde o texto é alinhado às margens esquerda e direita da caixa. Embora o texto justificado possa ter uma aparência organizada, ele apresenta um espaçamento irregular entre palavras, dificultando a leitura contínua, especialmente para usuários com dificuldades visuais ou dislexia. Portanto, seu uso deve ser evitado em textos longos.</p>
+
+      <p class="justified-text">O alinhamento justificado pode dificultar a leitura de textos longos, especialmente para pessoas com dificuldades cognitivas ou dislexia. Quando o texto é justificado, o espaçamento entre as palavras pode se tornar irregular, criando lacunas grandes e desconexas no texto. Esse espaçamento inconsistente pode interromper o fluxo natural da leitura, tornando mais difícil para o leitor identificar rapidamente o próximo ponto de leitura. A irregularidade pode causar distração e tornar o conteúdo mais difícil de processar, o que é um grande obstáculo para a compreensão eficiente do texto.</p>
+
+      <p class="justified-text">Além disso, o texto justificado pode prejudicar a acessibilidade em dispositivos de tela pequena, como smartphones e tablets. A adaptação do texto para diferentes tamanhos de tela muitas vezes resulta em grandes espaços em branco ou no aumento do espaçamento entre palavras, o que pode comprometer a clareza e a legibilidade. Isso ocorre porque, ao justificar o texto, não há controle adequado sobre como as palavras se distribuem no espaço, o que pode resultar em problemas visuais e dificuldades de leitura. Em dispositivos móveis, onde o espaço é limitado, o texto justificado pode se tornar especialmente desafiador de ler, afetando a experiência do usuário.</p>
+
+      <p class="justified-text">Outro problema com o alinhamento justificado é que ele pode prejudicar a consistência visual do layout. Embora o alinhamento justificado seja muitas vezes considerado mais "limpo" ou "formal", ele pode criar uma sensação de desorganização e desigualdade nas linhas de texto. As margens irregulares resultantes de um texto justificado podem prejudicar a harmonia do design, além de afetar negativamente o fluxo de leitura. Para garantir que o texto seja acessível e legível para o maior número possível de usuários, é preferível optar por alinhamentos mais naturais e consistentes, como o alinhamento à esquerda, que proporciona uma experiência de leitura mais fluida e agradável.</p>
+    </div>
+    <!-- fim do exemplo -->
+
+</body>

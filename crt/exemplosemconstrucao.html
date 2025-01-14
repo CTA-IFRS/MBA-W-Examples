@@ -1,0 +1,2136 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplos em construção</title>
+</head>
+
+<body>
+    <h1>Exemplos 1.3.1</h1>
+
+    <hr>
+
+    <!-- <h2>Cabeçalhos</h2> -->
+
+    <h3>Exemplo do uso hierárquico dos elementos de cabeçalho</h3>
+    <!-- <h3>5 - Estrutura de cabeçalhos: Todos os cabeçalhos seguem uma estrutura hierárquica, lógica e semântica.</h3> -->
+   <!--  <p>A estrutura e a hierarquia do conteúdo de uma página precisam ser definidas de maneira hierarquica e que respeite a semantica dos elementos HTML utilizados nesta organização, como os níveis de título, por exemplo. Isso permite que leitores de tela e outras tecnologias assistivas interpretem corretamente o conteúdo.</p>
+
+    <h4>Exemplo</h4>
+    <p>Abaixo o exemplo de um blog de tecnologia onde os níveis de título possuem uma hierarquia bem organizada, com um único <code>&lt;h1&gt;</code> representando o título do site, seguido por <code>&lt;h2&gt;</code> para os títulos principais de artigos, e <code>&lt;h3&gt;</code> para subseções dentro de cada artigo.</p>
+
+    <p>Além disso, os blocos de conteúdo como <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, e <code>&lt;footer&gt;</code> seguem uma estrutura semântica sólida e bem dividida, organizando o conteúdo de forma adequada para pessoas com e sem deficiência.</p> -->
+
+    <!-- início do exemplo -->
+    <style>
+        /* Estilo para a borda ao redor do conteúdo */
+        .content-wrapper {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+
+    <div class="content-wrapper">
+        <header>
+            <h1>Blog de Tecnologia</h1>
+        </header>
+        
+        <main>
+            <article>
+                <h2>Últimas Notícias</h2>
+                <section>
+                    <h3>Lançamento do Novo Smartphone</h3>
+                    <p>O novo smartphone foi lançado hoje e traz diversas inovações...</p>
+                </section>
+            
+                <section>
+                    <h3>Atualização de Software</h3>
+                    <p>Uma nova atualização de software foi liberada para corrigir bugs...</p>
+                </section>
+            </article>
+        
+            <article>
+                <h2>Dicas de Programação</h2>
+                <section>
+                    <h3>Melhores Práticas em HTML</h3>
+                    <p>Veja como melhorar a acessibilidade e semântica do seu código HTML...</p>
+                </section>
+            
+                <section>
+                    <h3>Otimização de Código CSS</h3>
+                    <p>Dicas para escrever código CSS mais limpo e eficiente...</p>
+                </section>
+            </article>
+        </main>
+        
+        <footer>
+            <h2>Contato</h2>
+            <p>Para mais informações, entre em contato pelo e-mail: contato@exemplo.com</p>
+        </footer>
+    </div>
+    <!-- fim do exemplo -->
+    <h5>Código fonte do exemplo</h5>
+    <script src="https://gist.github.com/laelNervis/0ddee343cc8bc6eec79211a9e0974c00.js"></script>
+
+<hr>
+
+    <h3>Exemplo do uso dos cabeçalhos para identificar cada seção</h3>
+    <!-- <h3>4 - Todas as seções de conteúdo possuem um cabeçalho que as identifica.</h3>
+    <h4>Exemplo</h4>
+    <p>O exemplo ilustra uma página web com um artigo sobre os cuidados com o meio ambiente, nela todas as seções de conteúdo possuem cabeçalhos que as identificam, facilitando a navegação e a compreensão do conteúdo</p> -->
+    <div class="content-wrapper">
+        <h1>Cuidado com o Meio Ambiente</h1>
+        <section>
+            <h2>1. O que é Sustentabilidade?</h2>
+            <p>A sustentabilidade refere-se à capacidade de atender às necessidades do presente sem comprometer a habilidade das futuras gerações de atender às suas próprias necessidades.</p>
+            <h3>1.1 Definição de Sustentabilidade</h3>
+            <p>O conceito de sustentabilidade envolve práticas que promovem o equilíbrio entre a conservação ambiental, o crescimento econômico e a justiça social.</p>
+            <h3>1.2 Importância da Sustentabilidade</h3>
+            <p>A sustentabilidade é crucial para a preservação dos recursos naturais e a proteção do meio ambiente para as futuras gerações.</p>    
+        </section>
+        <section>
+            <h2>2. Práticas Sustentáveis</h2>
+            <p>Adotar práticas sustentáveis é essencial para minimizar o impacto ambiental e promover a saúde do nosso planeta.</p>
+            <h3>2.1 Reciclagem</h3>
+            <p>A reciclagem ajuda a reduzir a quantidade de resíduos enviados para aterros e a conservar recursos naturais.</p>
+            <h3>2.2 Conservação de Água</h3>
+            <p>Conservar água é fundamental para manter os ecossistemas saudáveis e garantir o abastecimento para as futuras gerações.</p>
+        </section>
+    </div>
+
+    <h5>Código fonte do exemplo</h5>
+    <script src="https://gist.github.com/laelNervis/f3f0195e4eda86e17c8a82d2162d4af7.js"></script>
+
+<br><br>
+    <!-- <h3>2 - Uso de cabeçalhos: Todos os cabeçalhos são utilizados para identificar seções de conteúdo. </h3>
+    <h4>Exemplo</h4>
+    <p>O exemplo a seguir reflete um portal de notícias com uma organização clara e acessível, onde o <code>&lt;h1&gt;</code> "Brasil Notícias" identifica o tema central da página, indicando que o conteúdo é sobre notícias, os <code>&lt;h2&gt;</code> são usados para tópicos principais e os <code>&lt;h3&gt;</code> são utilizados para subtemas dentro das seções. Além disso a página conta com uma seção principal <code>&lt;main&gt;</code> e uma seção secundária <code>&lt;aside&gt;</code></p> -->
+    <div class="content-wrapper">
+        <h1>Brasil Notícias</h1>
+
+        <main>
+            <article>
+                <h2>Últimas Notícias</h2>
+                <p>Mantenha-se atualizado com as últimas notícias do Brasil e do mundo.</p>
+                
+                <h3>Crise Política no Brasil</h3>
+                <p>O governo enfrenta uma nova onda de protestos nas principais cidades do país.</p>
+                
+                <h3>Avanços na Vacinação</h3>
+                <p>Novas vacinas chegam ao Brasil, aumentando a cobertura vacinal da população.</p>
+            </article>
+
+            <article>
+                <h2>Esportes</h2>
+                <p>Acompanhe as últimas notícias e resultados dos principais eventos esportivos.</p>
+                
+                <h3>Campeonato Brasileiro</h3>
+                <p>As equipes se preparam para mais uma rodada emocionante do campeonato.</p>
+                
+                <h3>Jogos Olímpicos</h3>
+                <p>Atletas brasileiros se destacam nas competições olímpicas em Paris.</p>
+            </article>
+
+            <article>
+                <h2>Cultura e Entretenimento</h2>
+                <p>Descubra as novidades no mundo da cultura, cinema e música.</p>
+                
+                <h3>Lançamentos de Filmes</h3>
+                <p>Os filmes mais aguardados do mês já estão nos cinemas.</p>
+                
+                <h3>Festivais de Música</h3>
+                <p>Confira a programação dos principais festivais que ocorrerão neste verão.</p>
+            </article>
+        </main>
+
+        <aside>
+            <h2>Destaques</h2>
+            <p>Confira os principais destaques do dia e links para artigos populares.</p>
+            <ul>
+                <li><a href="#">Entrevista Exclusiva com Artista</a></li>
+                <li><a href="#">Análise do Último Jogo de Futebol</a></li>
+                <li><a href="#">Como a Vacinação Está Avançando</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <h5>Código fonte do exemplo</h5>
+    <script src="https://gist.github.com/laelNervis/83a5660ab9bc8238321232c4c6593aca.js"></script>
+
+    <hr>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- <h2>Links e Navegação</h2> -->
+
+    <h3>Exemplo de links para seções internas</h3>
+   <!--  <h3>2 - Uso de links: Todos os links são utilizados para navegação.</h3>
+
+    <p>Deve-se garantir que todos os links da página sejam usados unica e exclusivamente para navegação, seja ela interna (navegação entre ancoras nas seções da mesma página) ou exeterna (para outros sites). </p>
+
+    <p>Adicionalmente é recomendado que:</p>
+    <ul>
+        <li>Todos os links devem ter textos descritivos que informem o usuário sobre o destino do link. Evitando usar textos genéricos como "clique aqui" ou "saiba mais", pois não são informativos para usuários de tecnologias assistivas.</li>
+        <li>Links que permitem a navegação dentro da mesma página (âncoras) devem ser claramente identificáveis e devem ter um propósito descritivo.</li>
+        <li>Links para outros sites devem deixar claro que o usuário está saindo do site atual. Isso pode ser feito com textos descritivos ou indicando que o link abrirá em uma nova janela ou aba.</li>
+    </ul> -->
+
+    <h4>Exemplo 1</h4>
+    <!-- <p>Considerando as recomendações acima, aqui temos um exemplo de links utilizados para navegação interna onde cada link no menu de navegação usa um <code>href</code> com um ID de seção (<code>#section1</code>, <code>#section2</code>, <code>#section3</code>), o que permite ao usuário navegar internamente na página.</p> -->
+
+    <div class="content-wrapper">
+        <!-- início do exemplo -->
+        <style>
+            /* Estilo para a borda ao redor do conteúdo */
+
+            .content-wrapper {
+                border: 2px solid #ccc;
+                padding: 20px;
+                border-radius: 8px;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            section {
+                margin: 20px 0;
+            }
+        </style>
+
+        <div>
+            <h1>Como inserir texto alternativo para imagens em blogs e redes sociais</h1>
+            <p>A descrição de imagens é uma prática muito importante para que pessoas com deficiência visual ou com conexões lentas de internet possam ter acesso às informações que aparecem nesses elementos. A descrição pode ser disponibilizada por meio do texto alternativo, também conhecido como “alt”, por meio de uma legenda ou, ainda, no próprio conteúdo que antecede ou sucede a imagem, ou seja, no contexto.</p>
+            <p>Diversos softwares, como editores de texto, oferecem opção para fornecer um texto alternativo para as imagens.  Mais recentemente, gerenciadores de conteúdo e redes sociais também passaram a contemplar essa funcionalidade. Abaixo, aprenderemos como inserir o texto alternativo nas principais plataformas de blogs e redes sociais, sendo elas:</p>
+            <nav>
+                <ul>
+                    <li><a href="#section1">Wordpress</a></li>
+                    <li><a href="#section2">Facebook</a></li>
+                    <li><a href="#section3">Instagram</a></li>
+                    <li><a href="#section4">LinkedIn</a></li>
+                    <li><a href="#section5">Pinterest</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div>
+            <section id="section1">
+                <h2>Wordpress</h2>
+                <p>
+                    Para inserir um texto alternativo em uma imagem no WordPress, após inseri-la na postagem, basta clicar sobre ela e, em seguida,  clicar na opção de editar (botão com ilustração de lápis).  Na sequência, na janela “Detalhes da imagem”, insira a descrição no campo “Texto alternativo”. Para finalizar, clique no  botão “Atualizar” no final da janela e pronto, a descrição será salva.
+                </p>
+            </section>
+            
+            <section id="section2">
+                <h2>Facebook</h2>
+                <p>
+                    Para inserir o texto alternativo no Facebook, basta clicar no “Feed de Notícias” , inserir a imagem na opção “Foto/Vídeo”, clicar na opção “Editar”, clicar na opção “Texto alternativo”.  O Facebook já fornece uma sugestão de descrição, porém se quiser adicionar um texto personalizado, clique em “Texto alternativo personalizado” e insira a descrição. Para encerrar, pressione o botão “Gravar”. Para mais detalhes, acesse a postagem do CTA como inserir texto alternativo para imagens no Facebook.
+                </p>
+            </section>
+            
+            <section id="section3">
+                <h2>Instagram</h2>
+                <p>
+                    No instagram, adicione a imagem, realize a edição com filtros e na tela para publicação clique em “Configurações avançadas”. Na opção “Acessibilidade” haverá um campo para inserção do texto alternativo.
+                </p>
+            </section>
+
+            <section id="section4">
+                <h2>LinkedIn</h2>
+                <p>
+                    No LinkedIn, após inserir a imagem, clique na opção “Texto alternativo” (logo abaixo da figura). Na janela seguinte, digite a descrição da imagem no campo “Texto alternativo” e, para finalizar, clique no botão “Concluído ”. Pronto, agora é só publicar o conteúdo.
+                </p>
+            </section>
+
+            <section id="section5">
+                <h2>Pinterest</h2>
+                <p>
+                    No Pinterest,  insira um novo Pin/imagem ao clicar no botão “+”,  “Criar um Pin”  (canto inferior direito da tela), insira a imagem e clique no botão “Adicionar texto Alternativo”. Será aberto um campo, onde será permitido inserir a descrição. Ao finalizar, clique em “Salvar”.
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <h5>Código fonte do exemplo</h5>
+    <script src="https://gist.github.com/laelNervis/ab1a7b1cdfd4c1e3abcb12023f37a4e8.js"></script>
+
+    <!-- fim do exemplo -->
+<hr>
+    <h3>Exemplo de links para outros sites</h3>
+    <h4>Exemplo 2</h4>
+   <!--  <p>Neste outro exemplo, usaremos links para navegação externa (outros sites) e indicaremos que o link abrirá em uma nova aba usando o atributo <code>target="_blank"</code>.</p>
+    
+    <p>O atributo <code>target="_blank"</code> faz com que o link abra em uma nova aba ou janela, porem sem a indicação textual de que isso acontece o usuário não seria notificado que está saindo do site atual.</p> -->
+    
+    <div class="content-wrapper">
+            <!-- início do exemplo -->
+        <style>
+            /* Estilo para a borda ao redor do conteúdo */
+            .content-wrapper {
+                border: 2px solid #ccc;
+                padding: 20px;
+                border-radius: 8px;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+        </style>
+
+        <h1>Boxe Olímpico</h1>
+    
+        <p>
+            O <a href="https://www.olympic.org/boxing" target="_blank">boxe olímpico (link para outro site)</a> é um dos esportes mais antigos presentes nos Jogos Olímpicos. Sua inclusão remonta aos Jogos de 1904 em St. Louis, Estados Unidos. Ao longo dos anos, as regras e categorias do boxe olímpico evoluíram para tornar o esporte mais seguro e acessível para atletas de diversas idades e habilidades. Hoje, o boxe olímpico é praticado por homens e mulheres, com categorias que variam conforme o peso dos competidores.
+        </p>
+        
+        <p>
+            Em termos de regulamentação e desenvolvimento, o <a href="https://www.iba.sport/" target="_blank">International Boxing Association (IBA) (link para outro site)</a> é o órgão responsável por supervisionar o esporte a nível global. A IBA estabelece diretrizes para as competições e também atua na formação e certificação de árbitros e treinadores. Para acompanhar de perto as competições e resultados mais recentes, o site <a href="https://www.worldboxingnews.net/" target="_blank">World Boxing News (link para outro site)</a> fornece atualizações constantes e informações sobre os principais torneios de boxe ao redor do mundo.
+        </p>
+    </div>
+    <h5>Código fonte do exemplo</h5>
+    <script src="https://gist.github.com/laelNervis/dd349daa0de664e0345f13f2c2c4677e.js"></script>
+    <!-- fim do exemplo -->
+
+<hr>
+     <!-- <h2>Botões e Controles</h2> -->
+
+    <h3>Exemplo de botões descritivos</h3>
+
+    <!-- <h3>2 - Uso de botões: Todos os botões são utilizados para acionar uma funcionalidade.</h3> -->
+
+    <!-- <p>Todos os botões presentes numa página web devem ser claramente identificáveis e suas funcionalidades devem ser explícitamente compreensíveis para que todos os usuários, incluindo aqueles que utilizam leitores de tela e outras tecnologias assistivas, possam entender o que o botão faz</p>
+
+    <p>O uso de elementos HTML apropriados para botões é crucial. O elemento <code>&lt;button&gt;</code> é preferível ao <code>&lt;div&gt;</code> ou <code>&lt;span&gt;</code> estilizados como botões, pois o <code>&lt;button&gt;</code> é semanticamente correto e é automaticamente reconhecido por tecnologias assistivas.</p>
+
+    <p>Textos Descritivos: O texto dentro do botão deve ser descritivo e refletir a ação que será realizada ao clicar no botão. Deve-se evitar textos genéricos como "Clique aqui", preferindo descrições claras como "Enviar formulário" ou "Excluir item".</p>
+
+    <h4>Exemplo</h4>
+
+    <p>A seguir é simulada a última etapa de uma compra online. Nessa etapa o usuário informa os dados do cartão de crédito para efetuar o pagamento. O formulário possui dois botões, um para pagar a compra e outro para limpar os campos caso o usuário deseje por ter preenchido com os dados do cartão errado.</p> -->
+
+    <div class="content-wrapper">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+
+            form {
+                max-width: 400px;
+                border: 1px solid #ccc;
+                padding: 20px;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+            }
+
+            div {
+                margin-bottom: 15px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            input[type="text"],
+            input[type="number"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            button {
+                padding: 10px 15px;
+                margin-right: 10px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                color: white;
+            }
+
+            .pay-btn {
+                background-color: #28a745; /* Verde para o botão de pagar */
+            }
+
+            .clear-btn {
+                background-color: #dc3545; /* Vermelho para o botão de limpar */
+            }
+        </style>
+    
+        <h1>Formulário de Pagamento com Cartão de Crédito</h1>
+    
+        <form id="payment-form">
+            <fieldset>
+                <legend>3ª etapa (final) - Informações de Pagamento</legend>
+
+                <div>
+                    <label for="card-name">Nome no Cartão:</label>
+                    <input type="text" id="card-name" name="card-name" required placeholder="Nome completo">
+                </div>
+
+                <div>
+                    <label for="card-number">Número do Cartão:</label>
+                    <input type="text" id="card-number" name="card-number" required placeholder="1234 5678 9012 3456">
+                </div>
+
+                <div>
+                    <label for="expiry-date">Data de Validade:</label>
+                    <input type="text" id="expiry-date" name="expiry-date" required placeholder="MM/AA">
+                </div>
+
+                <div>
+                    <label for="cvv">CVV:</label>
+                    <input type="number" id="cvv" name="cvv" required placeholder="123">
+                </div>
+            </fieldset>
+
+            <button type="submit" class="pay-btn">Pagar</button>
+            <button type="reset" class="clear-btn">Limpar Campos</button>
+        </form>
+
+        <script>
+            // Simulação de funcionalidade do botão "Pagar"
+            document.getElementById('payment-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Impede o envio real do formulário para a demonstração
+                alert('Pagamento realizado com sucesso!');
+            });
+        </script>
+    </div>
+
+    <h5>Código fonte do exemplo</h5>
+    <script src="https://gist.github.com/laelNervis/4879f28c570f8020350883da515067ad.js"></script>
+
+    <!-- <h4>Explicação:</h4>
+    <p>O <code>&lt;button type="submit"&gt;</code>, utilizado para enviar o formulário é semântico e acessível, indicando claramente que o botão envia o formulário.</p>
+    
+    <p>O <code>&lt;button type="button"&gt;</code>, utilizado para cancelar a ação atual e redirecionar o usuário para outra página, garante que o botão não envíe o formulário acidentalmente.</p>
+    
+    <p>Além disso, os textos descritivos "Enviar Formulário" e "Cancelar" são claros e descrevem a ação que cada botão realizará.</p>
+    
+    <p>Outra característica importante é que os botões têm estilos distintos (<code>submit-button</code> e <code>cancel-button</code>), o que ajuda a diferenciar suas funções e a tornar a interface mais intuitiva.</p>
+    <p>Sendo assim usar elementos HTML semânticos e fornecer textos descritivos são práticas essenciais para cumprir esse critério e criar uma experiência de usuário inclusiva.</p> -->
+
+    <hr>
+
+     <!--  <h2>Listas</h2>
+
+    <h3>Todas as listas são utilizadas para agrupamento de itens de mesma natureza.</h3>
+
+    <p>As listas devem ser usadas de maneira semântica e apropriada para garantir que a estrutura do conteúdo seja clara e compreendida por todos os usuários, incluindo aqueles que usam leitores de tela.</p>
+
+    <p>Sendo assim, listas são utilizadas para agrupar itens que compartilham uma mesma natureza ou são partes de um conjunto. Por exemplo, uma lista de recursos, uma lista de passos em um procedimento, ou uma lista de itens de menu.</p>
+    
+    <p>O uso de elementos HTML semânticos apropriados para listas é fundamental. O elemento <code>&lt;ul&gt;</code> (lista não ordenada) é usado para itens sem uma ordem específica, enquanto <code>&lt;ol&gt;</code> (lista ordenada) é utilizado quando a sequência dos itens é importante. Os itens individuais são definidos com <code>&lt;li&gt;</code> (list item).</p>
+
+    <p>Deve-se evitar a utilização de números para identificar uma lista não ordenada, já que isso contradiz a semântica programática do conteúdo. Para esses casos é recomendável utilizar o elemento semantico correto (<code>&lt;ol&gt;</code>)</p>
+
+    <p>Também não é uma boa prática crar uma lista onde cada item desta lista é uma outra lista de apenas um item. De forma a respeitar a sememântica dos elementos HTML deve ser usar o <code>&lt;li&gt;</code> para idetificar cada item da lista individualmente.</p>
+
+    <p>Listas bem estruturadas ajudam leitores de tela a comunicar a relação entre itens, facilitando a navegação e compreensão do conteúdo. Isso é importante para garantir que todos os usuários possam entender o agrupamento e a ordem dos itens listados.</p>
+
+    <h4>Exemplo 1</h4>
+    <p>O exemplo a seguir traz uma lista não ordenada com algumas possíveis tarefas diárias de um product owner</p> -->
+
+    <h3>Exemplo de lista não ordenada</h3>
+    <h4>Exemplo 1</h4>
+    <!-- início do exemplo -->
+    <style>
+        /* Estilo para a borda ao redor do conteúdo */
+        .content-wrapper {
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: 0 auto;
+        }
+        ul, ol {
+            margin: 1px 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .gist{
+            border: 1px solid #999;
+            border-radius: 8px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .gist div{
+            margin-bottom: 0 !important;
+        }
+    </style>
+
+    <div class="content-wrapper">
+        <ul>
+            <li>Revisar backlog do produto</li>
+            <li>Priorizar itens para o próximo sprint</li>
+            <li>Alinhar requisitos com stakeholders</li>
+            <li>Participar da reunião diária (daily meeting)</li>
+            <li>Especificar novas histórias de usuário</li>
+            <li>Verificar progresso das tarefas em andamento</li>
+            <li>Revisar feedback de clientes</li>
+            <li>Planejar a revisão do sprint</li>
+        </ul>
+    </div>
+
+    <h5>Código fonte do exemplo</h5>
+    <script src="https://gist.github.com/laelNervis/d366b7d82ab352250122e77ed0f0bda9.js"></script>
+
+
+<hr>
+
+    <h3>Exemplo de lista ordenada</h3>
+    <h4>Exemplo 2</h4>
+    <!-- <p>Neste exemplo uma lista ordenada é utilizada para elencar os passos na ordem correta para restaurar um dispositivo android para as configurações de fábrica</p> -->
+
+    <div class="content-wrapper">
+        <ol>
+            <li>Fazer backup dos seus dados importantes (contatos, fotos, aplicativos)</li>
+            <li>Acessar as "Configurações" do dispositivo</li>
+            <li>Descer até a seção "Sistema" e tocar em "Redefinir"</li>
+            <li>Selecionar "Apagar todos os dados (restauração de fábrica)"</li>
+            <li>Ler as informações e confirmar a ação</li>
+            <li>Inserir o PIN, senha ou padrão, se solicitado</li>
+            <li>Tocar em "Apagar todos os dados" para iniciar a restauração</li>
+            <li>Aguardar o processo de reinicialização e restauração</li>
+            <li>Configurar o dispositivo novamente após a reinicialização</li>
+            <li>Restaurar os dados do backup, se necessário</li>
+        </ol>
+    </div>
+    <h5>Código fonte do exemplo</h5>
+    <script src="https://gist.github.com/laelNervis/55421720029798b95b9797a2e2e4baf2.js"></script>
+    <!-- fim do exemplo -->
+    <!-- <br><br>
+    <h4>Explicação:</h4>
+    
+    <p>Uma lista não ordenada (<code>&lt;ul&gt;</code>) foi usada para agrupar itens que não precisam de uma ordem específica. No exemplo, é utilizada para listar recursos como "Documentação Oficial", "Fórum de Suporte", "Guias de Melhores Práticas", "Vídeos Tutoriais", "Artigos de Blog", "FAQs", e "Suporte ao Cliente".</p>
+
+    <p>Uma lista ordenada (<code>&lt;ol&gt;</code>) foi usada para passos ou itens que precisam seguir uma sequência específica. No exemplo, descreve as etapas para acessar um site.</p>
+    
+    <p>Cada lista é identificada com um título <code>&lt;h2&gt;</code>, que ajuda a contextualizar o propósito da lista e facilita a navegação para leitores de tela.</p>
+    
+    <p>Cada item da lista foi especificado com o uso de <code>&lt;li&gt;</code>, mantendo a estrutura clara e semanticamente compreensível.</p> -->
+
+    <hr>
+
+    <hr><hr><hr>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <h2>Formulários e Entrada de Dados</h2>
+
+    <h3>3 - Rótulo de campo associado: Todos os rótulos estão associados aos respectivos campos de formulário de forma programaticamente determinada.</h3>
+
+    <p>Todos os campos de entrada precisam ter um rótulo descritivo associado a ele, por exemplo, usando a tag <code>&lt;label&gt;</code>.</p>
+
+    <p>Isso é crucial para garantir que usuários com deficiências, especialmente aqueles que utilizam tecnologias assistivas como leitores de tela, possam entender o propósito de cada campo do formulário de forma clara.</p>
+    
+
+    <h4>Exemplo</h4>
+
+    <p>Abaixo o exemplo de um formulário para envio de uma mensagem:</p>
+
+    <p>Cada campo de entrada do formulário tem um rótulo associado através da tag <code>&lt;label&gt;</code>. Por exemplo, o campo de nome tem um <code>&lt;label&gt;</code> com o texto "Nome completo" associado ao campo de texto com o atributo <code>for="nome"</code>.</p>
+
+    <p>A tag <code>&lt;label&gt;</code> ajuda os usuários de leitores de tela a compreenderem rapidamente o propósito do campo. Sem esse rótulo, eles podem ter dificuldade em entender o que deve ser preenchido.</p>
+
+    <p>O atributo <code>for</code> do <code>&lt;label&gt;</code> está vinculado ao atributo <code>id</code> do campo de entrada correspondente. Isso cria uma conexão explícita entre o rótulo e o campo, o que é essencial para a acessibilidade, pois permite que tecnologias assistivas reconheçam essa relação.</p>
+
+    <p>Exemplo: <code>&lt;label for="nome"&gt;Nome completo:&lt;/label&gt;</code> e <code>&lt;input type="text" id="nome" name="nome"&gt;</code>.</p>
+
+    <p>Observe quetanto o atributo <code>for</code> como o <code>id</code> tem a mesma identificação "nome", criando o vínculo entre os dois campos.</p>
+
+    <p>Usuários que dependem de leitores de tela ou navegam apenas pelo teclado podem ouvir ou ver o rótulo sendo lido ao focar no campo do formulário, permitindo que eles saibam exatamente o que precisa ser inserido. Sem essa associação, seria impossível para eles entenderem o propósito do campo.</p>
+
+    <div class="content-wrapper">
+        <style>
+            /* Estilizando o formulário */
+            form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            }
+
+            /* Estilizando cada div que envolve os campos */
+            div {
+            margin-bottom: 15px; /* Espaçamento entre os campos */
+            }
+
+            /* Alinhando os rótulos */
+            label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            }
+
+            /* Estilizando os campos de entrada */
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            textarea {
+            width: 100%; /* Faz o campo ocupar toda a largura do container */
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Garante que o padding e a borda sejam considerados no width */
+            }
+
+            /* Estilizando o botão */
+            button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            }
+
+            button:hover {
+            background-color: #0056b3;
+            }
+        </style>
+
+        <form>
+            <div>
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome">
+            </div>
+
+            <div>
+            <label for="email">Endereço de e-mail:</label>
+            <input type="email" id="email" name="email">
+            </div>
+
+            <div>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone">
+            </div>
+
+            <div>
+            <label for="mensagem">Sua mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <h5>Código fonte do exemplo</h5>
+    <script src="https://gist.github.com/laelNervis/653aedb8faa6f01850c3484181b59f33.js"></script>
+    <hr>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <h3>6 - Campos relacionados: Todos os campos de entrada relacionados possuem agrupamento determinado programaticamente.</h3>
+
+    <p>Quando temos campos de entrada que são relacionados entre si, como um grupo de opções de um formulário (por exemplo, informações de endereço), é importante agrupá-los usando elementos como <code>&lt;fieldset&gt;</code> e <code>&lt;legend&gt;</code>. Esses elementos ajudam tanto na organização visual quanto na acessibilidade do formulário, especialmente para usuários que utilizam tecnologias assistivas, como leitores de tela.</p>
+
+    <p>A utilização de elementos como <code>&lt;fieldset&gt;</code> e <code>&lt;legend&gt;</code> auxilia a fornecer contexto e estrutura clara para grupos de controles de formulário relacionados. Isso melhora a experiência de navegação e interpretação de um formulário, especialmente para pessoas com deficiência visual.</p>
+
+    <h4>Exemplo:</h4>
+
+    <p>Abaixo o exemplo de um formulário para envio de uma mensagem onde campos relacionados foram agrupados:</p>
+
+    <p>O <code>&lt;fieldset&gt;</code> é um elemento HTML que agrupa vários controles (campos de entrada) e rótulos (<code>&lt;label&gt;</code>) dentro de um formulário. Isso permite criar uma separação visual e semântica para um conjunto de campos relacionados.</p>
+
+    <p>No exemplo, há dois grupos de campos:</p>
+    <ul>
+        <li>Um grupo de "Dados Pessoais" (nome, e-mail, telefone).</li>
+        <li>Um grupo de "Mensagem" (campo para a mensagem do usuário).</li>
+    </ul>
+    <p>Cada conjunto de campos é envolvido por um <code>&lt;fieldset&gt;</code>, criando uma distinção clara para usuários e leitores de tela.</p>
+
+    <p>O <code>&lt;legend&gt;</code> é o rótulo que descreve o propósito do grupo de campos dentro de um <code>&lt;fieldset&gt;</code>. Ele age como um "título" para o grupo.</p>
+
+    <p>No exemplo, os <code>&lt;legend&gt;</code> são "Dados Pessoais" e "Mensagem". Esses rótulos ajudam a identificar rapidamente o que aquele conjunto de campos representa.</p>
+
+    <p>Usuários que utilizam tecnologias assistivas, como leitores de tela, se beneficiarão do uso de <code>&lt;fieldset&gt;</code> e <code>&lt;legend&gt;</code>, pois os leitores de tela anunciam o conteúdo de cada <code>&lt;legend&gt;</code>, deixando claro qual é o propósito do grupo de campos de formulário.</p>
+
+    <p>Isso ajuda a navegar de forma eficiente por formulários complexos, garantindo que o usuário compreenda melhor a relação entre os campos e suas funções.</p>
+
+    <div class="content-wrapper">
+        <style>
+            form {
+              max-width: 400px;
+              margin: 0 auto;
+              padding: 20px;
+              border: 1px solid #ccc;
+              border-radius: 8px;
+            }
+        
+            fieldset {
+              margin-bottom: 15px;
+              padding: 10px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+            }
+        
+            legend {
+              font-weight: bold;
+              margin-bottom: 10px;
+            }
+        
+            label {
+              display: block;
+              margin-bottom: 5px;
+            }
+        
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            textarea {
+              width: 100%;
+              padding: 10px;
+              font-size: 16px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              box-sizing: border-box;
+            }
+        
+            button {
+              padding: 10px 20px;
+              background-color: #007bff;
+              color: white;
+              border: none;
+              border-radius: 5px;
+              font-size: 16px;
+              cursor: pointer;
+            }
+        
+            button:hover {
+              background-color: #0056b3;
+            }
+        </style>
+        
+        <h1>Formulário de Denúncia de Crime Ambiental</h1>
+    <p>Por favor, preencha todos os campos abaixo. Os dados de contato são anônimos e não serão divulgados.</p>
+
+    <form>
+        <!-- Agrupando dados de contato do denunciante -->
+        <fieldset>
+            <legend>Dados de Contato (Anônimos)</legend>
+
+            <div>
+                <label for="anonimo-nome">Nome (Opcional):</label>
+                <input type="text" id="anonimo-nome" name="anonimo-nome" placeholder="Seu nome (opcional)">
+            </div>
+
+            <div>
+                <label for="anonimo-email">Endereço de e-mail:</label>
+                <input type="email" id="anonimo-email" name="anonimo-email" placeholder="Seu e-mail (opcional)">
+            </div>
+        </fieldset>
+
+        <!-- Agrupando dados do local do crime ambiental -->
+        <fieldset>
+            <legend>Endereço do Local do Crime Ambiental</legend>
+
+            <div>
+                <label for="local-endereco">Endereço Completo:</label>
+                <input type="text" id="local-endereco" name="local-endereco" required placeholder="Rua, Número, Bairro, Cidade, Estado">
+            </div>
+
+            <div>
+                <label for="local-ponto-referencia">Ponto de Referência:</label>
+                <input type="text" id="local-ponto-referencia" name="local-ponto-referencia" required placeholder="Ex.: Próximo ao parque municipal">
+            </div>
+
+            <div>
+                <label for="local-descricao">Descrição do Crime Ambiental:</label>
+                <textarea id="local-descricao" name="local-descricao" rows="4" required placeholder="Descreva detalhadamente o crime que está ocorrendo..."></textarea>
+            </div>
+        </fieldset>
+
+        <!-- Agrupando dados do autor do crime -->
+        <fieldset>
+            <legend>Dados do Autor do Crime</legend>
+
+            <div>
+                <label for="autor-tipo">Tipo de Autor:</label>
+                <select id="autor-tipo" name="autor-tipo" required>
+                    <option value="">Selecione...</option>
+                    <option value="Pessoa Física">Pessoa Física</option>
+                    <option value="Pessoa Jurídica">Pessoa Jurídica</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="autor-nome">Nome ou Razão Social:</label>
+                <input type="text" id="autor-nome" name="autor-nome" required placeholder="Nome do responsável ou empresa">
+            </div>
+
+            <div>
+                <label for="autor-cnpj-cpf">CPF ou CNPJ:</label>
+                <input type="text" id="autor-cnpj-cpf" name="autor-cnpj-cpf" required placeholder="CPF ou CNPJ do autor">
+            </div>
+
+            <div>
+                <label for="autor-descricao">Descrição do Autor:</label>
+                <textarea id="autor-descricao" name="autor-descricao" rows="4" required placeholder="Informações adicionais sobre o autor..."></textarea>
+            </div>
+        </fieldset>
+
+        <button type="submit">Enviar Denúncia</button>
+    </form>    
+    </div>
+
+    <h5>Código fonte do exemplo</h5>
+    <script src="https://gist.github.com/laelNervis/5611bb8c0711c707b00fb4743bdc806e.js"></script>
+
+    <hr>
+  
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <h2>Conteúdo Textual</h2>
+
+    <h3>8 - Semântica de texto especial: Todos os trechos de texto de ênfase, citação, abreviação ou outro tipo de texto especial possuem semântica determinada programaticamente.</h3>
+
+    <p>As informações e relacionamentos em uma página web devem ser programaticamente identificáveis e corretamente apresentados. Nesse sentido, todos os trechos de texto que expressam ênfase, citação, abreviação ou outro tipo de informação especial devem ser marcados semanticamente de acordo com seu propósito para que sejam acessíveis por tecnologias assistivas, como leitores de tela.</p>
+
+    <p>Elementos como <code>&lt;strong&gt;</code>, <code>&lt;abbr&gt;</code>, <code>&lt;cite&gt;</code>, <code>&lt;blockquote&gt;</code>, <code>&lt;q&gt;</code>, entre outros semelhantes, fornecem contexto adicional para tecnologias assistivas, permitindo que os leitores de tela anunciem corretamente a importância de uma ênfase, o significado de uma abreviação ou o propósito de uma citação.</p>
+
+    <p>Abaixo um exemplo de utilização correta destes elementos: </p>
+
+    <h3>Exemplo - Conteúdo textual</h3>
+
+    <!-- início do exemplo -->
+    <style>
+        /* Estilo para a borda ao redor do conteúdo */
+        .content-wrapper {
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: 0 auto;
+        }
+
+        blockquote {
+            border-left: 4px solid #ccc;
+            padding-left: 10px;
+            color: #555;
+            margin: 20px 0;
+        }
+    </style>
+
+    <div class="content-wrapper">
+        <p>Este parágrafo contém uma <strong>ênfase importante</strong> que destaca a relevância de um trecho de texto.</p>
+
+        <p>Em tecnologia, usamos muitas abreviações como <abbr title="Hypertext Markup Language">HTML</abbr> para facilitar a comunicação.</p>
+
+        <blockquote cite="https://www.exemplo.com/artigo">
+            "A tecnologia está sempre evoluindo, e devemos nos adaptar constantemente." — <cite>Artigo de Tecnologia</cite>.
+        </blockquote>
+
+        <p>Uma citação curta pode ser incluída diretamente no texto, como em: <q cite="https://www.exemplo.com/frase">A prática leva à perfeição</q>.</p>
+    </div>
+    <!-- fim do exemplo -->
+
+    <h4>Código fonte do exemplo</h4>
+    <script src="https://gist.github.com/laelNervis/a8d0754ea09cd69df6fb3e93266ccd3b.js"></script>
+
+    <h4>Explicação:</h4>
+    
+    <ul>
+        <li>O elemento <code>&lt;strong&gt;</code> enfatiza trechos de texto com significado importante. Ele é lido com mais destaque por tecnologias assistivas.</li>
+        <li>O uso de <code>&lt;abbr&gt;</code> com o atributo <code>title</code> garante que, ao passar o mouse sobre a abreviação ou ao usar um leitor de tela, o usuário saiba o significado completo daquela abreviação.</li>
+        <li>O elemento <code>&lt;cite&gt;</code> é usado para identificar o título de uma obra citada, como um livro, filme ou artigo.</li>
+        <li>O elemento <code>&lt;blockquote&gt;</code> é utilizado para um bloco de citação mais longo, que faz referência a uma fonte, citada com <code>&lt;cite&gt;</code>.</li>
+        <li>O elemento <code>&lt;q&gt;</code> é utilizado para pequenas citações inseridas diretamente dentro do parágrafo, representando falas ou trechos citados.</li>
+    </ul>
+    
+    <p>O uso correto desses elementos contribui para a acessibilidade do conteúdo, assegurando que ênfases, abreviações e citações sejam programaticamente identificáveis, seguindo as boas práticas recomendadas e melhorando a a experiência de usuários que dependem de leitores de telas.</p>
+
+    <hr>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <h2>Tabelas</h2>
+
+    <h3>2 - Uso de Tabelas: Todas as tabelas são utilizadas para apresentar dados tabulares. Não há tabelas de leiaute.</h3>
+
+    <p>De acordo com as recomendações da WCAG (Web Content Accessibility Guidelines) e as boas práticas de acessibilidade na web, tabelas devem ser utilizadas exclusivamente para a apresentação de dados tabulares — ou seja, dados que são organizados em colunas e linhas e que têm relação entre si. O uso de tabelas para a disposição ou layout visual de elementos na página é desencorajado, pois isso pode causar sérios problemas de acessibilidade.</p>
+    
+    <p>Quando uma tabela é usada corretamente para apresentar dados, tecnologias assistivas, como leitores de tela, podem processar corretamente as relações entre os dados e suas descrições, permitindo que usuários com deficiência visual compreendam o conteúdo de forma eficaz. Para garantir isso, é essencial usar a marcação semântica dos elementos HTML em tabelas de forma correta, conforme abaixo:</p>
+    
+    <ul>
+        <li><strong>Cabeçalhos de Tabela (<code>&lt;th&gt;</code>)</strong>: Cabeçalhos de linhas e colunas devem ser marcados corretamente com a tag <code>&lt;th&gt;</code>. Isso ajuda os leitores de tela a identificar o propósito de cada célula.</li>
+        <li><strong>Atributo <code>scope</code></strong>: O uso de <code>scope="col"</code> e <code>scope="row"</code> nas células de cabeçalho (headings) ajuda a vincular cada célula de dados à célula de cabeçalho correspondente.</li>
+        <li><strong>Elementos de agrupamento (<code>&lt;caption&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>)</strong>: Esses elementos permitem agrupar e organizar a estrutura da tabela, facilitando a compreensão para todos os usuários.</li>
+        <li><strong>Tabelas nunca devem ser usadas para layout de página</strong>: Isso dificulta a navegação e a interpretação correta do conteúdo por usuários que utilizam tecnologias assistivas. Para essa finalidade, utilize CSS.</li>
+    </ul>
+
+    <p>Abaixo um exemplo da utilização correta dos elementos HTML que compõem uma tabela. </p>
+
+    <h4>Explicação do exemplo:</h4>
+
+    <ul>
+        <li><strong>Cabeçalhos de Tabela (<code>&lt;th&gt;</code>)</strong>: As colunas e as linhas de cabeçalhos foram marcadas com <code>&lt;th&gt;</code>, permitindo que leitores de tela possam anunciar corretamente qual dado corresponde a qual cabeçalho.</li>
+        <li><strong>Atributo <code>scope</code></strong>: O uso de <code>scope="col"</code> e <code>scope="row"</code> associa corretamente as células de dados aos seus respectivos cabeçalhos de colunas e linhas.</li>
+        <li><strong>Elemento <code>&lt;caption&gt;</code></strong>: Adiciona uma legenda clara e visível para a tabela, explicando seu conteúdo de forma programática.</li>
+        <li><strong>Agrupamento com <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, e <code>&lt;tfoot&gt;</code></strong>: Os dados foram agrupados de forma lógica, com o cabeçalho no <code>&lt;thead&gt;</code>, o corpo da tabela no <code>&lt;tbody&gt;</code>, e o rodapé (com total) no <code>&lt;tfoot&gt;</code>. Isso facilita tanto a leitura visual quanto a navegação com tecnologias assistivas.</li>
+    </ul>
+    <h4>Exemplo de Tabela de Dados Tabulares Acessível</h4>
+    <!-- início do exemplo -->
+    <style>
+        /* Estilo para a borda ao redor do conteúdo */
+        .content-wrapper {
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: 0 auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        caption {
+            caption-side: top;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <div class="content-wrapper">
+        
+
+        <table>
+            <caption>Vendas de Produtos por Trimestre</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">1º Trimestre</th>
+                    <th scope="col">2º Trimestre</th>
+                    <th scope="col">3º Trimestre</th>
+                    <th scope="col">4º Trimestre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Smartphone</th>
+                    <td>1500</td>
+                    <td>2000</td>
+                    <td>1800</td>
+                    <td>2200</td>
+                </tr>
+                <tr>
+                    <th scope="row">Tablet</th>
+                    <td>800</td>
+                    <td>1200</td>
+                    <td>900</td>
+                    <td>1100</td>
+                </tr>
+                <tr>
+                    <th scope="row">Notebook</th>
+                    <td>2000</td>
+                    <td>2500</td>
+                    <td>2300</td>
+                    <td>2800</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row">Total</th>
+                    <td>4300</td>
+                    <td>5700</td>
+                    <td>5000</td>
+                    <td>6100</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <!-- fim do exemplo -->
+    <h4>Código fonte do exemplo</h4>
+    <script src="https://gist.github.com/laelNervis/88522ad5707e872b99c477c5c6ba8e04.js"></script>
+
+    <hr>
+
+    <h4>Exemplo simples de tabela acessível</h4>
+    <div class="content-wrapper">
+        <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Princípio</th>
+                <th>Quantidade de Critérios de Sucesso</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Perceptível</td>
+                <td>29</td>
+            </tr>
+            <tr>
+                <td>Operável</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>Compreensível</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>Robusto</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <h4>Código fonte do exemplo</h4>
+    <script src="https://gist.github.com/laelNervis/baf3fcbb0e4e24c5841ccb125ffd1452.js"></script>
+
+    <hr>
+
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <h3>3 - Cabeçalhos de tabela: Todas as células de dados de uma tabela estão associadas com os respectivos cabeçalhos de linha e coluna de forma programaticamente determinada.</h3>
+
+    <p>De acordo com as diretrizes de acessibilidade da WCAG, todas as células de dados em uma tabela devem estar programaticamente associadas aos seus respectivos cabeçalhos de linha e/ou coluna. Isso garante que as tecnologias assistivas, como leitores de tela, possam interpretar e anunciar corretamente a relação entre os dados e seus respectivos cabeçalhos.</p>
+
+    <p>O uso adequado dos cabeçalhos de tabelas (<code>&lt;th&gt;</code>) e dos atributos <code>&lt;scope&gt;</code> (<code>&lt;scope="col"&gt;</code> e <code>&lt;scope="row"&gt;</code>) é fundamental para garantir que a navegação pelos dados seja clara e compreensível para todos os usuários, especialmente aqueles que utilizam tecnologias assistivas.</p>
+
+    <p>Isso é importante porque usuários com deficiências visuais ou cognitivas dependem dessas associações programáticas para compreender o significado dos dados na tabela. Quando o conteúdo é adequadamente associado aos cabeçalhos, o leitor de tela pode anunciar o cabeçalho da linha e da coluna antes de anunciar o dado, o que melhora significativamente a experiência do usuário.</p>
+
+    <p>Abaixo um exemplo de tabela acessível com a associação correta entre cabeçalhos de linhas e colunas.</p>
+
+    <h4>Explicação do exemplo:</h4>
+
+    <ul>
+        <li><strong>Uso de <code>&lt;th&gt;</code> para cabeçalhos:</strong> As células dos cabeçalhos das colunas e das linhas são marcadas com a tag <code>&lt;th&gt;</code>. No exemplo abaixo, os cabeçalhos das colunas ("Nome do Estudante", "Matemática", "História", "Ciências") e das linhas (nomes dos estudantes) são especificados como cabeçalhos.</li>
+    
+        <li><strong>Atributo <code>scope</code>:</strong> O atributo <code>scope</code> é utilizado para associar cada cabeçalho de coluna com suas respectivas células de dados. O valor <code>scope="col"</code> é aplicado nos cabeçalhos das colunas e <code>scope="row"</code> nos cabeçalhos das linhas, associando corretamente os dados aos seus cabeçalhos.</li>
+    
+        <li><strong>Elemento <code>&lt;caption&gt;</code>:</strong> A tabela inclui um elemento <code>&lt;caption&gt;</code>, que fornece uma descrição geral sobre o que a tabela contém, melhorando a compreensão tanto para usuários com visão quanto para tecnologias assistivas.</li>
+    
+        <li><strong>Estruturação semântica:</strong> O uso dos elementos <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, e <code>&lt;tfoot&gt;</code> organiza os dados da tabela, ajudando na clareza e acessibilidade.</li>
+    </ul>
+
+    <h4>Exemplo tabela com cabeçalhos associados</h4>
+    <!-- início do exemplo -->
+    <style>
+        /* Estilo para a borda ao redor do conteúdo */
+        .content-wrapper {
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: 0 auto;
+        }
+    </style>
+
+    <div class="content-wrapper">
+        <table>
+            <caption>Notas dos Estudantes</caption>
+            <thead>
+            <tr>
+                <th scope="col">Nome do Estudante</th>
+                <th scope="col">Matemática</th>
+                <th scope="col">História</th>
+                <th scope="col">Ciências</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">João</th>
+                <td>85</td>
+                <td>90</td>
+                <td>78</td>
+            </tr>
+            <tr>
+                <th scope="row">Maria</th>
+                <td>92</td>
+                <td>88</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <th scope="row">Carlos</th>
+                <td>70</td>
+                <td>75</td>
+                <td>80</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- fim do exemplo -->
+    <h4>Código fonte do exemplo</h4>
+    <script src="https://gist.github.com/laelNervis/cde129ad1236d6df3d583d8e09fafa33.js"></script>
+
+    <hr>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <h3>5 - Título de tabela associado: Todos os títulos ou legendas de tabela estão associados à respectiva tabela de forma programaticamente determinada.</h3>
+
+    <p>Todas as tabelas em HTML devem possuir um título associado programaticamente que identifica a informação que ela contém. Esse título é inserido com o uso do elemento <code>&lt;caption&gt;</code>, que fornece uma descrição clara e útil para o conteúdo da tabela. Essa prática é recomendada pela WCAG, pois facilita a compreensão da tabela, especialmente para usuários que utilizam tecnologias assistivas como leitores de tela.</p>
+
+    <p>Exemplo de Tabela com <code>&lt;caption&gt;</code>.</p>
+
+    <h4>Explicação do exemplo:</h4>
+
+    <ul>
+        <li>O uso do elemento <code>&lt;caption&gt;</code> fornece um título claro para a tabela, essencial para acessibilidade.</li>
+        <li>O atributo <code>scope</code> nos elementos <code>&lt;th&gt;</code> garante que os cabeçalhos de linha e coluna sejam corretamente associados às células de dados.</li>
+        <li>A estrutura semântica com <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, e <code>&lt;tfoot&gt;</code> facilita a organização e interpretação dos dados.</li>
+    </ul>
+    
+    <p>No exemplo abaixo, a tabela contém um <code>&lt;caption&gt;</code> que descreve de forma clara que os dados apresentados referem-se ao "Desempenho Acadêmico dos Estudantes em Diferentes Disciplinas". O uso do <code>&lt;thead&gt;</code> para o cabeçalho, <code>&lt;tbody&gt;</code> para os dados, e <code>&lt;tfoot&gt;</code> para o rodapé, juntamente com o <code>scope</code> nos elementos <code>&lt;th&gt;</code>, garante que as relações entre os dados e seus cabeçalhos sejam corretamente interpretadas por tecnologias assistivas.</p>
+
+    <!-- início do exemplo -->
+    <style>
+        /* Estilo para a borda ao redor do conteúdo */
+        .content-wrapper {
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: 0 auto;
+        }
+    </style>
+
+    <h4>Exemplo de tabela com título</h4>
+
+    <div class="content-wrapper">
+        <table border="1">
+            <caption>Desempenho Acadêmico dos Estudantes em Diferentes Disciplinas</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Nome do Estudante</th>
+                    <th scope="col">Matemática</th>
+                    <th scope="col">História</th>
+                    <th scope="col">Ciências</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Maria Silva</th>
+                    <td>85</td>
+                    <td>90</td>
+                    <td>88</td>
+                </tr>
+                <tr>
+                    <th scope="row">João Santos</th>
+                    <td>78</td>
+                    <td>85</td>
+                    <td>82</td>
+                </tr>
+                <tr>
+                    <th scope="row">Ana Costa</th>
+                    <td>92</td>
+                    <td>87</td>
+                    <td>91</td>
+                </tr>
+            </tbody>
+            <!-- <tfoot>
+                <tr>
+                    <td colspan="4">Desempenho baseado nas últimas avaliações</td>
+                </tr>
+            </tfoot> -->
+        </table>
+    </div>
+    <!-- fim do exemplo -->
+    <h4>Código fonte do exemplo</h4>
+    <script src="https://gist.github.com/laelNervis/cc8827cf45183f37e6b5c09e269428c9.js"></script>
+    <hr>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <h3>Todas as tabelas complexas possuem uma descrição da tabela em texto.</h3>
+
+    <p>A recomendação da WCAG de fornecer uma descrição em texto para tabelas complexas tem o objetivo de garantir que todos os usuários, incluindo aqueles que utilizam tecnologias assistivas como leitores de tela, consigam entender e acessar o conteúdo tabular de forma eficiente. Tabelas complexas geralmente têm cabeçalhos de múltiplos níveis, células mescladas ou uma estrutura que pode ser difícil de interpretar apenas passando por ela célula a célula. Fornecer uma descrição em texto auxilia esses usuários a compreender o propósito da tabela e suas principais informações sem a necessidade de navegar por cada célula, o que pode ser demorado e confuso.</p>
+
+    <p>Abaixo um exemplo de tabela complexa com uma descrição em texto.</p>
+
+    <h4>Explicação do exemplo:</h4>
+
+    <ul>
+        <li>
+            <strong>Cabeçalhos de Tabela:</strong> A tabela tem cabeçalhos de coluna e linha marcados corretamente com <code>&lt;th&gt;</code>, usando o atributo <code>scope="col"</code> e <code>scope="row"</code> para associar cada cabeçalho às suas respectivas células de dados.
+        </li>
+        <li>
+            <strong>Células Mescladas:</strong> Algumas células foram mescladas, como a célula de "Média Geral" e as células de resultados combinados para cada grupo de estudantes.
+        </li>
+        <li>
+            <strong>Legenda da Tabela:</strong> O uso do elemento <code>&lt;caption&gt;</code> fornece uma descrição clara sobre o conteúdo da tabela, essencial para a compreensão do propósito da tabela tanto por usuários com visão quanto por tecnologias assistivas.
+        </li>
+        <li>
+            <strong>Organização Semântica:</strong> A tabela está organizada usando <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, e <code>&lt;tfoot&gt;</code>, facilitando a leitura e a navegação, especialmente para usuários de leitores de tela.
+        </li>
+    </ul>
+    
+    <p>Em relação ao seu conteúdo, a tabela a seguir apresenta uma análise comparativa de desempenho acadêmico em diferentes disciplinas para dois grupos de estudantes, com a média de notas em Matemática, História, e Ciências ao longo de dois semestres. A tabela é composta por dois níveis de cabeçalhos de coluna, separando os grupos de estudantes, e dois níveis de cabeçalhos de linha, diferenciando o semestre e as disciplinas. Algumas células são mescladas para agrupar informações relacionadas. A tabela compara o desempenho dos grupos ao longo dos semestres e permite uma análise mais detalhada das tendências de notas.</p>
+
+    <p>Descrição em Texto para Tecnologias Assistivas:</p>
+
+    <blockquote>
+        A tabela apresenta uma comparação entre o desempenho dos Grupos A e B em três disciplinas (Matemática, História, e Ciências) ao longo do 1º e 2º semestres. Cada linha da tabela corresponde a um semestre, e cada coluna mostra as notas médias dos grupos em cada disciplina. A linha final apresenta a média geral das notas por grupo. Os dados indicam que o Grupo B teve um desempenho geral ligeiramente superior ao Grupo A, com médias de 8.03 e 7.76, respectivamente.
+    </blockquote>
+    
+    <!-- início do exemplo -->
+    <style>
+        /* Estilo para a borda ao redor do conteúdo */
+        .content-wrapper {
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: 0 auto;
+        }
+    </style>
+    
+    <div class="content-wrapper">
+        <table>
+            <caption>Análise de Desempenho Acadêmico - Grupos de Estudantes por Disciplina e Semestre</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2">Semestre</th>
+                    <th colspan="3">Grupo A</th>
+                    <th colspan="3">Grupo B</th>
+                </tr>
+                <tr>
+                    <th>Matemática</th>
+                    <th>História</th>
+                    <th>Ciências</th>
+                    <th>Matemática</th>
+                    <th>História</th>
+                    <th>Ciências</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1º Semestre</th>
+                    <td>7.8</td>
+                    <td>6.5</td>
+                    <td>8.0</td>
+                    <td>8.2</td>
+                    <td>7.1</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <th scope="row">2º Semestre</th>
+                    <td>8.0</td>
+                    <td>6.8</td>
+                    <td>8.2</td>
+                    <td>8.5</td>
+                    <td>7.4</td>
+                    <td>7.9</td>
+                </tr>
+                <tr>
+                    <th colspan="7">Média Geral</th>
+                </tr>
+                <tr>
+                    <td colspan="3">Grupo A</td>
+                    <td colspan="3">Grupo B</td>
+                </tr>
+                <tr>
+                    <td colspan="3">7.76</td>
+                    <td colspan="3">8.03</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="7">Fonte: Relatório Acadêmico Semestral 2024</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <!-- fim do exemplo -->
+
+    <hr>
+
+    <h4>Exemplo de tabela complexa</h4>
+    <div class="content-wrapper">
+        <h2>Impacto do Trabalho no Desempenho Acadêmico de Estudantes do Ensino Médio</h2>
+        <p>Estudos indicam que estudantes do ensino médio que trabalham apresentam diferenças significativas em seu desempenho acadêmico em comparação com aqueles que não precisam trabalhar. A tabela abaixo apresenta as notas médias de ambos os grupos ao longo de três trimestres, nas disciplinas de Matemática, História, Ciências e Português da Escola Judith Pereira em Bento Gonçalves no Rio Grande do Sul</p>
+
+        <table>
+    <caption>Comparativo de desempenho dos estudantes</caption>
+    <thead>
+        <tr>
+            <th rowspan="2">Trimestre</th>
+            <th colspan="4">Alunos que trabalham</th>
+            <th colspan="4">Alunos que não trabalham</th>
+        </tr>
+        <tr>
+            <th>Matemática</th>
+            <th>História</th>
+            <th>Ciências</th>
+            <th>Português</th>
+            <th>Matemática</th>
+            <th>História</th>
+            <th>Ciências</th>
+            <th>Português</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- 1º Trimestre -->
+        <tr>
+            <th scope="row">1º Trimestre</th>
+            <td>6.5</td>
+            <td>5.8</td>
+            <td>6.0</td>
+            <td>6.2</td>
+            <td>8.0</td>
+            <td>7.5</td>
+            <td>8.2</td>
+            <td>7.8</td>
+        </tr>
+        <!-- 2º Trimestre -->
+        <tr>
+            <th scope="row">2º Trimestre</th>
+            <td>6.8</td>
+            <td>6.0</td>
+            <td>6.3</td>
+            <td>6.5</td>
+            <td>8.3</td>
+            <td>7.8</td>
+            <td>8.5</td>
+            <td>8.0</td>
+        </tr>
+        <!-- 3º Trimestre -->
+        <tr>
+            <th scope="row">3º Trimestre</th>
+            <td>6.7</td>
+            <td>5.9</td>
+            <td>6.1</td>
+            <td>6.4</td>
+            <td>8.1</td>
+            <td>7.6</td>
+            <td>8.3</td>
+            <td>7.9</td>
+        </tr>
+        <!-- Média Geral -->
+        <tr>
+            <th scope="row">Média Geral</th>
+            <td colspan="4">6.4</td>
+            <td colspan="4">7.9</td>
+        </tr>
+    </tbody>
+</table>
+<p>Os dados são organizados em duas categorias: "Alunos que trabalham" e "Alunos que não trabalham", comparando suas médias em Matemática, História, Ciências e Português. No 1º trimestre, os alunos que trabalham obtiveram as seguintes médias: 6.5 em Matemática, 5.8 em História, 6.0 em Ciências e 6.2 em Português. Em contraste, os alunos que não trabalham alcançaram notas mais altas: 8.0 em Matemática, 7.5 em História, 8.2 em Ciências e 7.8 em Português.</p>
+
+<p>Avançando para o 2º trimestre, as notas dos alunos que trabalham foram ligeiramente superiores ao trimestre anterior, com médias de 6.8 em Matemática, 6.0 em História, 6.3 em Ciências e 6.5 em Português. Os alunos que não trabalham mantiveram um desempenho consistente, com médias de 8.3 em Matemática, 7.8 em História, 8.5 em Ciências e 8.0 em Português.</p>
+
+<p>No 3º trimestre, os alunos que trabalham continuaram a ter um desempenho um pouco inferior, com médias de 6.7 em Matemática, 5.9 em História, 6.1 em Ciências e 6.4 em Português. Os alunos que não trabalham mantiveram as notas altas, com 8.1 em Matemática, 7.6 em História, 8.3 em Ciências e 7.9 em Português.</p>
+
+<p>Para uma visão geral do desempenho, a Média Geral dos alunos que trabalham ao longo dos três trimestres foi de 6.4, enquanto a média dos alunos que não trabalham foi de 7.9.</p>
+
+<p>Esse resultado ilustra uma tendência clara de melhor desempenho acadêmico entre os alunos que não precisam dividir o tempo de estudo com atividades de trabalho, sugerindo que a dupla jornada entre estudos e trabalho tende a afetar o rendimento escolar, especialmente nas disciplinas mais exigentes.</p>
+    </div>
+
+    <h4>Código fonte do exemplo</h4>
+    <script src="https://gist.github.com/laelNervis/2a45648c23084c5ff22150eacf3f85e0.js"></script>
+
+<br>
+<hr>
+<br>
+
+
+
+
+
+
+
+
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <h2>Codificação e marcação semântica</h2>
+
+    <h3>Todos os componentes customizados possuem semântica e comportamento previsíveis - ?????</h3>
+
+    <p>Quando falamos sobre componentes customizados, devemos garantir que esses componentes utilizem marcação semântica adequada e comportem-se de maneira previsível para tecnologias assistivas, como leitores de tela.</p>
+
+    <h4>Exemplo</h4>
+    <p>No exemplo a seguir vamos considerar um exemplo de de um link  <code>&lt;a&gt;</code> que foi estilizado através de uma classe CSS <code>.btn-link</code> para se parecer com um botão. O estilo inclui <code>padding</code>, <code>background-color</code>, e <code>border-radius</code> para dar a aparência de um botão. Também foi adicionado um efeito de hover com uma transição suave na cor do fundo para melhorar a experiência do usuário e aumentar a caracterização do link como botão.</p>
+
+    <div class="content-wrapper">
+        <a href="#" class="btn-link">Clique Aqui</a>
+
+        <style>
+            .btn-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease;
+            }
+        
+            .btn-link:hover {
+            background-color: #0056b3;
+            }
+        </style>
+    </div>
+
+    <hr>
+
+    <h3>8 - Título do frame: Todo frame ou iframe possui um título único e que o identifica.</h3>
+
+    <p>De acordo com as diretrizes da WCAG, é essencial que todo frame ou iframe em HTML possua um título descritivo único. Isso é necessário para que usuários de tecnologias assistivas, como leitores de tela, compreendam o propósito e o conteúdo do frame. O atributo <code>&lt;title&gt;</code> ajuda a fornecer essa descrição, permitindo que o conteúdo dentro de um frame seja identificado sem que o usuário precise explorá-lo diretamente.</p>
+
+    <p>Se um iframe não possui um título adequado, isso pode causar confusão para os usuários de tecnologias assistivas, pois eles podem não entender qual é o propósito do conteúdo dentro do frame. A inclusão de títulos descritivos melhora a navegação e a usabilidade do site, garantindo conformidade com as normas de acessibilidade.</p>
+
+    <p>Exemplo de um iframe acessível com título.</p>
+
+    <h4>Explicação do exemplo:</h4>
+
+    <p>O vídeo a seguir está incorporado através de um iframe. Ele contém um título descritivo para garantir que usuários de tecnologias assistivas saibam o propósito do conteúdo.</p>
+
+    <ul>
+        <li>
+            <strong>Uso do Atributo <code>&lt;title&gt;</code>:</strong> O atributo <code>&lt;title="Vídeo do Youtube: Confecção de mouse com Arduino para acionadores"&gt;</code> descreve o conteúdo do iframe. Isso permite que os leitores de tela anunciem essa informação aos usuários.
+        </li>
+        <li>
+            <strong>Conteúdo no iframe:</strong> O iframe está incorporando um vídeo do YouTube. O título fornecido ajuda a explicar o conteúdo do vídeo.
+        </li>
+        <li>
+            <strong>Acessibilidade:</strong> A presença do título dentro do iframe facilita a navegação e compreensão do conteúdo, evitando que o usuário precise explorar o iframe para descobrir o que ele contém.
+        </li>
+    </ul>
+
+    <h4>Exemplo de um iframe acessível com título</h4>
+    <!-- início do exemplo -->
+        <style>
+            /* Estilo para a borda ao redor do conteúdo */
+            .content-wrapper {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 560px;
+            margin: 0 auto;
+            }
+        </style>
+
+        <div class="content-wrapper">
+            <iframe 
+                src="https://www.youtube.com/embed/q6MQMLrqia4"
+                width="560"
+                height="315"
+                title="Vídeo do Youtube: Confecção de mouse com Arduino para acionadores"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div> 
+    <!-- fim do exemplo -->
+    <h4>Código fonte do exemplo</h4>
+    <script src="https://gist.github.com/laelNervis/bb082a259668dfcb58d673a4e5b57dec.js"></script>
+
+    <hr>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <h3>Todas as regiões da página são identificadas de forma semântica.</h3>
+
+    <p>De acordo com as diretrizes WCAG, é fundamental que todas as regiões de uma página web sejam identificadas de forma semântica. Isso significa que cada área da página deve ser marcada com elementos HTML que representem adequadamente seu propósito e tipo de conteúdo. Essa prática não apenas melhora a acessibilidade, mas também facilita a navegação e a compreensão do layout da página por usuários de tecnologias assistivas, como leitores de tela.</p>
+
+    <p>A semântica programática ajuda os usuários a entender rapidamente a estrutura e a função de cada seção da página, permitindo que eles se orientem melhor. Por exemplo, a utilização de elementos como <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;aside&gt;</code>, e <code>&lt;section&gt;</code> fornece informações contextuais que são anunciadas por leitores de tela, garantindo que todos os usuários, independentemente de suas habilidades, possam acessar o conteúdo de forma eficiente.</p>
+
+    <p>Exemplo de página HTML estruturada com regições identificadas de forma semântica.</p>
+
+    <h4>Explicação do exemplo:</h4>
+
+    <ul>
+        <li><strong>Header (<code>&lt;header&gt;</code>):</strong> Utilizado para definir a seção de cabeçalho da página, que contém o título do blog e a navegação principal.</li>
+        <li><strong>Navegação (<code>&lt;nav&gt;</code>):</strong> A seção de navegação é claramente identificada, facilitando a busca de links importantes.</li>
+        <li><strong>Main (<code>&lt;main&gt;</code>):</strong> A região principal do conteúdo, que contém artigos e outras informações relevantes.</li>
+        <li><strong>Artigo (<code>&lt;article&gt;</code>):</strong> Representa um conteúdo independente que pode ser distribuído ou reutilizado, como uma postagem de blog.</li>
+        <li><strong>Aside (<code>&lt;aside&gt;</code>):</strong> Usado para conteúdo complementar, como links para artigos relacionados, que não fazem parte do conteúdo principal.</li>
+        <li><strong>Footer (<code>&lt;footer&gt;</code>):</strong> Define a seção de rodapé, que contém informações de copyright.</li>
+    </ul>
+
+    <!-- início do exemplo -->
+    <style>
+        /* Estilo para a borda ao redor do conteúdo */
+        .content-wrapper {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+
+    <div class="content-wrapper">
+
+        <header>
+            <h1>Meu Blog de Tecnologia</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <article>
+                <h2>Últimas Notícias</h2>
+                <p>O novo smartphone foi lançado e traz várias inovações.</p>
+            </article>
+
+            <aside>
+                <h3>Artigos Relacionados</h3>
+                <ul>
+                    <li><a href="#artigo1">Artigo 1</a></li>
+                    <li><a href="#artigo2">Artigo 2</a></li>
+                </ul>
+            </aside>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Meu Blog de Tecnologia</p>
+        </footer>
+
+    </div>
+    <!-- fim do exemplo -->
+
+    <hr>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <h3>15. Elementos nativos - Todos os componentes da página utilizam elementos nativos.</h3>
+
+    <p>Todos os componentes da página devem utilizar elementos nativos do HTML sempre que possível, pois esses elementos já possuem comportamentos e propriedades semânticas embutidos que ajudam os usuários a entenderem a estrutura e o propósito do conteúdo. Quando não for viável usar elementos nativos, é essencial empregar outras formas de identificação semântica, como atributos ARIA (Accessible Rich Internet Applications). Esses atributos ajudam a fornecer informações adicionais sobre a funcionalidade e a estrutura dos elementos, facilitando a interação com tecnologias assistivas, como leitores de tela.</p>
+
+    <p>Exemplo de uso de semântica nativa e ARIA</p>
+
+    <p>Usando ARIA para tornar um componente como abas (tabs) acessível. Em muitos casos, o HTML nativo não oferece elementos específicos para essa funcionalidade, mas, ao usar ARIA, podemos garantir que os leitores de tela e outras tecnologias assistivas compreendam o comportamento esperado desses elementos.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+    
+    <ul>
+        <li>Utilizamos o atributo <code>role="tablist"</code> para indicar que o conjunto de abas pertence a uma lista de abas.</li>
+        <li>Cada aba possui o <code>role="tab</code>, e os respectivos conteúdos utilizam o <code>role="tabpanel"</code>.</li>
+        <li>O atributo <code>aria-selected="true"</code> indica qual aba está ativa no momento.</li>
+        <li><code>aria-controls</code> associa a aba ao painel correspondente, para que tecnologias assistivas saibam qual conteúdo exibir ao selecionar a aba.</li>
+        <li><code>aria-hidden="true</code> oculta o conteúdo de abas que não estão visíveis, melhorando a experiência para leitores de tela.</li>
+        <li>As abas podem ser navegadas e ativadas, com o conteúdo correspondente sendo mostrado ou escondido conforme a seleção, sem confusão ou ambiguidades para os usuários.</li>
+    </ul>
+    
+    <!-- início do exemplo -->
+    <style>
+        /* Estilo para a borda ao redor do conteúdo */
+        .content-wrapper {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tablist {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .tab[aria-selected="true"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .tabpanel {
+            border: 1px solid #ccc;
+            padding: 15px;
+            display: none;
+        }
+
+        .tabpanel[aria-hidden="false"] {
+            display: block;
+        }
+    </style>
+
+    <div class="content-wrapper">
+        <h2>Exemplo de Abas com ARIA</h2>
+
+        <div role="tablist" aria-label="Seleção de Seções">
+            <button id="tab-1" role="tab" aria-controls="panel-1" aria-selected="true" class="tab">Aba 1</button>
+            <button id="tab-2" role="tab" aria-controls="panel-2" aria-selected="false" class="tab">Aba 2</button>
+            <button id="tab-3" role="tab" aria-controls="panel-3" aria-selected="false" class="tab">Aba 3</button>
+        </div>
+
+        <div id="panel-1" role="tabpanel" aria-labelledby="tab-1" class="tabpanel" aria-hidden="false">
+            <p>Conteúdo da Aba 1. Informações relevantes para esta seção.</p>
+        </div>
+        <div id="panel-2" role="tabpanel" aria-labelledby="tab-2" class="tabpanel" aria-hidden="true">
+            <p>Conteúdo da Aba 2. Mais informações relevantes.</p>
+        </div>
+        <div id="panel-3" role="tabpanel" aria-labelledby="tab-3" class="tabpanel" aria-hidden="true">
+            <p>Conteúdo da Aba 3. Outro conjunto de informações relevantes.</p>
+        </div>
+
+        <script>
+            const tabs = document.querySelectorAll('[role="tab"]');
+            const tabPanels = document.querySelectorAll('[role="tabpanel"]');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove o estado selecionado de todas as abas
+                    tabs.forEach(t => {
+                        t.setAttribute('aria-selected', 'false');
+                    });
+
+                    // Esconde todos os painéis
+                    tabPanels.forEach(panel => {
+                        panel.setAttribute('aria-hidden', 'true');
+                    });
+
+                    // Marca a aba clicada como selecionada
+                    tab.setAttribute('aria-selected', 'true');
+
+                    // Exibe o painel associado
+                    const panelId = tab.getAttribute('aria-controls');
+                    document.getElementById(panelId).setAttribute('aria-hidden', 'false');
+                });
+            });
+        </script>
+    </div>
+    <!-- fim do exemplo -->
+
+    <hr>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <h2>Regiões da Página</h2>
+
+    <h3>4 - Regiões únicas: Não há mais do que uma região do tipo ‘header’/’banner’, ‘main’ ou ‘footer’/’contentinfo’.</h3>
+
+
+    <p>
+        A estrutura de uma página web deve ser organizada de forma semântica para garantir acessibilidade adequada.
+        A WCAG recomenda que as regiões principais da página (como <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code> e <code>&lt;footer&gt;</code>) sejam utilizadas uma única vez para evitar confusão. Isso significa que não deve haver mais de um cabeçalho ou rodapé global na página.
+        Essas regiões permitem a correta navegação por tecnologias assistivas, como leitores de tela, e ajudam os usuários a entenderem rapidamente a função de cada parte da página. Outras regiões, como <code>&lt;nav&gt;</code> e <code>&lt;aside&gt;</code>, podem ser usadas conforme necessário para fornecer suporte e organização adicional ao conteúdo.
+    </p>
+
+    <p>Abaixo um exemplo da correta utilização destes elementos.</p>
+
+    <h4>Explicação Exemplo:</h4>
+
+    <ul>
+        <li><strong>Cabeçalho (<code>&lt;header&gt;</code>)</strong>: Usado para definir a área de cabeçalho da página, onde colocamos o título e a navegação principal. Segundo a WCAG, deve haver apenas um <code>&lt;header&gt;</code> global na página para evitar confusão semântica.</li>
+        <li><strong>Navegação (<code>&lt;nav&gt;</code>)</strong>: A área de navegação permite uma organização clara dos links, garantindo acessibilidade para navegação rápida entre as seções do site.</li>
+        <li><strong>Conteúdo Principal (<code>&lt;main&gt;</code>)</strong>: A região <code>&lt;main&gt;</code> contém o conteúdo principal da página. Por recomendação da WCAG, deve haver apenas uma região <code>&lt;main&gt;</code> em toda a página.</li>
+        <li><strong>Conteúdo Complementar (<code>&lt;aside&gt;</code>)</strong>: O elemento <code>&lt;aside&gt;</code> é utilizado para exibir informações adicionais que complementam o conteúdo principal. Ele é semântico e ajuda na organização da página.</li>
+        <li><strong>Rodapé (<code>&lt;footer&gt;</code>)</strong>: A região <code>&lt;footer&gt;</code> contém informações de rodapé e links relevantes. Assim como o <code>&lt;header&gt;</code>, o rodapé global deve ser único.</li>
+    </ul>
+
+    <!-- início do exemplo -->
+    <style>
+        /* Estilo para a borda ao redor do conteúdo */
+        .content-wrapper {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+
+    <div class="content-wrapper">
+        <header>
+            <h1>Título do Site</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <article>
+                <h2>Artigo Principal</h2>
+                <p>Este é o conteúdo principal da página, organizado na seção <code>&lt;main&gt;</code>, que é a única utilizada na página para este propósito.</p>
+            </article>
+
+            <aside>
+                <h3>Informações Complementares</h3>
+                <p>Esta seção <code>&lt;aside&gt;</code> fornece conteúdo adicional e relevante ao lado do artigo principal.</p>
+            </aside>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Todos os direitos reservados - Nome da Empresa</p>
+            <nav>
+                <ul>
+                    <li><a href="#privacidade">Política de Privacidade</a></li>
+                    <li><a href="#termos">Termos de Uso</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+    <!-- fim do exemplo -->
+
+    <hr>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <h3>5 - Regiões identificadas unicamente: Todas as regiões do mesmo tipo possuem nome acessível único que as identifica.</h3>
+
+    <p>Em uma página complexa, pode haver mais de uma área de navegação (<code>&lt;nav&gt;</code>) ou mais de um conteúdo complementar (<code>&lt;aside&gt;</code>). No entanto, para que usuários de tecnologias assistivas possam entender o propósito de cada região, é essencial fornecer descrições únicas e acessíveis.</p>
+
+    <p>Utilizando o atributo <code>aria-label</code> em cada instância de <code>&lt;nav&gt;</code> e <code>&lt;aside&gt;</code>, garantimos que essas áreas sejam identificadas corretamente, sem ambiguidade.</p>
+
+    <p>Abaixo um exemplo de página onde existem múltiplos elementos <code>&lt;nav&gt;</code> e <code>&lt;aside&gt;</code>, mas identificados com nomes acessíveis únicos para evitar confusão semântica.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <ul>
+        <li><strong>Cabeçalho e Navegação Principal:</strong> O <code>&lt;nav&gt;</code> principal é rotulado com <code>aria-label="Navegação Principal"</code> para identificar sua função como a navegação principal da página.</li>
+        <li><strong>Conteúdos Complementares (Asides):</strong> Existem dois <code>&lt;aside&gt;</code>s. O primeiro é para "Artigos Relacionados" e o segundo para "Anúncios Promocionais". Cada um tem um <code>aria-label</code> único para garantir que leitores de tela possam diferenciar entre os dois.</li>
+        <li><strong>Navegação Secundária:</strong> O segundo <code>&lt;nav&gt;</code> é rotulado como <code>aria-label="Navegação do Artigo"</code>, permitindo que o usuário entenda que se trata de uma navegação interna ao artigo.</li>
+    </ul>
+    
+    <!-- início do exemplo -->
+    <style>
+        /* Estilo para a borda ao redor do conteúdo */
+        .content-wrapper {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+
+    <div class="content-wrapper">
+        <!-- Cabeçalho da página -->
+        <header>
+            <h1>Blog de Acessibilidade</h1>
+            <!-- Navegação principal -->
+            <nav aria-label="Navegação Principal">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#artigos">Artigos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <main>
+            <!-- Conteúdo principal -->
+            <article>
+                <h2>Postagem sobre Acessibilidade Web</h2>
+                <p>Este artigo discute as melhores práticas para garantir que seu site seja acessível a todos os usuários.</p>
+            </article>
+    
+            <!-- Conteúdo complementar (aside) para links relacionados -->
+            <aside aria-label="Artigos Relacionados">
+                <h3>Artigos Relacionados</h3>
+                <ul>
+                    <li><a href="#artigo1">Como melhorar a acessibilidade</a></li>
+                    <li><a href="#artigo2">Ferramentas de verificação de acessibilidade</a></li>
+                </ul>
+            </aside>
+    
+            <!-- Conteúdo complementar (aside) para anúncios -->
+            <aside aria-label="Anúncios Promocionais">
+                <h3>Anúncios</h3>
+                <p>Confira nossas últimas promoções!</p>
+            </aside>
+    
+            <!-- Navegação secundária (nav) para seções do artigo -->
+            <nav aria-label="Navegação do Artigo">
+                <h3>Navegação Interna</h3>
+                <ul>
+                    <li><a href="#introducao">Introdução</a></li>
+                    <li><a href="#praticas">Melhores Práticas</a></li>
+                    <li><a href="#conclusao">Conclusão</a></li>
+                </ul>
+            </nav>
+        </main>
+    
+        <!-- Rodapé -->
+        <footer>
+            <p>&copy; 2024 Blog de Acessibilidade</p>
+        </footer>
+    </div>
+    <!-- fim do exemplo -->    
+
+    <hr>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <p><center> <strong>Critério 1.3.2</strong></center></p>
+    <hr>
+
+    <h2>Formulários e Entrada de Dados</h2>
+
+    <h3>2 - Rótulo de campo previsível: Todos os rótulos estão posicionados de maneira previsível em relação aos respectivos campos de formulário.</h3>
+
+    <p>Os rótulos de um formulário devem estar claramente associados aos respectivos campos do formulário e dispostos de forma consistente em toda a página, seja acima, à esquerda ou à direita dos campos. Isso garante que os usuários, incluindo aqueles que dependem de tecnologias assistivas, como leitores de tela, consigam entender rapidamente a relação entre os campos e seus rótulos.</p>
+
+    <p>Posicionar rótulos de forma previsível ajuda a criar uma experiência de navegação mais intuitiva, reduzindo a carga cognitiva para usuários com deficiência visual ou outras limitações. Para garantir acessibilidade, a tag <code>&lt;label&gt;</code> deve ser utilizada corretamente e vinculada aos campos com o atributo <code>for</code>, garantindo que os leitores de tela possam anunciar o rótulo corretamente quando o campo de entrada for acessado.</p>
+
+    <p>O exemplo abaixo mostra um formulário onde os rótulos estão colocados de forma previsível em relação aos campos de entrada, permitindo uma navegação intuitiva para usuários de tecnologia assistiva e também garantindo a clareza para todos os usuários.</p>
+
+    <h4>Explicação do Exemplo</h4>
+    <ul>
+        <li><strong>Rótulos acima dos campos:</strong> No campo "Nome Completo" e "Data de Nascimento", os rótulos estão posicionados diretamente acima dos campos de entrada, facilitando a identificação de qual rótulo pertence a qual campo.</li>
+        <li><strong>Rótulo à esquerda:</strong> O campo "E-mail" tem o rótulo posicionado à esquerda, alinhado com o campo, criando uma estrutura visual clara e previsível para os usuários.</li>
+        <li><strong>Rótulo à direita:</strong> O checkbox para "Aceito os termos e condições" tem o rótulo à direita do campo, de modo a facilitar a compreensão sem confusão visual.</li>
+    </ul>
+
+    <!-- início do exemplo -->
+    <style>
+        /* Estilo para a borda ao redor do conteúdo */
+        .content-wrapper {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+
+    <div class="content-wrapper">
+        <form>
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                
+                <!-- Rótulo posicionado acima do campo de entrada -->
+                <div style="margin-bottom: 10px;">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+        
+                <!-- Rótulo posicionado à esquerda do campo de entrada -->
+                <div style="margin-bottom: 10px;">
+                    <label for="email" style="display: inline-block; width: 150px;">E-mail:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+        
+                <!-- Rótulo posicionado à esquerda do campo de seleção -->
+                <div style="margin-bottom: 10px;">
+                    <label for="nascimento" style="display: inline-block; width: 150px;">Data de Nascimento:</label>
+                    <input type="date" id="nascimento" name="nascimento">
+                </div>
+        
+                <!-- Rótulo posicionado à direita do checkbox -->
+                <div style="margin-bottom: 10px;">
+                    <input type="checkbox" id="termos" name="termos" style="display: inline-block;">
+                    <label for="termos" style="display: inline-block;">Aceito os termos e condições</label>
+                </div>
+        
+                <!-- Botão de envio -->
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <!-- fim do exemplo --> 
+
+    <hr>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <h2>Apresentação</h2>
+
+    <h3>2 - Ordem de apresentação: A apresentação dos elementos conforme aparecem na tela é tal que preserva o significado e a operabilidade.</h3>
+
+    <p>A ordem de apresentação dos elementos na tela deve preservar tanto o significado quanto a operabilidade. Isso significa que o conteúdo e a estrutura do HTML devem seguir uma ordem lógica e linear, de maneira que o significado não se perca quando os elementos forem lidos por tecnologias assistivas, como leitores de tela. Os elementos devem ser apresentados em uma sequência que faça sentido, permitindo que os usuários naveguem facilmente pelo conteúdo sem confusão.</p>
+
+    <p>A ordem visual dos elementos na tela pode ser controlada com CSS, mas a ordem no DOM (Document Object Model) deve preservar a lógica de leitura, o que é crucial para a acessibilidade, conforme exemplo abaixo.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <ul>
+        <li>
+            <strong>Ordem no HTML:</strong> No código HTML, a seção de conteúdo principal aparece primeiro no DOM, seguida pela barra lateral (sidebar). Isso garante que, ao usar um leitor de tela ou ao navegar sem CSS, o conteúdo principal será lido primeiro, como esperado.
+        </li>
+        <li>
+            <strong>Ordem Visual (CSS):</strong> No layout visual, utilizando CSS Flexbox, a ordem foi invertida para que a barra lateral seja exibida antes do conteúdo principal na tela, sem afetar a ordem de leitura no DOM. Isso preserva a acessibilidade e operabilidade.
+        </li>
+        <li>
+            <strong>Elemento &lt;main&gt;:</strong> A região principal da página está corretamente marcada com a tag &lt;main&gt;, contendo tanto o conteúdo principal quanto a barra lateral, garantindo que essa estrutura seja semântica e de fácil navegação.
+        </li>
+    </ul>
+
+    <!-- início do exemplo -->
+    <style>
+        /* Estilo para a borda ao redor do conteúdo */
+        .content-wrapper {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .container {
+            display: flex;
+            align-items: stretch;
+        }
+        .main-content, .sidebar {
+            padding: 20px;
+        }
+        .main-content {
+            background-color: #f0f8ff;
+            flex: 3;
+        }
+        .sidebar {
+            background-color: #f8f0ff;
+            flex: 1;
+        }
+        .sidebar {
+            order: 1; /* Visualmente aparece antes, mas é lida depois */
+        }
+        .main-content {
+            order: 2; /* Visualmente aparece depois, mas é lida primeiro */
+        }
+    </style>
+
+    <div class="content-wrapper">
+        <header>
+            <h1>Blog de Acessibilidade</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#artigos">Artigos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <!-- Conteúdo Principal -->
+                <section class="main-content">
+                    <h2>Artigo: A Importância da Acessibilidade</h2>
+                    <p>Este artigo discute por que a acessibilidade é fundamental para garantir que todos os usuários possam navegar na web com facilidade. Manter uma ordem lógica na apresentação dos conteúdos é essencial.</p>
+                </section>
+
+                <!-- Barra Lateral (Sidebar) -->
+                <aside class="sidebar">
+                    <h2>Artigos Relacionados</h2>
+                    <ul>
+                        <li><a href="#artigo1">Entendendo o WCAG</a></li>
+                        <li><a href="#artigo2">Melhores Práticas de Acessibilidade</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Blog de Acessibilidade</p>
+        </footer>
+    </div>
+    <!-- fim do exemplo --> 
+
+    <hr>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <h2>Codificação e Marcação Semântica</h2>
+
+    <h3>10 - Ordem de leitura: A ordem dos elementos conforme aparecem no código é lógica e intuitiva, tal que preserva o significado e a operabilidade.</h3>
+
+    <p>A ordem dos elementos conforme aparecem no código é fundamental para garantir que uma experiência satisfatória, intuitiva e acessível de navegação ao usuário, especialmente para usuários de tecnologias assistivas que dependem de leitores de tela para interpretar o conteúdo.</p>
+
+    <p> Quando a estrutura do HTML é lógica, os usuários podem navegar e compreender o conteúdo sem confusão. Nesse sentido é importante que os elementos sejam dispostos de maneira que reflitam a hierarquia e o fluxo natural da informação.</p>
+
+    <p> Para garantir que todos os usuários tenham acesso às informações, é essencial que a ordem dos elementos não apenas faça sentido visualmente, mas também em termos de navegação e interpretação por parte de tecnologias assistivas.</p>
+
+    <p> O exemplo abaixo demonstra como a ordem lógica na estrutura HTML é essencial para a acessibilidade, permitindo que todos os usuários, independentemente de suas habilidades, compreendam e naveguem pelo conteúdo de maneira eficaz.</p>
+            
+    <h4>Explicação do Exemplo:</h4>
+
+    <ul>
+        <li>
+            <strong>Lista Ordenada:</strong> A lista ordenada (<code>&lt;ol&gt;</code>) apresenta os passos para preparar o café em uma ordem lógica, onde cada passo é identificado claramente com um título e uma descrição. Isso permite que leitores de tela leiam os passos na sequência correta, mesmo que o layout visual seja confuso.
+        </li>
+        <li>
+            <strong>Clareza na Estrutura:</strong> Cada passo é apresentado como um item separado com suas próprias informações, ajudando a manter a ordem correta de leitura. O uso de <code>&lt;h2&gt;</code> para cada passo ajuda na navegação e compreensão.
+        </li>
+        <li>
+            <strong>Seções Separadas:</strong> O layout utiliza duas colunas, mas a ordem de leitura segue a sequência dos passos, garantindo que a experiência do usuário com leitores de tela seja intuitiva.
+        </li>
+    </ul>
+
+    <!-- início do exemplo -->
+    <style>
+        /* Estilo para a borda ao redor do conteúdo */
+        .content-wrapper {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    
+        .step-container {
+            flex: 1;
+            padding: 10px;
+        }
+    
+        .step {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    
+        .confusing-layout {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+    
+        .step-container-steps {
+            flex-grow: 1;
+        }
+    
+        .step-container-equipments {
+            flex-basis: 20px;
+        }
+    </style>
+    
+    <div class="content-wrapper">
+        <h1>Como Preparar um Café</h1>
+        <p>Siga os passos abaixo para preparar um café delicioso (embora a apresentação possa parecer confusa, a ordem de leitura no código HTML está correta para facilitar a navegação com leitores de tela).</p>
+    
+        <div class="confusing-layout">
+            <!-- Coluna da lista de passos -->
+            <div class="step-container step-container-steps">
+                <ol>
+                    <li class="step">
+                        <h2>Passo 1: Ferva a Água</h2>
+                        <p>Coloque água em uma chaleira e leve ao fogo até ferver.</p>
+                    </li>
+                    <li class="step">
+                        <h2>Passo 2: Adicione o Café</h2>
+                        <p>Em uma prensa francesa, adicione duas colheres de sopa de café moído.</p>
+                    </li>
+                    <li class="step">
+                        <h2>Passo 3: Despeje a Água</h2>
+                        <p>Quando a água ferver, despeje-a lentamente sobre o café moído.</p>
+                    </li>
+                    <li class="step">
+                        <h2>Passo 4: Aguarde</h2>
+                        <p>Deixe o café em infusão por cerca de 4 minutos.</p>
+                    </li>
+                    <li class="step">
+                        <h2>Passo 5: Pressione e Sirva</h2>
+                        <p>Pressione o êmbolo da prensa francesa e sirva o café em uma xícara.</p>
+                    </li>
+                </ol>
+            </div>
+    
+            <!-- Coluna da lista de equipamentos -->
+            <div class="step-container step-container-equipments">
+                <h3>Equipamentos Necessários:</h3>
+                <ul>
+                    <li>Chaleira</li>
+                    <li>Prensa Francesa</li>
+                    <li>Café Moído</li>
+                    <li>Água</li>
+                    <li>Xícara</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- fim do exemplo --> 
+
+    <hr>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <p><center> <strong>Links para Demais Exemplos</strong></center></p>
+    <hr>
+
+    <a href="https://ases.unifesp.br/manual/crt/exemplo1.3.3.html">Critério 1.3.3</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo1.3.4.html">Critério 1.3.4</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo1.3.5.html">Critério 1.3.5</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo1.3.6.html">Critério 1.3.6</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo1.4.1.html">Critério 1.4.1</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo1.4.2.html">Critério 1.4.2</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo1.4.3.html">Critério 1.4.3</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo1.4.4.html">Critério 1.4.4</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo1.4.5.html">Critério 1.4.5</a><br><br> 
+    <a href="https://ases.unifesp.br/manual/crt/exemplo1.4.6.html">Critério 1.4.6</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo1.4.7.html">Critério 1.4.7</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo1.4.8.html">Critério 1.4.8</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo1.4.9.html">Critério 1.4.9</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo1.4.10.html">Critério 1.4.10</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo1.4.11.html">Critério 1.4.11</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo1.4.12.html">Critério 1.4.12</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo1.4.13.html">Critério 1.4.13</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.1.1.html">Critério 2.1.1</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.1.2.html">Critério 2.1.2</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.1.3.html">Critério 2.1.3</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.1.4.html">Critério 2.1.4</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.2.1.html">Critério 2.2.1</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.2.2.html">Critério 2.2.2</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.2.3.html">Critério 2.2.3</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.2.4.html">Critério 2.2.4</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.2.5.html">Critério 2.2.5 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.2.6.html">Critério 2.2.6 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.3.1.html">Critério 2.3.1 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.3.2.html">Critério 2.3.2 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.3.3.html">Critério 2.3.3 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.4.1.html">Critério 2.4.1 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.4.2.html">Critério 2.4.2 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.4.3.html">Critério 2.4.3 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.4.4.html">Critério 2.4.4 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.4.5.html">Critério 2.4.5 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.4.6.html">Critério 2.4.6 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.4.7.html">Critério 2.4.7 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.4.8.html">Critério 2.4.8 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.4.9.html">Critério 2.4.9 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.4.10.html">Critério 2.4.10 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.4.11.html">Critério 2.4.11 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.4.12.html">Critério 2.4.12 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.4.13.html">Critério 2.4.13 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.5.1.html">Critério 2.5.1 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.5.2.html">Critério 2.5.2 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.5.3.html">Critério 2.5.3 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.5.4.html">Critério 2.5.4 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.5.5.html">Critério 2.5.5 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.5.6.html">Critério 2.5.6 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.5.7.html">Critério 2.5.7 - em construção</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo2.5.8.html">Critério 2.5.8 - em construção</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.1.1.html">Critério 3.1.1</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.1.2.html">Critério 3.1.2</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.1.3.html">Critério 3.1.3</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.1.4.html">Critério 3.1.4</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.1.5.html">Critério 3.1.5</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.1.6.html">Critério 3.1.6</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.2.1.html">Critério 3.2.1</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.2.2.html">Critério 3.2.2</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.2.3.html">Critério 3.2.3</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.2.4.html">Critério 3.2.4</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.2.5.html">Critério 3.2.5</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.2.6.html">Critério 3.2.6</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.3.1.html">Critério 3.3.1</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.3.2.html">Critério 3.3.2</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.3.3.html">Critério 3.3.3</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.3.4.html">Critério 3.3.4</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.3.5.html">Critério 3.3.5</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.3.6.html">Critério 3.3.6</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.3.7.html">Critério 3.3.7</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.3.8.html">Critério 3.3.8</a><br><br>
+    <a href="https://ases.unifesp.br/manual/crt/exemplo3.3.9.html">Critério 3.3.9</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo4.1.2.html">Critério 4.1.2</a><br><br>
+	<a href="https://ases.unifesp.br/manual/crt/exemplo4.1.3.html">Critério 4.1.3</a><br><br>
+
+
+</body>

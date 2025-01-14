@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 1.4.3</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 1.4.3</strong></center></p>
+    <hr>
+
+    <h2>Uso de Cores</h2>
+
+    <h3>3. Contraste para texto (mínimo): Todo conteúdo de texto, incluindo imagens de texto, tem relação de contraste de pelo menos 4,5:1 com o fundo.</h3>
+    
+    <p>De acordo com o critério <strong>1.4.3</strong> das Diretrizes de Acessibilidade para Conteúdo Web (WCAG), é necessário que todo conteúdo textual, incluindo texto presente em imagens, mantenha uma relação de contraste mínima de <strong>4,5:1</strong> em relação ao fundo. Essa recomendação visa garantir que o texto seja legível para pessoas com baixa visão ou outras deficiências visuais.</p>
+
+    <p>Você pode usar ferramentas online para calcular o contraste, como o <a href="https://webaim.org/resources/contrastchecker/">WebAIM's Contrast Checker</a>.</p>
+
+    <p>O exemplo a seguir apresenta um texto em branco sobre um fundo azul claro, onde a relação mínima de contraste recomendada pela WCAG é atendida.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <p> Neste exemplo, a cor de fundo (<code>#0076D1</code>) e a cor do texto (<code>#ffffff</code>) têm uma relação de contraste de aproximadamente <strong>4,5:1</strong>, que é o limite mínimo aceitável para textos pequenos, conforme as normas do critério <strong>1.4.3</strong> da WCAG.</p>
+
+    <!-- início do exemplo -->
+    <style>
+      .content-wrapper {
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .contrast-example {
+        padding: 10px;
+        background-color: #0076D1; /* cor de fundo com contraste */
+        color: #ffffff; /* cor de texto que mantém relação de contraste 4,5:1 */
+        border-radius: 4px;
+      }
+    </style>
+
+    <div class="content-wrapper">
+      <div class="contrast-example">
+          <p>Este é um exemplo de texto com fundo azul claro e cor de texto branca, atendendo ao contraste mínimo de 4,5:1.</p>
+          <p>Manter um contraste adequado entre o texto e o fundo é essencial para garantir que pessoas com deficiências visuais possam ler o conteúdo de forma clara e sem esforço.</p>
+          <p>Para indivíduos com baixa visão ou condições como daltonismo, o contraste insuficiente dificulta a compreensão da informação, impactando negativamente a acessibilidade e a experiência do usuário.</p>
+          <p>Seguir as diretrizes de contraste da WCAG ajuda a tornar o conteúdo acessível a todos, melhorando a inclusão e proporcionando uma navegação mais amigável para usuários com diferentes necessidades.</p>
+      </div>
+    </div>
+    <!-- fim do exemplo -->
+
+    <br><hr>
+
+    <h3>3. Contraste para texto (mínimo): O conteúdo de texto está em tamanho grande e tem relação de contraste de pelo menos 3:1 com o fundo.</h3>
+
+    <p> Segundo o critério <strong>1.4.3</strong> das Diretrizes de Acessibilidade para Conteúdo Web (WCAG), textos considerados "grandes" devem ter uma relação de contraste mínima de <strong>3:1</strong> em relação ao fundo. Esse critério se aplica para assegurar que conteúdo em fontes maiores seja legível, atendendo a pessoas com baixa visão, especialmente em dispositivos de grande dimensão ou para usuários que aumentam o tamanho do texto.</p>
+
+    <p>O exemplo a seguir apresenta um texto grande em branco sobre um fundo azul escuro, atendendo ao critério de contraste mínimo de 3:1.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <p>Neste exemplo, a cor de fundo (<code>#2994FF</code>) e a cor do texto (<code>#ffffff</code>) apresentam uma relação de contraste que cumpre o requisito mínimo de <strong>3:1</strong> para textos grandes, conforme o critério <strong>1.4.3</strong> das diretrizes WCAG.</p>
+  
+
+    <!-- início do exemplo -->
+    <style>
+      .content-wrapper {
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .contrast-example-large {
+          font-size: 24px; /* Tamanho grande para o texto */
+          padding: 10px;
+          background-color: #2994FF; /* cor de fundo com contraste para texto grande */
+          color: #ffffff; /* cor de texto que mantém relação de contraste 3:1 */
+          border-radius: 4px;
+      }
+    </style>
+
+    <div class="content-wrapper">
+      <div class="contrast-example-large">
+          <p>Este é um exemplo de texto em tamanho grande com fundo azul claro e cor de texto branca, garantindo o contraste mínimo de 3:1, como recomendado pela WCAG.</p>
+          <p>O uso de contraste adequado é fundamental para assegurar que conteúdos importantes sejam legíveis, facilitando a compreensão para pessoas com deficiências visuais e promovendo uma experiência de leitura inclusiva.</p>
+      </div>
+    </div>
+    <!-- fim do exemplo -->
+</body>

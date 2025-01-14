@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 1.3.4</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 1.3.4</strong></center></p>
+    <hr>
+
+    <h2>Apresentação</h2>
+
+    <h3>3 - Orientação de exibição: O conteúdo não restringe sua visualização e operação a uma única orientação de exibição, como de retrato ou paisagem.</h3>
+
+    <p>O critério <strong>1.3.4</strong> das <abbr title="Diretrizes de Acessibilidade para o Conteúdo Web">WCAG</abbr> exige que o conteúdo da página não seja restrito a uma única orientação de exibição, como apenas retrato (vertical) ou paisagem (horizontal). Isso significa que o conteúdo deve se adaptar e permanecer funcional independentemente da orientação do dispositivo que o usuário esteja utilizando.</p>
+
+    <p>Essa diretriz é especialmente importante para usuários com dispositivos móveis, que podem girar seus dispositivos e esperar que o conteúdo continue acessível e legível em qualquer orientação.</p>
+
+    <p>Não impor uma única orientação para o conteúdo é fundamental para a acessibilidade porque alguns usuários podem ter limitações que os impedem de mudar a orientação de seus dispositivos. Por exemplo, uma pessoa que usa seu celular montado em uma cadeira de rodas pode ter dificuldades para rotacionar o dispositivo de forma confortável.</p>
+
+    <p>Além disso, os usuários devem poder escolher a orientação que melhor atende às suas necessidades sem que isso comprometa a usabilidade e legibilidade do conteúdo.</p>
+
+    <h4>Explicação dos Exemplos:</h4>
+
+    <p>O exemplo apresenta uma notícia fictícia sobre a instalação de um novo módulo de pesquisa na estação espacial internacional.</p>
+
+    <p>Este exemplo usa CSS flexível (através de media queries) para adaptar o layout com base na orientação do dispositivo. Quando a página é visualizada em modo retrato, os elementos (imagem e texto) são empilhados verticalmente. Quando a página é visualizada em modo paisagem, os elementos são dispostos lado a lado, aproveitando melhor a largura da tela.</p>
+
+    
+
+<!-- início do exemplo -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .content, .mission-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .news-image, .mission-image {
+            max-width: 100%;
+            width: 400px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .text-content, .mission-text {
+            max-width: 700px;
+        }
+        @media (orientation: landscape) {
+            .content, .mission-details {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .text-content, .mission-text {
+                text-align: left;
+                margin-left: 20px;
+            }
+        }
+    </style>
+
+    <main>
+        <section>
+            <h2>Notícia: Estação Espacial Internacional Recebe Novo Módulo de Pesquisa</h2>
+            <div class="content">
+                <img src="https://www.nasa.gov/wp-content/uploads/2020/09/sts_106_iss_departure_flyaround_sts106-375-018_0.jpg" alt="Imagem ilustrativa da Estação Espacial Internacional" class="news-image">
+                <div class="text-content">
+                    <p>A Estação Espacial Internacional (ISS) recebeu um novo módulo de pesquisa em uma missão bem-sucedida realizada pela NASA em parceria com a Agência Espacial Europeia (ESA). O novo módulo, chamado "Lunar Gateway", foi acoplado à ISS e já está operando a plena capacidade.</p>
+                    <p>O "Lunar Gateway" permitirá que cientistas conduzam experimentos em condições de microgravidade, focando principalmente em novas tecnologias para a exploração lunar. A missão foi um marco importante para os planos da NASA de explorar mais a fundo a Lua e, eventualmente, Marte.</p>
+                    <p>A chegada do módulo foi acompanhada de grande expectativa, já que ele trará novos avanços em diversas áreas, como biotecnologia, física e ciências materiais. A acoplagem foi transmitida ao vivo pela NASA TV, com milhões de espectadores acompanhando o evento.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section>
+            <div class="mission-details">
+                <h3>Mais Detalhes da Missão</h3>
+                <div class="mission-text">
+                    <p>Além do "Lunar Gateway", a missão também transportou suprimentos essenciais para os astronautas que estão a bordo da ISS, além de equipamentos para manutenção e novos experimentos científicos. A missão foi um sucesso completo, com todos os objetivos alcançados.</p>
+                    <p>Os próximos passos incluem a verificação de todos os sistemas do novo módulo e a preparação de futuros experimentos que irão ajudar a pavimentar o caminho para missões mais longas e distantes no espaço profundo.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+<!-- fim do exemplo -->
+

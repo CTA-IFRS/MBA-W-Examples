@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 1.4.11</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 1.4.11</strong></center></p>
+    <hr>
+
+    <h2>Uso de Cores</h2>
+
+    <h3>4. Contraste para componentes: Todo componente de interface tem relação de contraste de pelo menos 3:1 com o fundo e entre seus estados.</h3>
+
+    <p>O critério de sucesso <strong>1.4.11</strong> da <abbr title="Diretrizes de Acessibilidade para o Conteúdo Web">WCAG</abbr> exige que componentes de interface 
+    (como botões, links, controles, etc.) tenham uma relação de contraste de pelo menos 3:1 em relação ao fundo. Isso inclui estados dinâmicos, como hover, foco e pressionado, garantindo que todos os usuários possam identificar visualmente os componentes e suas mudanças de estado.</p>
+
+    <p> No exemplo abaixo, um botão foi estilizado para atender a essa recomendação. A relação de contraste entre o botão e seu fundo é de pelo menos 3:1 em todos os estados. Além disso, a transição suave ajuda a destacar as mudanças de estado.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <ul>
+      <li>Cores e Contraste: As cores escolhidas garantem uma relação de contraste de pelo menos 3:1 entre o fundo, o botão e sua borda.</li>
+      <li>Estados: O estado <code>hover</code> foi estilizado para indicar visualmente a interação com contraste adequado.</li>
+      <li>Transição: A propriedade <code>transition</code> melhora a experiência do usuário ao tornar as mudanças mais perceptíveis.</li>
+      <li>Estado pressionado: No estado <code>:active</code> utiliza uma tonalidade de azul mais escura para o fundo e uma borda ainda mais escura, garantindo contraste de pelo menos 3:1 com o texto branco e o fundo.</li>
+      <li>Feedback tátil visual: O uso de <code>transform: scale(0.98)</code> cria uma leve compressão, ajudando o usuário a identificar que o botão foi pressionado.</li>
+    </ul>
+
+    <!-- início do exemplo -->
+    <style>
+      .content-wrapper {
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 130px;
+        margin: 0 auto;
+      }
+      /* Estilo padrão do botão */
+      .botao {
+        background-color: #0071EB; /* Azul padrão */
+        color: #FFFFFF; /* Texto branco */
+        border: 2px solid #0056b3; /* Borda com contraste */
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.1s;
+      }
+  
+      /* Estado hover do botão */
+      .botao:hover {
+        background-color: #0056b3; /* Azul mais escuro */
+        color: #FFFFFF; /* Texto branco */
+        border-color: #003f7f; /* Borda ainda mais escura */
+      }
+
+      /* Estado pressionado do botão */
+      .botao:active {
+        background-color: #003f7f; /* Azul ainda mais escuro */
+        color: #FFFFFF; /* Texto branco */
+        border-color: #002752; /* Borda mais escura */
+        transform: scale(0.98); /* Pequeno efeito de compressão para feedback visual */
+      }
+    </style>
+
+    <div class="content-wrapper">
+      <button class="botao">Clique Aqui</button>
+    </div>
+    <!-- fim do exemplo -->
+</body>

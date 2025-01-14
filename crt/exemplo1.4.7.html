@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 1.4.7</title>
+</head>
+
+<body>
+  <p><center> <strong>Critério 1.4.7</strong></center></p>
+  <hr>
+
+  <h2>Áudio e Vídeo</h2>
+
+  <h3>8. Áudio sem ruído: Não há conteúdo em áudio que possua sons de fundo ou há um mecanismo para desligar ou reduzir os sons de fundo.</h3>
+
+  <p>O critério <strong>1.4.7</strong> das Diretrizes de Acessibilidade para Conteúdo Web (WCAG) busca garantir que conteúdos em áudio, principalmente aqueles focados em fala ou discurso, não contenham ruídos de fundo que dificultem a compreensão. Caso haja sons de fundo, eles devem ser reduzidos ou ajustados para não interferirem na clareza do conteúdo principal, ou ainda deve haver um mecanismo para desativá-los.</p>
+  
+  <p>Este critério é especialmente importante para usuários com dificuldades auditivas, pois sons de fundo podem interferir na compreensão do conteúdo falado. Para atender a essa recomendação, é indicado:</p>
+
+  <ul>
+    <li>Evitar o uso de sons de fundo em conteúdos de fala;</li>
+    <li>Garantir que os sons de fundo tenham volume reduzido em relação ao conteúdo principal;</li>
+    <li>Disponibilizar controles para desligar ou ajustar o volume dos sons de fundo, quando presentes.</li>
+  </ul>
+
+  <p>No exemplo a seguir, há um áudio com fala, e o usuário pode desligar o som de fundo clicando em um botão. Isso atende ao critério de acessibilidade, pois oferece controle sobre os ruídos, evitando distrações e garantindo que a fala principal seja compreensível.</p>
+
+  <h4>Explicação do Exemplo:</h4>
+
+  <p>No exemplo abaixo, o botão "Desligar Som de Fundo" simula um controle que permitiria ao usuário desativar o som de fundo. Isso promove uma experiência mais acessível e cumpre o critério 1.4.7.</p>
+
+  <p>O áudio de fundo é carregado e configurado para tocar em loop com volume reduzido.</p>
+
+  <p>O botão "Desligar Som de Fundo" permite ao usuário pausar ou retomar o som de fundo, ajustando a interface de acordo com a ação.</p>
+
+  <!-- início do exemplo -->
+  <style>
+    .audio-container {
+      margin: 0 auto;
+      padding: 20px;
+      max-width: 800px;
+      background-color: #f0f8ff;
+      border: 1px solid #005f73;
+      border-radius: 8px;
+      text-align: center;
+    }
+  </style>
+    
+  <div class="audio-container">
+    <audio id="audio-principal" controls>
+      <source src="../assets/audios/audio-principal.mp3" type="audio/mp3">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <br><br>
+    <button onclick="toggleSomDeFundo()">Desligar Som de Fundo</button>
+  </div>
+
+  <script>
+    const somDeFundo = new Audio('../assets/audios/audio-fundo.mp3');
+    somDeFundo.loop = true; // O som de fundo toca em loop para acompanhar o áudio principal
+    somDeFundo.volume = 0.3; // Volume reduzido para não interferir na fala principal
+    somDeFundo.play();
+
+    let somDeFundoAtivo = true;
+
+    const audioPrincipal = document.getElementById('audio-principal');
+
+    function toggleSomDeFundo() {
+      somDeFundoAtivo = !somDeFundoAtivo;
+      if (somDeFundoAtivo && !audioPrincipal.paused) {
+        somDeFundo.play();
+        document.querySelector("button").innerText = "Desligar Som de Fundo";
+      } else {
+        somDeFundo.pause();
+        document.querySelector("button").innerText = "Ligar Som de Fundo";
+      }
+    }
+
+    audioPrincipal.addEventListener('play', () => {
+      if (somDeFundoAtivo) {
+        somDeFundo.play();
+      }
+    });
+
+    audioPrincipal.addEventListener('pause', () => {
+      somDeFundo.pause();
+    });
+
+    audioPrincipal.addEventListener('ended', () => {
+      somDeFundo.pause();
+    });
+  </script>
+  <!-- fim do exemplo -->
+</body>

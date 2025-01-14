@@ -1,0 +1,107 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter' !important;
+    background-color: #F3F5F7;
+}
+
+#main{  
+    padding-bottom: 10rem !important;
+}
+
+#conteudo-principal {
+    background: rgb(8,36,0);
+    background: linear-gradient(0deg, rgba(8,36,0,1) 0%, rgba(13,80,60,1) 40%);
+    color: white;
+}
+
+.curve {
+    width: 100%;
+    margin-top: -150px;
+}
+
+#conteudo-principal p {
+    font-size: 20px;
+}
+
+p {
+    line-height: 1.7rem !important;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    box-shadow: #D8D8D8 0px 5px 5px;
+}
+
+ul.list-unstyled li img{
+    max-width: 95px;
+    border-radius: 100%;
+    padding: 5px;
+}
+
+nav.barra-acessibilidade{
+    background-color: #D8D8D8;
+}
+
+nav.barra-acessibilidade a.enumarate:hover {
+    text-decoration: underline;
+}
+
+.custom-card {
+    border-radius: 16px;
+}
+
+#equipe img {
+    border-radius: 100%;
+    max-width: 100px;
+}
+
+#footer {
+    background-color: #E9ECEF;
+}
+
+@media (max-width: 400px) {
+    #main h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 400px) {
+    #contribute,
+    #manuals,
+    #main,
+    #feedback,
+    #about,
+    #contact
+    {
+        text-align: justify !important;
+    }
+
+    #contribute h2,
+    #manuals h2,
+    #main h1,
+    #feedback h2,
+    #about h2,
+    #contact h2
+    {
+        text-align: center !important;
+    }
+
+    #contribute .gh-button{
+        text-align: center !important;
+    }
+
+}
+
+.navbar {
+    box-shadow: 0 3px 2px -2px rgba(0,0,0,.1);
+}
+
+.menu-principal {  
+    background-color: #FFFFFF !important;
+}

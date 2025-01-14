@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 1.4.13</title>
+</head>
+
+<body>
+  <p><center> <strong>Critério 1.4.13</strong></center></p>
+  <hr>
+
+  <h2>Interação por teclado</h2>
+
+  <h3>8. Conteúdo adicional persistente: Todo conteúdo adicional exibido por foco do teclado ou posicionamento do cursor permanece visível até que o usuário retire o foco, posicione o cursor fora do componente ou dispense-o de outra forma, ou até que a informação transmitida pelo conteúdo deixe de ser válida.</h3>
+
+  <p>O critério de sucesso <strong>1.4.13</strong> da <abbr title="Diretrizes de Acessibilidade para o Conteúdo Web">WCAG</abbr> garante que informações ou conteúdos adicionais exibidos ao receber foco (via teclado) ou ao posicionar o cursor permaneçam visíveis enquanto o usuário interagir com o componente ou até que seja dispensado de outra forma. Esse comportamento garante que os usuários, especialmente aqueles que navegam por teclado ou utilizam tecnologias assistivas, tenham acesso completo à informação exibida.</p>
+
+  <p>No exemplo abaixo, um botão contém um tooltip que aparece ao passar o mouse ou ao receber foco via teclado. O tooltip permanece visível enquanto o foco estiver no botão ou enquanto o cursor estiver sobre ele, conforme o recomendado.</p>
+
+  <h4>Explicação do Exemplo:</h4>
+
+  <ul>
+    <li>Conteúdo adicional visível: O tooltip associado ao botão aparece ao interagir com o foco <code>:focus</code> ou ao posicionar o cursor <code>:hover</code>.</li>
+    <li>Persistência do conteúdo: O conteúdo permanece visível até que o usuário retire o foco ou mova o cursor para fora.</li>
+    <li>Acessibilidade por teclado: O destaque visual do botão ao receber foco ajuda usuários que dependem do teclado a identificar a interação.</li>
+    <li>CSS para controle: A exibição do conteúdo adicional é controlada exclusivamente por CSS, evitando comportamento imprevisível.</li>
+  </ul>
+
+  <!-- início do exemplo -->
+    <style>
+      .content-wrapper {
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 250px;
+        margin: 0 auto;
+      }
+      /* Estilo do botão */
+      .botao {
+        font-size: 16px;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .botao:focus {
+        outline: 3px solid #FFD700; /* Destaque ao receber foco */
+      }
+
+      /* Tooltip inicial oculto */
+      .tooltip {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: #FFF;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        white-space: nowrap;
+        margin-top: 8px;
+        z-index: 10;
+      }
+
+      /* Exibe o tooltip ao focar no botão */
+      .botao:focus .tooltip,
+      .botao:hover .tooltip {
+        display: block;
+      }
+    </style>
+
+    <div class="content-wrapper">
+      <button class="botao">
+        Passe o mouse ou use Tab
+        <span class="tooltip">Informação adicional exibida</span>
+      </button>
+    </div>
+  <!-- fim do exemplo -->
+
+</body>

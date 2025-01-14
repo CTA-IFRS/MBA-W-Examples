@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 1.4.1</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 1.4.1</strong></center></p>
+    <hr>
+
+    <h2>Uso de Cores</h2>
+
+    <h3>1. Uso de cores: Não há elementos que fazem uso somente de cores para transmitir informações, indicar uma ação, pedir uma resposta ou distinguir um elemento visual.</h3>
+
+    <p>O critério <strong>1.4.1</strong> das <abbr title="Diretrizes de Acessibilidade para o Conteúdo Web">WCAG</abbr> estabelece que não deve haver elementos que façam uso somente de cores para transmitir informações, indicar ações, pedir respostas ou distinguir elementos visuais. Isso é importante para garantir que todos os usuários, incluindo aqueles com deficiências visuais como daltonismo, possam acessar e entender o conteúdo.</p>
+    <p>É essencial fornecer informações de forma que não dependam exclusivamente da percepção de cor. Para isso, é recomendado o uso de texto, ícones ou outros elementos visuais que possam transmitir a mesma informação que a cor sozinha.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <p>No exemplo abaixo, as mensagens informativas e de erro são representadas não apenas por cores, mas também por texto e ícones. A mensagem informativa possui um fundo azul claro e texto azul, enquanto a mensagem de erro tem um fundo vermelho claro e texto vermelho. Ambos os casos incluem texto descritivo que fornece informações essenciais sobre a ação ou status, tornando o conteúdo acessível para todos os usuários.</p>
+
+    <ul>
+        <li><strong>Informação Visual e Textual:</strong> As mensagens de informação e erro são apresentadas em diferentes cores, mas também incluem texto que explica a natureza da mensagem. Isso garante que os usuários que não conseguem distinguir cores ainda possam entender a mensagem.</li>
+        <li><strong>Estilos CSS:</strong> As mensagens têm estilos diferenciados, usando cores de fundo e texto que chamam a atenção, mas a informação essencial é transmitida por meio do texto descritivo, cumprindo assim o especificado no critério 1.4.1.</li>
+        <li><strong>Acessibilidade:</strong> O uso de texto descritivo e ícones garante que a informação não dependa apenas da cor, tornando a interface mais acessível para usuários com deficiências visuais.</li>
+    </ul>
+    
+    <!-- início do exemplo -->
+
+    <style>
+        .content-wrapper {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .info {
+            background-color: #e7f3fe;
+            color: #31708f;
+            padding: 10px;
+            border: 1px solid #bce8f1;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .error {
+            background-color: #f2dede;
+            color: #a94442;
+            padding: 10px;
+            border: 1px solid #ebccd1;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .icon {
+            margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+        }
+    </style>
+
+    <div class="content-wrapper">
+        <div class="info">
+            <img src="https://img.icons8.com/color/24/000000/info--v1.png" alt="Ícone de Informação" class="icon">
+            <strong>Informação:</strong> Este é um exemplo de mensagem informativa.
+        </div>
+        <div class="error">
+            <img src="https://img.icons8.com/color/24/000000/error--v1.png" alt="Ícone de Erro" class="icon">
+            <strong>Erro:</strong> Este é um exemplo de mensagem de erro.
+        </div>
+    </div>
+
+    <!-- fim do exemplo -->
+
+</body>

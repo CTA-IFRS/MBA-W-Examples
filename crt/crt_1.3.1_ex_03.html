@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>AMAWeb | Manual</title>
+        
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Manual Brasileiro da Acessibilidade Web baseado na WCAG 2.1">
+        <link href="../assets/redesign/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <!-- Font Inter -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <!-- Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="../assets/plugins/simplelightbox/simple-lightbox.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../assets/redesign/css/main.css">
+        <link rel="stylesheet" href="../assets/redesign/css/high_contrast.css">
+        <link href="../assets/redesign/css/amaweb.css" rel="stylesheet">
+        <!-- Theme CSS -->  
+        <link id="theme-style" rel="stylesheet" href="../assets/css/theme.css">
+    </head>
+    <body class="docs-page">
+        <header class="header fixed-top">
+            <!-- Barra de acessibilidade -->
+            <nav id="menuAcessibilidade" class="barra-acessibilidade navbar navbar-expand-sm navbar-dark" aria-label="Menu de acessibilidade">
+                <ul class="navbar-nav mx-3">
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" href="#conteudo-principal" accesskey="1">
+                            <small><span class="badge bg-black">1</span> Ir para o conteúdo</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" href="#menu-principal" accesskey="2">
+                            <small><span class="badge bg-black">2</span> Ir para o menu</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" id="high_contrast" aria-checked="false" href=""><small><i class="bi bi-circle-half">&nbsp;</i>Alto Contraste</small></a>
+                    </li>
+                </ul>
+                <span class="badge position-fixed" role="alert" style="right: 20px; background-color: #A82521;" ><i class="bi bi-exclamation-diamond"></i>&nbsp;&nbsp;EM DESENVOLVIMENTO</span>
+            </nav>
+
+            <!-- Menu principal -->
+            <a href="#menu-principal" id="menu-principal" class="visually-hidden">Início do menu principal</a>
+            <nav class="navbar navbar-expand-lg bg-light menu-principal">
+                <div class="container-fluid mx-3">
+                    <a class="navbar-brand" id="amaweb" href="/">
+                        <img class="brand-hover" src="../assets/redesign/img/navbar-logo-horizontal.svg" alt="logo-AMAWeb">
+                    </a>
+                    <div id="navbarNav">
+                        <ul class="nav navbar-nav gap-1">
+                            <li class="nav-item dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Menu
+                                </button>
+                                <ul id="dropdown" class="dropdown-menu dropdown-menu-lg-end shadow-lg" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="/">Página inicial</a></li>
+                                    <li><a class="dropdown-item" href="/avaliador">Avaliador</a></li>
+                                    <li><a class="dropdown-item" href="/manual">Manual</a></li>
+                                    <li><a class="dropdown-item" href="/observatorio">Observatório</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="docs-wrapper">
+            <!--//docs-sidebar-->
+            <div id="docs-sidebar" class="docs-sidebar">
+                <!--//docs-nav-->
+                <nav id="docs-nav" class="docs-nav navbar">
+                    <ul class="section-items list-unstyled nav flex-column pb-3">
+                        <li class="nav-item section-title"><a class="nav-link scrollto" href="../index.html#section-0"><span class="theme-icon-holder me-2"><i class="bi bi-star-fill"></i></span>Introdução</a></li>
+                        <li class="nav-item section-title"><a class="nav-link scrollto" href="../index.html#section-1"><span class="theme-icon-holder me-2"><i class="bi bi-eye-fill"></i></span>1. Perceptível</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-1-1">1.1 Alternativas em Texto</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-1-2">1.2 Mídias com base em tempo</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-1-3">1.3 Adaptável</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-1-4">1.4 Discernível</a></li>
+                        <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="../index.html#section-2"><span class="theme-icon-holder me-2"><i class="bi bi-keyboard-fill"></i></span>2. Operável</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-1">2.1 Acessível por Teclado</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-2">2.2 Tempo Suficiente</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-3">2.3 Convulsões e Reações Fisicas</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-4">2.4 Navegável</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-2-5">2.5 Modalidades de Entrada</a></li>
+                        <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="../index.html#section-3"><span class="theme-icon-holder me-2"><i class="bi bi-puzzle-fill"></i></span>3. Compreensível</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-3-1">3.1 Legível</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-3-2">3.2 Previsível</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-3-3">3.3 Assistência de Entrada</a></li>
+                        <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="../index.html#section-4"><span class="theme-icon-holder me-2"><i class="bi bi-diamond-fill"></i></span>4. Robusto</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="../index.html#item-4-1">4.1 Compatível</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="docs-content">
+                <div class="container">
+                    <!--//docs-article-->   
+                    <article class="docs-article" id="item-1-1">
+                        <!-- Breadcrumb -->
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="../">Manual</a></li>
+                                <li class="breadcrumb-item" aria-current="page"><a href="../index.html#item-1-3-1">Critério de Sucesso 1.3.1</a></li>
+                            </ol>
+                        </nav>
+                        <header class="docs-header">
+                            <h2 class="docs-heading">Uso semântico de botões <a href="" id="copyURL" data-bs-toggle="tooltip" data-bs-title="Copiar link deste exemplo"><i class="bi bi-link-45deg"></i></a></h2>
+                            <section class="docs-intro">
+                                <p>Os botões (elemento <code>&lt;button&gt;</code>) devem ser utilizados para acionar uma funcionalidade e seu propósito deve ser claramente identificável. Ou seja, os usuários, inclusive os que utilizam leitor de tela ou outras tecnologias assistivas, devem compreender facilmente qual o propósito do botão, que funcionalidade ele irá acionar. Assim, o texto do botão deve ser descritivo, refletindo a ação que ele desencadeia. Deve-se evitar, portanto, textos genéricos como "Clique aqui", preferindo descrições claras como "Enviar formulário" ou "Excluir item".</p>
+                                <p>É importante salientar que o uso de elemento HTML apropriado para botões é crucial. O elemento <code>&lt;button&gt;</code> é preferível ao <code>&lt;div&gt;</code> ou <code>&lt;span&gt;</code> estilizados como botões, pois o <code>&lt;button&gt;</code> tem valor semântico e é automaticamente reconhecido como botão pelas tecnologias assistivas.</p>
+                            </section><!--//docs-intro-->
+							<section>
+								<h3 class="mt-5">Exemplo de botões descritivos</h3>
+                                <p>A seguir, temos o formulário correspondente à última etapa de uma compra online. Nessa etapa, o usuário informa os dados do cartão de crédito para efetuar o pagamento. O formulário possui dois botões, um para pagar a compra e outro para limpar os campos, caso o usuário deseje por ter preenchido incorretamente.</p>
+                                <p>Repare que os textos dos botões,"Enviar Formulário" e "Cancelar", são claros e descrevem a ação que cada botão realizará.</p>
+                                <p>O <code>&lt;button type="submit"&gt;</code>, utilizado para enviar o formulário, é semântico e acessível, indicando claramente que o botão envia o formulário. Já o <code>&lt;button type="button"&gt;</code>, utilizado para cancelar a ação atual e redirecionar o usuário para outra página, garante que o botão não envie o formulário acidentalmente. Outra característica importante é que os botões têm estilos distintos (<code>submit-button</code> e <code>cancel-button</code>), o que ajuda a diferenciar suas funções e a tornar a interface mais intuitiva.</p>
+                                <div class="row">
+                                    <div class="col-6 mx-auto rounded border px-4 py-4">
+                                        <h1 class="h3">Formulário de Pagamento com Cartão de Crédito</h1>
+    
+                                        <form id="payment-form" class="needs-validation" novalidate>
+                                          <fieldset class="border p-4 rounded">
+                                            <legend class="h5 mb-3">3ª etapa (final) - Informações de Pagamento</legend>
+
+                                            <div class="mb-3">
+                                              <label for="card-name" class="form-label">Nome no Cartão:</label>
+                                              <input type="text" id="card-name" name="card-name" class="form-control" required placeholder="Nome completo">
+                                              <div class="invalid-feedback">Por favor, insira o nome no cartão.</div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                              <label for="card-number" class="form-label">Número do Cartão:</label>
+                                              <input type="text" id="card-number" name="card-number" class="form-control" required placeholder="1234 5678 9012 3456">
+                                              <div class="invalid-feedback">Por favor, insira um número de cartão válido.</div>
+                                            </div>
+
+                                            <div class="row">
+                                              <div class="col-md-6 mb-3">
+                                                <label for="expiry-date" class="form-label">Data de Validade:</label>
+                                                <input type="text" id="expiry-date" name="expiry-date" class="form-control" required placeholder="MM/AA">
+                                                <div class="invalid-feedback">Por favor, insira a data de validade.</div>
+                                              </div>
+                                              <div class="col-md-6 mb-3">
+                                                <label for="cvv" class="form-label">CVV:</label>
+                                                <input type="number" id="cvv" name="cvv" class="form-control" required placeholder="123">
+                                                <div class="invalid-feedback">Por favor, insira o CVV.</div>
+                                              </div>
+                                            </div>
+                                          </fieldset>
+
+                                          <div class="d-flex gap-3 mt-4">
+                                            <button type="submit" class="btn btn-primary">Pagar</button>
+                                            <button type="reset" class="btn btn-secondary">Limpar Campos</button>
+                                          </div>
+                                        </form>
+
+                                        <script>
+                                            // Simulação de funcionalidade do botão "Pagar"
+                                            document.getElementById('payment-form').addEventListener('submit', function(event) {
+                                                event.preventDefault(); // Impede o envio real do formulário para a demonstração
+                                                alert('Pagamento realizado com sucesso!');
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                                <p class="mt-4">Código fonte do exemplo:</p>
+                                <div class="docs-code-block">
+                                    <script src="https://gist.github.com/laelNervis/4879f28c570f8020350883da515067ad.js"></script>
+                                </div>
+							</section><!--//docs-examples-->
+                        </header>
+                    </article>
+                    
+                </div>
+
+                <!-- Footer -->
+                <footer class="container-fluid mt-5" id="footer">
+                    <div class="container p-5 d-none d-lg-block">
+                        <div class="fw-bold text-black-50 d-flex flex-column">
+                            <div class="d-flex">
+                                <div class="col-6 d-flex justify-content-start align-items-center">
+                                    <div id="redes-sociais">
+                                        <p>Acompanhe o AMAWeb:</p>
+                                        <div>
+                                            <a class="me-3" href="https://git.unifesp.br/proj-acessibilidade-mpf"><img src="../assets/redesign/img/footer-github-seeklogo 2.png" alt="Github"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex justify-content-end align-items-center">
+                                    <div id="logos">
+                                        <a class="ms-4" href=""><img src="../assets/redesign/img/footer-logo-mpf.png" alt="Logo MPF"></a>
+                                        <a class="ms-4" href=""><img src="../assets/redesign/img/footer-logo-unifesp.png" alt="Logo UNIFESP"></a>
+                                        <a class="ms-4" href=""><img src="../assets/redesign/img/footer-logo-cta.png" alt="Logo CTA"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center d-flex flex-column">
+                                <hr>
+                                <p class="p-0 m-0"><small>Desenvolvido por CTA - IFRS. Aplicativo sob a licença GPLv3 e Creative Commons NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container p-5 d-lg-none">
+                        <div class="fw-bold text-black-50 d-flex flex-column gap-4">
+                            <div class="d-flex flex-column text-center pb-2">
+                                <p>Desenvolvido por:</p>
+                                <div class="d-flex gap-3 justify-content-center">
+                                    <a href=""><img src="../assets/redesign/img/footer-logo-mpf.png" alt="Logo MPF"></a>
+                                    <a href=""><img src="../assets/redesign/img/footer-logo-unifesp.png" alt="Logo UNIFESP"></a>
+                                    <a href=""><img src="../assets/redesign/img/footer-logo-cta.png" alt="Logo CTA"></a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                <p>Acompanhe o AMAWeb:</p>
+                                <div>
+                                    <a class="me-3" href="https://git.unifesp.br/proj-acessibilidade-mpf"><img src="../assets/redesign/img/footer-github-seeklogo 2.png" alt="Github"></a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                <hr>
+                                <p class="p-0 m-0"><small>Desenvolvido por CTA - IFRS. Aplicativo sob a licença GPLv3 e Creative Commons NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!--//docs-wrapper-->
+        <!-- Javascript -->          
+        <script src="../assets/plugins/popper.min.js"></script>
+        <script src="../assets/plugins/js.cookie.min.js"></script>
+        <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Page Specific JS -->
+        <script src="../assets/plugins/smoothscroll.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+        <script src="../assets/js/highlight-custom.js"></script>
+        <script src="../assets/redesign/js/high_contrast.js"></script> 
+        <script src="../assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+        <script src="../assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+        <script src="../assets/js/docs.js"></script> 
+        <script src="../assets/redesign/js/copyCurrentUrl.js"></script>
+        <script src="../assets/js/imageMapResizer.min.js"></script>
+
+        <!-- Tooltips -->
+         <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+         </script>
+    </body>
+</html>

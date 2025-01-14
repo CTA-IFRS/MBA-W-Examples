@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 3.1.4</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 3.1.4</strong></center></p>
+    <hr>
+
+    <h2>Conteúdo Textual</h2>
+
+    <h3>11. Siglas e abreviaturas: Há um mecanismo para identificar a forma expandida ou o significado das siglas e abreviaturas.</h3>
+
+    <p>O critério <strong>3.1.4</strong> das <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> recomenda que todas as siglas e abreviações incluam um mecanismo para identificar sua forma expandida ou significado. Isso permite que usuários, especialmente aqueles que utilizam tecnologias assistivas, compreendam corretamente o conteúdo.</p>
+
+    <p>Siglas e abreviações podem ser difíceis de entender, especialmente para usuários com deficiência cognitiva ou que não estejam familiarizados com o termo. Fornecer a forma expandida melhora a compreensão e garante uma experiência acessível. Além de:</p>
+
+    <ul>
+        <li>Ajudar usuários que não estão familiarizados com os termos.</li>
+        <li>Facilitar a compreensão para pessoas com deficiência cognitiva.</li>
+        <li>MelhorarS a experiência de usuários de leitores de tela, que conseguem acessar o significado completo.</li>
+    </ul>
+
+    <p>No exemplo abaixo são mostradas varias siglas com o uso da tag <code>&lt;abbr&gt;</code> em conjunto com o atributo <code>title</code> para demonstrar a forma recomendada de indentificar uma sigla ou abreviatura.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+	<ul>
+        <li><strong>Uso da tag <code>&lt;abbr&gt;</code>:</strong> O elemento <code>&lt;abbr&gt;</code> envolve a sigla e inclui o atributo <code>title</code> com a forma expandida ou o significado completo.</li>
+        <li><strong>Atributo <code>title</code>:</strong> Ao passar o mouse sobre a sigla, o usuário vê a forma expandida. Leitores de tela também leem o valor do atributo <code>title</code>.</li>
+        <li><strong>Exemplos práticos:</strong> As siglas "ONU", "HTML", "CSS" e "SEO" são explicadas em seus respectivos contextos.</li>
+    </ul>
+
+    <!-- início do exemplo -->
+	<style>
+	.content-wrapper {
+		border: 2px solid #ccc;
+		padding: 20px;
+		border-radius: 8px;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	abbr {
+		border-bottom: 1px dotted #000;
+		cursor: help;
+	}
+    </style>
+
+	<div class="content-wrapper">
+		<p>A <abbr title="Organização das Nações Unidas">ONU</abbr> foi fundada em 1945 para promover a paz e a segurança internacionais.</p>
+
+		<p>O <abbr title="HyperText Markup Language">HTML</abbr> é a linguagem padrão para a criação de páginas web.</p>
+
+		<p>Já o <abbr title="Cascading Style Sheets">CSS</abbr> é utilizado para estilizar a apresentação do conteúdo.</p>
+
+		<p>O termo <abbr title="Search Engine Optimization">SEO</abbr> refere-se às práticas de otimização de sites para mecanismos de busca.</p>
+	</div>
+    <!-- fim do exemplo -->
+
+</body>

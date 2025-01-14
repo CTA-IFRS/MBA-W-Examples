@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 4.1.2</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 4.1.2</strong></center></p>
+    <hr>
+
+    <h2>Codificação e Marcação Semântica</h2>
+
+    <h3>14. Componentes com nome acessível: Todos os componentes que requerem identificação por nome possuem um nome acessível.</h3>
+
+	<p>O critério <strong>4.1.2</strong> da <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> exige que todos os componentes interativos que exigem identificação por nome, como campos de formulário, botões, links e outros elementos interativos, possuam um nome acessível. Esse nome acessível é essencial para garantir que usuários com deficiências visuais ou outras deficiências que dependem de tecnologias assistivas, como leitores de tela, possam interagir corretamente com os elementos da página.</p>
+
+    <p>O nome acessível é atribuído por meio de atributos apropriados, como <code>aria-label</code>, <code>aria-labelledby</code> ou o uso de etiquetas <code>label</code> corretamente associadas aos campos de formulário. Além disso, os elementos de navegação e interação devem ser descritos de maneira clara e específica, para que o usuário compreenda facilmente sua função e como utilizá-los.</p>
+
+	<p>O exemplo abaixo apresenta um pequeno formulário de cadastro onde as exigências do critério 4.1.2 são seguidas.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <ul>
+        <li>Os campos de "Nome", "Email" e "Senha" têm um <code>label</code> associado e um <code>aria-label</code> específico. Esse atributo <code>aria-label</code> fornece uma descrição específica do que o campo exige, como "Digite seu nome completo" ou "Digite uma senha segura", garantindo que o nome do campo seja acessível aos usuários de tecnologias assistivas.</li>
+        <li>O botão "Enviar" também possui um atributo <code>aria-label</code> que descreve claramente sua função para leitores de tela.</li>
+    </ul>
+
+    <!-- início do exemplo -->
+	<style>
+		.content-wrapper {
+			border: 2px solid #ccc;
+			padding: 20px;
+			border-radius: 8px;
+			max-width: 450px;
+			margin: 0 auto;
+		}
+		
+		form {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			width: 100%;
+			max-width: 400px;
+		}
+
+		label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 5px;
+			color: #333;
+		}
+
+		input[type="password"], input[type="text"], input[type="email"]{
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+			font-size: 14px;
+			box-sizing: border-box;
+		}
+
+		input[type="password"]:focus, input[type="text"]:focus, input[type="email"]:focus{
+			border-color: #4CAF50;
+			outline: none;
+		}
+
+		button {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			padding: 12px 20px;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 16px;
+			width: 100%;
+			margin-top: 10px;
+		}
+
+		button:hover {
+			background-color: #45a049;
+		}
+	</style>
+
+	<div class="content-wrapper">
+		<form action="/enviar" method="POST">
+			<label for="nome">Nome:</label>
+			<input type="text" id="nome" name="nome" required aria-label="Digite seu nome completo">
+			<br><br>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required aria-label="Digite seu email">
+			<br><br>
+
+			<label for="senha">Senha:</label>
+			<input type="password" id="senha" name="senha" required aria-label="Digite uma senha segura">
+			<br><br>
+
+			<button type="submit" aria-label="Enviar formulário">Enviar</button>
+		</form>
+	</div>
+    <!-- fim do exemplo -->
+</body>

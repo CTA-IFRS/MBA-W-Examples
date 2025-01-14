@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 3.1.6</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 3.1.6</strong></center></p>
+    <hr>
+
+    <h2>Conteúdo Textual</h2>
+
+    <h3>13. Pronúncia identificada: Há um mecanismo para identificar a pronúncia específica de palavras cujo significado no contexto é ambíguo sem conhecer a pronúncia.</h3>
+
+	<p>O critério <strong>3.1.6</strong> da <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> recomenda que palavras ambíguas ou com múltiplas pronúncias tenham um mecanismo que permita identificar a pronúncia correta. Isso é especialmente útil em situações onde o significado de uma palavra depende da forma como ela é pronunciada.</p>
+	
+	<p>Isso é importante porque algumas palavras podem ter diferentes significados dependendo de sua pronúncia. Isso pode gerar confusão, especialmente para usuários de leitores de tela ou para aqueles que estão aprendendo o idioma. Fornecer a pronúncia correta garante que todos os usuários entendam o contexto corretamente e evita mal-entendidos em textos com palavras homônimas.</p>
+
+	<p>O elemento <code>&lt;ruby&gt;</code> pode ser utilizado para indicar a pronúncia de palavras ou caracteres complexos:</p>
+
+	<p>Este recurso pode ser útil em:</p>
+	<ul>
+		<li>Palavras estrangeiras com pronúncia específica.</li>
+		<li>Termos técnicos com pronúncia pouco conhecida.</li>
+		<li>Idiomas com caracteres que possuem múltiplas leituras (como em japonês ou chinês).</li>
+	</ul>
+	
+	<p>Veja o exemplo abaixo com a palavra "pelo", demonstra como a palavra pode ser pronunciada de duas formas diferentes (com ou sem acento, dependendo do contexto e do significado). E outro exemplo com a palavra "para", monstrando a diferença entre o verbo "para" (parar) e a preposição "para" (direção, propósito).</p>
+
+    <h4>Explicação do Exemplo:</h4>
+	<ul>
+		<li><strong>Elemento <code>&lt;ruby&gt;</code>:</strong> Usado para fornecer informações sobre a pronúncia de palavras.</li>
+		<li><strong>Elemento <code>&lt;rt&gt;</code>:</strong> Dentro de <code>&lt;ruby&gt;</code>, o <code>&lt;rt&gt;</code> (ruby text) fornece a informação de pronúncia ou uma anotação explicativa.</li>
+		<li><strong>Exemplos práticos:</strong> As palavras "pelo" e "para" são homônimas, com significados diferentes dependendo da pronúncia.</li>
+	</ul>
+
+    <!-- início do exemplo -->
+	<style>
+	.content-wrapper {
+		border: 2px solid #ccc;
+		padding: 20px;
+		border-radius: 8px;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	ruby {
+		font-size: 1.2em;
+	}
+	rt {
+		font-size: 0.8em;
+		color: #555;
+	}
+	</style>
+	
+	<div class="content-wrapper">
+		<p><strong>Exemplo com a palavra "pelo":</strong></p>
+
+		<p>O gato tem muito <ruby>pelo<rt>pe-lo</rt></ruby>.</p>
+		<p>Ele fez isso <ruby>pelo<rt>pêlo</rt></ruby> amigo.</p>
+		<br>
+	
+		<p><strong>Exemplo com a palavra "para":</strong></p>
+	
+		<p>Ele <ruby>para<rt>pára</rt></ruby> o carro na esquina.</p>
+		<p>Isso foi feito <ruby>para<rt>para</rt></ruby> ajudar você.</p>
+	</div>
+    <!-- fim do exemplo -->
+
+</body>

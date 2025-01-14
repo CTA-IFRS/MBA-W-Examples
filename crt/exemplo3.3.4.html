@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 3.3.4</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 3.3.4</strong></center></p>
+    <hr>
+
+    <h2>Formulários e Entrada de Dados</h2>
+
+    <h3>13. Ajuda contextual: Há ajuda contextual, como instruções e dicas relevantes, que auxilia o usuário no preenchimento e envio dos formulários.</h3>
+
+	<p>O critério <strong>3.3.4</strong> da <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> assegura que os formulários ofereçam instruções e dicas relevantes para facilitar o preenchimento correto pelos usuários. Essas instruções devem ser:</p>
+
+		<ul>
+			<li>Disponíveis no momento apropriado (antes ou durante o preenchimento);</li>
+			<li>Acessíveis a todos os usuários, incluindo aqueles que utilizam tecnologias assistivas;</li>
+			<li>Claras e fáceis de entender, para evitar erros e confusões.</li>
+		</ul>
+
+	<p>O exemplo abaixo implementa um formulário com ajuda contextual clara e acessível, utilizando instruções relevantes e disponíveis no momento certo.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+	<p>Os elementos do formulário e do script, trazidos no exemplo, que contribuem para atender ao critério 3.3.4 são:</p>
+
+	<ul>
+		<li>
+			<strong>Elementos do Formulário</strong>
+			<ul>
+				<li>
+					<code>aria-describedby</code>: Cada campo possui este atributo associado ao ID de um elemento 
+					<code>&lt;small&gt;</code> que fornece ajuda contextual específica. 
+					<br>Exemplo: O campo de nome está vinculado à mensagem "Insira seu nome completo conforme consta em seus documentos oficiais." Isso garante que leitores de tela associem corretamente o campo ao texto de ajuda.
+				</li>
+				<li>
+					<code>aria-hidden="true"</code>: Os asteriscos usados para indicar campos obrigatórios estão marcados como 
+					<code>aria-hidden="true"</code>, garantindo que leitores de tela não interpretem os asteriscos como conteúdo adicional irrelevante.
+				</li>
+				<li>
+					Mensagens de ajuda claras e específicas: Cada campo tem uma descrição significativa que orienta os usuários. 
+					<br>Exemplo para o campo de e-mail: "Digite um e-mail válido. Exemplo: usuario@dominio.com."
+				</li>
+			</ul>
+		</li>
+		<li>
+			<strong>Comportamento Dinâmico (Script de Validação)</strong>
+			<ul>
+				<li>
+					Foco nas instruções: Quando um campo recebe foco, a mensagem de ajuda associada é destacada visualmente (cor azul), chamando a atenção do usuário. Isso beneficia usuários com dificuldades de concentração ou visão reduzida.
+				</li>
+				<li>
+					Retorno ao estado padrão: Quando o campo perde o foco, o destaque visual é removido, garantindo uma interface limpa e intuitiva.
+				</li>
+			</ul>
+		</li>
+		<li>
+			<strong>Benefícios para Acessibilidade</strong>
+			<ul>
+				<li>Ajuda contextual fornecida de maneira previsível, próxima aos campos correspondentes, beneficia tanto usuários visuais quanto aqueles que utilizam tecnologias assistivas.</li>
+				<li>Implementações como <code>aria-describedby</code> e comportamento dinâmico tornam o formulário acessível para diferentes grupos, incluindo usuários com deficiência visual ou cognitiva.</li>
+			</ul>
+		</li>
+	</ul>
+
+    <!-- início do exemplo -->
+	<style>
+		.content-wrapper {
+			border: 2px solid #ccc;
+			padding: 20px;
+			border-radius: 8px;
+			max-width: 450px;
+			margin: 0 auto;
+		}
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+		div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="email"], input[type="password"], input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus, input[type="date"]:focus  {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        small {
+            font-size: 12px;
+            color: #777;
+        }
+
+        span {
+            color: red;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        small {
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
+
+	<div class="content-wrapper">
+		<h1>Formulário de cadastro</h1>
+
+		<form id="example-form" action="/submit" method="POST">
+			<div>
+				<label for="nome">Nome Completo <span aria-hidden="true">*</span></label>
+				<input type="text" id="nome" name="nome" required aria-describedby="nome-ajuda">
+				<small id="nome-ajuda">Insira seu nome completo conforme consta em seus documentos oficiais.</small>
+			</div>
+	
+			<div>
+				<label for="email">E-mail <span aria-hidden="true">*</span></label>
+				<input type="email" id="email" name="email" required aria-describedby="email-ajuda">
+				<small id="email-ajuda">Digite um e-mail válido. Exemplo: usuario@dominio.com</small>
+			</div>
+	
+			<div>
+				<label for="senha">Senha <span aria-hidden="true">*</span></label>
+				<input type="password" id="senha" name="senha" required minlength="6" aria-describedby="senha-ajuda">
+				<small id="senha-ajuda">A senha deve conter pelo menos 6 caracteres, incluindo letras e números.</small>
+			</div>
+	
+			<div>
+				<label for="data-nascimento">Data de Nascimento</label>
+				<input type="date" id="data-nascimento" name="data-nascimento" aria-describedby="data-ajuda">
+				<small id="data-ajuda">Use o formato DD/MM/AAAA.</small>
+			</div>
+	
+			<button type="submit">Enviar</button>
+		</form>
+	
+		<script>
+			// Adiciona foco nas instruções contextuais quando o campo correspondente recebe foco
+			document.querySelectorAll('input').forEach(input => {
+				input.addEventListener('focus', function () {
+					const ajudaId = this.getAttribute('aria-describedby');
+					if (ajudaId) {
+						const ajudaElemento = document.getElementById(ajudaId);
+						if (ajudaElemento) {
+							ajudaElemento.style.color = 'blue'; // Destaca a instrução em azul
+						}
+					}
+				});
+	
+				input.addEventListener('blur', function () {
+					const ajudaId = this.getAttribute('aria-describedby');
+					if (ajudaId) {
+						const ajudaElemento = document.getElementById(ajudaId);
+						if (ajudaElemento) {
+							ajudaElemento.style.color = 'initial'; // Remove o destaque
+						}
+					}
+				});
+			});
+		</script>
+	</div>
+    <!-- fim do exemplo -->
+</body>

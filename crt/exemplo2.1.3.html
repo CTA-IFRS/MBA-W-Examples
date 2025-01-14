@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 2.1.3</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 2.1.3</strong></center></p>
+    <hr>
+
+    <h2>Interação por teclado</h2>
+
+    <h3>5. Uso de foco: Todos os elementos focáveis são utilizados para interação.</h3>
+
+	<p>O critério <strong>2.1.3</strong> da <abbr title="Diretrizes de Acessibilidade para o Conteúdo Web">WCAG</abbr> estabelece que todos os elementos focáveis de uma página devem ser úteis e proporcionarem interação ao usuário. Elementos que podem ser focados, como links e botões, não devem ser vazios ou decorativos, garantindo que o foco do teclado seja utilizado apenas onde há função ou interação.</p>
+
+	<p>Este princípio evita que o usuário perca tempo navegando em elementos focáveis que não possuem propósito ou ação, melhorando a eficiência e a experiência de navegação para usuários que dependem do teclado.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <ul>
+		<li>
+			<strong>Uso Significativo do Foco:</strong>
+			<ul>
+				<li>Apenas elementos com função (botões e links com ações claras) podem ser focados.</li>
+				<li>Elementos decorativos ou sem função não são focáveis.</li>
+			</ul>
+		</li>
+		<li>
+			<strong>Destaque ao Foco:</strong>
+			<ul>
+				<li>O foco é visualmente destacado quando o usuário navega com o teclado, utilizando bordas e sombras.</li>
+			</ul>
+		</li>
+		<li>
+			<strong>Elementos Interativos:</strong>
+			<ul>
+				<li>O botão e o link possuem funções úteis (exemplo: exibir alertas), garantindo que o usuário interaja apenas com elementos funcionais.</li>
+			</ul>
+		</li>
+	</ul>
+	
+    <!-- início do exemplo -->
+		<style>
+		.content-wrapper {
+			border: 2px solid #ccc;
+			padding: 20px;
+			border-radius: 8px;
+			max-width: 350px;
+			margin: 0 auto;
+		}
+		button, a {
+			display: inline-block;
+			margin: 5px;
+			padding: 10px 20px;
+			font-size: 16px;
+			text-decoration: none;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			background-color: #007BFF;
+			cursor: pointer;
+		}
+		button:focus, a:focus {
+			outline: 2px solid #FF5722;
+			box-shadow: 0 0 5px 2px rgba(255, 87, 34, 0.7);
+		}
+		</style>
+
+		<div class="content-wrapper">
+			<p>Use <kbd>Tab</kbd> para navegar entre os elementos interativos:</p>
+			<div>
+				<a href="#!" onclick="alert('Você clicou no link funcional.')">Link Funcional</a>
+				<button onclick="alert('Você clicou no botão funcional.')">Botão Funcional</button>
+			</div>
+		</div>
+    <!-- fim do exemplo -->
+</body>

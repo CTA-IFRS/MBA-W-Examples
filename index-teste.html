@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>AMAWeb | Manual</title>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Manual Brasileiro da Acessibilidade Web baseado no WCAG 2.1">
+        <link href="assets/redesign/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <!-- Font Inter -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <!-- Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="assets/redesign/css/main.css">
+        <link rel="stylesheet" href="assets/redesign/css/high_contrast.css">
+        <link href="assets/redesign/css/amaweb.css" rel="stylesheet">
+        <!-- Theme CSS -->  
+        <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+    </head>
+    <body class="docs-page">
+        <header class="header fixed-top">
+            <!-- Barra de acessibilidade -->
+            <nav id="menuAcessibilidade" class="barra-acessibilidade navbar navbar-expand-sm navbar-dark" aria-label="Menu de acessibilidade">
+                <ul class="navbar-nav mx-3">
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" href="#conteudo-principal" accesskey="1">
+                            <small><span class="badge bg-black">1</span> Ir para o conteúdo</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" href="#menu-principal" accesskey="2">
+                            <small><span class="badge bg-black">2</span> Ir para o menu</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" id="high_contrast" aria-checked="false" href=""><small><i class="bi bi-circle-half">&nbsp;</i>Alto Contraste</small></a>
+                    </li>
+                </ul>
+                <span class="badge position-fixed" role="alert" style="right: 20px; background-color: #A82521;" ><i class="bi bi-exclamation-diamond"></i>&nbsp;&nbsp;EM DESENVOLVIMENTO</span>
+            </nav>
+
+            <!-- Menu principal -->
+            <a href="#menu-principal" id="menu-principal" class="visually-hidden">Início do menu principal</a>
+            <nav class="navbar navbar-expand-lg bg-light menu-principal">
+                <div class="container-fluid mx-3">
+                    <a class="navbar-brand" id="amaweb" href="/">
+                        <img class="brand-hover" src="assets/redesign/img/navbar-logo-horizontal.svg" alt="Logo AMAWeb">
+                    </a>
+                    <div id="navbarNav">
+                        <ul class="nav navbar-nav gap-1">
+                            <li class="nav-item dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Menu
+                                </button>
+                                <ul id="dropdown" class="dropdown-menu dropdown-menu-lg-end shadow-lg" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="/">Página inicial</a></li>
+                                    <li><a class="dropdown-item" href="/avaliador">Avaliador</a></li>
+                                    <li><a class="dropdown-item" href="/manual">Manual</a></li>
+                                    <li><a class="dropdown-item" href="/observatorio">Observatório</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="docs-wrapper">
+            <!--//docs-sidebar-->
+            <div id="docs-sidebar" class="docs-sidebar ps-3 pt-5">
+                <aside>
+                  <h4>Busca</h4>
+
+                  <!-- Busca textual -->
+                  
+                  <div class="mb-3">
+                    <label for="search" class="form-label visually-hidden">Busca</label>
+                    <input type="text" class="form-control" id="search" placeholder="Buscar critério...">
+                  </div>
+
+
+                  <h4>Filtros</h4>
+                  <!-- Filtro por nível de conformidade -->
+                  <div class="mb-3">
+                    <label class="form-label fw-bold">Nível de Conformidade</label>
+                    <div>
+                      <input type="checkbox" class="form-check-input filter" id="nivelA" value="A">
+                      <label class="form-check-label" for="nivelA">A</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" class="form-check-input filter" id="nivelAA" value="AA">
+                      <label class="form-check-label" for="nivelAA">AA</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" class="form-check-input filter" id="nivelAAA" value="AAA">
+                      <label class="form-check-label" for="nivelAAA">AAA</label>
+                    </div>
+                  </div>
+
+                  <!-- Filtro por categoria -->
+                  <div class="mb-3">
+                    <label class="form-label fw-bold">Categoria</label>
+                    <div>
+                      <div class="d-block">
+                        <input type="checkbox" class="form-check-input filter" value="Imagens" id="cat1">
+                        <label class="form-check-label" for="cat1">Imagens</label>
+                    </div>
+                    <div class="d-block">
+                      <input type="checkbox" class="form-check-input filter" value="Áudio e Vídeo" id="cat2">
+                      <label class="form-check-label" for="cat2">Áudio e Vídeo</label>
+                    </div>
+                    <div class="d-block">
+                      <input type="checkbox" class="form-check-input filter" value="Codificação e Marcação Semântica" id="cat3">
+                      <label class="form-check-label" for="cat3">Codificação e Marcação Semântica</label>
+    </div>
+                    <div class="d-block">
+                      <input type="checkbox" class="form-check-input filter" value="Apresentação" id="cat4">
+                      <label class="form-check-label" for="cat4">Apresentação</label>
+    </div>
+                    <div class="d-block">
+                      <input type="checkbox" class="form-check-input filter" value="Interação por teclado" id="cat5">
+                      <label class="form-check-label" for="cat5">Interação por teclado</label>
+    </div>
+                    <div class="d-block">
+                      <input type="checkbox" class="form-check-input filter" value="Uso de Cores" id="cat6">
+                      <label class="form-check-label" for="cat6">Uso de Cores</label>
+    </div>
+                    <div class="d-block">
+                      <input type="checkbox" class="form-check-input filter" value="Animação e Tempo" id="cat7">
+                      <label class="form-check-label" for="cat7">Animação e Tempo</label>
+    </div>
+                    <div class="d-block">
+                      <input type="checkbox" class="form-check-input filter" value="Navegação" id="cat8">
+                      <label class="form-check-label" for="cat8">Navegação</label>
+    </div>
+                    <div class="d-block">
+                      <input type="checkbox" class="form-check-input filter" value="Formulários e Entrada de Dados" id="cat9">
+                      <label class="form-check-label" for="cat9">Formulários e Entrada de Dados</label>
+                  </div>
+                    </div>
+                    <!-- (Demais categorias seguem o mesmo padrão) -->
+                  </div>
+
+                  <!-- Filtro por princípio -->
+                  <div class="mb-3">
+                    <label class="form-label fw-bold">Princípio</label>
+                    <div>
+                      <input type="checkbox" class="form-check-input filter" value="perceptible" id="principle1">
+                      <label class="form-check-label" for="principle1">Perceptível</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" class="form-check-input filter" value="operable" id="principle2">
+                      <label class="form-check-label" for="principle2">Operável</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" class="form-check-input filter" value="comprehensible" id="principle3">
+                      <label class="form-check-label" for="principle3">Compreensível</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" class="form-check-input filter" value="robust" id="principle4">
+                      <label class="form-check-label" for="principle4">Robusto</label>
+                    </div>
+                  </div>
+
+                  <!-- Botão para aplicar os filtros -->
+                  <button id="filterBtn" class="btn btn-primary mt-2">Aplicar Filtros</button> <!-- Botão de filtro -->
+              
+                </aside>
+
+            </div>
+            <div class="docs-content">
+                <div class="container">
+                    <!--//docs-intro-->
+                    <article class="docs-article" id="section-0">
+                        <header class="docs-header">
+                            <h2 class="docs-heading">Introdução</h2>
+                            <section class="docs-intro">
+                            <p>Este documento apresenta as <a href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/">Web Content Accessibility Guidelines (WCAG 2.1)</a> ou Diretrizes de Acessibilidade para Conteúdo Web, com explicações didáticas dos critérios de sucesso e exemplos funcionais de como atendê-los, utilizando como base as técnicas apresentadas no WCAG.</p>
+                            </section>
+                        </header>
+                    </article>
+
+                    <style type="text/css">
+                        .principle-perceptible .card:hover{
+                            border-color: var(--bs-border-color-translucent)
+                        }
+                        .principle-perceptible .card:hover *{
+                            /*color: #fff;*/
+                        }
+                        .principle-perceptible .card:hover .card-footer{
+                            /*background: #fff;*/
+                        }
+                        .principle-perceptible .card-body,
+                        .principle-perceptible .card-header{
+                            /*background: #B72925;*/
+                        }
+                        .principle-perceptible .card{
+                            border-color: #439A81 !important;
+                        }
+                        .principle-operable .card{
+                            border-color: #444 !important;
+                        }
+                        .principle-comprehensible .card{
+                            border-color: #106CF6 !important;
+                        }
+                        .principle-robust .card{
+                            border-color: #D73338 !important;
+                        }
+                        .principle-perceptible *{
+                            /*color: #fff;*/
+                        }
+                        .principle-perceptible div div a{
+                            text-decoration: none;
+                        }
+                        .principle-perceptible div div a:focus,
+                        .principle-perceptible div div a:hover{
+                            text-decoration: underline;
+                            /*color: #fff !important;*/
+                        }
+                        .principle-perceptible span.disability{
+                            /*border: 1px solid #fff;*/
+                            border-radius: 5px;
+                            font-size: 1rem;
+                        }
+                        div.card-header p{
+                            border: 1px solid #000;
+                        }
+                        p.bg-primary{
+                            color: #fff !important;
+                        }
+                    </style>
+
+                <div class="row" id="cardContainer">
+                  <!-- Perceptível -->
+                  <!-- <div class="col-md-4 mb-4 card-item" data-nivel="A" data-categoria="Imagens" data-principle="perceptible" flex-grow-1 h-100 d-flex flex-column>
+                      <a href="pagina-criterio-1-1-1.html" class="card-link" aria-labelledby="titulo-criterio-1-1-1">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 id="titulo-criterio-1-1-1" class="card-title">Critério de sucesso 1.1.1 Conteúdo Não-textual</h5>
+                            font-<p class="card-text"><strong>Nível:</strong> A</p>
+                            <p class="card-text"><strong>Princípio:</strong> Perceptível</p>
+                            <p class="card-text"><strong>Categoria:</strong> Imagens</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div> -->
+
+                  <!-- <div class="col-4 principle-perceptible" data-nivel="A" data-categoria="Imagens" data-principle="perceptible">
+                    <div class="card" flex-grow-1>
+                        <div class="card-header">
+                            <p class="card-text badge bg-primary float-start m-0" aria-hidden="true">Perceptível</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">A</p>
+                        </div>
+                        <div class="card-body">
+                            <a href="teste.html"><span class="card-title h4">1.1.1 
+                                <span class="disability"><i class="bi bi-universal-access"></i></span>
+                                <span class="disability"><i class="bi bi-eye-slash-fill"></i></i></span>
+                                </span><br/><span class="card-subtitle h5">Conteúdo Não-textual</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Perceptível</p>
+                            <p class="visually-hidden">Nível: A</p>
+                            <p class="visually-hidden">Nível: A</p>
+                        </div>
+                        <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text"><span class="visually-hidden">Categoria:</span><span class="badge bg-warning text-dark">Imagens</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+
+                      <div class="col-lg-4 mb-4 principle-perceptible" data-nivel="A" data-categoria="Imagens" data-principle="perceptible">
+                        <div class="card h-100 d-flex flex-column">
+                          <div class="card-header px-2">
+                            <p class="card-text badge bg-primary float-start m-0" aria-hidden="true">Perceptível</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0 conformidade" aria-hidden="true">A</p>
+                          </div>
+                          <div class="card-body flex-grow-1">
+                            <a href="criterio-1-1-1.html">
+                              <span class="card-title h4">1.1.1 
+                                <span class="disability"><i class="bi bi-universal-access"></i></span>
+                                <span class="disability"><i class="bi bi-eye-slash-fill"></i></span>
+                              </span><br />
+                              <span class="card-subtitle h5">Conteúdo Não-textual</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Perceptível</p>
+                            <p class="visually-hidden">Nível: A</p>
+                          </div>
+                          <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text">
+                              <span class="visually-hidden">Categoria:</span>
+                              <span class="badge bg-dark">Imagens</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <div class="col-lg-4 mb-4 principle-perceptible" data-nivel="A" data-categoria="Áudio e Vídeo" data-principle="perceptible">
+                        <div class="card h-100 d-flex flex-column">
+                          <div class="card-header px-2">
+                            <p class="card-text badge bg-primary float-start m-0" aria-hidden="true">Perceptível</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">A</p>
+                          </div>
+                          <div class="card-body flex-grow-1">
+                            <a href="criterio-1-2-1.html">
+                              <span class="card-title h4">1.2.1 
+                                <span class="disability"><i class="bi bi-music-note"></i></span>
+                                <span class="disability"><i class="bi bi-camera-video"></i></span>
+                              </span><br />
+                              <span class="card-subtitle h5">Apenas Áudio e Apenas Vídeo (Pré-gravado)</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Perceptível</p>
+                            <p class="visually-hidden">Nível: A</p>
+                          </div>
+                          <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text">
+                              <span class="visually-hidden">Categoria:</span>
+                              <span class="badge bg-success">Áudio e Vídeo</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="col-lg-4 mb-4 principle-perceptible" data-nivel="A" data-categoria="Áudio e Vídeo" data-principle="perceptible">
+                        <div class="card h-100 d-flex flex-column">
+                          <div class="card-header px-2">
+                            <p class="card-text badge bg-primary float-start m-0" aria-hidden="true">Perceptível</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">A</p>
+                          </div>
+                          <div class="card-body flex-grow-1">
+                            <a href="criterio-1-2-2.html">
+                              <span class="card-title h4">1.2.2 
+                                <span class="disability"><i class="bi bi-cc-circle"></i></span>
+                              </span><br />
+                              <span class="card-subtitle h5">Legendas (Pré-gravado)</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Perceptível</p>
+                            <p class="visually-hidden">Nível: A</p>
+                          </div>
+                          <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text">
+                              <span class="visually-hidden">Categoria:</span>
+                              <span class="badge bg-success">Áudio e Vídeo</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="col-lg-4 mb-4 principle-perceptible" data-nivel="A" data-categoria="Áudio e Vídeo" data-principle="perceptible">
+                        <div class="card h-100 d-flex flex-column">
+                          <div class="card-header px-2">
+                            <p class="card-text badge bg-primary float-start m-0" aria-hidden="true">Perceptível</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">A</p>
+                          </div>
+                          <div class="card-body flex-grow-1">
+                            <a href="criterio-1-2-3.html">
+                              <span class="card-title h4">1.2.3 
+                                <span class="disability"><i class="bi bi-volume-up"></i></span>
+                              </span><br />
+                              <span class="card-subtitle h5">Audiodescrição ou Mídia Alternativa (Pré-gravado)</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Perceptível</p>
+                            <p class="visually-hidden">Nível: A</p>
+                          </div>
+                          <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text">
+                              <span class="visually-hidden">Categoria:</span>
+                              <span class="badge bg-success">Áudio e Vídeo</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 mb-4 principle-perceptible" data-nivel="AA" data-categoria="Áudio e Vídeo" data-principle="perceptible">
+                        <div class="card h-100 d-flex flex-column">
+                          <div class="card-header px-2">
+                            <p class="card-text badge bg-primary float-start m-0" aria-hidden="true">Perceptível</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">AA</p>
+                          </div>
+                          <div class="card-body flex-grow-1">
+                            <a href="criterio-1-2-4.html">
+                              <span class="card-title h4">1.2.4 
+                                <span class="disability"><i class="bi bi-play-btn"></i></span>
+                                <span class="disability"><i class="bi bi-cc-circle"></i></span>
+                              </span><br />
+                              <span class="card-subtitle h5">Legendas (Ao Vivo)</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Perceptível</p>
+                            <p class="visually-hidden">Nível: AA</p>
+                          </div>
+                          <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text">
+                              <span class="visually-hidden">Categoria:</span>
+                              <span class="badge bg-success">Áudio e Vídeo</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 mb-4 principle-perceptible" data-nivel="A" data-categoria="Codificação e Marcação Semântica" data-principle="perceptible">
+                        <div class="card h-100 d-flex flex-column">
+                          <div class="card-header px-2">
+                            <p class="card-text badge bg-primary float-start m-0" aria-hidden="true">Perceptível</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">A</p>
+                          </div>
+                          <div class="card-body flex-grow-1">
+                            <a href="criterio-1-3-1.html">
+                              <span class="card-title h4">1.3.1 
+                                <span class="disability"><i class="bi bi-code-slash"></i></span>
+                              </span><br />
+                              <span class="card-subtitle h5">Informações e Relações</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Perceptível</p>
+                            <p class="visually-hidden">Nível: A</p>
+                          </div>
+                          <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text">
+                              <span class="visually-hidden">Categoria:</span>
+                              <span class="badge bg-secondary">Codificação e Marcação Semântica</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 mb-4 principle-perceptible" data-nivel="A" data-categoria="Apresentação" data-principle="perceptible">
+                        <div class="card h-100 d-flex flex-column">
+                          <div class="card-header px-2">
+                            <p class="card-text badge bg-primary float-start m-0" aria-hidden="true">Perceptível</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">A</p>
+                          </div>
+                          <div class="card-body flex-grow-1">
+                            <a href="criterio-1-3-2.html">
+                              <span class="card-title h4">1.3.2 
+                                <span class="disability"><i class="bi bi-layout-text-sidebar"></i></span>
+                              </span><br />
+                              <span class="card-subtitle h5">Sequência Significativa</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Perceptível</p>
+                            <p class="visually-hidden">Nível: A</p>
+                          </div>
+                          <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text">
+                              <span class="visually-hidden">Categoria:</span>
+                              <span class="badge bg-warning text-dark">Apresentação</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 mb-4 principle-perceptible" data-nivel="A" data-categoria="Imagens" data-principle="perceptible">
+                        <div class="card h-100 d-flex flex-column">
+                          <div class="card-header px-2">
+                            <p class="card-text badge bg-primary float-start m-0" aria-hidden="true">Perceptível</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">A</p>
+                          </div>
+                          <div class="card-body flex-grow-1">
+                            <a href="criterio-1-3-3.html">
+                              <span class="card-title h4">1.3.3 
+                                <span class="disability"><i class="bi bi-image"></i></span>
+                              </span><br />
+                              <span class="card-subtitle h5">Características Sensoriais</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Perceptível</p>
+                            <p class="visually-hidden">Nível: A</p>
+                          </div>
+                          <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text">
+                              <span class="visually-hidden">Categoria:</span>
+                              <span class="badge bg-dark">Imagens</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 mb-4 principle-perceptible" data-nivel="A" data-categoria="Uso de Cores" data-principle="perceptible">
+                        <div class="card h-100 d-flex flex-column">
+                          <div class="card-header px-2">
+                            <p class="card-text badge bg-primary float-start m-0" aria-hidden="true">Perceptível</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">A</p>
+                          </div>
+                          <div class="card-body flex-grow-1">
+                            <a href="criterio-1-4-1.html">
+                              <span class="card-title h4">1.4.1 
+                                <span class="disability"><i class="bi bi-palette"></i></span>
+                              </span><br />
+                              <span class="card-subtitle h5">Uso de Cor</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Perceptível</p>
+                            <p class="visually-hidden">Nível: A</p>
+                          </div>
+                          <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text">
+                              <span class="visually-hidden">Categoria:</span>
+                              <span class="badge bg-warning text-dark">Uso de Cores</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 mb-4 principle-perceptible" data-nivel="AAA" data-categoria="Apresentação Visual" data-principle="perceptible">
+                          <div class="card h-100 d-flex flex-column">
+                            <div class="card-header px-2">
+                              <p class="card-text badge bg-dark float-start m-0" aria-hidden="true">Perceptível</p>
+                              <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">AAA</p>
+                            </div>
+                            <div class="card-body flex-grow-1">
+                              <a href="criterio-1-4-8.html">
+                                <span class="card-title h4">1.4.8 
+                                  <span class="disability"><i class="bi bi-layout-text-sidebar-reverse"></i></span>
+                                </span><br />
+                                <span class="card-subtitle h5">Apresentação Visual</span>
+                              </a>
+                              <p class="visually-hidden">Princípio: Perceptível</p>
+                              <p class="visually-hidden">Nível: AAA</p>
+                            </div>
+                            <div class="card-footer pt-0 pb-1 px-2">
+                              <p class="card-text">
+                                <span class="visually-hidden">Categoria:</span>
+                                <span class="badge bg-warning text-dark">Apresentação</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                  <!-- Operável -->
+                      <div class="col-lg-4 mb-4 principle-operable" data-nivel="A" data-categoria="Interação por teclado" data-principle="operable">
+                        <div class="card h-100 d-flex flex-column">
+                          <div class="card-header px-2">
+                            <p class="card-text badge bg-dark float-start m-0" aria-hidden="true">Operável</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">A</p>
+                          </div>
+                          <div class="card-body flex-grow-1">
+                            <a href="criterio-2-1-1.html">
+                              <span class="card-title h4">2.1.1 
+                                <span class="disability"><i class="bi bi-keyboard"></i></span>
+                              </span><br />
+                              <span class="card-subtitle h5">Teclado</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Operável</p>
+                            <p class="visually-hidden">Nível: A</p>
+                          </div>
+                          <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text">
+                              <span class="visually-hidden">Categoria:</span>
+                              <span class="badge bg-danger">Interação por teclado</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 mb-4 principle-operable" data-nivel="A" data-categoria="Interação por teclado" data-principle="operable">
+                        <div class="card h-100 d-flex flex-column">
+                          <div class="card-header px-2">
+                            <p class="card-text badge bg-dark float-start m-0" aria-hidden="true">Operável</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">A</p>
+                          </div>
+                          <div class="card-body flex-grow-1">
+                            <a href="criterio-2-1-2.html">
+                              <span class="card-title h4">2.1.2 
+                                <span class="disability"><i class="bi bi-keyboard"></i></span>
+                              </span><br />
+                              <span class="card-subtitle h5">Sem Armadilhas de Teclado</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Operável</p>
+                            <p class="visually-hidden">Nível: A</p>
+                          </div>
+                          <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text">
+                              <span class="visually-hidden">Categoria:</span>
+                              <span class="badge bg-danger">Interação por teclado</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 mb-4 principle-operable" data-nivel="A" data-categoria="Animação e Tempo" data-principle="operable">
+                        <div class="card h-100 d-flex flex-column">
+                          <div class="card-header px-2">
+                            <p class="card-text badge bg-dark float-start m-0" aria-hidden="true">Operável</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">A</p>
+                          </div>
+                          <div class="card-body flex-grow-1">
+                            <a href="criterio-2-2-1.html">
+                              <span class="card-title h4">2.2.1 
+                                <span class="disability"><i class="bi bi-hourglass-split"></i></span>
+                              </span><br />
+                              <span class="card-subtitle h5">Tempo Ajustável</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Operável</p>
+                            <p class="visually-hidden">Nível: A</p>
+                          </div>
+                          <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text">
+                              <span class="visually-hidden">Categoria:</span>
+                              <span class="badge bg-warning text-dark">Animação e Tempo</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 mb-4 principle-operable" data-nivel="AA" data-categoria="Navegação" data-principle="operable">
+                        <div class="card h-100 d-flex flex-column">
+                          <div class="card-header px-2">
+                            <p class="card-text badge bg-dark float-start m-0" aria-hidden="true">Operável</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">AA</p>
+                          </div>
+                          <div class="card-body flex-grow-1">
+                            <a href="criterio-2-4-5.html">
+                              <span class="card-title h4">2.4.5 
+                                <span class="disability"><i class="bi bi-box-arrow-in-up-right"></i></span>
+                              </span><br />
+                              <span class="card-subtitle h5">Vários Meios de Navegação</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Operável</p>
+                            <p class="visually-hidden">Nível: AA</p>
+                          </div>
+                          <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text">
+                              <span class="visually-hidden">Categoria:</span>
+                              <span class="badge bg-info text-dark">Navegação</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 mb-4 principle-operable" data-nivel="AAA" data-categoria="Interação Visual" data-principle="operable">
+                          <div class="card h-100 d-flex flex-column">
+                            <div class="card-header px-2">
+                              <p class="card-text badge bg-danger float-start m-0" aria-hidden="true">Operável</p>
+                              <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">AAA</p>
+                            </div>
+                            <div class="card-body flex-grow-1">
+                              <a href="criterio-2-3-2.html">
+                                <span class="card-title h4">2.3.2 
+                                  <span class="disability"><i class="bi bi-lightning-charge"></i></span>
+                                </span><br />
+                                <span class="card-subtitle h5">Três Flashes</span>
+                              </a>
+                              <p class="visually-hidden">Princípio: Operável</p>
+                              <p class="visually-hidden">Nível: AAA</p>
+                            </div>
+                            <div class="card-footer pt-0 pb-1 px-2">
+                              <p class="card-text">
+                                <span class="visually-hidden">Categoria:</span>
+                                <span class="badge bg-warning text-dark">Apresentação</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                  <!-- Compreensível -->
+                      <div class="col-lg-4 mb-4 principle-comprehensible" data-nivel="A" data-categoria="Codificação e Marcação Semântica" data-principle="comprehensible">
+                        <div class="card h-100 d-flex flex-column">
+                          <div class="card-header px-2">
+                            <p class="card-text badge bg-info float-start m-0" aria-hidden="true">Compreensível</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">A</p>
+                          </div>
+                          <div class="card-body flex-grow-1">
+                            <a href="criterio-3-1-1.html">
+                              <span class="card-title h4">3.1.1 
+                                <span class="disability"><i class="bi bi-globe"></i></span>
+                              </span><br />
+                              <span class="card-subtitle h5">Idioma da Página</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Compreensível</p>
+                            <p class="visually-hidden">Nível: A</p>
+                          </div>
+                          <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text">
+                              <span class="visually-hidden">Categoria:</span>
+                              <span class="badge bg-secondary">Codificação e Marcação Semântica</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 mb-4 principle-comprehensible" data-nivel="AAA" data-categoria="Leitura e Compreensão" data-principle="comprehensible">
+                          <div class="card h-100 d-flex flex-column">
+                            <div class="card-header px-2">
+                              <p class="card-text badge bg-info float-start m-0" aria-hidden="true">Compreensível</p>
+                              <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">AAA</p>
+                            </div>
+                            <div class="card-body flex-grow-1">
+                              <a href="criterio-3-1-5.html">
+                                <span class="card-title h4">3.1.5 
+                                  <span class="disability"><i class="bi bi-journal-bookmark"></i></span>
+                                </span><br />
+                                <span class="card-subtitle h5">Leitura de Nível Avançado</span>
+                              </a>
+                              <p class="visually-hidden">Princípio: Compreensível</p>
+                              <p class="visually-hidden">Nível: AAA</p>
+                            </div>
+                            <div class="card-footer pt-0 pb-1 px-2">
+                              <p class="card-text">
+                                <span class="visually-hidden">Categoria:</span>
+                                <span class="badge bg-warning text-dark">Navegação</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                      <div class="col-lg-4 mb-4 principle-comprehensible" data-nivel="A" data-categoria="Navegação e Foco" data-principle="comprehensible">
+                          <div class="card h-100 d-flex flex-column">
+                            <div class="card-header px-2">
+                              <p class="card-text badge bg-info float-start m-0" aria-hidden="true">Compreensível</p>
+                              <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">A</p>
+                            </div>
+                            <div class="card-body flex-grow-1">
+                              <a href="criterio-3-2-1.html">
+                                <span class="card-title h4">3.2.1 
+                                  <span class="disability"><i class="bi bi-cursor-fill"></i></span>
+                                </span><br />
+                                <span class="card-subtitle h5">Foco</span>
+                              </a>
+                              <p class="visually-hidden">Princípio: Compreensível</p>
+                              <p class="visually-hidden">Nível: A</p>
+                            </div>
+                            <div class="card-footer pt-0 pb-1 px-2">
+                              <p class="card-text">
+                                <span class="visually-hidden">Categoria:</span>
+                                <span class="badge bg-warning text-dark">Navegação e Foco</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 principle-comprehensible" data-nivel="A" data-categoria="Entrada de Dados" data-principle="comprehensible">
+                          <div class="card h-100 d-flex flex-column">
+                            <div class="card-header px-2">
+                              <p class="card-text badge bg-info float-start m-0" aria-hidden="true">Compreensível</p>
+                              <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">A</p>
+                            </div>
+                            <div class="card-body flex-grow-1">
+                              <a href="criterio-3-2-2.html">
+                                <span class="card-title h4">3.2.2 
+                                  <span class="disability"><i class="bi bi-box-arrow-in-right"></i></span>
+                                </span><br />
+                                <span class="card-subtitle h5">Entrada de Dados</span>
+                              </a>
+                              <p class="visually-hidden">Princípio: Compreensível</p>
+                              <p class="visually-hidden">Nível: A</p>
+                            </div>
+                            <div class="card-footer pt-0 pb-1 px-2">
+                              <p class="card-text">
+                                <span class="visually-hidden">Categoria:</span>
+                                <span class="badge bg-light text-dark">Formulários e Entrada de Dados</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 principle-comprehensible" data-nivel="A" data-categoria="Erros e Sugestões" data-principle="comprehensible">
+                          <div class="card h-100 d-flex flex-column">
+                            <div class="card-header px-2">
+                              <p class="card-text badge bg-info float-start m-0" aria-hidden="true">Compreensível</p>
+                              <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">A</p>
+                            </div>
+                            <div class="card-body flex-grow-1">
+                              <a href="criterio-3-3-1.html">
+                                <span class="card-title h4">3.3.1 
+                                  <span class="disability"><i class="bi bi-exclamation-circle-fill"></i></span>
+                                </span><br />
+                                <span class="card-subtitle h5">Identificação de Erros</span>
+                              </a>
+                              <p class="visually-hidden">Princípio: Compreensível</p>
+                              <p class="visually-hidden">Nível: A</p>
+                            </div>
+                            <div class="card-footer pt-0 pb-1 px-2">
+                              <p class="card-text">
+                                <span class="visually-hidden">Categoria:</span>
+                                <span class="badge bg-light text-dark">Formulários e Entrada de Dados</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                      <div class="col-lg-4 mb-4 principle-comprehensible" data-nivel="AA" data-categoria="Formulários e Entrada de Dados" data-principle="comprehensible">
+                        <div class="card h-100 d-flex flex-column">
+                          <div class="card-header px-2">
+                            <p class="card-text badge bg-info float-start m-0" aria-hidden="true">Compreensível</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">AA</p>
+                          </div>
+                          <div class="card-body flex-grow-1">
+                            <a href="criterio-3-3-2.html">
+                              <span class="card-title h4">3.3.2 
+                                <span class="disability"><i class="bi bi-card-text"></i></span>
+                              </span><br />
+                              <span class="card-subtitle h5">Rótulos ou Instruções</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Compreensível</p>
+                            <p class="visually-hidden">Nível: AA</p>
+                          </div>
+                          <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text">
+                              <span class="visually-hidden">Categoria:</span>
+                              <span class="badge bg-light text-dark">Formulários e Entrada de Dados</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 mb-4 principle-comprehensible" data-nivel="AA" data-categoria="Erros e Sugestões" data-principle="comprehensible">
+                          <div class="card h-100 d-flex flex-column">
+                            <div class="card-header px-2">
+                              <p class="card-text badge bg-info float-start m-0" aria-hidden="true">Compreensível</p>
+                              <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">AA</p>
+                            </div>
+                            <div class="card-body flex-grow-1">
+                              <a href="criterio-3-3-3.html">
+                                <span class="card-title h4">3.3.3 
+                                  <span class="disability"><i class="bi bi-check-circle"></i></span>
+                                </span><br />
+                                <span class="card-subtitle h5">Sugestão de Correção</span>
+                              </a>
+                              <p class="visually-hidden">Princípio: Compreensível</p>
+                              <p class="visually-hidden">Nível: AA</p>
+                            </div>
+                            <div class="card-footer pt-0 pb-1 px-2">
+                              <p class="card-text">
+                                <span class="visually-hidden">Categoria:</span>
+                                <span class="badge bg-light text-dark">Formulários e Entrada de Dados</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                      <div class="col-lg-4 mb-4 principle-robust" data-nivel="A" data-categoria="Codificação e Marcação Semântica" data-principle="robust">
+                        <div class="card h-100 d-flex flex-column">
+                          <div class="card-header px-2">
+                            <p class="card-text badge bg-danger float-start m-0" aria-hidden="true">Robustez</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">A</p>
+                          </div>
+                          <div class="card-body flex-grow-1">
+                            <a href="criterio-4-1-1.html">
+                              <span class="card-title h4">4.1.1 
+                                <span class="disability"><i class="bi bi-code-square"></i></span>
+                              </span><br />
+                              <span class="card-subtitle h5">Análise de Erro</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Robustez</p>
+                            <p class="visually-hidden">Nível: A</p>
+                          </div>
+                          <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text">
+                              <span class="visually-hidden">Categoria:</span>
+                              <span class="badge bg-secondary">Codificação e Marcação Semântica</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 mb-4 principle-robust" data-nivel="AA" data-categoria="Codificação e Marcação Semântica" data-principle="robust">
+                        <div class="card h-100 d-flex flex-column">
+                          <div class="card-header px-2">
+                            <p class="card-text badge bg-danger float-start m-0" aria-hidden="true">Robustez</p>
+                            <p class="card-text badge bg-light text-dark float-end m-0" aria-hidden="true">AA</p>
+                          </div>
+                          <div class="card-body flex-grow-1">
+                            <a href="criterio-4-1-2.html">
+                              <span class="card-title h4">4.1.2 
+                                <span class="disability"><i class="bi bi-input-cursor-text"></i></span>
+                              </span><br />
+                              <span class="card-subtitle h5">Nome, Função, Valor</span>
+                            </a>
+                            <p class="visually-hidden">Princípio: Robustez</p>
+                            <p class="visually-hidden">Nível: AA</p>
+                          </div>
+                          <div class="card-footer pt-0 pb-1 px-2">
+                            <p class="card-text">
+                              <span class="visually-hidden">Categoria:</span>
+                              <span class="badge bg-secondary">Codificação e Marcação Semântica</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <footer class="container-fluid mt-5" id="footer">
+                    <div class="container p-5 d-none d-lg-block">
+                        <div class="fw-bold text-black-50 d-flex flex-column">
+                            <div class="d-flex">
+                                <div class="col-6 d-flex justify-content-start align-items-center">
+                                    <div id="redes-sociais">
+                                        <p>Acompanhe o AMAWeb:</p>
+                                        <div>
+                                            <a class="me-3" href="https://git.unifesp.br/proj-acessibilidade-mpf"><img src="assets/redesign/img/footer-github-seeklogo 2.png" alt="Github"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex justify-content-end align-items-center">
+                                    <div id="logos">
+                                        <a class="ms-4" href=""><img src="assets/redesign/img/footer-logo-mpf.png" alt="Logo MPF"></a>
+                                        <a class="ms-4" href=""><img src="assets/redesign/img/footer-logo-unifesp.png" alt="Logo UNIFESP"></a>
+                                        <a class="ms-4" href=""><img src="assets/redesign/img/footer-logo-cta.png" alt="Logo CTA"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center d-flex flex-column">
+                                <hr>
+                                <p class="p-0 m-0"><small>Desenvolvido por CTA - IFRS. Aplicativo sob a licença GPLv3 e Creative Commons NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container p-5 d-lg-none">
+                        <div class="fw-bold text-black-50 d-flex flex-column gap-4">
+                            <div class="d-flex flex-column text-center pb-2">
+                                <p>Desenvolvido por:</p>
+                                <div class="d-flex gap-3 justify-content-center">
+                                    <a href=""><img src="assets/redesign/img/footer-logo-mpf.png" alt="Logo MPF"></a>
+                                    <a href=""><img src="assets/redesign/img/footer-logo-unifesp.png" alt="Logo UNIFESP"></a>
+                                    <a href=""><img src="assets/redesign/img/footer-logo-cta.png" alt="Logo CTA"></a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                <p>Acompanhe o AMAWeb:</p>
+                                <div>
+                                    <a class="me-3" href="https://git.unifesp.br/proj-acessibilidade-mpf"><img src="assets/redesign/img/footer-github-seeklogo 2.png" alt="Github"></a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                <hr>
+                                <p class="p-0 m-0"><small>Desenvolvido por CTA - IFRS. Aplicativo sob a licença GPLv3 e Creative Commons NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!--//docs-wrapper-->
+        <!-- Javascript -->          
+        <script src="assets/plugins/popper.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.0/dist/js.cookie.min.js"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+        <!-- Page Specific JS -->
+        <script src="assets/plugins/smoothscroll.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+        <script src="assets/js/highlight-custom.js"></script>
+        <script src="assets/redesign/js/high_contrast.js"></script> 
+        <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+        <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+        <script src="assets/js/docs.js"></script> 
+
+        <!-- Tooltips -->
+        <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+         </script>
+
+        <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.getElementById('search');
+    const filterBtn = document.getElementById('filterBtn');
+    const filters = document.querySelectorAll('.filter');
+
+    // Função de normalização de texto
+    function normalizeText(text) {
+      return text
+        .toLowerCase() // Transforma em minúsculas
+        .trim()        // Remove espaços no início e no final
+        .replace(/\s+/g, ' '); // Substitui múltiplos espaços por um único
+    }
+
+    // Função para filtrar os cards
+    function filterCards() {
+      const searchQuery = normalizeText(searchInput.value); // Normaliza o valor da busca
+      const activeFilters = Array.from(filters) // Captura os filtros ativos
+        .filter(filter => filter.checked)
+        .map(filter => filter.value);
+
+      document.querySelectorAll('.principle-comprehensible, .principle-robust, .principle-perceptible, .principle-operable').forEach(card => {
+        const titleElement = card.querySelector('.card-title');
+        const subtitleElement = card.querySelector('.card-subtitle');
+        const categoria = card.dataset.categoria;
+        const nivel = card.dataset.nivel;
+        const principle = card.dataset.principle.toLowerCase();
+
+        // Normaliza o texto do título e do subtítulo
+        const title = titleElement ? normalizeText(titleElement.textContent) : '';
+        const subtitle = subtitleElement ? normalizeText(subtitleElement.textContent) : '';
+
+        // Verifica se a busca corresponde ao título, subtítulo ou categoria
+        const matchesSearch = !searchQuery || 
+          title.includes(searchQuery) || 
+          subtitle.includes(searchQuery) || 
+          normalizeText(categoria).includes(searchQuery);
+
+        // Verifica os filtros
+        const matchesFilters = (
+          !activeFilters.length ||
+          activeFilters.includes(nivel) ||
+          activeFilters.includes(principle) ||
+          activeFilters.some(f => categoria.includes(f))
+        );
+
+        // Exibe ou oculta o card
+        card.style.display = matchesSearch && matchesFilters ? 'block' : 'none';
+      });
+    }
+
+    // Evento do botão de aplicar filtros e busca
+    filterBtn.addEventListener('click', filterCards);
+  });
+</script>
+
+
+    </body>
+</html>

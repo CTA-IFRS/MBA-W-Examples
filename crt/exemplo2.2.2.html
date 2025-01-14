@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 2.2.2</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 2.2.2</strong></center></p>
+    <hr>
+
+    <h2>Tempo</h2>
+
+    <h3>3. Controle de atualização: Não há atualização que inicie automaticamente e seja apresentada em paralelo com outro conteúdo ou existe um mecanismo para pausar, parar ou ocultar a atualização, ou para controlar a frequência da atualização ou a atualização é essencial para a atividade.</h3>
+
+	<p>O <strong>critério 2.2.2</strong> da <abbr title="Diretrizes de Acessibilidade para o Conteúdo Web">WCAG</abbr> exige que atualizações automáticas de conteúdo sejam controláveis. Atualizações contínuas podem distrair ou dificultar o uso do conteúdo para pessoas com deficiências cognitivas, visuais ou físicas. Portanto, é essencial fornecer um mecanismo para pausar, parar ou ajustar a frequência dessas atualizações, a menos que sejam essenciais para a funcionalidade do conteúdo.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <p>No exemplo a seguir, são apresentadas várias manchetes em uma lista de rolage (news ticker) que atualiza automaticamente, mas oferece controles para pausar, reiniciar ou ajustar a frequência das atualizações.</p>
+
+    <!-- início do exemplo -->
+		<style>
+			.content-wrapper {
+				border: 2px solid #ccc;
+				padding: 20px;
+				border-radius: 8px;
+				max-width: 400px;
+				margin: 0 auto;
+			}
+			#news-ticker {
+				border: 1px solid #ccc;
+				padding: 10px;
+				background: #e9ecef;
+				margin-bottom: 15px;
+				font-size: 1.1em;
+				border-radius: 4px;
+			}
+			button {
+				margin-top: 10px;
+				padding: 10px 15px;
+				background: #007BFF;
+				color: #fff;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+			}
+			button:hover {
+				background: #0056b3;
+			}
+		</style>
+
+		<div class="content-wrapper">
+			<h2>Site de nóticias</h2>
+			<div id="news-ticker">
+				<span id="news-content">Notícia 1: Evento importante aconteceu hoje.</span>
+			</div>
+			<button id="pause-news">Pausar</button>
+			<button id="resume-news">Reiniciar</button>
+			<button id="slow-news">Reduzir Velocidade</button>
+			<button id="fast-news">Aumentar Velocidade</button>
+		</div>
+	
+		<script>
+			const noticias = [
+				"Notícia 1: Evento importante aconteceu hoje.",
+				"Notícia 2: Nova tecnologia é anunciada.",
+				"Notícia 3: Grandes mudanças no mercado financeiro.",
+				"Notícia 4: Descoberta científica impressionante.",
+			];
+	
+			let indiceAtual = 0;
+			let velocidade = 3000; // Atualiza a cada 3 segundos
+			let tickerInterval;
+	
+			const newsContent = document.getElementById('news-content');
+			const pauseButton = document.getElementById('pause-news');
+			const resumeButton = document.getElementById('resume-news');
+			const slowButton = document.getElementById('slow-news');
+			const fastButton = document.getElementById('fast-news');
+	
+			// Função para atualizar a notícia
+			function atualizarNoticia() {
+				indiceAtual = (indiceAtual + 1) % noticias.length; // Cicla pelas notícias
+				newsContent.textContent = noticias[indiceAtual];
+			}
+	
+			// Inicia o ticker automático
+			function iniciarTicker() {
+				tickerInterval = setInterval(atualizarNoticia, velocidade);
+			}
+	
+			// Pausa o ticker
+			pauseButton.addEventListener('click', () => {
+				clearInterval(tickerInterval);
+			});
+	
+			// Reinicia o ticker
+			resumeButton.addEventListener('click', () => {
+				clearInterval(tickerInterval);
+				iniciarTicker();
+			});
+	
+			// Reduz a velocidade do ticker
+			slowButton.addEventListener('click', () => {
+				if (velocidade < 10000) { // Limite superior de 10 segundos
+					velocidade += 1000;
+					clearInterval(tickerInterval);
+					iniciarTicker();
+				}
+			});
+	
+			// Aumenta a velocidade do ticker
+			fastButton.addEventListener('click', () => {
+				if (velocidade > 1000) { // Limite inferior de 1 segundo
+					velocidade -= 1000;
+					clearInterval(tickerInterval);
+					iniciarTicker();
+				}
+			});
+	
+			// Inicializa o ticker ao carregar a página
+			iniciarTicker();
+		</script>
+    <!-- fim do exemplo -->
+</body>

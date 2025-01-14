@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 1.3.6</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 1.3.6</strong></center></p>
+    <hr>
+
+    <h2>Codificação e Marcação Semântica</h2>
+
+    <h3>13. Propósito identificável: A finalidade dos componentes da interface do usuário, ícones e regiões pode ser determinada programaticamente.</h3>
+
+    <p>O critério <strong>1.3.6</strong> das <abbr title="Diretrizes de Acessibilidade para o Conteúdo Web">WCAG</abbr> estabelece que a finalidade dos componentes da interface do usuário, como botões, ícones e regiões, deve ser determinada programaticamente. Isso é fundamental para garantir que usuários de tecnologias assistivas, como leitores de tela, possam compreender e interagir corretamente com esses elementos.</p>
+
+    <p>Para que a finalidade dos componentes seja determinada, é essencial o uso correto de elementos HTML semânticos e atributos ARIA, que fornecem informações adicionais sobre a função de um componente. Esses atributos ajudam a transmitir a função e a estrutura dos elementos, permitindo uma navegação mais intuitiva e acessível.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <p>Abaixo um exemplo de um formulário de contato que utiliza elementos HTML semânticos, atributos ARIA e ícones SVG, garantindo que os leitores de tela possam entender claramente a finalidade de cada componente:</p>
+
+    <ul>
+        <li>
+            <strong>Estrutura Semântica:</strong>
+            <p>O uso de elementos semânticos como <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code> e <code>&lt;textarea&gt;</code> ajuda os leitores de tela a entenderem a hierarquia e a estrutura do conteúdo.</p>
+        </li>
+        <li>
+            <strong>Atributo aria-labelledby:</strong>
+            <p>O atributo <code>aria-labelledby</code> no formulário vincula a descrição do formulário ao título, ajudando os leitores de tela a identificar o propósito do formulário.</p>
+        </li>
+        <li>
+            <strong>Atributos aria-describedby:</strong>
+            <p>Cada campo de entrada tem um atributo <code>aria-describedby</code>, que aponta para um elemento <code>&lt;span&gt;</code> que fornece informações adicionais sobre o que é esperado nesse campo.</p>
+        </li>
+        <li>
+            <strong>Atributo aria-label:</strong>
+            <p>O botão de envio possui um atributo <code>aria-label</code> que fornece uma descrição clara de sua finalidade, permitindo que os usuários de leitores de tela compreendam a ação.</p>
+        </li>
+        <li>
+            <strong>Ícone SVG:</strong>
+            <p>Um ícone gráfico (SVG) é incluído no botão para melhorar a funcionalidade visual, mas não substitui a necessidade de uma descrição textual clara. O ícone é visualmente acessível, mas a descrição do botão é fornecida pelo atributo <code>aria-label</code>.</p>
+        </li>
+        <li>
+            <strong>Classe .visually-hidden:</strong>
+            <p>A classe <code>.visually-hidden</code> foi adicionada ao estilo para ocultar visualmente elementos, mas ainda torná-los acessíveis para leitores de tela.</p>
+        </li>
+    </ul>
+
+    <!-- início do exemplo -->
+    <style>
+        /* Estilo para a borda ao redor do conteúdo */
+        .content-wrapper {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+        .icon {
+            margin-right: 8px;
+        }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
+
+    <div class="content-wrapper">
+        <h1>Entre em Contato</h1>
+        <p>Preencha o formulário abaixo para nos enviar uma mensagem.</p>
+
+        <form action="#" method="post" aria-labelledby="form-title">
+            <h2 id="form-title" class="visually-hidden">Formulário de Contato</h2>
+
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required aria-required="true" aria-describedby="nameHelp">
+            <span id="nameHelp" class="visually-hidden">Por favor, insira seu nome completo.</span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required aria-required="true" aria-describedby="emailHelp">
+            <span id="emailHelp" class="visually-hidden">Por favor, insira um endereço de email válido.</span>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="5" required aria-required="true" aria-describedby="messageHelp"></textarea>
+            <span id="messageHelp" class="visually-hidden">Escreva sua mensagem aqui.</span>
+
+            <button type="submit" class="submit-button" aria-label="Enviar mensagem">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M2 2l20 10L2 22V2z" fill="white"/>
+                </svg>
+                Enviar
+            </button>
+        </form>
+    </div>
+    <!-- fim do exemplo -->
+
+</body>

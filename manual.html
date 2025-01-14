@@ -1,913 +1,1060 @@
 <!DOCTYPE html>
-<html lang="pt-br"> 
-<head>
-    <title>Manual Brasileiro da Acessibilidade Web | MBA-W</title>
-    
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Manual Brasileiro da Acessibilidade Web baseado na WCAG 2.1">
-    <meta name="author" content="Lael Nervis and Xiaoying Riley at 3rd Wave Media">   
-    <!-- <link rel="shortcut icon" href="favicon.ico">  -->
-    
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome JS-->
-    <script defer src="assets/fontawesome/js/all.min.js"></script>
-    
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
-    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
-
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
-	<link id="theme-style" rel="stylesheet" href="assets/css/custom.css">
-
-	<!-- High Contrast CSS-->
-	<link rel="stylesheet" href="assets/css/high_contrast.css">
-
-</head> 
-
-<body class="docs-page">    
-    <header class="header fixed-top">
-		<!-- <nav class="barra-acessibilidade navbar navbar-expand-sm navbar-dark" aria-label="Menu de acessibilidade">
-			<button type="button" class="navbar-toggler bg-dark btn-a11y" data-bs-toggle="collapse" data-bs-target="#menuAcessibilidade" aria-controls="menuAcessibilidade" aria-expanded="false" aria-label="Expandir menu">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div id="menuAcessibilidade" class="collapse navbar-collapse">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link text-dark py-0" href="#conteudo-principal" accesskey="1"><small>Ir para o conteúdo
-							<span class="badge text-bg-dark">1</span></small>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-dark py-0" href="#menu-principal" accesskey="2"><small>Ir para o menu
-							<span class="badge text-bg-dark">2</span></small>
-						</a>
-					</li>
-				</ul>
-				<ul class="navbar-nav justify-content-end ml-auto">
-					<li class="nav-item my-2 my-md-0">
-						<a class="nav-link text-dark py-0" id="high_contrast" aria-checked="false" href="#"><small><i class="bi bi-circle-half">&nbsp;</i> Alto contraste</small></a>
-					</li>
-				</ul>
-			</div>
-		</nav> -->
-		
-        <div class="branding docs-branding">
-            <div class="container-fluid position-relative py-2">
-                <div class="docs-logo-wrapper">
-					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
-	                    <span></span>
-	                    <span></span>
-	                    <span></span>
-	                </button>
-	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="assets/images/logo.svg" alt="logo"><h1 class="d-inline"><span class="logo-text">Manual do <span class="text-alt">WCAG 2.1</span></span></h1></a></div>
-                </div><!--//docs-logo-wrapper-->
-	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
-					<a href="" class="btn btn-primary d-none d-lg-flex"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;Download em PDF</a>
-				</div>
-            </div><!--//container-->
-        </div><!--//branding-->
-    </header><!--//header-->
-    
-    
-    <div class="docs-wrapper">
-	    <div id="docs-sidebar" class="docs-sidebar">
-		    <nav id="docs-nav" class="docs-nav navbar">
-			    <ul class="section-items list-unstyled nav flex-column pb-3">
-					<li class="nav-item section-title"><a class="nav-link scrollto" href="#section-0"><span class="theme-icon-holder me-2"><i class="fas fa-star"></i></span>Introdução</a></li>
-				    <li class="nav-item section-title"><a class="nav-link scrollto" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-eye"></i></span>1. Perceptível</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">1.1 Alternativas em Texto</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">1.2 Mídias com base em tempo</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">1.3 Adaptável</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">1.4 Discernível</a></li>
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>2. Operável</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">2.1 Acessível por Teclado</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">2.2 Tempo Suficiente</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">2.3 Convulsões e Reações Fisicas</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">2.4 Navegável</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-5">2.5 Modalidades de Entrada</a></li>
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i class="fas fa-box"></i></span>3. Compreensível</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">3.1 Legível</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">3.2 Previsível</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">3.3 Assistência de Entrada</a></li>
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i class="fas fa-cogs"></i></span>4. Robusto</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">4.1 Compatível</a></li>
-			    </ul>
-
-		    </nav><!--//docs-nav-->
-	    </div><!--//docs-sidebar-->
-	    <div class="docs-content">
-		    <div class="container">
-				<article class="docs-article" id="section-0">
-				    <header class="docs-header">
-					    <h2 class="docs-heading">Introdução <span class="docs-time">Última atualização: 28-05-2023</span></h2>
-					    <section class="docs-intro">
-						    <p class="lead">O intuito dessa página é apresentar uma explicação de fácil compreensão de cada critério de sucesso da WCAG 2.1, bem como exemplos desses critérios de sucesso conforme as técnicas existentes na WCAG 2.1</p>
-						</section><!--//docs-intro-->
-				    </header>
-			    </article><!--//docs-article-->
-
-			    <article class="docs-article" id="section-1">
-				    <header class="docs-header">
-					    <h2 class="docs-heading">1. Perceptível</h2>
-						
-						<div class="card text-bg-light my-4">
-							<div class="card-header">De acordo com a WCAG</div>
-							<div class="card-body pb-1">
-								<p>As informações e os componentes da interface do usuário devem ser apresentados em formas que possam ser percebidas pelo usuário.</p>
-							</div>
-						</div>
-
-				    </header>
-
-				    <section class="docs-section" id="item-1-1">
-						<h3 class="section-heading">1.1 Alternativas em Texto</h3>
-						
-						<div class="card text-bg-light my-4">
-							<div class="card-header">De acordo com a WCAG</div>
-							<div class="card-body">
-								<p>Fornecer alternativas textuais para qualquer conteúdo não textual, para que possa ser transformado em outras formas de acordo com as necessidades dos usuários, tais como impressão com tamanho de fontes maiores, braille, fala, símbolos ou linguagem mais simples.</p>
-								<p>O objetivo desta diretriz é garantir que todo o conteúdo não textual também esteja disponível na forma de texto. E texto, nesse caso, se refere a texto eletrônico e não imagem de texto. Informação em texto pode ser apresentada da forma que melhor atende às necessidades do usuário, seja ela visual, auditiva, tátil ou uma combinação delas. Além disso, informação apresentada em texto pode ser facilmente ampliada, lida em voz alta ou convertida para qualquer formato tátil, como em linhas Braille.</p>
-							</div>
-						</div>
-
-						<div class="docs-section" id="item-1-1-1">
-							<h4>
-								Critério de Sucesso 1.1.1 Conteúdo não textual <span class="permalink"><a href="#item-1-1-1" aria-label="Link Permanente para 1.1.1 Conteúdo não textual" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.1.1 Conteúdo não textual">§</a></span>
-								<small class="text-muted d-flex fs-6 align-content-center mt-1"><span class="badge bg-secondary">Nível A</span></small>
-							</h4>
-
-							<div class="card text-bg-light my-4">
-								<div class="card-header">Explicação da WCAG</div>
-								<div class="card-body py-0">
-									<p class="mt-3">Todo o conteúdo não textual que é exibido ao usuário tem uma alternativa textual que serve a um propósito equivalente, exceto para as situações indicadas abaixo.</p>
-									<div class="callout-block">
-										<strong class="d-block">Controles ou entrada</strong>
-										Se o conteúdo não textual for um controle ou aceitar a entrada de dados por parte do usuário, então esse conteúdo não textual possui um nome que descreve a sua finalidade. (Consultar o Critério de Sucesso 4.1.2 para requisitos adicionais de controles e conteúdo que aceitam entrada de dados por parte do usuário)
-									</div>
-									<div class="callout-block">
-										<strong class="d-block">Mídias com base no tempo</strong>
-										Se o conteúdo não textual consiste em mídia baseada em tempo, então as alternativas textuais fornecem, no mínimo, uma identificação descritiva do conteúdo não textual (Consulte a Diretriz 1.2 para obter os requisitos adicionais para mídia).
-									</div>
-									<div class="callout-block">
-										<strong class="d-block">Teste</strong>
-										Se o conteúdo não textual for um teste ou um exercício, que ficaria inválido se fosse apresentado em texto, então as alternativas textuais fornecem, no mínimo, uma identificação descritiva do conteúdo não textual.
-									</div>
-									<div class="callout-block">
-										<strong class="d-block">Sensorial</strong>
-										Se a finalidade do conteúdo não textual for, essencialmente, criar uma experiência sensorial específica, então as alternativas textuais fornecem, no mínimo, uma identificação descritiva do conteúdo não textual.
-									</div>
-									<div class="callout-block">
-										<strong class="d-block">CAPTCHA</strong>
-										Se a finalidade do conteúdo não textual for confirmar que o conteúdo está sendo acessado por uma pessoa e não por um computador, então devem ser fornecidas alternativas textuais que identificam e descrevem a finalidade do conteúdo não textual. Formas alternativas de CAPTCHA, que utilizam modos de saída para diferentes tipos de percepção sensorial, devem ser apresentadas para atender diferentes deficiências.
-									</div>
-									<div class="callout-block">
-										<strong class="d-block">Decoração, Formatação, Invisível</strong>
-										Se o conteúdo não textual for meramente decorativo, se for utilizado apenas para formatação visual, ou se não for exibido aos usuários, então esse conteúdo não textual deve ser implementado de uma forma que possa ser ignorado pelas tecnologias assistivas.
-									</div>
-								</div>
-							</div>
-							
-							<p>Conteúdo não textual é qualquer conteúdo que não é formado por uma sequência de caracteres, como, por exemplo, imagens (inclusive imagens de texto), mídias de áudio e vídeo, gráficos, diagramas, animações, ASCII, emoticons, botões, CAPTCHAs, dentre outros.</p>
-							<p>O objetivo deste critério é oferecer uma alternativa textual para tais elementos, tornando-os acessíveis de acordo com as necessidades da pessoa. Por exemplo, uma pessoa que não consegue ver uma imagem pode ter a alternativa em texto lida em voz alta usando um leitor de tela. Uma pessoa que não consegue ouvir um arquivo de áudio pode ter a alternativa textual exibida para ser lida. No futuro, as alternativas de texto também permitirão que as informações sejam mais facilmente traduzidas para a língua de sinais ou para uma forma simplificada da mesma língua.</p>
-
-							<h5 class="mt-5 mb-3">Como atender o critério</h5>
-							<div class="row row-cols-1 row-cols-md-3 g-4">
-								<div class="col">
-								  <div class="card text-center">
-									<img src="assets/images/1.1.1-img-simples.png" class="card-img-top" alt="Exemplo">
-									<div class="card-img-overlay d-flex flex-column">
-									  <a class="btn btn-primary mt-auto" href="crt_1.1.1_ex_01.html">Alternativa textual para imagens simples</a>
-									</div>
-								  </div>
-								</div>
-								<div class="col">
-									<div class="card text-center">
-									<img src="assets/images/1.1.1-img-de-texto.png" class="card-img-top" alt="Exemplo">
-									<div class="card-img-overlay d-flex flex-column">
-										<a class="btn btn-primary mt-auto" href="crt_1.1.1_ex_02.html">Alternativa textual para imagens de texto</a>
-									</div>
-								  </div>
-								</div>
-								<div class="col">
-									<div class="card text-center">
-									<img src="assets/images/exemplo-imagens-complexas.png" class="card-img-top" alt="Exemplo">
-									<div class="card-img-overlay d-flex flex-column">
-										<a class="btn btn-primary mt-auto" href="crt_1.1.1_ex_03.html">Alternativa textual para imagens complexas</a>
-									</div>
-								  </div>
-								</div>
-								<div class="col">
-									<div class="card text-center">
-									  <img src="assets/images/1.1.1-mapa-imagem.png" class="card-img-top" alt="Exemplo">
-									  <div class="card-img-overlay d-flex flex-column">
-										  <a class="btn btn-primary mt-auto" href="crt_1.1.1_ex_04.html">Alternativa textual para mapas de imagem</a>
-									  </div>
-									</div>
-								  </div>
-								<div class="col">
-									<div class="card text-center">
-									<img src="assets/images/1.1.1-img-decorativa.png" class="card-img-top" alt="Exemplo">
-									<div class="card-img-overlay d-flex flex-column">
-										<a class="btn btn-primary mt-auto" href="crt_1.1.1_ex_05.html">Imagens decorativas</a>
-									</div>
-								  </div>
-								</div>
-								<div class="col">
-									<div class="card text-center">
-									  <img src="assets/images/exemplo-ao-vivo.png" class="card-img-top" alt="Exemplo">
-									  <div class="card-img-overlay d-flex flex-column">
-										  <a class="btn btn-primary mt-auto" href="crt_1.1.1_ex_06.html">Alternativa textual para áudio e/ou vídeo ao vivo</a>
-									  </div>
-									</div>
-								</div>
-								<div class="col">
-									<div class="card text-center">
-										<img src="assets/images/exemplo-nao-imagem.png" class="card-img-top" alt="Exemplo">
-										<div class="card-img-overlay d-flex flex-column">
-											<a class="btn btn-primary mt-auto" href="crt_1.1.1_ex_07.html">Alternativa textual para elementos que não são imagens</a>
-										</div>
-									</div>
-								</div>
-								<div class="col">
-									<div class="card text-center">
-										<img src="assets/images/1.1.1-MathML.png" class="card-img-top" alt="Exemplo">
-										<div class="card-img-overlay d-flex flex-column">
-											<a class="btn btn-primary mt-auto" href="crt_1.1.1_ex_08.html">Alternativa textual para elementos MathML</a>
-										</div>
-									</div>
-								</div>
-								<div class="col">
-									<div class="card text-center">
-										<img src="assets/images/exemplo-captcha.png" class="card-img-top" alt="Exemplo">
-										<div class="card-img-overlay d-flex flex-column">
-											<a class="btn btn-primary mt-auto" href="crt_1.1.1_ex_09.html">Alternativa textual para CAPTCHA</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-1-2">
-						<h3 class="section-heading">1.2 Mídias com base em tempo</h3>
-						<section class="docs-intro ">
-							
-							<div class="card text-bg-light my-4">
-								<div class="card-header">De acordo com a WCAG</div>
-								<div class="card-body">
-									<p>Fornecer alternativas para mídias baseadas em tempo.</p>
-								</div>
-							</div>
-							
-							<div class="callout-block">
-								<strong class="d-block">Mídias baseadas em tempo</strong>
-								São qualquer conteúdo em forma de áudio e/ou vídeo.
-							</div>
-							<p>O objetivo dessa diretriz é disponibilizar aos usuários as informações transmitidas por essas mídias através de outras formas, como por exemplo: de forma textual para pessoas que não conseguem ouvir o que está sendo falado ou através de uma faixa de audiodescrição para pessoas que não conseguem enxergar o que está sendo mostrado.</p>
-							<p>Além de tornarem o conteúdo acessível para pessoas com deficiência auditiva e/ou visual, essas abordagens também podem facilitar a compreensão do conteúdo por pessoas com dificuldades cognitivas, de linguagem e de aprendizado.</p>
-						</section><!--//docs-intro-->
-
-						<div class="docs-section" id="item-1-2-1">
-							<h4>
-								Critério de Sucesso 1.2.1 Apenas Áudio e Apenas Vídeo (Pré-gravado) <span class="permalink"><a href="#item-1-2-1" aria-label="Link Permanente para 1.2.1 Apenas Áudio e Apenas Vídeo" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.1 Apenas Áudio e Apenas Vídeo">§</a></span>
-								<small class="text-muted d-flex fs-6 align-content-center mt-1"><span class="badge bg-secondary">Nível A</span></small>
-							</h4>
-
-							<div class="card text-bg-light my-4">
-								<div class="card-header">Explicação da WCAG</div>
-								<div class="card-body pb-0">
-									<p>Para as mídias de apenas áudio pré-gravados e mídias de vídeo (sem áudio) pré-gravados as regras seguintes são verdadeiras, exceto quando o áudio ou o vídeo é uma mídia alternativa para o texto e está claramente identificado como tal:</p>
-
-									<div class="callout-block">
-										<strong class="d-block">Apenas áudio pré-gravado</strong>
-										É fornecida uma alternativa para mídia com base em tempo que apresenta informação equivalente para o conteúdo composto por apenas áudio pré-gravado.
-									</div>
-
-									<div class="callout-block">
-										<strong class="d-block">Apenas vídeo pré-gravado</strong>
-										É fornecida uma alternativa em mídia com base em tempo ou uma faixa de áudio que apresenta informação equivalente para o conteúdo apenas de vídeo pré-gravado.
-									</div>
-								</div>
-							</div>
-
-							<p>A intenção deste critério é disponibilizar a todos os usuários as informações transmitidas por conteúdo somente áudio e somente vídeo, ambos pré-gravados, através de outras formas, como por exemplo, texto. A informação é acessível via texto porque o texto pode ser processado por meio de qualquer modalidade sensorial (por exemplo, visual, auditiva ou tátil).</p>
-							<div class="callout-block">
-								<strong class="d-block">Somente áudio</strong>
-								Qualquer gravação de áudio que não tenha vídeo nem texto, ou alternativa de acessibilidade associada.
-							</div>
-							<div class="callout-block">
-								<strong class="d-block">Somente vídeo</strong>
-								Qualquer gravação de vídeo que não tenha áudio, texto, ou alternativa de acessibilidade associada.
-							</div>
-							<p>Para atender a este critério é obrigatório fornecer ao menos uma alternativa equivalente, ao conteúdo somente áudio ou somente vídeo.</p>
-							
-							<div class="table-responsive">
-								<table class="table caption-top table-bordered align-middle">
-									<caption>Exemplos de alternativas:</caption>
-									<tr>
-										<th>Somente áudio</th>
-										<td>
-											<ul class="m-0">
-												<li>Alternativa em texto: pode ser lida por pessoas com deficiência auditiva; pode ser acessada por leitores de tela e linha Braille (cegos e surdocegos).</li>
-											</ul>
-										</td>
-									</tr>
-									<tr>
-										<th>Somente vídeo</th>
-										<td>
-											<ul class="m-0">
-												<li>Alternativa em texto: pode ser acessada por leitores de tela e linha Braille (cegos e surdocegos)</li>
-												<li>Faixa de áudio: pode ser ouvida por pessoas com deficiência visual</li>
-											</ul>
-										</td>
-									</tr>
-								</table>
-							  </div>
-
-							<h5 class="mt-5 mb-3">Como atender o critério</h5>
-							<div class="row row-cols-1 row-cols-md-3 g-4">
-								<div class="col">
-								  <div class="card text-center">
-									<img src="assets/images/exemplo-somente-audio.png" class="card-img-top" alt="Exemplo">
-									<div class="card-img-overlay d-flex flex-column">
-									  <a class="btn btn-primary mt-auto" href="crt_1.2.1_ex_01.html">Somente áudio</a>
-									</div>
-								  </div>
-								</div>
-								<div class="col">
-									<div class="card text-center">
-										<img src="assets/images/exemplo-somente-video.png" class="card-img-top" alt="Exemplo">
-									  <div class="card-img-overlay d-flex flex-column">
-										<a class="btn btn-primary mt-auto" href="crt_1.2.1_ex_02.html">Somente vídeo</a>
-									  </div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="docs-section" id="item-1-2-2">
-							<h4>
-								Critério de Sucesso 1.2.2 Legendas (Pré-gravadas) <span class="permalink"><a href="#item-1-2-2" aria-label="Link Permanente para 1.2.2 Legendas" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.2 Legendas">§</a></span>
-								<small class="text-muted d-flex fs-6 align-content-center mt-1"><span class="badge bg-secondary">Nível A</span></small>
-							</h4>
-
-							<div class="card text-bg-light my-4">
-								<div class="card-header">Explicação da WCAG</div>
-								<div class="card-body">
-									<p>São fornecidas legendas para todo conteúdo de áudio pré-gravado em mídia sincronizada, exceto quando a mídia for uma alternativa para texto e for claramente identificada como tal.</p>
-								</div>
-							</div>
-
-							<p>Para atender este critério, é obrigatório fornecer legenda para vídeo pré-gravado.</p>
-							<p>Legendas podem ser usadas para  permitir que pessoas surdas ou com deficiência auditiva assistam a vídeos e possam acompanhar simultaneamente o que está sendo transmitido via áudio. Isso pode ser feito de duas maneiras, conforme abaixo:</p>
-							
-							<div class="callout-block">
-								<strong class="d-block">Fornecer legendas abertas:</strong>
-								com esta técnica, todos os diálogos e sons importantes são incorporados como texto na faixa de vídeo e ficam sempre visíveis.
-							</div>
-
-							<div class="callout-block">
-								<strong class="d-block">Fornecer legendas ocultas:</strong>
-								esta técnica permite que o usuário escolha se deseja exibir ou não as legendas, ou seja, todos os diálogos e sons importantes são incorporados como texto de uma forma que faz com que o texto não seja visível, a menos que o usuário o solicite.
-							</div>
-
-							<p>As legendas não incluem apenas diálogos, mas também identificam quem está falando e incluem informações não verbais transmitidas por meio do som, incluindo efeitos sonoros significativos. Além disso, as legendas não devem ocultar nem obstruir informações relevantes do vídeo.</p>
-							<p>As legendas também são importantes para pessoas que estejam em alguma situação que cause dificuldade para ouvir o que está sendo transmitido via áudio.</p>
-
-							<h5 class="mt-5 mb-3">Como atender o critério</h5>
-							<div class="row row-cols-1 row-cols-md-3 g-4">
-								<div class="col">
-								  <div class="card text-center">
-									<img src="assets/images/1.2.2-legenda-aberta.png" class="card-img-top" alt="Exemplo">
-									<div class="card-img-overlay d-flex flex-column">
-									  <a class="btn btn-primary mt-auto" href="crt_1.2.2_ex_01.html">Exemplo com legenda aberta</a>
-									</div>
-								  </div>
-								</div>
-								<div class="col">
-									<div class="card text-center">
-										<img src="assets/images/1.2.2-legenda-oculta.png" class="card-img-top" alt="Exemplo">
-									  <div class="card-img-overlay d-flex flex-column">
-										<a class="btn btn-primary mt-auto" href="crt_1.2.2_ex_02.html">Exemplo com legenda oculta</a>
-									  </div>
-									</div>
-								</div>
-								<div class="col">
-									<div class="card text-center">
-										<img src="assets/images/1.2.2-info-nao-verbais.png" class="card-img-top" alt="Exemplo">
-									  <div class="card-img-overlay d-flex flex-column">
-										<a class="btn btn-primary mt-auto" href="crt_1.2.2_ex_03.html">Legenda para Informações não Verbais</a>
-									  </div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="docs-section" id="item-1-2-3">
-							<h4>
-								Critério de Sucesso 1.2.3 Audiodescrição ou mídia alternativa (pré-gravada) <span class="permalink"><a href="#item-1-2-3" aria-label="Link Permanente para 1.2.3 Audiodescrição ou mídia alternativa" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.3 Audiodescrição ou mídia alternativa">§</a></span>
-								<small class="text-muted d-flex fs-6 align-content-center mt-1"><span class="badge bg-secondary">Nível A</span></small>
-							</h4>
-
-							<div class="card text-bg-light my-4">
-								<div class="card-header">Explicação da WCAG</div>
-								<div class="card-body">
-									<p>Uma alternativa para mídia com base ou uma audiodescrição do conteúdo em vídeo pré-gravado é fornecida para mídia sincronizada, exceto quando a mídia é uma alternativa ao texto e for claramente identificada como tal.</p>
-								</div>
-							</div>
-
-							<p>A intenção é fornecer às pessoas com deficiência visual acesso às informações visuais presentes em um vídeo. Estas informações são:</p>
-							<ul>
-								<li>diálogos;</li>
-								<li>sons (naturais e artificiais);</li>
-								<li>o cenário e o fundo;</li>
-								<li>as ações e expressões de pessoas, animais, etc.;</li>
-								<li>texto ou gráficos;</li>
-								<li>e mais.</li>
-							</ul>
-
-							<p>Existem duas maneiras de atender este critério de sucesso, qualquer uma das quais pode ser usada. São elas:</p>
-							
-							<div class="callout-block">
-								<strong class="d-block">Audiodescrição:</strong>
-								Uma abordagem é fornecer a audiodescrição do conteúdo do vídeo. A audiodescrição adiciona informações em áudio necessárias para melhor compreender o que está sendo mostrado no vídeo. Durante as pausas existentes no diálogo, a audiodescrição fornece informações sobre ações, personagens, mudanças de cena e texto na tela que são importantes e não são descritas ou faladas na trilha sonora principal.
-							</div>
-
-							<div class="callout-block">
-								<strong class="d-block">Transcrição do vídeo:</strong>
-								A segunda abordagem envolve o fornecimento de todas as informações (visuais e auditivas) em forma de texto, ou seja, são fornecidas descrições completas de todas as informações visuais, incluindo contexto visual, ações e expressões dos atores e qualquer outro material visual. Além disso, são descritos sons não falados (risos, vozes fora da tela, etc.), e transcrições de todos os diálogos estão incluídos. A sequência das transcrições da descrição e dos diálogos é a mesma do próprio vídeo. Como resultado, essa descrição em texto pode fornecer uma representação muito mais completa do conteúdo da mídia sincronizada do que apenas a audiodescrição.
-							</div>
-
-							<h5 class="mt-5 mb-3">Como atender o critério</h5>
-							<div class="row row-cols-1 row-cols-md-3 g-4">
-								<div class="col">
-								  <div class="card text-center">
-									<img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
-									<div class="card-img-overlay d-flex flex-column">
-									  <a class="btn btn-primary mt-auto" href="crt_1.2.3_ex_01.html">Vídeo com transcrição</a>
-									</div>
-								  </div>
-								</div>
-								<div class="col">
-									<div class="card text-center">
-										<img src="assets/images/1.2.3-audiodescricao.png" class="card-img-top" alt="Exemplo">
-									  <div class="card-img-overlay d-flex flex-column">
-										<a class="btn btn-primary mt-auto" href="crt_1.2.3_ex_02.html">Video com audiodescrição</a>
-									  </div>
-									</div>
-								</div>
-								<!-- Comentado no momento pois não temos um exemplo para incluir na página até então -->
-								<!-- <div class="col">
-									<div class="card text-center">
-										<img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
-									  <div class="card-img-overlay d-flex flex-column">
-										<a class="btn btn-primary mt-auto" href="crt_1.2.3_ex_03.html">Filme com audiodescrição estendida</a>
-									  </div>
-									</div>
-								</div> -->
-							</div>
-						</div>
-
-						<div class="docs-section" id="item-1-2-4">
-							<h4>
-								Critério de Sucesso 1.2.4 Legendas (ao vivo) <span class="permalink"><a href="#item-1-2-4" aria-label="Link Permanente para 1.2.3 Legendas (ao vivo)" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.4 Legendas (ao vivo)">§</a></span>
-								<small class="text-muted d-flex fs-6 align-content-center mt-1"><span class="badge bg-secondary">Nível AA</span></small>
-							</h4>
-
-							<div class="card text-bg-light my-4">
-								<div class="card-header">Explicação da WCAG</div>
-								<div class="card-body">
-									<p>São fornecidas legendas para todo o conteúdo do áudio ao vivo existente em mídia sincronizada.</p>
-								</div>
-							</div>
-
-							<p>A intenção deste critério é permitir que pessoas surdas ou com deficiência auditiva tenham acesso ao conteúdo de uma apresentação ao vivo (eventos presenciais, vídeos em streaming, TV ao vivo, etc.), através de legendas. O conteúdo das legendas é baseado no conteúdo do áudio e além dos diálogos, também podem identificar quem está falando, eventuais efeitos sonoros e outros áudios significativos.</p>
-
-							<h5 class="mt-5 mb-3">Como atender o critério</h5>
-							<div class="row row-cols-1 row-cols-md-3 g-4">
-								<div class="col">
-								  <div class="card text-center">
-									<img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
-									<div class="card-img-overlay d-flex flex-column">
-									  <a class="btn btn-primary mt-auto" href="crt_1.2.4_ex_01.html">Conversão de voz para texto</a>
-									</div>
-								  </div>
-								</div>
-								<div class="col">
-									<div class="card text-center">
-										<img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
-									  <div class="card-img-overlay d-flex flex-column">
-										<a class="btn btn-primary mt-auto" href="crt_1.2.4_ex_02.html">Estenodactilografia</a>
-									  </div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="docs-section" id="item-1-2-5">
-							<h4>
-								Critério de Sucesso 1.2.5 Audiodescrição (Pré-gravado) <span class="permalink"><a href="#item-1-2-5" aria-label="Link Permanente para 1.2.5 Audiodescrição (Pré-gravado)" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.5 Audiodescrição (Pré-gravado)">§</a></span>
-								<small class="text-muted d-flex fs-6 align-content-center mt-1"><span class="badge bg-secondary">Nível AA</span></small>
-							</h4>
-
-							<div class="card text-bg-light my-4">
-								<div class="card-header">Explicação da WCAG</div>
-								<div class="card-body">
-									<p>É fornecida audiodescrição para todo o conteúdo de vídeo pré-gravado existente em mídia sincronizada.</p>
-								</div>
-							</div>
-
-							<p>A intenção deste critério é fornecer às pessoas com deficiência visual acesso às informações visuais existentes em um vídeo. A audiodescrição adiciona ao áudio original do vídeo as informações necessárias para o entendimento do que acontece visualmente, aproveitando as pausas existentes no diálogo. A audiodescrição fornece informações sobre ações, personagens, mudanças de cena e texto na tela que são importantes e não são descritos ou falados no áudio original.</p>
-							<p>As pessoas cegas ou com baixa visão, bem como aquelas com limitações cognitivas que têm dificuldade em interpretar visualmente o que está acontecendo, se beneficiam da audiodescrição da informação visual.</p>
-
-							<p>Observação: Os critérios 1.2.3 e 1.2.5 são semelhantes. Enquanto no critério 1.2.3 (A) a audiodescrição é uma das possibilidades, no critério 1.2.5 (AA) ela é obrigatória. Dessa forma, se você atender o critério 1.2.5 automaticamente estará atendendo ao critério 1.2.3.</p>
-
-							<h5 class="mt-5 mb-3">Como atender o critério</h5>
-							<div class="row row-cols-1 row-cols-md-3 g-4">
-								<div class="col">
-								  <div class="card text-center">
-									<img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
-									<div class="card-img-overlay d-flex flex-column">
-									  <a class="btn btn-primary mt-auto" href="crt_1.2.5_ex_01.html">Vídeo com Audiodescrição</a>
-									</div>
-								  </div>
-								</div>
-							</div>
-						</div>
-
-						<div class="docs-section" id="item-1-2-6">
-							<h4>
-								Critério de Sucesso 1.2.6 Língua de sinais (pré-gravada) <span class="permalink"><a href="#item-1-2-6" aria-label="Link Permanente para 1.2.6 Língua de sinais (pré-gravada)" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.6 Língua de sinais (pré-gravada)">§</a></span>
-								<small class="text-muted d-flex fs-6 align-content-center mt-1"><span class="badge bg-secondary">Nível AAA</span></small>
-							</h4>
-
-							<div class="card text-bg-light my-4">
-								<div class="card-header">Explicação da WCAG</div>
-								<div class="card-body">
-									<p>É fornecida interpretação em língua de sinais para todo o conteúdo de áudio pré-gravado existente em um conteúdo em mídia sincronizada.</p>
-								</div>
-							</div>
-
-							<p>Esse critério tem o propósito de permitir que pessoas surdas ou com deficiência auditiva e fluentes em língua de sinais entendam o conteúdo em áudio de vídeos. Como a língua de sinais fornece a capacidade de fornecer entonação, emoção e outras informações de áudio que são refletidas na interpretação da língua de sinais, mas não nas legendas, a interpretação da língua de sinais fornece acesso mais rico e equivalente ao conteúdo completo do vídeo. Pessoas que se comunicam extensivamente em linguagem de sinais também são mais rápidas em linguagem de sinais, o que facilita o ritmo de acompanhamento.</p>
-							<p>Para aqueles que se comunicam principalmente em língua de sinais, às vezes não é possível ler e entender o texto na velocidade em que é apresentado nas legendas. Para esses indivíduos, é importante fornecer a apresentação em linguagem de sinais das informações de áudio.</p>
-
-							<p>Observação: Os critérios 1.2.3 e 1.2.5 são semelhantes. Enquanto no critério 1.2.3 (A) a audiodescrição é uma das possibilidades, no critério 1.2.5 (AA) ela é obrigatória. Dessa forma, se você atender o critério 1.2.5 automaticamente estará atendendo ao critério 1.2.3.</p>
-
-							<h5 class="mt-5 mb-3">Como atender o critério</h5>
-							<div class="row row-cols-1 row-cols-md-3 g-4">
-								<div class="col">
-								  <div class="card text-center">
-									<img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
-									<div class="card-img-overlay d-flex flex-column">
-									  <a class="btn btn-primary mt-auto" href="crt_1.2.6_ex_01.html">Vídeo pré-gravado com Libras ao vivo</a>
-									</div>
-								  </div>
-								</div>
-								<div class="col">
-									<div class="card text-center">
-									  <img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
-									  <div class="card-img-overlay d-flex flex-column">
-										<a class="btn btn-primary mt-auto" href="crt_1.2.6_ex_02.html">Vídeo pré-gravado com janela de Libras</a>
-									  </div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="docs-section" id="item-1-2-7">
-							<h4>
-								Critério de Sucesso 1.2.7 - Audiodescrição estendida <span class="permalink"><a href="#item-1-2-7" aria-label="Link Permanente para 1.2.7 - Audiodescrição estendida" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.7 - Audiodescrição estendida">§</a></span>
-								<small class="text-muted d-flex fs-6 align-content-center mt-1"><span class="badge bg-secondary">Nível AAA</span></small>
-							</h4>
-
-							<div class="card text-bg-light my-4">
-								<div class="card-header">Explicação da WCAG</div>
-								<div class="card-body">
-									<p>Quando as pausas no áudio de primeiro plano forem insuficientes para permitir que as audiodescrições transmitam o sentido do vídeo, é fornecida uma audiodescrição estendida para todo o vídeo pré-gravado existente no conteúdo em mídia sincronizada.</p>
-								</div>
-							</div>
-
-							<p>O objetivo é fornecer às pessoas com deficiência visual acesso a um conteúdo de áudio além daquele que pode ser fornecido pela descrição de áudio padrão. Isso é feito congelando periodicamente a apresentação do vídeo e reproduzindo a descrição de áudio adicional, retornando na sequência a apresentação do vídeo. Como isso atrapalha a visualização para aqueles que não precisam da descrição adicional, geralmente são fornecidas técnicas que permitem ativar e desativar o recurso. Como alternativa, podem ser fornecidas versões com e sem a descrição adicional.</p>
-
-							<h5 class="mt-5 mb-3">Como atender o critério</h5>
-							<div class="row row-cols-1 row-cols-md-3 g-4">
-								<div class="col">
-								  <div class="card text-center">
-									<img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
-									<div class="card-img-overlay d-flex flex-column">
-									  <a class="btn btn-primary mt-auto" href="#">Vídeo em versão com audiodescrição estendida</a>
-									</div>
-								  </div>
-								</div>
-								<div class="col">
-									<div class="card text-center">
-									  <img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
-									  <div class="card-img-overlay d-flex flex-column">
-										<a class="btn btn-primary mt-auto" href="#">Vídeo com opção de habilitar a audiodescrição estendida</a>
-									  </div>
-									</div>
-								  </div>
-							</div>
-						</div>
-
-						<div class="docs-section" id="item-1-2-8">
-							<h4>
-								Critério de Sucesso 1.2.8 - Mídia Alternativa (Pré-gravada) <span class="permalink"><a href="#item-1-2-8" aria-label="Link Permanente para 1.2.8 - Mídia Alternativa (Pré-gravada)" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.8 - Mídia Alternativa (Pré-gravada)">§</a></span>
-								<small class="text-muted d-flex fs-6 align-content-center mt-1"><span class="badge bg-secondary">Nível AAA</span></small>
-							</h4>
-
-							<div class="card text-bg-light my-4">
-								<div class="card-header">Explicação da WCAG</div>
-								<div class="card-body">
-									<p>É fornecida uma alternativa para mídia com base em tempo para todo o conteúdo existente em mídia sincronizada pré-gravada e para a todo o conteúdo multimídia composto por apenas vídeo pré-gravado.</p>
-								</div>
-							</div>
-
-							<p>A intenção é disponibilizar material audiovisual para indivíduos cuja visão seja muito ruim para ler legendas de maneira confiável e cuja audição seja muito ruim para ouvir diálogos e descrições de áudio de maneira confiável.</p>
-							<p>Essa abordagem envolve o fornecimento de todas as informações de vídeos em forma de texto. Uma alternativa para mídia baseada em tempo fornece uma descrição contínua de tudo o que está acontecendo no conteúdo do vídeo. A alternativa para áudios ou vídeos é algo como um livro que descreve tudo o que está acontecendo para fornecer ao leitor a compreensão completa do contexto.</p>
-							<p>Ao contrário da audiodescrição, a descrição da parte do vídeo não é restrita apenas às pausas no diálogo existente. São fornecidas descrições completas de todas as informações visuais, incluindo contexto visual, ações e expressões dos atores e qualquer outro material visual. Além disso, são descritos sons não falados (risos, vozes fora da tela, etc.), e transcrições de todos os diálogos estão incluídos. A sequência das descrições e transcrições dos diálogos é a mesma do vídeo. Como resultado, essa alternativa pode fornecer uma representação muito mais completa do conteúdo do vídeo do que apenas a audiodescrição.</p>
-							<p>Se houver alguma interação como parte da apresentação do vídeo (por exemplo, "pressione agora para responder à pergunta"), a alternativa forneceria hiperlinks ou o que for necessário para fornecer essa funcionalidade paralela.</p>
-							<p>Indivíduos cuja visão é muito ruim para ler legendas de forma confiável e cuja audição é muito ruim para ouvir diálogos de maneira confiável podem acessar essa alternativa usando uma linha braille.</p>
-
-							<p>Observação: Os critérios 1.2.3 e 1.2.8 são semelhantes. Enquanto no critério 1.2.3 (A) a mídia alternativa é uma das possibilidades. No critério 1.2.8 ela é obrigatória. Dessa forma, se você atender ao critério 1.2.8, automaticamente estará atendendo ao critério 1.2.3.</p>
-
-							<h5 class="mt-5 mb-3">Como atender o critério</h5>
-							<div class="row row-cols-1 row-cols-md-3 g-4">
-								<div class="col">
-								  <div class="card text-center">
-									<img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
-									<div class="card-img-overlay d-flex flex-column">
-									  <a class="btn btn-primary mt-auto" href="#">Vídeo ou áudio com arquivo de texto para download</a>
-									</div>
-								  </div>
-								</div>
-								<div class="col">
-									<div class="card text-center">
-									  <img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
-									  <div class="card-img-overlay d-flex flex-column">
-										<a class="btn btn-primary mt-auto" href="#">Vídeo ou áudio com alternativa textual presente na própria página</a>
-									  </div>
-									</div>
-								  </div>
-							</div>
-						</div>
-
-						<div class="docs-section" id="item-1-2-9">
-							<h4>
-								Critério de Sucesso 1.2.9 Somente áudio (ao vivo) <span class="permalink"><a href="#item-1-2-9" aria-label="Link Permanente para 1.2.9 Somente áudio (ao vivo)" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.9 Somente áudio (ao vivo)">§</a></span>
-								<small class="text-muted d-flex fs-6 align-content-center mt-1"><span class="badge bg-secondary">Nível AAA</span></small>
-							</h4>
-
-							<div class="card text-bg-light my-4">
-								<div class="card-header">Explicação da WCAG</div>
-								<div class="card-body">
-									<p>É fornecida uma alternativa para mídia com base em tempo que apresenta informações equivalentes para conteúdo apenas áudio ao vivo.</p>
-								</div>
-							</div>
-
-							<p>A intenção aqui é tornar as informações transmitidas por áudio ao vivo, como videoconferências, discursos ao vivo e Webcasts de rádio, acessíveis por meio do uso de uma alternativa de texto. Um serviço de legenda de texto ao vivo permitirá que o áudio ao vivo seja acessível a pessoas surdas ou com deficiência auditiva ou que não possam ouvir o áudio de outra forma. Esses serviços usam um operador humano treinado que ouve o que está sendo dito e usa um teclado especial para inserir o texto com apenas um pequeno atraso. Eles são capazes de capturar um evento ao vivo com alto grau de fidelidade, e também inserir notas em qualquer áudio não falado que seja essencial para a compreensão do evento. Às vezes, uma transcrição é uma possibilidade se o áudio ao vivo estiver seguindo um script definido; mas um serviço de legenda ao vivo é preferido porque reproduz no mesmo ritmo que o próprio áudio e pode se adaptar a quaisquer desvios do script que possam ocorrer.</p>
-
-							<h5 class="mt-5 mb-3">Como atender o critério</h5>
-							<div class="row row-cols-1 row-cols-md-3 g-4">
-								<div class="col">
-								  <div class="card text-center">
-									<img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
-									<div class="card-img-overlay d-flex flex-column">
-									  <a class="btn btn-primary mt-auto" href="#">Legendas para áudio ao vivo</a>
-									</div>
-								  </div>
-								</div>
-								<div class="col">
-									<div class="card text-center">
-									  <img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
-									  <div class="card-img-overlay d-flex flex-column">
-										<a class="btn btn-primary mt-auto" href="#">Link para roteiro de obra ao vivo</a>
-									  </div>
-									</div>
-								  </div>
-								  <div class="col">
-									<div class="card text-center">
-									  <img src="assets/images/exemplo.png" class="card-img-top" alt="Exemplo">
-									  <div class="card-img-overlay d-flex flex-column">
-										<a class="btn btn-primary mt-auto" href="#">Link para transcrição do pronunciamento ao vivo</a>
-									  </div>
-									</div>
-								  </div>
-							</div>
-						</div>
-
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-1-3">
-						<h3 class="section-heading">1.3 Adaptável</h3>
-						
-						<div class="card text-bg-light my-4">
-							<div class="card-header">De acordo com a WCAG</div>
-							<div class="card-body">
-								<p>Criar conteúdo que pode ser apresentado de diferentes maneiras (por exemplo um layout simplificado) sem perder informação ou estrutura.</p>
-							</div>
-						</div>
-
-					</section><!--//section-->
-
-					<section class="docs-section" id="item-1-4">
-						<h3 class="section-heading">1.4 Discernível</h3>
-						
-						<div class="card text-bg-light my-4">
-							<div class="card-header">De acordo com a WCAG</div>
-							<div class="card-body">
-								<p>Facilitar a audição e a visualização de conteúdo aos usuários, incluindo a separação entre o primeiro plano e o plano de fundo.</p>
-							</div>
-						</div>
-
-					</section><!--//section-->
-			    </article><!--//docs-article-->
-			    
-			    <article class="docs-article" id="section-2">
-				    <header class="docs-header">
-					    <h2 class="docs-heading">2. Operável</h2>
-					    
-						<div class="card text-bg-light my-4">
-							<div class="card-header">De acordo com a WCAG</div>
-							<div class="card-body">
-								<p class="mb-0">Os componentes de interface de usuário e a navegação devem ser operáveis.</p>
-							</div>
-						</div>
-
-				    </header>
-				     <section class="docs-section" id="item-2-1">
-						<h3 class="section-heading">2.1 Acessível por Teclado</h3>
-						
-						<div class="card text-bg-light my-4">
-							<div class="card-header">De acordo com a WCAG</div>
-							<div class="card-body">
-								<p>Fazer com que toda funcionalidade fique disponível a partir de um teclado.</p>
-							</div>
-						</div>
-
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-2-2">
-						<h3 class="section-heading">2.2 Tempo Suficiente</h3>
-						
-						<div class="card text-bg-light my-4">
-							<div class="card-header">De acordo com a WCAG</div>
-							<div class="card-body">
-								<p>Fornecer aos usuários tempo suficiente para ler e utilizar o conteúdo.</p>
-							</div>
-						</div>
-
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-2-3">
-						<h3 class="section-heading">2.3 Convulsões e Reações Fisicas</h3>
-						
-						<div class="card text-bg-light my-4">
-							<div class="card-header">De acordo com a WCAG</div>
-							<div class="card-body">
-								<p>Não criar conteúdo de uma forma conhecida por causar convulsões e reações físicas.</p>
-							</div>
-						</div>
-
-					</section><!--//section-->
-
-					<section class="docs-section" id="item-2-4">
-						<h3 class="section-heading">2.4 Navegável</h3>
-						
-						<div class="card text-bg-light my-4">
-							<div class="card-header">De acordo com a WCAG</div>
-							<div class="card-body">
-								<p>Fornecer maneiras de ajudar os usuários a navegar, localizar conteúdos e determinar onde se encontram.</p>
-							</div>
-						</div>
-
-					</section><!--//section-->
-
-					<section class="docs-section" id="item-2-5">
-						<h3 class="section-heading">2.5 Modalidades de Entrada</h3>
-						
-						<div class="card text-bg-light my-4">
-							<div class="card-header">De acordo com a WCAG</div>
-							<div class="card-body">
-								<p>Torna mais fácil para os usuários operar a funcionalidade por meio de várias entradas além do teclado.</p>
-							</div>
-						</div>
-
-					</section><!--//section-->
-			    </article><!--//docs-article-->
-			    
-			    
-			    <article class="docs-article" id="section-3">
-				    <header class="docs-header">
-					    <h2 class="docs-heading">3. Compreensível</h2>
-					    
-						<div class="card text-bg-light my-4">
-							<div class="card-header">De acordo com a WCAG</div>
-							<div class="card-body">
-								<p class="mb-0">A informação e a operação da interface de usuário devem ser compreensíveis.</p>
-							</div>
-						</div>
-
-				    </header>
-				     <section class="docs-section" id="item-3-1">
-						<h3 class="section-heading">3.1 Legível</h3>
-						
-						<div class="card text-bg-light my-4">
-							<div class="card-header">De acordo com a WCAG</div>
-							<div class="card-body">
-								<p>Tornar o conteúdo do texto legível e compreensível.</p>
-							</div>
-						</div>
-
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-3-2">
-						<h3 class="section-heading">3.2 Previsível</h3>
-						
-						<div class="card text-bg-light my-4">
-							<div class="card-header">De acordo com a WCAG</div>
-							<div class="card-body">
-								<p>Fazer com que as páginas web apareçam e funcionem de modo previsível.</p>
-							</div>
-						</div>
-
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-3-3">
-						<h3 class="section-heading">3.3 Assistência de Entrada</h3>
-						
-						<div class="card text-bg-light my-4">
-							<div class="card-header">De acordo com a WCAG</div>
-							<div class="card-body">
-								<p>Ajudar os usuários a evitar e corrigir erros.</p>
-							</div>
-						</div>
-
-					</section><!--//section-->
-			    </article><!--//docs-article-->
-			    
-			    <article class="docs-article" id="section-4">
-				    <header class="docs-header">
-					    <h2 class="docs-heading">4. Robusto</h2>
-					    
-						<div class="card text-bg-light my-4">
-							<div class="card-header">De acordo com a WCAG</div>
-							<div class="card-body">
-								<p class="mb-0">O conteúdo deve ser robusto o suficiente para poder ser interpretado de forma confiável por uma ampla variedade de agentes de usuário, incluindo tecnologias assistivas.</p>
-							</div>
-						</div>
-
-				    </header>
-				     <section class="docs-section" id="item-4-1">
-						<h3 class="section-heading">4.1 Compatível</h3>
-						
-						<div class="card text-bg-light my-4">
-							<div class="card-header">De acordo com a WCAG</div>
-							<div class="card-body">
-								<p>Maximizar a compatibilidade entre os atuais e futuros agentes de usuário, incluindo tecnologias assistivas.</p>
-							</div>
-						</div>
-
-					</section><!--//section-->
-			    </article><!--//docs-article-->
-
-			    <footer class="footer">
-				    <div class="container text-center py-5">
-				        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-			            <small class="copyright">UNIFESP | CTA-IFRS</small>
-				        <ul class="social-list list-unstyled pt-4 mb-0">
-						    <li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li> 
-				            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>
-				            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
-				        </ul><!--//social-list-->
-				    </div>
-			    </footer>
-		    </div> 
-	    </div>
-    </div><!--//docs-wrapper-->
-   
-       
-    <!-- Javascript -->          
-    <script src="assets/plugins/popper.min.js"></script>
-	<script src="assets/plugins/js.cookie.min.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
-    
-    
-    <!-- Page Specific JS -->
-    <script src="assets/plugins/smoothscroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-    <script src="assets/js/highlight-custom.js"></script>
-	<script src="assets/js/high_contrast.js"></script> 
-    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
-    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
-    <script src="assets/js/docs.js"></script> 
-
-</body>
-</html> 
-
+<html lang="pt-br">
+    <head>
+        <title>AMAWeb | Manual</title>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Manual Brasileiro da Acessibilidade Web baseado no WCAG 2.1">
+        <link href="assets/redesign/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <!-- Font Inter -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <!-- Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="assets/redesign/css/main.css">
+        <link rel="stylesheet" href="assets/redesign/css/high_contrast.css">
+        <link href="assets/redesign/css/amaweb.css" rel="stylesheet">
+        <!-- Theme CSS -->  
+        <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+    </head>
+    <body class="docs-page">
+        <header class="header fixed-top">
+            <!-- Barra de acessibilidade -->
+            <nav id="menuAcessibilidade" class="barra-acessibilidade navbar navbar-expand-sm navbar-dark" aria-label="Menu de acessibilidade">
+                <ul class="navbar-nav mx-3">
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" href="#conteudo-principal" accesskey="1">
+                            <small><span class="badge bg-black">1</span> Ir para o conteúdo</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" href="#menu-principal" accesskey="2">
+                            <small><span class="badge bg-black">2</span> Ir para o menu</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="enumarate nav-link text-dark py-0" id="high_contrast" aria-checked="false" href=""><small><i class="bi bi-circle-half">&nbsp;</i>Alto Contraste</small></a>
+                    </li>
+                </ul>
+                <span class="badge position-fixed" role="alert" style="right: 20px; background-color: #A82521;" ><i class="bi bi-exclamation-diamond"></i>&nbsp;&nbsp;EM DESENVOLVIMENTO</span>
+            </nav>
+
+            <!-- Menu principal -->
+            <a href="#menu-principal" id="menu-principal" class="visually-hidden">Início do menu principal</a>
+            <nav class="navbar navbar-expand-lg bg-light menu-principal">
+                <div class="container-fluid mx-3">
+                    <a class="navbar-brand" id="amaweb" href="/">
+                        <img class="brand-hover" src="assets/redesign/img/navbar-logo-horizontal.svg" alt="Logo AMAWeb">
+                    </a>
+                    <div id="navbarNav">
+                        <ul class="nav navbar-nav gap-1">
+                            <li class="nav-item dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Menu
+                                </button>
+                                <ul id="dropdown" class="dropdown-menu dropdown-menu-lg-end shadow-lg" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="/">Página inicial</a></li>
+                                    <li><a class="dropdown-item" href="/avaliador">Avaliador</a></li>
+                                    <li><a class="dropdown-item" href="/manual">Manual</a></li>
+                                    <li><a class="dropdown-item" href="/observatorio">Observatório</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="docs-wrapper">
+            <!--//docs-sidebar-->
+            <div id="docs-sidebar" class="docs-sidebar">
+                <!--//docs-nav-->
+                <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <li class="nav-item section-title"><a class="nav-link scrollto" href="#section-0"><span class="theme-icon-holder me-2"><i class="bi bi-star-fill"></i></span>Introdução</a></li>
+                    <li class="nav-item section-title"><a class="nav-link scrollto" href="#section-1"><span class="theme-icon-holder me-2"><i class="bi bi-eye-fill"></i></span>1. Perceptível</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">1.1 Alternativas em Texto</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">1.2 Mídias com base em tempo</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">1.3 Adaptável</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">1.4 Discernível</a></li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i class="bi bi-keyboard-fill"></i></span>2. Operável</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">2.1 Acessível por Teclado</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">2.2 Tempo Suficiente</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">2.3 Convulsões e Reações Fisicas</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">2.4 Navegável</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-5">2.5 Modalidades de Entrada</a></li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i class="bi bi-puzzle-fill"></i></span>3. Compreensível</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">3.1 Legível</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">3.2 Previsível</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">3.3 Assistência de Entrada</a></li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i class="bi bi-diamond-fill"></i></span>4. Robusto</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">4.1 Compatível</a></li>
+                </ul>
+                </nav>
+            </div>
+            <div class="docs-content">
+                <div class="container">
+                    <!--//docs-intro-->
+                    <article class="docs-article" id="section-0">
+                        <header class="docs-header">
+                            <h2 class="docs-heading">Introdução</h2>
+                            <section class="docs-intro">
+                            <p>Este documento apresenta as <a href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/">Web Content Accessibility Guidelines (WCAG 2.1)</a> ou Diretrizes de Acessibilidade para Conteúdo Web, com explicações didáticas dos critérios de sucesso e exemplos funcionais de como atendê-los, utilizando como base as técnicas apresentadas no WCAG.</p>
+                            </section>
+                        </header>
+                    </article>
+                    <!--//docs-article-->
+                    <article class="docs-article" id="section-1">
+                        <header class="docs-header">
+                            <h2 class="docs-heading">1. Perceptível</h2>
+                            <!-- Accordion -->
+                            <div class="accordion" id="accordion-header">
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-header" aria-expanded="false" aria-controls="collapse-header">
+                                            <strong>De acordo com o WCAG</strong>
+                                        </button>
+                                    </h3>
+                                    <div id="collapse-header" class="accordion-collapse collapse" data-bs-parent="#accordion-header">
+                                        <div class="accordion-body">
+                                        As informações e os componentes da interface do usuário devem ser apresentados em formas que possam ser percebidas pelo usuário.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <!--//section-->
+                        <section class="docs-section" id="item-1-1">
+                            <h3 class="section-heading">1.1 Alternativas em Texto</h3>
+                            <!-- Accordion -->
+                            <div class="accordion" id="accordion-1-1">
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1-1" aria-expanded="true" aria-controls="collapse-1-1">
+                                            <strong>De acordo com o WCAG</strong>
+                                        </button>
+                                    </h4>
+                                    <div id="collapse-1-1" class="accordion-collapse collapse" data-bs-parent="#accordion-1-1">
+                                        <div class="accordion-body">
+                                            <p>Fornecer alternativas textuais para qualquer conteúdo não textual, para que possa ser transformado em outras formas de acordo com as necessidades dos usuários, tais como impressão com tamanho de fontes maiores, braille, fala, símbolos ou linguagem mais simples.</p>
+                                            <p>O objetivo desta diretriz é garantir que todo o conteúdo não textual também esteja disponível na forma de texto. E texto, nesse caso, se refere a texto eletrônico e não imagem de texto. Informação em texto pode ser apresentada da forma que melhor atende às necessidades do usuário, seja ela visual, auditiva, tátil ou uma combinação delas. Além disso, informação apresentada em texto pode ser facilmente ampliada, lida em voz alta ou convertida para qualquer formato tátil, como em linhas Braille.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="docs-section" id="item-1-1-1">
+                                <h4 class="d-flex align-items-center">
+                                    Critério de Sucesso 1.1.1
+                                    <small class="text-muted ms-2">
+                                        <span class="badge">Nível A</span>
+                                    </small>
+                                </h4>
+                                <h3>Conteúdo não textual&nbsp;<a href="#item-1-1-1" aria-label="Link Permanente para 1.1.1 Conteúdo não textual" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.1.1 Conteúdo não textual"><i class="bi bi-link-45deg"></i></a></h3>
+                                <!-- Accordion -->
+                                <div class="accordion" id="accordion-1-1-1">
+                                    <div class="accordion-item">
+                                        <h4 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1-1-1" aria-expanded="true" aria-controls="collapse-1-1-1">
+                                                <strong>Explicação do WCAG</strong>
+                                            </button>
+                                        </h4>
+                                        <div id="collapse-1-1-1" class="accordion-collapse collapse" data-bs-parent="#accordion-1-1-1">
+                                            <div class="accordion-body">
+                                                <p>Todo o conteúdo não textual que é exibido ao usuário tem uma alternativa textual que serve a um propósito equivalente, exceto para as situações indicadas abaixo.</p>
+                                                <div class="callout-block">
+                                                    <strong class="d-block">Controles ou entrada</strong>
+                                                    Se o conteúdo não textual for um controle ou aceitar a entrada de dados por parte do usuário, então esse conteúdo não textual possui um nome que descreve a sua finalidade. (Consultar o Critério de Sucesso 4.1.2 para requisitos adicionais de controles e conteúdo que aceitam entrada de dados por parte do usuário)
+                                                </div>
+                                                <div class="callout-block">
+                                                    <strong class="d-block">Mídias com base no tempo</strong>
+                                                    Se o conteúdo não textual consiste em mídia baseada em tempo, então as alternativas textuais fornecem, no mínimo, uma identificação descritiva do conteúdo não textual (Consulte a Diretriz 1.2 para obter os requisitos adicionais para mídia).
+                                                </div>
+                                                <div class="callout-block">
+                                                    <strong class="d-block">Teste</strong>
+                                                    Se o conteúdo não textual for um teste ou um exercício, que ficaria inválido se fosse apresentado em texto, então as alternativas textuais fornecem, no mínimo, uma identificação descritiva do conteúdo não textual.
+                                                </div>
+                                                <div class="callout-block">
+                                                    <strong class="d-block">Sensorial</strong>
+                                                    Se a finalidade do conteúdo não textual for, essencialmente, criar uma experiência sensorial específica, então as alternativas textuais fornecem, no mínimo, uma identificação descritiva do conteúdo não textual.
+                                                </div>
+                                                <div class="callout-block">
+                                                    <strong class="d-block">CAPTCHA</strong>
+                                                    Se a finalidade do conteúdo não textual for confirmar que o conteúdo está sendo acessado por uma pessoa e não por um computador, então devem ser fornecidas alternativas textuais que identificam e descrevem a finalidade do conteúdo não textual. Formas alternativas de CAPTCHA, que utilizam modos de saída para diferentes tipos de percepção sensorial, devem ser apresentadas para atender diferentes deficiências.
+                                                </div>
+                                                <div class="callout-block">
+                                                    <strong class="d-block">Decoração, Formatação, Invisível</strong>
+                                                    Se o conteúdo não textual for meramente decorativo, se for utilizado apenas para formatação visual, ou se não for exibido aos usuários, então este conteúdo deve ser implementado de forma que possa ser ignorado pelos recursos de tecnologia assistiva, ou seja, o leitor de tela utilizado pelas pessoas cegas irá ignorar a existência de tais conteúdos. Isso pode ser feito de duas principais formas:
+                                                </div>
+                                                <a class="btn button_secondary border-primary text-primary" href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/#non-text-content"><i class="bi bi-box-arrow-up-right"></i>&nbsp;Ver item 1.1.1 no WCAG</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="mt-4">Conteúdo não textual é qualquer conteúdo que não é formado por uma sequência de caracteres, como, por exemplo, imagens (inclusive imagens de texto), mídias de áudio e vídeo, gráficos, diagramas, animações, ASCII, emoticons, botões, CAPTCHAs, dentre outros.</p>
+                                <p>O objetivo deste critério é oferecer uma alternativa textual para tais elementos, tornando-os acessíveis de acordo com as necessidades da pessoa. Por exemplo, uma pessoa que não consegue ver uma imagem pode ter a alternativa em texto lida em voz alta usando um leitor de tela. Uma pessoa que não consegue ouvir um arquivo de áudio pode ter a alternativa textual exibida para ser lida.</p>
+                                <p>No futuro, as alternativas de texto também permitirão que as informações sejam mais facilmente traduzidas para a língua de sinais ou para uma forma simplificada da mesma língua.</p>
+                                <h3 class="mt-5 mb-3">Como atender o critério</h3>
+                                <div class="row g-3">
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_01.html">    
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Alternativa textual para imagens simples</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_02.html">  
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Alternativa textual para imagens de texto</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_03.html">  
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Alternativa textual para imagens complexas</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_04.html">  
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Alternativa textual para mapas de imagem</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_05.html">  
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Imagens decorativas</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_06.html">  
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Alternativa textual para áudio e/ou vídeo ao vivo</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_07.html">  
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Alternativa textual para elementos que não são imagens</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_08.html">  
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Alternativa textual para elementos MathML</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <a class="text-decoration-none" href="crt/crt_1.1.1_ex_09.html">  
+                                            <div class="card card-crt">
+                                                <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                    <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Alternativa textual para CAPTCHA</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!--//section-->
+                        <section class="docs-section" id="item-1-2">
+                            <h3 class="section-heading">1.2 Mídias com base em tempo</h3>
+                            <section class="docs-intro ">
+                                <!-- Accordion -->
+                                <div class="accordion" id="accordion-1-2">
+                                    <div class="accordion-item">
+                                        <h4 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1-2" aria-expanded="true" aria-controls="collapse-1-2">
+                                                <strong>De acordo com o WCAG</strong>
+                                            </button>
+                                        </h4>
+                                        <div id="collapse-1-2" class="accordion-collapse collapse" data-bs-parent="#accordion-1-2">
+                                            <div class="accordion-body">
+                                                <p>Fornecer alternativas para mídias baseadas em tempo.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--//Accordion -->
+                                <p class="mt-4">O objetivo dessa diretriz é disponibilizar aos usuários as informações transmitidas pelas mídias baseadas em tempo através de outras formas, como por exemplo: de forma textual para pessoas que não conseguem ouvir o que está sendo falado ou através de uma faixa de audiodescrição para pessoas que não conseguem enxergar o que está sendo mostrado.</p>
+                                <div class="callout-block">
+                                    <strong class="d-block">Mídias baseadas em tempo</strong>
+                                    São qualquer conteúdo em forma de áudio e/ou vídeo.
+                                </div>
+                                <p>Além de tornarem o conteúdo acessível para pessoas com deficiência auditiva e/ou visual, essas abordagens também podem facilitar a compreensão do conteúdo por pessoas com dificuldades cognitivas, de linguagem e de aprendizado.</p>
+                            </section>
+                            <!--//docs-intro-->
+                            <div class="docs-section" id="item-1-2-1">
+                            <h4 class="d-flex align-content-center">
+                                Critério de Sucesso 1.2.1
+                                <small class="text-muted ms-2">
+                                    <span class="badge">Nível A</span>
+                                </small>
+                            </h4>
+                            <h3> Apenas Áudio e Apenas Vídeo (Pré-gravado)&nbsp;<a href="#item-1-2-1" aria-label="Link Permanente para 1.2.1 Apenas Áudio e Apenas Vídeo" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.1 Apenas Áudio e Apenas Vídeo"><i class="bi bi-link-45deg"></i></a></h3>
+                            
+                            <!-- Accordion -->
+                            <div class="accordion" id="accordion-1-2-1">
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1-2-1" aria-expanded="true" aria-controls="collapse-1-2-1">
+                                            <strong>Explicação do WCAG</strong>
+                                        </button>
+                                    </h4>
+                                    <div id="collapse-1-2-1" class="accordion-collapse collapse" data-bs-parent="#accordion-1-2-1">
+                                        <div class="accordion-body">
+                                            <p>Para as mídias de apenas áudio pré-gravados e mídias de vídeo (sem áudio) pré-gravados as regras seguintes são verdadeiras, exceto quando o áudio ou o vídeo é uma mídia alternativa para o texto e está claramente identificado como tal:</p>
+                                            <div class="callout-block">
+                                                <strong class="d-block">Apenas áudio pré-gravado</strong>
+                                                É fornecida uma alternativa para mídia com base em tempo que apresenta informação equivalente para o conteúdo composto por apenas áudio pré-gravado.
+                                            </div>
+                                            <div class="callout-block">
+                                                <strong class="d-block">Apenas vídeo pré-gravado</strong>
+                                                É fornecida uma alternativa em mídia com base em tempo ou uma faixa de áudio que apresenta informação equivalente para o conteúdo apenas de vídeo pré-gravado.
+                                            </div>
+                                            <a class="btn button_secondary border-primary text-primary" href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/#audio-only-and-video-only-prerecorded"><i class="bi bi-box-arrow-up-right"></i>&nbsp;Ver item 1.2.1 no WCAG</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--//Accordion -->
+                            
+                            <p class="mt-3">A intenção deste critério é disponibilizar a todos os usuários as informações transmitidas por conteúdo somente áudio e somente vídeo, ambos pré-gravados, através de outras formas, como por exemplo, texto. A informação é acessível via texto porque o texto pode ser processado por meio de qualquer modalidade sensorial (por exemplo, visual, auditiva ou tátil).</p>
+                            <div class="callout-block">
+                                <strong class="d-block">Somente áudio</strong>
+                                Qualquer gravação de áudio que não tenha vídeo nem texto, ou alternativa de acessibilidade associada.
+                            </div>
+                            <div class="callout-block">
+                                <strong class="d-block">Somente vídeo</strong>
+                                Qualquer gravação de vídeo que não tenha áudio, texto, ou alternativa de acessibilidade associada.
+                            </div>
+                            <p>Para atender a este critério é obrigatório fornecer ao menos uma alternativa equivalente ao conteúdo somente áudio ou somente vídeo.</p>
+                            <div class="table-responsive">
+                                <table class="table caption-top table-bordered align-middle">
+                                    <caption>Exemplos de alternativas:</caption>
+                                    <tr>
+                                        <th>Somente áudio</th>
+                                        <td>
+                                        <ul class="m-0">
+                                            <li>Alternativa em texto: pode ser lida por pessoas com deficiência auditiva; pode ser acessada por leitores de tela e linha Braille (cegos e surdocegos).</li>
+                                        </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Somente vídeo</th>
+                                        <td>
+                                        <ul class="m-0">
+                                            <li>Alternativa em texto: pode ser acessada por leitores de tela e linha Braille (cegos e surdocegos).</li>
+                                            <li>Faixa de áudio: pode ser ouvida por pessoas com deficiência visual.</li>
+                                        </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3 class="mt-5 mb-3">Como atender o critério</h3>
+                            <div class="row g-3">
+                                <div class="col-md-3 mb-3">
+                                    <a class="text-decoration-none" href="crt/crt_1.2.1_ex_01.html">    
+                                        <div class="card card-crt">
+                                            <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Somente áudio</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <a class="text-decoration-none" href="crt/crt_1.2.1_ex_02.html">    
+                                        <div class="card card-crt">
+                                            <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Somente vídeo</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="docs-section" id="item-1-2-2">
+                            <h4 class="d-flex align-content-center">
+                                Critério de Sucesso 1.2.2
+                                <small class="text-muted ms-2">
+                                    <span class="badge">Nível A</span>
+                                </small>
+                            </h4>
+                            <h3>Legendas (Pré-gravadas)&nbsp;<a href="#item-1-2-2" aria-label="Link Permanente para 1.2.2 Legendas" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.2 Legendas"><i class="bi bi-link-45deg"></i></a></h3>
+                            <!-- Accordion -->
+                            <div class="accordion" id="accordion-1-2-2">
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1-2-2" aria-expanded="true" aria-controls="collapse-1-2-2">
+                                            <strong>Explicação do WCAG</strong>
+                                        </button>
+                                    </h4>
+                                    <div id="collapse-1-2-2" class="accordion-collapse collapse" data-bs-parent="#accordion-1-2-2">
+                                        <div class="accordion-body">
+                                            <p>São fornecidas legendas para todo conteúdo de áudio pré-gravado em mídia sincronizada, exceto quando a mídia for uma alternativa para texto e for claramente identificada como tal.</p>
+                                            <a class="btn button_secondary border-primary text-primary" href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/#captions-prerecorded"><i class="bi bi-box-arrow-up-right"></i>&nbsp;Ver item 1.2.2 no WCAG</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--//Accordion -->
+                            
+                            <p class="mt-3">Para atender este critério, é obrigatório fornecer legenda para vídeo pré-gravado.</p>
+                            <p>Legendas podem ser usadas para  permitir que pessoas surdas ou com deficiência auditiva assistam a vídeos e possam acompanhar simultaneamente o que está sendo transmitido via áudio. Isso pode ser feito de duas maneiras, conforme abaixo:</p>
+                            <div class="callout-block">
+                                <strong class="d-block">Fornecer legendas abertas:</strong>
+                                com esta técnica, todos os diálogos e sons importantes são incorporados como texto na faixa de vídeo e ficam sempre visíveis.
+                            </div>
+                            <div class="callout-block">
+                                <strong class="d-block">Fornecer legendas ocultas:</strong>
+                                esta técnica permite que o usuário escolha se deseja exibir ou não as legendas, ou seja, todos os diálogos e sons importantes são incorporados como texto de uma forma que faz com que o texto não seja visível, a menos que o usuário o solicite.
+                            </div>
+                            <p>As legendas não incluem apenas diálogos, mas também identificam quem está falando e incluem informações não verbais transmitidas por meio do som, incluindo efeitos sonoros significativos. Além disso, as legendas não devem ocultar nem obstruir informações relevantes do vídeo.</p>
+                            <p>As legendas também são importantes para pessoas que estejam em alguma situação que cause dificuldade para ouvir o que está sendo transmitido via áudio.</p>
+                            <h3 class="mt-5 mb-3">Como atender o critério</h3>
+                            
+                            <div class="row g-3">
+                                <div class="col-md-3 mb-3">
+                                    <a class="text-decoration-none" href="crt/crt_1.2.2_ex_01.html">    
+                                        <div class="card card-crt">
+                                            <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Legenda aberta</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <a class="text-decoration-none" href="crt/crt_1.2.2_ex_02.html">    
+                                        <div class="card card-crt">
+                                            <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Legenda oculta</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <a class="text-decoration-none" href="crt/crt_1.2.2_ex_03.html">    
+                                        <div class="card card-crt">
+                                            <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Legenda descritiva</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            </div>
+                            <div class="docs-section" id="item-1-2-3">
+                            <h4 class="d-flex align-content-center">
+                                Critério de Sucesso 1.2.3
+                                <small class="text-muted ms-2">
+                                    <span class="badge">Nível A</span>
+                                </small>
+                            </h4>
+                            <h3> Audiodescrição ou mídia alternativa (pré-gravada)&nbsp;<a href="#item-1-2-3" aria-label="Link Permanente para 1.2.3 Audiodescrição ou mídia alternativa" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.3 Audiodescrição ou mídia alternativa"><i class="bi bi-link-45deg"></i></a></h3>
+                            
+                            <!-- Accordion -->
+                            <div class="accordion" id="accordion-1-2-3">
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1-2-3" aria-expanded="true" aria-controls="collapse-1-2-3">
+                                            <strong>Explicação do WCAG</strong>
+                                        </button>
+                                    </h4>
+                                    <div id="collapse-1-2-3" class="accordion-collapse collapse" data-bs-parent="#accordion-1-2-3">
+                                        <div class="accordion-body">
+                                            <p>Uma alternativa para mídia com base ou uma audiodescrição do conteúdo em vídeo pré-gravado é fornecida para mídia sincronizada, exceto quando a mídia é uma alternativa ao texto e for claramente identificada como tal.</p>
+                                            <a class="btn button_secondary border-primary text-primary" href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/#audio-description-or-media-alternative-prerecorded"><i class="bi bi-box-arrow-up-right"></i>&nbsp;Ver item 1.2.3 no WCAG</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--//Accordion -->
+
+                            <p class="mt-3">O objetivo deste critério é que os vídeos possam ser compreendidos por mais pessoas, fornecendo uma descrição do seu conteúdo visual. Assim, pessoas cegas, com baixa visão ou que possam ter dificuldade para compreender o conteúdo visual poderão ter acesso a sua descrição. Isso pode ser feito de duas formas, sendo que qualquer uma delas pode ser usada. São elas:</p>
+                            <div class="callout-block">
+                                <strong class="d-block">Audiodescrição:</strong>
+                                Uma abordagem é fornecer a audiodescrição do conteúdo do vídeo. A audiodescrição adiciona informações em áudio necessárias para melhor compreender o que está sendo mostrado no vídeo. Durante as pausas existentes no diálogo, a audiodescrição fornece informações sobre ações, personagens, mudanças de cena e texto na tela que são importantes e não são descritas ou faladas na trilha sonora principal.
+                            </div>
+                            <div class="callout-block">
+                                <strong class="d-block">Transcrição do vídeo:</strong>
+                                A segunda abordagem envolve o fornecimento de todas as informações (visuais e auditivas) em forma de texto, ou seja, são fornecidas descrições completas de todas as informações visuais, incluindo contexto visual, ações e expressões dos atores e qualquer outro material visual. Além disso, são descritos sons não falados (risos, vozes fora da tela, etc.), e transcrições de todos os diálogos estão incluídos. A sequência das transcrições da descrição e dos diálogos é a mesma do próprio vídeo. Como resultado, essa descrição em texto pode fornecer uma representação muito mais completa do conteúdo da mídia sincronizada do que apenas a audiodescrição.
+                            </div>
+                            <h3 class="mt-5 mb-3">Como atender o critério</h3>
+                            
+                            <div class="row g-3">
+                                <div class="col-md-3 mb-3">
+                                    <a class="text-decoration-none" href="crt/crt_1.2.3_ex_02.html">
+                                        <div class="card card-crt">
+                                            <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Video com audiodescrição</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <a class="text-decoration-none" href="crt/crt_1.2.3_ex_01.html">
+                                        <div class="card card-crt">
+                                            <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Vídeo com transcrição</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            </div>
+                            <div class="docs-section" id="item-1-2-4">
+                            <h4 class="d-flex align-content-center">
+                                Critério de Sucesso 1.2.4
+                                <small class="text-muted ms-2">
+                                    <span class="badge">Nível AA</span
+                                        ></small>
+                            </h4>
+                            <h3> Legendas (ao vivo)&nbsp;<a href="#item-1-2-4" aria-label="Link Permanente para 1.2.3 Legendas (ao vivo)" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.4 Legendas (ao vivo)"><i class="bi bi-link-45deg"></i></a></h3>
+                            
+                            <!-- Accordion -->
+                            <div class="accordion" id="accordion-1-2-4">
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1-2-4" aria-expanded="true" aria-controls="collapse-1-2-4">
+                                            <strong>Explicação do WCAG</strong>
+                                        </button>
+                                    </h4>
+                                    <div id="collapse-1-2-4" class="accordion-collapse collapse" data-bs-parent="#accordion-1-2-4">
+                                        <div class="accordion-body">
+                                            <p>São fornecidas legendas para todo o conteúdo do áudio ao vivo existente em mídia sincronizada.</p>
+                                            <a class="btn button_secondary border-primary text-primary" href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/#captions-live"><i class="bi bi-box-arrow-up-right"></i>&nbsp;Ver item 1.2.4 no WCAG</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--//Accordion -->
+
+                            <p class="mt-3">A intenção deste critério é permitir que pessoas surdas ou com deficiência auditiva tenham acesso ao conteúdo de uma apresentação ao vivo (eventos presenciais, vídeos em streaming, TV ao vivo, etc.), através de legendas. O conteúdo das legendas é baseado no conteúdo do áudio e além dos diálogos, também podem identificar quem está falando, eventuais efeitos sonoros e outros áudios significativos.</p>
+                            <h3 class="mt-5 mb-3">Como atender o critério</h3>
+                            
+                            <div class="row g-3">
+                                <div class="col-md-3 mb-3">
+                                    <a class="text-decoration-none" href="crt/crt_1.2.4_ex_01.html">
+                                        <div class="card card-crt">
+                                            <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Legendas geradas por conversão de voz para texto</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <a class="text-decoration-none" href="crt/crt_1.2.4_ex_02.html">
+                                        <div class="card card-crt">
+                                            <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Legendas geradas por estenotipia</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            </div>
+                            <div class="docs-section" id="item-1-2-5">
+                            <h4 class="d-flex align-content-center">
+                                Critério de Sucesso 1.2.5
+                                <small class="text-muted ms-2">
+                                    <span class="badge">Nível AA</span
+                                        ></small>
+                            </h4>
+                            <h3> Audiodescrição (Pré-gravado)&nbsp;<a href="#item-1-2-5" aria-label="Link Permanente para 1.2.5 Audiodescrição (Pré-gravado)" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.5 Audiodescrição (Pré-gravado)"><i class="bi bi-link-45deg"></i></a></h3>
+                            
+                            <!-- Accordion -->
+                            <div class="accordion" id="accordion-1-2-5">
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1-2-5" aria-expanded="true" aria-controls="collapse-1-2-5">
+                                            <strong>Explicação do WCAG</strong>
+                                        </button>
+                                    </h4>
+                                    <div id="collapse-1-2-5" class="accordion-collapse collapse" data-bs-parent="#accordion-1-2-5">
+                                        <div class="accordion-body">
+                                            <p>É fornecida audiodescrição para todo o conteúdo de vídeo pré-gravado existente em mídia sincronizada.</p>
+                                            <a class="btn button_secondary border-primary text-primary" href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/#audio-description-prerecorded"><i class="bi bi-box-arrow-up-right"></i>&nbsp;Ver item 1.2.5 no WCAG</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--//Accordion -->
+                            
+                            <p class="mt-5">A intenção deste critério é fornecer às pessoas com deficiência visual acesso às informações visuais existentes em um vídeo. A audiodescrição adiciona ao áudio original do vídeo as informações necessárias para o entendimento do que acontece visualmente, aproveitando as pausas existentes no diálogo. A audiodescrição fornece informações sobre ações, personagens, mudanças de cena e texto na tela que são importantes e não são descritos ou falados no áudio original.</p>
+                            <p>As pessoas cegas ou com baixa visão, bem como aquelas com limitações cognitivas que têm dificuldade em interpretar visualmente o que está acontecendo, se beneficiam da audiodescrição da informação visual.</p>
+                            <p>Observação: Os critérios 1.2.3 e 1.2.5 são semelhantes. Enquanto no critério 1.2.3 (A) a audiodescrição é uma das possibilidades, no critério 1.2.5 (AA) ela é obrigatória. Dessa forma, se você atender o critério 1.2.5 automaticamente estará atendendo ao critério 1.2.3.</p>
+                            <h3 class="mt-5 mb-3">Como atender o critério</h3>
+                            
+                            <div class="row g-3">
+                                <div class="col-md-3 mb-3">
+                                    <a class="text-decoration-none" href="crt/crt_1.2.5_ex_01.html">
+                                        <div class="card card-crt">
+                                            <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Vídeo com Audiodescrição</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            </div>
+                            <div class="docs-section" id="item-1-2-6">
+                            <h4 class="d-flex align-content-center">
+                                Critério de Sucesso 1.2.6
+                                <small class="text-muted ms-2">
+                                    <span class="badge">Nível AAA</spa
+                                        n></small>
+                            </h4>
+                            <h3> Língua de sinais (pré-gravada)&nbsp;<a href="#item-1-2-6" aria-label="Link Permanente para 1.2.6 Língua de sinais (pré-gravada)" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.6 Língua de sinais (pré-gravada)"><i class="bi bi-link-45deg"></i></a></h3>
+                            
+                            <!-- Accordion -->
+                            <div class="accordion" id="accordion-1-2-6">
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1-2-6" aria-expanded="true" aria-controls="collapse-1-2-6">
+                                            <strong>Explicação do WCAG</strong>
+                                        </button>
+                                    </h4>
+                                    <div id="collapse-1-2-6" class="accordion-collapse collapse" data-bs-parent="#accordion-1-2-6">
+                                        <div class="accordion-body">
+                                            <p>É fornecida interpretação em língua de sinais para todo o conteúdo de áudio pré-gravado existente em um conteúdo em mídia sincronizada.</p>
+                                            <a class="btn button_secondary border-primary text-primary" href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/#sign-language-prerecorded"><i class="bi bi-box-arrow-up-right"></i>&nbsp;Ver item 1.2.6 no WCAG</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--//Accordion -->
+                            
+                            <p class="mt-3">Este critério tem o propósito de permitir que pessoas surdas que utilizam língua de sinais consigam compreender o conteúdo em áudio de mídias sincronizadas. Pessoas surdas que têm a língua de sinais como primeira língua podem apresentar dificuldade para compreender a Língua Portuguesa. Estas pessoas podem não conseguir ler e compreender as legendas ou, ainda, podem ter dificuldade em acompanhar a velocidade das legendas. Além disso, a alternativa em língua de sinais permite fornecer entonação, emoção e outras informações do áudio que não têm como ser apresentadas através de legendas, oferecendo um acesso mais rico e equivalente ao conteúdo.</p>
+                            <div class="callout-block">
+                                A língua de sinais não é universal. Cada país possui sua própria língua de sinais, com suas características e peculiaridades. No Brasil, temos a Língua Brasileira de Sinais (Libras), que foi reconhecida como segunda língua oficial do país pela Lei nº 10.436, em 24 de abril de 2002.
+                            </div>
+                            <p>A Libras é uma língua visual-gestual, ou seja, se baseia em gestos, expressões faciais e movimentos corporais para comunicar ideias e informações e possui sua própria gramática, estruturada de forma diferente da gramática da Língua Portuguesa.</p>
+                            <p>Observação: Os critérios 1.2.3 e 1.2.5 são semelhantes. Enquanto no critério 1.2.3 (A) a audiodescrição é uma das possibilidades, no critério 1.2.5 (AA) ela é obrigatória. Dessa forma, se você atender o critério 1.2.5 automaticamente estará atendendo ao critério 1.2.3.</p>
+                            <h3 class="mt-5 mb-3">Como atender o critério</h3>
+                            
+                            <div class="row g-3">
+                                <div class="col-md-3 mb-3">
+                                    <a class="text-decoration-none" href="crt/crt_1.2.6_ex_01.html">
+                                        <div class="card card-crt">
+                                            <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Mídia sincronizada com Libras</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            </div>
+                            <div class="docs-section" id="item-1-2-7">
+                            <h4 class="d-flex align-content-center">
+                                Critério de Sucesso 1.2.7
+                                <small class="text-muted ms-2">
+                                    <span class="badge">Nível AAA</spa
+                                        n></small>
+                            </h4>
+                            <h3>Audiodescrição estendida&nbsp;<a href="#item-1-2-7" aria-label="Link Permanente para 1.2.7 - Audiodescrição estendida" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.7 - Audiodescrição estendida"><i class="bi bi-link-45deg"></i></a></h3>
+                            
+                            <!-- Accordion -->
+                            <div class="accordion" id="accordion-1-2-7">
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1-2-7" aria-expanded="true" aria-controls="collapse-1-2-7">
+                                            <strong>Explicação do WCAG</strong>
+                                        </button>
+                                    </h4>
+                                    <div id="collapse-1-2-7" class="accordion-collapse collapse" data-bs-parent="#accordion-1-2-7">
+                                        <div class="accordion-body">
+                                            <p>Quando as pausas no áudio de primeiro plano forem insuficientes para permitir que as audiodescrições transmitam o sentido do vídeo, é fornecida uma audiodescrição estendida para todo o vídeo pré-gravado existente no conteúdo em mídia sincronizada.</p>
+                                            <a class="btn button_secondary border-primary text-primary" href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/#extended-audio-description-prerecorded"><i class="bi bi-box-arrow-up-right"></i>&nbsp;Ver item 1.2.7 no WCAG</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--//Accordion -->
+                            
+                            <p class="mt-3">Pessoas cegas, com baixa visão ou com limitações de ordem cognitiva que têm dificuldade para interpretar o que está acontecendo visualmente no vídeo podem fazer uso da audiodescrição para compreensão do conteúdo visual. No entanto, se existir grande quantidade de diálogo e poucas pausas, a audiodescrição padrão pode não dar conta de informar todo o conteúdo visual relevante. Nesse sentido, a audiodescrição estendida pode fornecer as informações adicionais necessárias para a compreensão do vídeo.</p>
+                            <p>Assim, o objetivo deste critério é oferecer acesso ao conteúdo de um vídeo para além do que pode ser fornecido através de audiodescrição padrão. Para isso, o vídeo é pausado periodicamente para que a audiodescrição adicional possa ser reproduzida. Quando a audiodescrição adicional termina, o vídeo volta a ser reproduzido. Como isso atrapalha a visualização para aqueles que não precisam da audiodescrição adicional, podem ser fornecidas versões com e sem a audiodescrição adicional, ou podem ser disponibilizadas técnicas que permitem ativar e desativar o recurso.</p>
+                            <h3 class="mt-5 mb-3">Como atender o critério</h3>
+                            
+                            <div class="row g-3">
+                                <div class="col-md-3 mb-3">
+                                    <a class="text-decoration-none" href="crt/crt_1.2.7_ex_01.html">
+                                        <div class="card card-crt">
+                                            <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Vídeo em versão com audiodescrição estendida</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <a class="text-decoration-none" href="crt/crt_1.2.7_ex_02.html">
+                                        <div class="card card-crt">
+                                            <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Vídeo com opção de habilitar a audiodescrição estendida</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            </div>
+                            <div class="docs-section" id="item-1-2-8">
+                            <h4 class="d-flex align-content-center">
+                                Critério de Sucesso 1.2.8
+                                <small class="text-muted ms-2">
+                                    <span class="badge">Nível AAA</spa
+                                        n></small>
+                            </h4>
+                            <h3>Mídia Alternativa (Pré-gravada)&nbsp;<a href="#item-1-2-8" aria-label="Link Permanente para 1.2.8 - Mídia Alternativa (Pré-gravada)" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.8 - Mídia Alternativa (Pré-gravada)"><i class="bi bi-link-45deg"></i></a></h3>
+                            
+                            <!-- Accordion -->
+                            <div class="accordion" id="accordion-1-2-8">
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1-2-8" aria-expanded="true" aria-controls="collapse-1-2-8">
+                                            <strong>Explicação do WCAG</strong>
+                                        </button>
+                                    </h4>
+                                    <div id="collapse-1-2-8" class="accordion-collapse collapse" data-bs-parent="#accordion-1-2-8">
+                                        <div class="accordion-body">
+                                            <p>É fornecida uma alternativa para mídia com base em tempo para todo o conteúdo existente em mídia sincronizada pré-gravada e para a todo o conteúdo multimídia composto por apenas vídeo pré-gravado.</p>
+                                            <a class="btn button_secondary border-primary text-primary" href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/#media-alternative-prerecorded"><i class="bi bi-box-arrow-up-right"></i>&nbsp;Ver item 1.2.8 no WCAG</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--//Accordion -->
+                            
+                            <p class="mt-3">O objetivo deste critério é tornar conteúdo audiovisual disponível para pessoas com limitações visuais que as impeça de visualizar as legendas e, também, com limitações auditivas que as impossibilite de ouvir com clareza os diálogos e audiodescrição. Ou seja, o objetivo é fornecer alternativa para pessoas cegas ou com baixa visão e que também têm deficiência auditiva ou surdez. Para tal, o conteúdo em áudio e vídeo deve ser fornecido em forma de texto. </p>
+                            <p>A transcrição textual é toda a informação relevante, sonora e visual, presente em um vídeo fornecida em forma de texto. A transcrição pode fornecer descrições completas de todas as informações visuais (contexto visual, ações, expressões, etc.), de todos os diálogos e outras informações sonoras, como risos, por exemplo. As informações são apresentadas na mesma sequência que aparecem no vídeo.</p>
+                            <p>O conteúdo textual pode ser acessado, inclusive, por pessoas que utilizam um recurso de tecnologia assistiva chamado Linha ou Display Braille, como as pessoas surdocegas, que terão acesso ao conteúdo através de Braille, dinamicamente reproduzido pelo recurso.</p>
+                            <p>Ainda, caso exista conteúdo interativo na mídia, algo como "clique para responder a pergunta", por exemplo, a alternativa textual deve fornecer links ou outra forma alternativa para que os usuários possam acessar tal funcionalidade.</p>
+                            <p>Observação: Os critérios 1.2.3 e 1.2.8 são semelhantes. Enquanto no critério 1.2.3 (A) a mídia alternativa é uma das possibilidades, 1.2.8 ela é obrigatória. Dessa forma, se você atender ao critério 1.2.8, automaticamente estará atendendo ao critério 1.2.3.</p>
+                            <h3 class="mt-5 mb-3">Como atender o critério</h3>
+                            
+                            <div class="row g-3">
+                                <div class="col-md-3 mb-3">
+                                    <a class="text-decoration-none" href="crt/crt_1.2.8_ex_01.html">
+                                        <div class="card card-crt">
+                                            <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Vídeo ou áudio com arquivo de texto para download</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <a class="text-decoration-none" href="crt/crt_1.2.8_ex_02.html">
+                                        <div class="card card-crt">
+                                            <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Vídeo ou áudio com alternativa textual presente na própria página</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            </div>
+                            <div class="docs-section" id="item-1-2-9">
+                            <h4 class="d-flex align-content-center">
+                                Critério de Sucesso 1.2.9
+                                <small class="text-muted ms-2">
+                                    <span class="badge">Nível AAA</spa
+                                        n></small>
+                            </h4>
+                            <h3> Somente áudio (ao vivo)&nbsp;<a href="#item-1-2-9" aria-label="Link Permanente para 1.2.9 Somente áudio (ao vivo)" data-bs-toggle="tooltip" data-bs-title="Link Permanente para 1.2.9 Somente áudio (ao vivo)"><i class="bi bi-link-45deg"></i></a></h3>
+                            
+                            <!-- Accordion -->
+                            <div class="accordion" id="accordion-1-2-9">
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1-2-9" aria-expanded="true" aria-controls="collapse-1-2-9">
+                                            <strong>Explicação do WCAG</strong>
+                                        </button>
+                                    </h4>
+                                    <div id="collapse-1-2-9" class="accordion-collapse collapse" data-bs-parent="#accordion-1-2-9">
+                                        <div class="accordion-body">
+                                            <p>É fornecida uma alternativa para mídia com base em tempo que apresenta informações equivalentes para conteúdo apenas áudio ao vivo.</p>
+                                            <a class="btn button_secondary border-primary text-primary" href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/#audio-only-live"><i class="bi bi-box-arrow-up-right"></i>&nbsp;Ver item 1.2.9 no WCAG</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--//Accordion -->
+                            
+                            <p class="mt-3">O objetivo deste critério é tornar as informações transmitidas por áudio ao vivo, como em videoconferências, discursos ou webcasts, acessíveis a pessoas surdas ou com deficiência auditiva ou, ainda, que não possam ouvir o áudio. Isso pode ser feito através de um serviço de legenda ao vivo ou, em casos específicos, fornecendo uma transcrição.</p>
+                            <p>Observação: o critério não é considerado atendido quando é oferecida legenda ao vivo feita por pessoas sem treinamento ou é disponibilizada uma transcrição cujo conteúdo difere claramente do apresentado no áudio.</p>
+                            <h3 class="mt-5 mb-3">Como atender o critério</h3>
+                            
+                            <div class="row g-3">
+                                <div class="col-md-3 mb-3">
+                                    <a class="text-decoration-none" href="crt/crt_1.2.9_ex_01.html">
+                                        <div class="card card-crt">
+                                            <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Legenda para áudio ao vivo</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <a class="text-decoration-none" href="crt/crt_1.2.9_ex_02.html">
+                                        <div class="card card-crt">
+                                            <div class="card-body"><i class="bi bi-plus-circle-fill text-primary"></i>
+                                                <p class="card-title mt-2"><span class="badge badge-pill badge-success"></span> Transcrição para áudio ao vivo</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            </div>
+                        </section>
+                        <!--//section-->
+                        <section class="docs-section" id="item-1-3">
+                            <h3 class="section-heading">1.3 Adaptável</h3>
+                            <div class="card text-bg-light my-4">
+                            <div class="card-header">De acordo com o WCAG</div>
+                            <div class="card-body">
+                                <p>Criar conteúdo que pode ser apresentado de diferentes maneiras (por exemplo um layout simplificado) sem perder informação ou estrutura.</p>
+                            </div>
+                            </div>
+                        </section>
+                        <!--//section-->
+                        <section class="docs-section" id="item-1-4">
+                            <h3 class="section-heading">1.4 Discernível</h3>
+                            <div class="card text-bg-light my-4">
+                            <div class="card-header">De acordo com o WCAG</div>
+                            <div class="card-body">
+                                <p>Facilitar a audição e a visualização de conteúdo aos usuários, incluindo a separação entre o primeiro plano e o plano de fundo.</p>
+                            </div>
+                            </div>
+                        </section>
+                        <!--//section-->
+                    </article>
+                    <!--//docs-article-->
+                    <article class="docs-article" id="section-2">
+                        <header class="docs-header">
+                            <h2 class="docs-heading">2. Operável</h2>
+                            <div class="card text-bg-light my-4">
+                            <div class="card-header">De acordo com o WCAG</div>
+                            <div class="card-body">
+                                <p class="mb-0">Os componentes de interface de usuário e a navegação devem ser operáveis.</p>
+                            </div>
+                            </div>
+                        </header>
+                        <!--//section-->
+                        <section class="docs-section" id="item-2-1">
+                            <h3 class="section-heading">2.1 Acessível por Teclado</h3>
+                            <div class="card text-bg-light my-4">
+                            <div class="card-header">De acordo com o WCAG</div>
+                            <div class="card-body">
+                                <p>Fazer com que toda funcionalidade fique disponível a partir de um teclado.</p>
+                            </div>
+                            </div>
+                        </section>
+                        <!--//section-->
+                        <section class="docs-section" id="item-2-2">
+                            <h3 class="section-heading">2.2 Tempo Suficiente</h3>
+                            <div class="card text-bg-light my-4">
+                            <div class="card-header">De acordo com o WCAG</div>
+                            <div class="card-body">
+                                <p>Fornecer aos usuários tempo suficiente para ler e utilizar o conteúdo.</p>
+                            </div>
+                            </div>
+                        </section>
+                        <!--//section-->
+                        <section class="docs-section" id="item-2-3">
+                            <h3 class="section-heading">2.3 Convulsões e Reações Fisicas</h3>
+                            <div class="card text-bg-light my-4">
+                            <div class="card-header">De acordo com o WCAG</div>
+                            <div class="card-body">
+                                <p>Não criar conteúdo de uma forma conhecida por causar convulsões e reações físicas.</p>
+                            </div>
+                            </div>
+                        </section>
+                        <!--//section-->
+                        <section class="docs-section" id="item-2-4">
+                            <h3 class="section-heading">2.4 Navegável</h3>
+                            <div class="card text-bg-light my-4">
+                            <div class="card-header">De acordo com o WCAG</div>
+                            <div class="card-body">
+                                <p>Fornecer maneiras de ajudar os usuários a navegar, localizar conteúdos e determinar onde se encontram.</p>
+                            </div>
+                            </div>
+                        </section>
+                        <!--//section-->
+                        <section class="docs-section" id="item-2-5">
+                            <h3 class="section-heading">2.5 Modalidades de Entrada</h3>
+                            <div class="card text-bg-light my-4">
+                            <div class="card-header">De acordo com o WCAG</div>
+                            <div class="card-body">
+                                <p>Torna mais fácil para os usuários operar a funcionalidade por meio de várias entradas além do teclado.</p>
+                            </div>
+                            </div>
+                        </section>
+                        <!--//section-->
+                    </article>
+                    <!--//docs-article-->
+                    <article class="docs-article" id="section-3">
+                        <header class="docs-header">
+                            <h2 class="docs-heading">3. Compreensível</h2>
+                            <div class="card text-bg-light my-4">
+                            <div class="card-header">De acordo com o WCAG</div>
+                            <div class="card-body">
+                                <p class="mb-0">A informação e a operação da interface de usuário devem ser compreensíveis.</p>
+                            </div>
+                            </div>
+                        </header>
+                        <!--//section-->
+                        <section class="docs-section" id="item-3-1">
+                            <h3 class="section-heading">3.1 Legível</h3>
+                            <div class="card text-bg-light my-4">
+                            <div class="card-header">De acordo com o WCAG</div>
+                            <div class="card-body">
+                                <p>Tornar o conteúdo do texto legível e compreensível.</p>
+                            </div>
+                            </div>
+                        </section>
+                        <!--//section-->
+                        <section class="docs-section" id="item-3-2">
+                            <h3 class="section-heading">3.2 Previsível</h3>
+                            <div class="card text-bg-light my-4">
+                            <div class="card-header">De acordo com o WCAG</div>
+                            <div class="card-body">
+                                <p>Fazer com que as páginas web apareçam e funcionem de modo previsível.</p>
+                            </div>
+                            </div>
+                        </section>
+                        <!--//section-->
+                        <section class="docs-section" id="item-3-3">
+                            <h3 class="section-heading">3.3 Assistência de Entrada</h3>
+                            <div class="card text-bg-light my-4">
+                            <div class="card-header">De acordo com o WCAG</div>
+                            <div class="card-body">
+                                <p>Ajudar os usuários a evitar e corrigir erros.</p>
+                            </div>
+                            </div>
+                        </section>
+                        <!--//section-->
+                    </article>
+                    <!--//docs-article-->
+                    <article class="docs-article" id="section-4">
+                        <header class="docs-header">
+                            <h2 class="docs-heading">4. Robusto</h2>
+                            <div class="card text-bg-light my-4">
+                            <div class="card-header">De acordo com o WCAG</div>
+                            <div class="card-body">
+                                <p class="mb-0">O conteúdo deve ser robusto o suficiente para poder ser interpretado de forma confiável por uma ampla variedade de agentes de usuário, incluindo tecnologias assistivas.</p>
+                            </div>
+                            </div>
+                        </header>
+                        <section class="docs-section" id="item-4-1">
+                            <h3 class="section-heading">4.1 Compatível</h3>
+                            <div class="card text-bg-light my-4">
+                            <div class="card-header">De acordo com o WCAG</div>
+                            <div class="card-body">
+                                <p>Maximizar a compatibilidade entre os atuais e futuros agentes de usuário, incluindo tecnologias assistivas.</p>
+                            </div>
+                            </div>
+                        </section>
+                        <!--//section-->
+                    </article>
+                    <!--//docs-article-->
+                </div>
+
+                <!-- Footer -->
+                <footer class="container-fluid mt-5" id="footer">
+                    <div class="container p-5 d-none d-lg-block">
+                        <div class="fw-bold text-black-50 d-flex flex-column">
+                            <div class="d-flex">
+                                <div class="col-6 d-flex justify-content-start align-items-center">
+                                    <div id="redes-sociais">
+                                        <p>Acompanhe o AMAWeb:</p>
+                                        <div>
+                                            <a class="me-3" href="https://git.unifesp.br/proj-acessibilidade-mpf"><img src="assets/redesign/img/footer-github-seeklogo 2.png" alt="Github"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex justify-content-end align-items-center">
+                                    <div id="logos">
+                                        <a class="ms-4" href=""><img src="assets/redesign/img/footer-logo-mpf.png" alt="Logo MPF"></a>
+                                        <a class="ms-4" href=""><img src="assets/redesign/img/footer-logo-unifesp.png" alt="Logo UNIFESP"></a>
+                                        <a class="ms-4" href=""><img src="assets/redesign/img/footer-logo-cta.png" alt="Logo CTA"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center d-flex flex-column">
+                                <hr>
+                                <p class="p-0 m-0"><small>Desenvolvido por CTA - IFRS. Aplicativo sob a licença GPLv3 e Creative Commons NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container p-5 d-lg-none">
+                        <div class="fw-bold text-black-50 d-flex flex-column gap-4">
+                            <div class="d-flex flex-column text-center pb-2">
+                                <p>Desenvolvido por:</p>
+                                <div class="d-flex gap-3 justify-content-center">
+                                    <a href=""><img src="assets/redesign/img/footer-logo-mpf.png" alt="Logo MPF"></a>
+                                    <a href=""><img src="assets/redesign/img/footer-logo-unifesp.png" alt="Logo UNIFESP"></a>
+                                    <a href=""><img src="assets/redesign/img/footer-logo-cta.png" alt="Logo CTA"></a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                <p>Acompanhe o AMAWeb:</p>
+                                <div>
+                                    <a class="me-3" href="https://git.unifesp.br/proj-acessibilidade-mpf"><img src="assets/redesign/img/footer-github-seeklogo 2.png" alt="Github"></a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                <hr>
+                                <p class="p-0 m-0"><small>Desenvolvido por CTA - IFRS. Aplicativo sob a licença GPLv3 e Creative Commons NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!--//docs-wrapper-->
+        <!-- Javascript -->          
+        <script src="assets/plugins/popper.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.0/dist/js.cookie.min.js"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+        <!-- Page Specific JS -->
+        <script src="assets/plugins/smoothscroll.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+        <script src="assets/js/highlight-custom.js"></script>
+        <script src="assets/redesign/js/high_contrast.js"></script> 
+        <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+        <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+        <script src="assets/js/docs.js"></script> 
+
+        <!-- Tooltips -->
+        <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+         </script>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 1.4.5</title>
+</head>
+
+<body>
+  <p><center> <strong>Critério 1.4.5</strong></center></p>
+  <hr>
+
+  <h2>Imagens</h2>
+
+  <h3>5. Imagens de Texto: Não há imagens de texto ou todas as imagens de texto são essenciais e possuem texto alternativo com o mesmo conteúdo.</h3>
+
+  <p>De acordo com o critério <strong>1.4.5</strong> das Diretrizes de Acessibilidade para Conteúdo Web (WCAG), deve-se evitar o uso de imagens que contenham texto, a menos que essas imagens sejam consideradas essenciais e não possam ser representadas de outra forma. Se for necessário o uso de uma imagem de texto, ela deve conter uma descrição alternativa (atributo <code>alt</code>) com o mesmo conteúdo textual, de forma que o usuário possa compreender a informação mesmo que não consiga visualizar a imagem.</p>
+
+  <p>O exemplo abaixo simula uma imagem de texto usada como banner promocional e faz parte do design visual específico da página de e-commerce demonstrada. A imagem possui um texto alternativo que descreve seu conteúdo, garantindo acessibilidade para pessoas que usam leitores de tela.</p>
+
+  <h4>Explicação do Exemplo:</h4>
+
+  <p>Neste exemplo, a imagem simula um banner promocional com um texto que é parte integral do design visual e por isso é essencial. O atributo <code>alt</code> contém o mesmo conteúdo textual da imagem, permitindo que usuários de leitores de tela recebam a mesma informação. É importante lembrar que, sempre que possível, o conteúdo textual deve ser representado em HTML para facilitar o acesso, redimensionamento e personalização pelo usuário.</p>
+
+  <!-- início do exemplo -->
+  <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+      .content-wrapper {
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .banner {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+      }
+      .banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+      }
+      .product {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        text-align: center;
+      }
+      .product img {
+        width: 100%;
+        height: auto;
+      }
+      .product h3 {
+        font-size: 1.2em;
+        margin: 10px 0;
+      }
+      .product p {
+        color: #555;
+      }
+      .product button {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .product button:hover {
+        background-color: #218838;
+      }
+  </style>
+
+  <div class="content-wrapper">
+    <header>
+      <h1>Bem-vindo à Nossa Loja</h1>
+    </header>
+
+    <div class="banner" role="banner" aria-label="Promoção de Produtos">
+      <img src="../assets/images/1.4.5-banner-imagem-de-texto.png" alt="Banner promocional: Desconto de até 20% em todos os produtos durante o mês de novembro.">
+    </div>
+      
+    <h2>Nossos Produtos</h2>
+    <div class="products">
+      <div class="product" role="region" aria-label="Produto 1">
+        <img src="../assets/images/1.4.5-tenis-esportivo.png" alt="Tênis Esportivo Modelo X" />
+        <h3>Tênis Esportivo Modelo X</h3>
+        <p>Preço: R$ 299,00</p>
+        <button>Adicionar ao Carrinho</button>
+      </div>
+      <div class="product" role="region" aria-label="Produto 2">
+        <img src="../assets/images/1.4.5-camisa-casual.png" alt="Camisa Casual Estilo Y" />
+        <h3>Camisa Casual Estilo Y</h3>
+        <p>Preço: R$ 149,00</p>
+        <button>Adicionar ao Carrinho</button>
+      </div>
+      <div class="product" role="region" aria-label="Produto 3">
+        <img src="../assets/images/1.4.5-relogio-elegante.png" alt="Relógio Elegante Modelo Z" />
+        <h3>Relógio Elegante Modelo Z</h3>
+        <p>Preço: R$ 499,00</p>
+        <button>Adicionar ao Carrinho</button>
+      </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nossa Loja. Todos os direitos reservados.</p>
+    </footer>
+  </div>
+  <!-- fim do exemplo -->
+  
+</body>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 1.4.10</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 1.4.10</strong></center></p>
+    <hr>
+
+    <h2>Conteúdo Textual</h2>
+
+    <h3>6. Largura de blocos de texto: A largura dos blocos de texto não ultrapassa 80 caracteres ou deve existir um mecanismo para configurar a largura dos blocos de texto e alcançar esse resultado.</h3>
+
+    <p>O critério <strong>1.4.10</strong> da <abbr title="Diretrizes de Acessibilidade para o Conteúdo Web">WCAG</abbr> trata da largura dos blocos de texto e sua importância para a legibilidade e acessibilidade do conteúdo na web. De acordo com esse critério, os blocos de texto não devem ultrapassar 80 caracteres por linha, ou deve ser oferecido um mecanismo para que o usuário possa configurar a largura do bloco de texto de acordo com suas necessidades de leitura. O motivo dessa recomendação é garantir que o texto seja facilmente legível, evitando que as linhas fiquem excessivamente longas, o que pode prejudicar a leitura e a compreensão do conteúdo.</p>
+    
+    <p>Quando as linhas de texto são muito largas, o usuário pode ter dificuldade em seguir a leitura, especialmente em dispositivos com telas pequenas ou quando há limitações cognitivas. O ideal é que o comprimento das linhas seja confortável e permita que o usuário "acompanhe" a leitura sem se perder ou ter que mover os olhos de maneira excessiva. Limitar a largura do texto ou permitir que o usuário ajuste esse valor melhora a experiência de leitura e torna o conteúdo acessível para mais pessoas, incluindo aquelas com deficiências visuais ou cognitivas.</p>
+
+    <p>A seguir, fornecemos um exemplo de como implementar a largura dos blocos de texto de acordo com as recomendações da WCAG 1.4.10. Neste caso, utilizamos um valor de largura máxima para o texto e também implementamos um mecanismo de controle para que o usuário possa ajustar a largura do bloco conforme necessário, sem prejudicar a legibilidade.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <p>O exemplo abaixo utiliza a unidade "ch" para limitar a largura do bloco de texto a 80 caracteres por linha, o que segue a recomendação da WCAG para garantir que o texto não seja excessivamente largo. Além disso, um controle de ajuste de largura foi adicionado, permitindo ao usuário personalizar a largura do bloco de texto conforme sua preferência. Isso garante que, além de atender ao limite de 80 caracteres, o conteúdo seja flexível e ajustável conforme as necessidades do usuário, oferecendo uma experiência de leitura acessível e confortável. Nesse exemplo:</p>
+
+    <ul>
+        <li>A classe <code>.content</code> é usada para definir o bloco de texto, limitando sua largura a 80 caracteres por linha usando a unidade <code>ch</code> (caracteres) no CSS. Isso segue a recomendação de manter a largura dos blocos de texto acessível e legível.</li>
+        <li>Também é fornecido um mecanismo de ajuste de largura com um controle deslizante (<code>&lt;input type="range"&gt;</code>), que permite ao usuário ajustar a largura do bloco de texto de acordo com sua preferência. Isso oferece flexibilidade, permitindo que os usuários escolham a largura mais confortável para sua leitura, sem perder a legibilidade ou funcionalidade do conteúdo.</li>
+        <li>Ao usar a unidade <code>ch</code>, o exemplo garante que o texto não ultrapasse a largura recomendada de 80 caracteres por linha, e o mecanismo de ajuste permite que os usuários configurem a largura do texto conforme suas necessidades. Dessa forma, a implementação atende ao critério 1.4.10 da WCAG, promovendo a acessibilidade e a personalização da experiência de leitura.</li>
+    </ul>
+
+    <!-- início do exemplo -->
+    <style>
+      .content {
+        max-width: 80ch; /* Limita a largura do texto a 80 caracteres por linha */
+        margin: 0 auto; /* Centraliza o bloco de texto */
+        padding: 1em;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+      }
+      .adjust-width {
+        width: 100%; /* Permite que o usuário ajuste a largura */
+      }
+    </style>
+
+    <div class="content">
+      <p>Este exemplo demonstra como limitar a largura do bloco de texto a 80 caracteres por linha, facilitando a leitura e melhorando a acessibilidade. O uso da unidade "ch" permite um controle mais preciso sobre o número de caracteres por linha, o que é uma prática recomendada para garantir a legibilidade do conteúdo textual.</p>
+      <p>Caso o usuário queira ajustar a largura do bloco de texto, existe um mecanismo para configurar isso, permitindo a personalização da experiência de leitura conforme a necessidade de cada usuário.</p>
+
+      <label for="width-adjust">Ajuste a largura do texto:</label>
+      <input type="range" id="width-adjust" class="adjust-width" min="50" max="100" value="80" onchange="document.querySelector('.content').style.maxWidth = this.value + 'ch';">
+    </div>
+    <!-- fim do exemplo -->
+     
+</body>

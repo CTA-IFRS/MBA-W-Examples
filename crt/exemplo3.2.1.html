@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 3.2.1</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 3.2.1</strong></center></p>
+    <hr>
+
+    <h2>Botões e Controles</h2>
+
+    <h3>9. Mudança de contexto previsível no foco: Não há componentes acionados somente pelo foco do teclado ou posicionamento do cursor que provocam uma mudança de contexto.</h3>
+
+	<p>O critério <strong>3.2.1</strong> da <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> recomenda que componentes acionados pelo foco do teclado ou pelo posicionamento do cursor <strong>não provoquem mudanças inesperadas de contexto</strong>. Mudanças de contexto incluem redirecionamentos de página, envio de formulários ou abertura de janelas sem aviso prévio.</p>
+	
+	<p>Isso é importante porque usuários com deficiência, especialmente aqueles que dependem de navegação por teclado, podem ter dificuldades se ações inesperadas ocorrerem apenas ao focar ou passar o cursor sobre um componente. Isso pode causar confusão e dificultar a navegação, alem de:</p>
+
+	<ul>
+		<li>Garantir que usuários de teclado naveguem de forma previsível.</li>
+		<li>Evitar frustrações com mudanças inesperadas.</li>
+		<li>Promover uma experiência mais controlada e consistente.</li>
+	</ul>
+
+	<p>O exemplo abaixo consiste em um formulário simples onde o usuário precisa confirmar o envio. O botão só deve submeter o formulário quando clicado, e não ao receber foco.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+	<ul>
+		<li><strong>Ação explícita:</strong> O botão <code>&lt;button type="submit"&gt;</code> só aciona uma função quando o usuário clica nele, o que é uma ação intencional, e não ao focar ou ao posicionar o cursor. Não há nenhum evento <code>onfocus</code> ou <code>onmouseover</code> que cause a submissão.</li>
+		<li><strong>Evitar mudanças automáticas:</strong> Não há redirecionamentos ou envios automáticos ao focar o botão. Em um cenário problemático, a submissão poderia ocorrer ao focar o botão, como por exemplo usando o evento <code>onfocus</code>:</li> 
+		<pre><code>&lt;button onfocus="this.form.submit()"&gt;Enviar&lt;/button&gt;</code></pre>
+		<li><strong>Uso de tooltips:</strong> Exibir informações adicionais ao passar o cursor é permitido, desde que não altere o contexto principal ou o fluxo da navegação na página.</li>
+	</ul>
+
+    <!-- início do exemplo -->
+	<style>
+	.content-wrapper {
+		border: 2px solid #ccc;
+		padding: 20px;
+		border-radius: 8px;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	form {
+		width: 300px;
+		margin: 0 auto;
+	}
+	label {
+		display: block;
+		margin-bottom: 8px;
+	}
+	input[type="text"], input[type="email"] {
+		width: 100%;
+		padding: 8px;
+		margin-bottom: 15px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+	}
+	button {
+		background-color: #007BFF;
+		color: white;
+		padding: 10px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		width: 105%;
+	}
+	button:hover {
+		background-color: #0056b3;
+	}
+	.tooltip {
+		display: none;
+		position: absolute;
+		background-color: #333;
+		color: #fff;
+		padding: 5px;
+		border-radius: 5px;
+	}
+	.info:hover .tooltip {
+		display: block;
+	}
+	</style>
+
+	<div class="content-wrapper">
+		<form action="processar-formulario.html" method="post">
+			<label for="nome">Nome:</label>
+			<input type="text" id="nome" name="nome">
+	
+			<label for="email">E-mail:</label>
+			<input type="email" id="email" name="email">
+	
+			<!-- Botão correto: a ação ocorre apenas quando clicado -->
+			<div class="info">
+				<button type="submit" onclick="alert('Formulário enviado!')">Enviar</button>
+				<div class="tooltip">Clique para enviar.</div>
+			</div>
+		</form>
+	</div>
+    <!-- fim do exemplo -->
+
+</body>

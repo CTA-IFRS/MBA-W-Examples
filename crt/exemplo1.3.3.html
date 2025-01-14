@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 1.3.3</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 1.3.3</strong></center></p>
+    <hr>
+
+    <h2>Apresentação</h2>
+
+    <h3>1 - Características sensoriais: Não há instruções para compreender e utilizar o conteúdo que dependem somente das características sensoriais dos componentes, tais como forma, cor, tamanho, localização visual, orientação e som.</h3>
+
+    <p>Instruções fornecidas para compreensão e uso de um conteúdo não devem depender exclusivamente de características sensoriais, como cor, forma, tamanho, localização visual, orientação ou som. Isso significa que, se um usuário com deficiência visual ou auditiva, por exemplo, não conseguir perceber determinadas características sensoriais, ele ainda poderá interagir e entender o conteúdo adequadamente.</p>
+
+    <p>Nos exemplos abaixo, a primeira versão utiliza a cor como a única característica sensorial para descrever o botão, o que prejudicaria usuários com deficiência visual ou daltônicos. A segunda versão utiliza o texto presente no botão como referência, tornando a interação acessível a todos, independentemente da percepção visual da cor.</p>
+
+    <h4>Explicação dos Exemplos:</h4>
+
+    <p>O exemplo abaixo apresenta um formulário para envio de mensagens. Os exemplos comparam duas formas de instrução: Do lado esquerdo o formulário apresenta a forma incorreta de utilizar caracteristicas sensoriais. Do lado direto é apresentada a forma correta.</p>
+
+    <!-- início do exemplo -->
+    <style>
+        /* Estilo para a borda ao redor do conteúdo */
+        .content-wrapper {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            gap: 80px;
+        }
+    
+        .container {
+            max-width: 650px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    
+        .important-text {
+            font-weight: bold;
+        }
+    
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    
+        .submit-button svg {
+            fill: white;
+            width: 20px;
+            height: 20px;
+        }
+    
+        .instructions {
+            margin-bottom: 20px;
+            background-color: #f9f9a1;
+            padding: 10px;
+            border-left: 4px solid #e0e000;
+        }
+    </style>
+    
+    <div class="content-wrapper">
+        <!-- Formulário da esquerda: Instrução que não atende ao critério -->
+        <div class="container">
+            <p>Instrução que não atende ao critério: Ela depende exclusivamente da cor (botão verde), o que não é acessível a usuários que não percebem cores.</p>
+
+            <div class="instructions">
+                Para enviar o formulário, clique no <strong>botão verde</strong>.
+            </div>
+    
+            <form action="#" method="post">
+                <label for="name1">Nome:</label>
+                <input type="text" id="name1" name="name" required>
+    
+                <label for="email1">Email:</label>
+                <input type="email" id="email1" name="email" required>
+    
+                <label for="message1">Mensagem:</label>
+                <textarea id="message1" name="message" rows="5" required></textarea>
+    
+                <button type="submit" class="submit-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M9 5v6h9.59l-3.3-3.29 1.42-1.42 6 6-6 6-1.42-1.42L18.59 13H7V5h2z"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    
+        <!-- Formulário da direita: Instrução que atende ao critério -->
+        <div class="container">
+            <p>Instrução que atende ao critério: Baseada no texto visível do botão, permitindo que qualquer pessoa, incluindo usuários de leitores de tela ou pessoas com daltonismo, compreenda a ação a ser realizada.</p>
+
+            <div class="instructions">
+                Para enviar o formulário, clique no botão verde com a instrução <span class="important-text">"Enviar Formulário"</span>.
+            </div>
+    
+            <form action="#" method="post">
+                <label for="name2">Nome:</label>
+                <input type="text" id="name2" name="name" required>
+    
+                <label for="email2">Email:</label>
+                <input type="email" id="email2" name="email" required>
+    
+                <label for="message2">Mensagem:</label>
+                <textarea id="message2" name="message" rows="5" required></textarea>
+    
+                <button type="submit" class="submit-button">Enviar Formulário</button>
+            </form>
+        </div>
+    </div>
+    <!-- fim do exemplo -->
+
+      
+</body>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 3.1.1</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 3.1.1</strong></center></p>
+    <hr>
+
+    <h2>Codificação e Marcação Semântica</h2>
+
+    <h3>2. Idioma da página: A página tem seu idioma declarado de forma programaticamente determinada.</h3>
+
+	<p>De acordo com o critério <strong>3.1.1</strong> das <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>, uma página da web deve ter seu idioma principal declarado de forma programaticamente determinável, ou seja, especificado no código fonte. Isso facilita a compreensão do conteúdo por tecnologias assistivas, como leitores de tela, que utilizam essa informação para ajustar a pronúncia e a interpretação correta do texto.</p>
+
+	<p>Além disso, declarar o idioma corretamente pode melhorar a indexação do conteúdo por mecanismos de busca e garantir conformidade com padrões internacionais de acessibilidade.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+	<p>O exemplo abaixo demonstra a correta identificação do idoma da página através da tag <code>&lt;html&gt;</code> que inclui o atributo <code>lang="pt-BR"</code>, indicando que o idioma principal da página é o Português do Brasil.</p>
+
+    <!-- início do exemplo -->
+    <style>
+		.content-wrapper {
+		border: 2px solid #ccc;
+		padding: 20px;
+		border-radius: 8px;
+		max-width: 800px;
+		margin: 0 auto;
+		}
+		code {
+			background-color: #f4f4f4;
+			padding: 2px 4px;
+			border-radius: 4px;
+		}
+    </style>
+
+<div class="content-wrapper">
+<p>O atributo <code>lang</code> pode ser utilizado na tag <code>&lt;html&gt;</code> para especificar o idioma principal do conteúdo:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;Exemplo de Página com Idioma Declarado&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;h1&gt;Olá, mundo!&lt;/h1&gt;
+	&lt;p&gt;Esta página demonstra o uso correto do atributo lang em HTML.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+    <!-- fim do exemplo -->
+</body>

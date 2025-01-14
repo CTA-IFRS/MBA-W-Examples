@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 1.4.2</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 1.4.2</strong></center></p>
+    <hr>
+
+    <h2>Audio e Vídeo</h2>
+
+    <h3>7. Controle de áudio: "Existe um mecanismo para pausar, parar, silenciar ou ajustar o seu volume sem afetar o volume geral do sistema."</h3>
+
+    <p>O critério <strong>1.4.2</strong> das <abbr title="Diretrizes de Acessibilidade para o Conteúdo Web">WCAG</abbr> exige que as aplicações web proporcionem um mecanismo que permita aos usuários pausar, parar, silenciar ou ajustar o volume do áudio que é reproduzido automaticamente. Isso é importante para garantir que todos os usuários, incluindo aqueles com deficiências auditivas ou que estão em ambientes silenciosos, possam interagir com o conteúdo sem dificuldades.</p>
+    
+    <p>Ter um controle de áudio acessível permite que os usuários gerenciem a experiência de áudio de acordo com suas necessidades, sem interferir nas configurações de volume do sistema operacional. Este tipo de funcionalidade é essencial em páginas que reproduzem sons automaticamente, como vídeos, músicas ou qualquer tipo de áudio que possa distrair ou dificultar a concentração dos usuários.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <p>O exemplo abaixo mostra um vídeo com controles de áudio acessíveis, permitindo que o usuário pause, ajuste o volume ou silencie o áudio. O uso da tag <code>&lt;audio&gt;</code> do HTML5 e a adição de controles personalizáveis garante que o conteúdo sonoro seja gerenciado de forma eficaz.</p>
+
+    <p>Neste exemplo, o elemento <code>&lt;audio&gt;</code> é utilizado com o atributo <code>controls</code>, que automaticamente fornece controles padrão de reprodução, incluindo opções para pausar, ajustar o volume e silenciar. Isso assegura que o usuário tenha total controle sobre a experiência auditiva sem depender de comandos de sistema, promovendo assim uma experiência mais inclusiva e acessível.</p>
+
+    <!-- início do exemplo -->
+    <style>
+        .content-wrapper {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+
+    <div class="content-wrapper">
+        <audio controls>
+            <source src="caminho-para-o-audio.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento <code>audio</code>.
+        </audio>
+    </div>
+    <!-- fim do exemplo -->
+
+</body>

@@ -2,8 +2,8 @@
 
 .breadcrumb {
   // scss-docs-start breadcrumb-css-vars
-  --#{$prefix}breadcrumb-padding-x: #{$breadcrumb-padding-x};
-  --#{$prefix}breadcrumb-padding-y: #{$breadcrumb-padding-y};
+  --#{$prefix}breadcrumb-padding-x: 0;
+  --#{$prefix}breadcrumb-padding-y: 0;
   --#{$prefix}breadcrumb-margin-bottom: #{$breadcrumb-margin-bottom};
   @include rfs($breadcrumb-font-size, --#{$prefix}breadcrumb-font-size);
   --#{$prefix}breadcrumb-bg: #{$breadcrumb-bg};
@@ -15,7 +15,8 @@
 
   display: flex;
   flex-wrap: wrap;
-  padding: var(--#{$prefix}breadcrumb-padding-y) var(--#{$prefix}breadcrumb-padding-x);
+  margin-left: -24px;
+  padding: 0px;
   margin-bottom: var(--#{$prefix}breadcrumb-margin-bottom);
   @include font-size(var(--#{$prefix}breadcrumb-font-size));
   list-style: none;
@@ -38,5 +39,9 @@
 
   &.active {
     color: var(--#{$prefix}breadcrumb-item-active-color);
+  }
+
+  a {
+    text-decoration: none; // Remove underline from breadcrumb links
   }
 }

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 3.3.3</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 3.3.3</strong></center></p>
+    <hr>
+
+    <h2>Formulários e Entrada de Dados</h2>
+
+    <h3>10. Sugestão de correção: Todas as mensagens de erro fornecem sugestões de correção de entrada de dados quando conhecidas ou a sugestão de correção coloca em risco a segurança ou o propósito do conteúdo.</h3>
+
+	<p>O critério <strong>3.3.3</strong> da <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> assegura que, em formulários ou campos de entrada de dados, as mensagens de erro forneçam sugestões claras para correção quando:</p>
+
+	<ul>
+		<li>O erro é detectado pelo sistema;</li>
+		<li>As sugestões de correção são conhecidas;</li>
+		<li>As sugestões de correção não comprometem a segurança ou o propósito do conteúdo.</li>
+	</ul>
+
+	<p>Essa recomendação é fundamental para melhorar a usabilidade, garantindo que os usuários consigam corrigir erros de maneira eficiente. O exemplo a seguir implementa um formulário cadastramento que valida entradas com mensagens de erro descritivas e acessíveis.</p>
+
+    <p>O exemplo abaixo inclui um formulário que valida entradas com mensagens de erro claras e acessíveis. As mensagens de erro aparecem apenas quando necessário e fornecem instruções precisas para corrigir os erros, de acordo com as boas práticas de acessibilidade.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+	<p>Os elementos do formulário e do script, trazidos no exemplo, que contribuem para atender ao critério 3.3.3 são:</p>
+
+	<ol>
+		<li>
+			<strong>Elementos do formulário</strong>
+			<ul>
+				<li>
+					<strong><code>aria-describedby</code> nos campos de entrada:</strong> Cada campo possui o atributo <code>aria-describedby</code> associado ao <code>id</code> do elemento <code>&lt;small&gt;</code> que contém a mensagem de erro correspondente. Isso garante que leitores de tela possam identificar a mensagem de erro associada ao campo, tornando as sugestões acessíveis.
+				</li>
+				<li>
+					<strong><code>role="alert"</code> nos elementos de erro (<code>&lt;small&gt;</code>):</strong> Define a mensagem como um alerta acessível. Quando exibida, leitores de tela notificam o usuário automaticamente sobre o erro.
+				</li>
+				<li>
+					<strong><code>aria-hidden="true"</code> nos asteriscos:</strong> Marca os asteriscos de campos obrigatórios como invisíveis para leitores de tela, evitando confusões ao interpretar os elementos visuais como conteúdo adicional.
+				</li>
+				<li>
+					<strong>Mensagens descritivas e específicas nas validações:</strong> Exemplo: "Por favor, insira um e-mail válido. Exemplo: usuario@dominio.com" para o campo de e-mail e "A senha deve conter pelo menos 6 caracteres." para o campo de senha. Isso facilita a correção dos erros pelos usuários.
+				</li>
+			</ul>
+		</li>
+		<li>
+			<strong>Elementos do script de validação</strong>
+			<ul>
+				<li>
+					<strong>Detecção de erros específicos:</strong> O script verifica condições específicas para cada campo, como a presença de um caractere <code>@</code> e um ponto (<code>.</code>) em e-mails e a correspondência das senhas. Isso atende ao critério de fornecer uma sugestão clara de correção quando o erro é detectado.
+				</li>
+				<li>
+					<strong>Exibição controlada das mensagens de erro:</strong> As mensagens de erro (<code>&lt;small&gt;</code>) começam ocultas (<code>display: none</code>) e só aparecem quando um erro é detectado. Isso evita poluição visual e confusão para os usuários.
+				</li>
+				<li>
+					<strong>Feedback imediato ao usuário:</strong> As mensagens aparecem assim que um erro é identificado, fornecendo correções claras antes do envio do formulário. Exemplo: Se as senhas não coincidirem, a mensagem "As senhas não coincidem. Por favor, verifique." é exibida imediatamente.
+				</li>
+			</ul>
+		</li>
+		<li>
+			<strong>Elementos de segurança e propósito</strong> O exemplo evita exibir mensagens que possam comprometer a segurança (como informações específicas sobre validações internas), garantindo que apenas erros claros e necessários sejam apresentados ao usuário.
+		</li>
+	</ol>
+
+    <!-- início do exemplo -->
+	<style>
+		.content-wrapper {
+			border: 2px solid #ccc;
+			padding: 20px;
+			border-radius: 8px;
+			max-width: 450px;
+			margin: 0 auto;
+		}
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+		div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input[type="email"]:focus, input[type="password"]:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        small {
+            font-size: 12px;
+            color: #777;
+        }
+
+        span {
+            color: red;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        small {
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
+
+	<div class="content-wrapper">
+		<h1>Formulário de cadastramento</h1>
+		
+		<form id="example-form" action="/submit" method="POST" novalidate>
+			<div>
+				<label for="email">E-mail <span aria-hidden="true">*</span></label>
+				<input type="email" id="email" name="email" required aria-describedby="email-error">
+				<small id="email-error" role="alert" style="color: red; display: none;">Por favor, insira um e-mail válido. Exemplo: usuario@dominio.com</small>
+			</div>
+	
+			<div>
+				<label for="senha">Senha <span aria-hidden="true">*</span></label>
+				<input type="password" id="senha" name="senha" required minlength="6" aria-describedby="senha-error">
+				<small id="senha-error" role="alert" style="color: red; display: none;">A senha deve conter pelo menos 6 caracteres.</small>
+			</div>
+	
+			<div>
+				<label for="confirmacao-senha">Confirma&ccedil;&atilde;o de Senha <span aria-hidden="true">*</span></label>
+				<input type="password" id="confirmacao-senha" name="confirmacao-senha" required aria-describedby="confirmacao-senha-error">
+				<small id="confirmacao-senha-error" role="alert" style="color: red; display: none;">As senhas não coincidem. Por favor, verifique.</small>
+			</div>
+	
+			<button type="submit">Enviar</button>
+		</form>
+	
+		<script>
+			// Validação do formulário
+			document.getElementById('example-form').addEventListener('submit', function (event) {
+				event.preventDefault(); // Impede o envio para teste
+	
+				// Reseta mensagens de erro
+				document.querySelectorAll('small[role="alert"]').forEach(error => error.style.display = 'none');
+	
+				let isValid = true;
+	
+				// Valida e-mail
+				const email = document.getElementById('email');
+				if (!email.value.includes('@') || !email.value.includes('.')) {
+					document.getElementById('email-error').style.display = 'block';
+					isValid = false;
+				}
+	
+				// Valida senha
+				const senha = document.getElementById('senha');
+				if (senha.value.length < 6) {
+					document.getElementById('senha-error').style.display = 'block';
+					isValid = false;
+				}
+	
+				// Valida confirmação de senha
+				const confirmacaoSenha = document.getElementById('confirmacao-senha');
+				if (senha.value !== confirmacaoSenha.value) {
+					document.getElementById('confirmacao-senha-error').style.display = 'block';
+					isValid = false;
+				}
+	
+				// Se válido, envia o formulário
+				if (isValid) {
+					alert('Formulário enviado com sucesso!');
+					this.submit();
+				}
+			});
+		</script>
+	</div>
+    <!-- fim do exemplo -->
+</body>

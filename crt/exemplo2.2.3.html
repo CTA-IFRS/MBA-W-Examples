@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 2.2.3</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 2.2.3</strong></center></p>
+    <hr>
+
+    <h2>Tempo</h2>
+
+    <h3>1. Limite de tempo: Não há evento ou atividade no conteúdo com limite de tempo ou o limite de tempo não é parte essencial do evento ou da atividade ou o conteúdo é uma mídia sincronizada não interativa ou um evento em tempo real.</h3>
+
+	<p>O <strong>critério 2.2.3</strong> da <abbr title="Diretrizes de Acessibilidade para o Conteúdo Web">WCAG</abbr> estabelece que limites de tempo só devem ser impostos em situações em que sejam essenciais para o evento ou atividade, como em uma competição em tempo real ou uma transmissão ao vivo. Para conteúdos gerais, recomenda-se evitar limites de tempo sempre que possível, a fim de garantir que todos os usuários, independentemente de suas habilidades, possam interagir com o conteúdo sem pressões temporais.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <p>O exemplo a seguir, simula o início da realização de uma atividade sem limite de tempo. Essa atividade pode ser o preenchimento de uma formulário, a submissão de um texto ou mensagem, ou o upload de arquivos.</p>
+
+    <!-- início do exemplo -->
+		<style>
+			.content-wrapper {
+				border: 2px solid #ccc;
+				padding: 20px;
+				border-radius: 8px;
+				max-width: 400px;
+				margin: 0 auto;
+			}
+			button {
+				padding: 10px 15px;
+				background: #007BFF;
+				color: #fff;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+			}
+			button:hover {
+				background: #0056b3;
+			}
+		</style>
+
+		<div class="content-wrapper">
+				<h2>Exemplo Prático</h2>
+				<p>
+					Clique no botão abaixo para iniciar a atividade. Não há limite de tempo, e você pode concluir no seu próprio ritmo.
+				</p>
+				<button id="start-activity">Iniciar Atividade</button>
+				<p id="activity-message" style="display: none; margin-top: 15px;">A atividade foi iniciada. Realize-a no seu próprio ritmo.</p>
+		</div>
+	
+		<script>
+			const startButton = document.getElementById('start-activity');
+			const activityMessage = document.getElementById('activity-message');
+	
+			// Exibe a mensagem de início da atividade sem limite de tempo
+			startButton.addEventListener('click', () => {
+				activityMessage.style.display = 'block';
+				startButton.style.display = 'none'; // Oculta o botão após o início
+			});
+		</script>
+    <!-- fim do exemplo -->
+</body>

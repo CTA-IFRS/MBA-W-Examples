@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 3.3.5</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 3.3.5</strong></center></p>
+    <hr>
+
+    <h2>Formulários e Entrada de Dados</h2>
+
+    <h3>13. Ajuda contextual: Há ajuda contextual, como instruções e dicas relevantes, que auxilia o usuário no preenchimento e envio dos formulários.</h3>
+
+	<p>O critério <strong>3.3.5</strong> da <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> enfatiza a necessidade de fornecer suporte adicional para que os usuários preencham os formulários corretamente, incluindo instruções contextuais claras, ferramentas ou informações que reduzam possíveis erros e melhorem a experiência do usuário.</p>
+
+	<p>O exemplo abaixo abaixo implementa um formulário que demonstra a implementação de ajuda contextual para atender a este critério, com base em práticas acessíveis e amigáveis.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+	<p>Os elementos do formulário e do script, trazidos no exemplo, que contribuem para atender ao critério 3.3.5 são:</p>
+
+	<ul>
+		<li>
+			<strong>Instruções contextuais associadas aos campos:</strong> 
+			Cada campo possui um elemento <code>&lt;small&gt;</code> que fornece instruções claras, como:
+			"Digite um e-mail ativo" ou "Preencha seu nome completo". Essas instruções ajudam o usuário a preencher corretamente os dados solicitados.
+		</li>
+		<li>
+			<strong>Atributo <code>aria-describedby</code>:</strong>
+			Este atributo associa os campos às instruções correspondentes, garantindo que leitores de tela possam descrever as dicas para usuários com deficiência visual.
+			Por exemplo, o campo "Nome" está associado ao <code>id="nome-ajuda"</code>.
+		</li>
+		<li>
+			<strong>Realce visual das instruções ao focar no campo:</strong>
+			O script utiliza eventos de <code>focus</code> e <code>blur</code> para destacar as mensagens de ajuda, adicionando a classe CSS <code>.highlight</code>, que altera a cor do texto para azul. 
+			Isso melhora a usabilidade e atrai a atenção do usuário.
+		</li>
+		<li>
+			<strong>Compatibilidade com diferentes entradas:</strong>
+			Todos os tipos de campos relevantes (<code>text</code>, <code>email</code>, <code>password</code> e <code>select</code>) possuem mensagens de ajuda, aplicando consistentemente o suporte contextual.
+		</li>
+		<li>
+			<strong>Boa experiência para dispositivos assistivos:</strong>
+			O uso combinado de <code>aria-describedby</code>, texto descritivo e feedback visual promove uma experiência mais inclusiva para usuários com ou sem deficiências.
+		</li>
+	</ul>
+
+    <!-- início do exemplo -->
+	<style>
+		.content-wrapper {
+			border: 2px solid #ccc;
+			padding: 20px;
+			border-radius: 8px;
+			max-width: 450px;
+			margin: 0 auto;
+		}
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+		div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="email"], input[type="password"], input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus, select:focus  {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        small {
+            font-size: 12px;
+            color: #777;
+			display: block;
+            margin-top: 5px;
+        }
+
+        span {
+            color: red;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .highlight {
+            color: blue;
+        }
+    </style>
+
+	<div class="content-wrapper">
+		<h1>Formulário de cadastramento</h1>
+
+		<form id="registration-form" action="/submit" method="POST">
+			<div>
+				<label for="nome">Nome Completo <span aria-hidden="true">*</span></label>
+				<input type="text" id="nome" name="nome" required aria-describedby="nome-ajuda">
+				<small id="nome-ajuda">Preencha seu nome completo, conforme consta em seus documentos.</small>
+			</div>
+
+			<div>
+				<label for="email">E-mail <span aria-hidden="true">*</span></label>
+				<input type="email" id="email" name="email" required aria-describedby="email-ajuda">
+				<small id="email-ajuda">Digite um e-mail ativo. Exemplo: usuario@dominio.com.</small>
+			</div>
+
+			<div>
+				<label for="senha">Senha <span aria-hidden="true">*</span></label>
+				<input type="password" id="senha" name="senha" required minlength="8" aria-describedby="senha-ajuda">
+				<small id="senha-ajuda">Sua senha deve conter pelo menos 8 caracteres, incluindo letras e números.</small>
+			</div>
+
+			<div>
+				<label for="estado">Estado</label>
+				<select id="estado" name="estado" aria-describedby="estado-ajuda">
+					<option value="">Selecione...</option>
+					<option value="sp">São Paulo</option>
+					<option value="rj">Rio de Janeiro</option>
+					<option value="mg">Minas Gerais</option>
+					<option value="rs">Rio Grande do Sul</option>
+				</select>
+				<small id="estado-ajuda">Selecione o estado onde você reside atualmente.</small>
+			</div>
+
+			<button type="submit">Enviar</button>
+		</form>
+	</div>
+
+	<script>
+		// Destaca o texto de ajuda ao focar nos campos
+		document.querySelectorAll('input, select').forEach(element => {
+			element.addEventListener('focus', function () {
+				const ajudaId = this.getAttribute('aria-describedby');
+				if (ajudaId) {
+					const ajudaElemento = document.getElementById(ajudaId);
+					if (ajudaElemento) {
+						ajudaElemento.classList.add('highlight');
+					}
+				}
+			});
+
+			element.addEventListener('blur', function () {
+				const ajudaId = this.getAttribute('aria-describedby');
+				if (ajudaId) {
+					const ajudaElemento = document.getElementById(ajudaId);
+					if (ajudaElemento) {
+						ajudaElemento.classList.remove('highlight');
+					}
+				}
+			});
+		});
+	</script>
+
+    <!-- fim do exemplo -->
+</body>

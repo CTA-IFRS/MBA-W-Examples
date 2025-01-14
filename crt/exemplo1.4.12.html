@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Critério 1.4.12</title>
+</head>
+
+<body>
+    <p><center> <strong>Critério 1.4.12</strong></center></p>
+    <hr>
+
+    <h2>Conteúdo Textual</h2>
+
+    <h3>1. Espaçamento entre linhas: Todos os blocos de texto têm espaçamento entre as linhas (entrelinhas) de pelo menos 1,5 vezes o tamanho da fonte ou existe um mecanismo para configurar o espaçamento e não há perda de conteúdo ou funcionalidade quando o critério acima é cumprido."</h3>
+
+    <p>O critério de sucesso <strong>1.4.12</strong> da <abbr title="Diretrizes de Acessibilidade para o Conteúdo Web">WCAG</abbr> garante que blocos de texto tenham espaçamento adequado para facilitar a leitura e melhorar a acessibilidade para pessoas com deficiências visuais, dificuldades de leitura ou transtornos como dislexia. Este critério requer que o espaçamento entre linhas seja de pelo menos 1,5 vezes o tamanho da fonte, ou que exista um mecanismo que permita ajustar esses espaçamentos sem causar perda de conteúdo ou funcionalidade.</p>
+
+    <h4>Explicação do Exemplo:</h4>
+
+    <p>Este exemplo mostra como implementar uma funcionalidade que permite ajustar o espaçamento entre linhas sem causar perda de conteúdo ou funcionalidade. O botão abaixo alterna entre um espaçamento padrão de 1,5 vezes e um espaçamento mais amplo de 2 vezes, atendendo assim ao especificado neste critério.</p>
+
+    <!-- início do exemplo -->
+    <style>
+      .content-wrapper {
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Estilo geral para texto */
+      .texto {
+        font-size: 16px; /* Tamanho base da fonte */
+        line-height: 1.5; /* Espaçamento de 1,5 vezes o tamanho da fonte */
+        margin-bottom: 20px;
+      }
+
+      /* Botão para alternar o espaçamento */
+      .botao {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007BFF;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+    .botao:hover {
+      background-color: #0056b3;
+    }
+    </style>
+
+    <script>
+      // Função para alternar o espaçamento entre linhas
+      function alternarEspacamento() {
+        const texto = document.getElementById('textoExemplo');
+        const botao = document.getElementById('botaoEspacamento');
+
+        if (texto.style.lineHeight === '2') {
+          texto.style.lineHeight = '1.5';
+          botao.textContent = 'Aumentar Espaçamento';
+        } else {
+          texto.style.lineHeight = '2';
+          botao.textContent = 'Reduzir Espaçamento';
+        }
+      }
+    </script>
+
+    <div class="content-wrapper">
+      <p id="textoExemplo" class="texto">
+        Este é um exemplo de texto com espaçamento ajustável. O espaçamento entre linhas padrão é de 1,5 vezes o tamanho da fonte, 
+        mas pode ser alterado para 2 vezes clicando no botão abaixo. Essa funcionalidade é útil para melhorar a acessibilidade 
+        para usuários que preferem um espaçamento maior, especialmente aqueles com dificuldades de leitura ou necessidades visuais 
+        específicas. Este parágrafo é suficientemente longo para demonstrar como o espaçamento afeta a leitura de blocos de texto 
+        extensos.
+      </p>
+      <button id="botaoEspacamento" class="botao" onclick="alternarEspacamento()">Aumentar Espaçamento</button>
+    </div>
+    <!-- fim do exemplo -->
+     
+</body>
